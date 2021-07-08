@@ -1,0 +1,16 @@
+
+Carrera: Diseño y Desarrollo Web
+Materia: Programacion 2
+Cuatrimestre: 3er 
+Ano: 2020
+Turno: Noche
+Comision: A
+Alumno: Servente, Sebastian Andres
+email:sebastian.servente@davinci.edu.ar
+Docente: Santiago, Gallino 
+Entrega: 2do Parcial
+
+datos del sitio:
+
+usuario: ser@ser.com.ar		
+password: asdasd

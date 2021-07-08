@@ -1,0 +1,99 @@
+[{
+    "id_productos":1,
+    "title":"Torpedo IPA",
+    "intro":"Cerveza IPA Torpedo",
+    "definicion":" 7.2\u00ba | 65 IBU",
+    "text":"La Torpedo Extra IPA es una cerveza agresiva aunque equilibrada, intensos aromas de l\u00fapulo a c\u00edtricos, pinos y fruta tropical. ",
+    "precio":"260",
+    "img-big":"ipa-160x160-0001.jpg",
+    "img-small":"ipa-160x160-0000.jpg",
+    "img-alt":"Cerveza Artesanal Patagonica"
+},
+{
+    "id_productos":2,
+    "title":"Pale APA ",
+    "intro":"Cerveza Pale Ale",
+    "definicion":"IBU 50 | ABV 5% ",
+    "text":"De cuerpo medio-liviano a medio. Carbonataci\u00f3n de moderada a alta. Acabado suave, sin astringencias, asociado a la alta tasa de lupulaci\u00f3n. ",
+    "precio":"340",
+    "img-big":"rabieta-apa.jpg",
+    "img-small":"rabieta-apa-lata-0001.jpg",
+    "img-alt":"Cerveza Artesanal botella 235ml"
+},
+{
+    "id_productos":3,
+    "title":"Scottish",
+    "intro":"Cerveza Tennent\u2019s",
+    "definicion":"IBU 50 | ABV 5,6% ",
+    "text":"Cerveza Tennent\u2019s Extra Strong Scottish Lager de Tennent's Espa\u00f1a. Una cerveza con car\u00e1cter al m\u00e1s puro estilo Stout, de contraste dulce y amargo en boca, gran aroma y aspecto.",
+    "precio":"340",
+    "img-big":"scottish.jpg",
+    "img-small":"scottish-0001.jpg",
+    "img-alt":"Cerveza Artesanal botella "
+},
+{
+    "id_productos":4,
+    "title":"Blonde",
+    "intro":"Cerveza Blonde ALE",
+    "definicion":"IBU 50 | ABV 5,6% ",
+    "text":"La Blonde Ale de Espiga, destaca por su aroma intenso, con notas c\u00edtricas, fruta tropical, mel\u00f3n y uva. En boca destaca la fruta, con un amargor final que compensa la dulzura.",
+    "precio":"340",
+    "img-big":"blonde-ale-0001.jpg",
+    "img-small":"blonde-ale-0001.jpg",
+    "img-alt":"Cerveza Artesanal botella"
+},
+{
+    "id_productos":5,
+    "title":"Stout",
+    "intro":"Cervezas Irish Stout",
+    "definicion":"IBU 50 | ABV 4,5% ",
+    "text":"Tostado pronunciado, similar al caf\u00e9. El balance varia desde bastante uniforme a bastante amargo, la version m\u00e1s balanceada teniendo un poco de dulzor a malta y la version amargas siendo bastante secas. ",
+    "precio":"340",
+    "img-big":"stout.jpg",
+    "img-small":"stout-0001.jpg",
+    "img-alt":"Cerveza Artesanal botella"
+},
+{
+    "id_productos":6,
+    "title":"India Pale",
+    "intro":"Cerveza Pale Ale",
+    "definicion":"IBU 50 | ABV 5,6% ",
+    "text":" Es un estilo de cerveza de tradici\u00f3n inglesa que se caracteriza como una ale1\u200b p\u00e1lida y espumosa con un alto nivel de alcohol y de l\u00fapulo.",
+    "precio":"340",
+    "img-big":"india-pale.jpg",
+    "img-small":"india-pale-0001.jpg",
+    "img-alt":"Cerveza Artesanal botella"
+},
+{
+    "id_productos":7,
+    "title":"Apa",
+    "intro":"Cerveza APA Piccolo",
+    "definicion":"IBU 30 | ABV 4,5% ",
+    "text":"Refrescante y lupulada, suficiente soporte de malta para hacer la cerveza balanceada y bebible. La presencia limpia de l\u00fapulo puede reflejar variedades cl\u00e1sicas o modernas",
+    "precio":"220",
+    "img-big":"apa-0002.jpg",
+    "img-small":"apa-0001.jpg",
+    "img-alt":"Cerveza Artesanal botella"
+},
+{
+    "id_productos":8,
+    "title":"Belgian",
+    "intro":"Belgian Blonde ale",
+    "definicion":"IBU 25 | ABV 6% ",
+    "text":"Sabor c\u00edtrico y refrescante. l\u00fapulos y malta. Cuerpo ligero con espuma cremosa. Color dorado p\u00e1lido, aroma floral y c\u00edtrico. Amargor suave con toques a melocot\u00f3n y pino.",
+    "precio":"300",
+    "img-big":"blonde-pale.jpg",
+    "img-small":"blonde-pale-0001.jpg",
+    "img-alt":"Cerveza Artesanal botella"
+},
+{
+    "title":"cerveza apa ",
+    "intro":"cerveza apa ",
+    "text":"muy buena cerveza iportada",
+    "definicion":"ce",
+    "precio":"345",
+    "img-big":"rabieta-apa.jpg",
+    "img-small":"rabieta-apa-lata-0001.jpg",
+    "img-alt":"Cerveza Artesanal botella 235ml"
+}
+]
