@@ -33,7 +33,7 @@ $title = $secciones[$seccion]['title'];
 </head>
 <body>
     <header class="header-home container-fluid bg-dark ">
-        <h1>Tienda de Cervezas</h1>
+        <h1>La Tienda</h1>
         <div class="row bg-dark">
             <nav class="nav-index col navbar navbar-expand-md navbar-dark ">               
                 <a class="navbar-brand" href="#">
@@ -57,13 +57,16 @@ $title = $secciones[$seccion]['title'];
                             <a class="nav-link" href="index.php?s=productos">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?s=contacto">Contacto</a>
+                            <a class="nav-link" href="index.php?s=login">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?s=registro">Registrarse</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
-    </header> 
+    </header>
     <main>
         
             <?php

@@ -5,6 +5,12 @@ $secciones = [
     'home' => [
         'title' => 'Tienda de Cervezas :: Cervezas De todas Partes del Mundo '
     ],
+    'login' => [
+        'title' => 'Tienda de Cervezas :: Iniciar Sesión'
+    ],
+    'registro' => [
+        'title' => 'Tienda de Cervezas :: Registrarse'
+    ],
     'productos' => [
         'title' => 'Tienda de Cervezas :: Nuestros Productos'
     ],

@@ -30,8 +30,31 @@
     background: #343a40;
 }
 
-
-
+/*------------------- formRegistro --------------------------------*/
+.formRegistro {
+ /*   background: #ffc107;*/
+    padding: 0.5rem;
+}
+.formRegistro label {
+    font-weight: bold;
+    padding: 0.5rem;
+}
+.formRegistro input {
+    padding: 0.5rem;
+    box-shadow: 1px 1px 5px -2px black;
+}
+.formRegistro .botonRegistro {
+    margin-top: 1rem;
+    width: 100%;
+}
+fieldset {
+    padding: 0.4rem;
+}
+fieldset legend {
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+}
 /*--------------mantenimientos-------------------------------------*/
 .reparar {
     display: grid;
