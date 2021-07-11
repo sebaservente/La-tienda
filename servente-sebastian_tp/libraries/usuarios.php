@@ -15,3 +15,6 @@ function usuarioBuscaPorEmail($db, $email) {
         return null;
     }
 }
+function usuariosCrear() {
+
+}

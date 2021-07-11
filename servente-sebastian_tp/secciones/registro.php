@@ -12,6 +12,7 @@
             <div class="form-file">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" class="form-control">
+                <button type="btn">ver pass</button>
             </div>
         </fieldset>
         <fieldset>
