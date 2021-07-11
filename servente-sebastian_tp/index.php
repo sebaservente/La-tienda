@@ -80,7 +80,7 @@ $title = $secciones[$seccion]['title'];
                 <ul>
                     <li>Diseño y Desarrollo Web</li>									
                     <li>Comisión DwTn3A</li> 
-                    <li>Profesor Santiago Gallino</li>
+                    <li>Profesor Santiago Gallinooo</li>
                 </ul>
 			</div>						
 			<div id="footer" class="row  m-auto col-12 justify-content-center  "> 
