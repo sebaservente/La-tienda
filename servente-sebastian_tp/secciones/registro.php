@@ -12,7 +12,7 @@
             <div class="form-file">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" class="form-control">
-                <button type="btn">ver pass</button>
+                <button type="button" class="form-pass-button" data-input="password">ver pass</button>
             </div>
         </fieldset>
         <fieldset>
@@ -31,3 +31,5 @@
 
     <p>¿Ya tenes cuenta? <a href="index.php?s=login">inicia sesión</a></p>
 </section>
+
+<script src="js/pass.js"></script>
