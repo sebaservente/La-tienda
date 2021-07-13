@@ -1,4 +1,4 @@
-<section class="container">
+<section class="container sectionRegistro">
     <h2>Registrarse</h2>
     <p>Completa el formulario para poder estar registardo</p>
 
@@ -12,7 +12,7 @@
             <div class="form-file">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" class="form-control">
-                <button type="button" class="form-pass-button" data-input="password">ver pass</button>
+                <button type="button" title="Ver Password" class="form-pass-button" data-input="password"><i class="bi bi-eye text-light"></i></button>
             </div>
         </fieldset>
         <fieldset>
@@ -26,10 +26,10 @@
                 <input type="text" id="apellido" name="apellido" class="form-control">
             </div>
         </fieldset>
-        <button class="btn btn-success botonRegistro">Registrarse ProgChamp</button>
+        <button class="btn btn-success botonRegistro">Registrarse</button>
     </form>
 
-    <p>¿Ya tenes cuenta? <a href="index.php?s=login">inicia sesión</a></p>
+    <p class="parraRegistro">¿Ya tenes cuenta? <a href="index.php?s=login">inicia sesión</a></p>
 </section>
 
-<script src="js/pass.js"></script>
+<!--<script src="js/pass.js"></script>-->

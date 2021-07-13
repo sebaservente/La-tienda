@@ -32,20 +32,35 @@
 
 /*------------------- formRegistro --------------------------------*/
 .formRegistro {
- /*   background: #ffc107;*/
-    padding: 0.5rem;
+    background: #161514bf;
+    padding: 1.5rem;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px -1px orange;
 }
+
 .formRegistro label {
     font-weight: bold;
-    padding: 0.5rem;
+    padding: 1rem 0rem;
+    color: orange;
 }
 .formRegistro input {
     padding: 0.5rem;
     box-shadow: 1px 1px 5px -2px black;
 }
 .formRegistro .botonRegistro {
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     width: 100%;
+    box-shadow: 1px 1px 5px -2px green;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.formRegistro fieldset:nth-child(1) .form-file button {
+    border: none;
+    padding: 0.5rem;
+    background: none;
+    cursor: pointer;
 }
 fieldset {
     padding: 0.4rem;
@@ -53,7 +68,26 @@ fieldset {
 fieldset legend {
     text-align: center;
     font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    color: #fff;
+}
+.sectionRegistro {
     padding: 1rem;
+}
+.sectionRegistro h2 {
+    font-family: 'Roboto Slab', serif;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+}
+.sectionRegistro p {
+    padding-bottom: 3rem;
+    width: 100%;
+    text-align: center;
+}
+.sectionRegistro .parraRegistro {
+    text-align: center;
+    padding: 2rem;
 }
 /*--------------mantenimientos-------------------------------------*/
 .reparar {

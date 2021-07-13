@@ -6,10 +6,16 @@ $secciones = [
         'title' => 'Tienda de Cervezas :: Cervezas De todas Partes del Mundo '
     ],
     'login' => [
-        'title' => 'Tienda de Cervezas :: Iniciar Sesión'
+        'title' => 'Tienda de Cervezas :: Iniciar Sesión',
+        'js' => [
+            'js/pass.js'
+        ],
     ],
     'registro' => [
-        'title' => 'Tienda de Cervezas :: Registrarse'
+        'title' => 'Tienda de Cervezas :: Registrarse',
+        'js' => [
+            'js/pass.js'
+        ],
     ],
     'productos' => [
         'title' => 'Tienda de Cervezas :: Nuestros Productos'

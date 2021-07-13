@@ -26,6 +26,7 @@ $title = $secciones[$seccion]['title'];
     <title><?= $title ?></title>
     <link rel="shortcut icon" href="imgs/favicon.ico" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
@@ -51,16 +52,16 @@ $title = $secciones[$seccion]['title'];
                 <div class="collapse navbar-collapse" id="barra">
                     <ul class="navbar-nav text-right ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?s=home">Home</a>
+                            <a class="nav-link text-warning" href="index.php?s=home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?s=productos">Productos</a>
+                            <a class="nav-link text-warning" href="index.php?s=productos">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?s=login">Iniciar Sesión</a>
+                            <a class="nav-link text-warning" href="index.php?s=login">Iniciar Sesión</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?s=registro">Registrarse</a>
+                            <a class="nav-link text-warning" href="index.php?s=registro">Registrarse</a>
                         </li>
                     </ul>
                 </div>
@@ -100,7 +101,13 @@ $title = $secciones[$seccion]['title'];
 			</div>
 		</div>
     </footer>
-
+    <?php
+    if(isset($secciones[$seccion]['js'])):
+        foreach ($secciones[$seccion]['js'] as $script): ?>
+        <script src="<?=$script;?>"></script>
+    <?php
+        endforeach;
+    endif; ?>
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
     <script>
