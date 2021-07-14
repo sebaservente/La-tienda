@@ -23,17 +23,21 @@ function usuarioBuscaPorEmail($db, $email) {
  *              nombre: Opcional. string.
  *              apellido: Opcional. string.
  *              id_rol: Opcional. int. Default
+ * @return boll | int
  * **/
 function usuariosCrear($db, $data) {
     $idRol      = isset($data['idRol']) ? mysqli_real_escape_string($db, $data['idRol']) : 2;
     $email      = mysqli_real_escape_string($db, $data['email']);
-    $password   = mysqli_real_escape_string($db, $data['password']);
     $nombre     = mysqli_real_escape_string($db, $data['nombre'] ?? '');
     $apellido   = mysqli_real_escape_string($db, $data['apellido'] ?? '');
+    $password   = password_hash($data['password'], PASSWORD_DEFAULT);
 
     $query = "INSERT INTO usuarios (id_rol, email, password, nombre, apellido)
                 VALUES ('" . $idRol . "','" . $email . "','" . $password . "','" . $nombre . "','" . $apellido . "' )";
     $exito = mysqli_query($db, $query);
-    return $exito;
+    if ($exito){
+        return mysqli_insert_id($db);
+    }
+    return false;
 
 }
