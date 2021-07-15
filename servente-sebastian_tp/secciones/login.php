@@ -19,7 +19,7 @@ $oldData = sessionValueGetFlash('old_data', []);
                     value="<?= $oldData['email'] ?? '';?>">
             <?php
             if(isset($errores['email'])) : ?>
-                <div id="error-email" class="msj-error pl-4"><?= $errores['email'];?></div>
+                <div id="error-email" class="msj-error pl-4 bg-warning"><?= $errores['email'];?></div>
             <?php
             endif; ?>
 
