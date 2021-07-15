@@ -16,8 +16,8 @@ if(empty($email)){
 
 if(empty($password)){
     $errores['password'] = "Te olvidaste el Password";
-} else if(strlen($password) < 3){
-    $errores['password'] = "Minimo 3 caracteres";
+} else if(strlen($password) < 6){
+    $errores['password'] = "Minimo 6 caracteres";
 }
 
 if(!empty($errores)){

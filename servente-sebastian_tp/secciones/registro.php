@@ -15,12 +15,12 @@ $oldData = sessionValueGetFlash('old_data', []);
             <legend>Datos de identificación</legend>
             <div class="form-file">
                 <label for="email">Email</label>
-                <input  type="email" id="email" name="email" class="form-control shadow" autocomplete="off"
+                <input  type="email" id="email" name="email" class="form-control shadow" autocomplete="off" placeholder="ser@ser.com.ar"
                     <?php if(isset($errores['email'])) echo 'aria-describedby="error-email"';?>
                         value="<?= $oldData['email'] ?? '';?>">
                 <?php
                 if(isset($errores['email'])) : ?>
-                    <div id="error-email" class="msj-error pl-4 bg-warning"><?= $errores['email'];?></div>
+                    <div id="error-email" class="msj-error mt-2 pl-4 bg-warning"><i class="bi bi-backspace-reverse p-1"></i><?= $errores['email'];?></div>
                 <?php
                 endif; ?>
             </div>
@@ -28,12 +28,12 @@ $oldData = sessionValueGetFlash('old_data', []);
                 <label for="password">Password</label>
                 <!--<input type="password" id="password" name="password" class="form-control">-->
 
-                <input  type="password" id="password" name="password" class="form-control shadow" autocomplete="off"
+                <input  type="password" id="password" name="password" class="form-control shadow" autocomplete="off" placeholder="******"
                     <?php if(isset($errores['password'])) echo 'aria-describedby="error-password"';?>
                         value="<?= $oldData['password'] ?? '';?>">
                 <?php
                 if(isset($errores['password'])) : ?>
-                    <div id="error-password" class="msj-error pl-4 bg-warning"><?= $errores['password'];?></div>
+                    <div id="error-password" class="msj-error mt-2 pl-4 bg-warning"><i class="bi bi-backspace-reverse p-1"></i><?= $errores['password'];?></div>
                 <?php
                 endif; ?>
 
