@@ -3,8 +3,8 @@
 
 require '../data/bootstrap.php';
 require 'data/routes.php';
-require '../libraries/sessiones.php';
-require '../libraries/auth.php';
+/*require_once __DIR__ . '../libraries/sessiones.php';
+require_once __DIR__ . '../libraries/auth.php';*/
 
 $seccion = $_GET['s'] ?? "home";
 

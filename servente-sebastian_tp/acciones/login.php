@@ -1,16 +1,15 @@
 <?php
-
 // recibimos datos del usuario con sus verificaciones
 
-require_once '../../data/bootstrap.php';
-require_once '../../libraries/auth.php';
-require_once '../../libraries/usuarios.php';
+require_once '../data/bootstrap.php';
+require_once '../libraries/auth.php';
+//require_once '../../libraries/usuarios.php';
 
 // form
 $email = trim($_POST['email']);
 $password = trim($_POST['password']);
 
-//  validacion 
+//  validacion
 $errores = [];
 
 if(empty($email)) {

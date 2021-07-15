@@ -18,6 +18,13 @@ const ENVIROMENT_MANTAINANCE = 2;
 // estado del entorno.
 $enviromentState = ENVIROMENT_DEV;
 
+// incluimos los archivos de sesiones, usuarios y de autenticacion
+require_once __DIR__ . '/../libraries/sessiones.php';
+require_once __DIR__ . '/../libraries/auth.php';
+require_once __DIR__ . '/../libraries/usuarios.php';
+
+
+
 // conexion a la base
 
 require  __DIR__ . '/conexion.php';
