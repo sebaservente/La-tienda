@@ -15,6 +15,10 @@ if($enviromentState === ENVIROMENT_MANTAINANCE) {
 
 $title = $secciones[$seccion]['title'];
 
+$success = sessionValueGetFlash('success');
+$successErrors = sessionValueGetFlash('success_errors');
+$successInfo = sessionValueGetFlash('successInfo');
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -69,11 +73,28 @@ $title = $secciones[$seccion]['title'];
         </div>
     </header>
     <main>
-        
-            <?php
-                require 'secciones/' .  $seccion . '.php';
-            ?>
-        
+        <?php
+        if($success !== null): ?>
+            <div class="msj-success mt-3 pl-4"><?= $success;?></div>
+        <?php
+        endif; ?>
+
+        <?php
+        if($successErrors !== null): ?>
+            <div class="msj-error pl-4"><?= $successErrors;?></div>
+        <?php
+        endif; ?>
+        <?php
+
+        if($successInfo !== null): ?>
+            <div class="msj-info pl-4"><?= $successInfo;?></div>
+        <?php
+        endif; ?>
+
+        <?php
+        require 'secciones/' .  $seccion . '.php';
+        ?>
+
     </main>
     <footer class="container-fluid page-footer font-small cyan darken-2 ">
 		<div class="row  ">
