@@ -10,6 +10,25 @@ $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 
 // todo validar
+if(empty($email)){
+    $errores['email'] = "Te estas olvidando el email";
+}
+
+if(empty($password)){
+    $errores['password'] = "Te olvidaste el Password";
+} else if(strlen($password) < 3){
+    $errores['password'] = "Minimo 3 caracteres";
+}
+
+if(!empty($errores)){
+    $_SESSION['errores'] = $errores;
+    $_SESSION['old_data'] = $_POST;
+    header('Location: ../index.php?s=registro');
+    //importante
+    exit;
+}
+
+
 $idRol = 2;
 $idUsuario = usuariosCrear($db, [
     /*'idRol'     => $idRol,*/
