@@ -89,6 +89,10 @@ fieldset legend {
     text-align: center;
     padding: 2rem;
 }
+/*--------------------*/
+main #err {
+    background: deeppink;
+}
 /*--------------mantenimientos-------------------------------------*/
 .reparar {
     display: grid;

@@ -18,7 +18,7 @@ if($enviromentState === ENVIROMENT_MANTAINANCE) {
 
 if(isset($secciones[$seccion]['requiresAuth']) && $secciones[$seccion]['requiresAuth']) {
     // verificamos uqe este autenticado
-    if(!authEstaAutenticado()) {
+    if(!authEstaAutenticado() || !authEsAdmin()) {
         $_SESSION['seccion_preten'] = $seccion;
         $_SESSION['successInfo'] = "Necesitas estar autenticado para ingresar";
         header('Location: index.php?s=login');
@@ -104,28 +104,28 @@ if(isset($_SESSION['successErrors'])){
         
     </header> 
     <main>
-       
-            <?php 
-            if($success !== null): ?>
-            <div class="msj-success mt-3 pl-4"><?= $success;?></div>
-            <?php 
-            endif; ?>
 
-            <?php 
-            if($successErrors !== null): ?>
-            <div class="msj-error pl-4"><?= $successErrors;?></div>
-            <?php 
-            endif; ?>
-             <?php 
-             
-            if($successInfo !== null): ?>
-            <div class="msj-info pl-4"><?= $successInfo;?></div>
-            <?php 
-            endif; ?>
+        <?php
+        if($success !== null): ?>
+        <div class="msj-success mt-3 pl-4"><?= $success;?></div>
+        <?php
+        endif; ?>
 
-            <?php
-                require 'secciones/' .  $seccion . '.php';
-            ?>
+        <?php
+        if($successErrors !== null): ?>
+        <div class="msj-error pl-4"><?= $successErrors;?></div>
+        <?php
+        endif; ?>
+         <?php
+
+        if($successInfo !== null): ?>
+        <div class="msj-info pl-4"><?= $successInfo;?></div>
+        <?php
+        endif; ?>
+
+        <?php
+            require 'secciones/' .  $seccion . '.php';
+        ?>
         
     </main>
     <footer class="container-fluid page-footer font-small cyan darken-2 ">

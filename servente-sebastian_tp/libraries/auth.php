@@ -48,8 +48,19 @@ function authLogout() {
 }
 
 // confirmamos si esta autenticado
+/*
+ * @return bool
+ * **/
 function authEstaAutenticado() {
     return isset($_SESSION['usuario_admin']);
+}
+
+// autenticacion segun id_rol
+/*
+ * @return bool
+ * **/
+function authEsAdmin(){
+    return $_SESSION['usuario_admin']['id_rol'] == 1;
 }
 
 // usuario autenticado

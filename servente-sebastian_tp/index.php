@@ -61,18 +61,33 @@ $successInfo = sessionValueGetFlash('successInfo');
                         <li class="nav-item">
                             <a class="nav-link text-warning" href="index.php?s=productos">Productos</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-warning" href="index.php?s=login">Iniciar Sesión</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-warning" href="index.php?s=registro">Registrarse</a>
-                        </li>
+                        <?php
+                        if(!authEstaAutenticado()):?>
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" href="index.php?s=login">Iniciar Sesión</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" href="index.php?s=registro">Registrarse</a>
+                            </li>
+                        <?php
+                        else: ?>
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" href="index.php?s=perfil">Mi Perfil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" href="acciones/logout.php"><?= authObtenerUsuario()['nombre'];?> (Cerrar Sesión)</a>
+                            </li>
+                        <?php
+                        endif;
+                        ?>
+
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
     <main>
+        <!-- todo: ajustar el css -->
         <?php
         if($success !== null): ?>
             <div class="msj-success mt-3 pl-4"><?= $success;?></div>
@@ -81,7 +96,7 @@ $successInfo = sessionValueGetFlash('successInfo');
 
         <?php
         if($successErrors !== null): ?>
-            <div class="msj-error pl-4"><?= $successErrors;?></div>
+            <div id="err" class="msj-error pl-4 bg-warning"><?= $successErrors;?></div>
         <?php
         endif; ?>
         <?php

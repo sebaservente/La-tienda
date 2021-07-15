@@ -11,6 +11,9 @@ $secciones = [
             'js/pass.js'
         ],
     ],
+    'perfil' => [
+        'title' => 'Tienda de Cervezas :: Mi Perfil'
+    ],
     'registro' => [
         'title' => 'Tienda de Cervezas :: Registrarse',
         'js' => [
