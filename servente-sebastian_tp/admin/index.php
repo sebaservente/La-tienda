@@ -79,7 +79,7 @@ if(isset($_SESSION['successErrors'])){
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <?php 
-                if(authEstaAutenticado()):
+                if(authEstaAutenticado() && authEsAdmin()):
                 ?>
                 <div class="collapse navbar-collapse" id="barra">
                     <ul class="navbar-nav text-right ml-auto">

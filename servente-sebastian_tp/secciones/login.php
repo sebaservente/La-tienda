@@ -7,7 +7,7 @@ $oldData = sessionValueGetFlash('old_data', []);
 
 ?>
 
-<section>
+<section id="loginIndex">
     <h2>Iniciar Sesión</h2>
     <p>Ingresa tus credenciales</p>
     <form action="acciones/login.php" method="post" class="p-3 m-auto">
