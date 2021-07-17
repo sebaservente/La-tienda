@@ -7,10 +7,10 @@ $oldData = sessionValueGetFlash('old_data', []);
 
 ?>
 
-<section id="loginIndex">
+<section id="loginIndex" class="sectionRegistro">
     <h2>Iniciar Sesión</h2>
-    <p>Ingresa tus credenciales</p>
-    <form action="acciones/login.php" method="post" class="p-3 m-auto">
+    <p class="primerParrafo">Ingresa tus credenciales</p>
+    <form action="acciones/login.php" method="post" class="p-3 m-auto formRegistro">
 
         <div class="form-group">
             <label for="email">Email</label>
@@ -28,10 +28,10 @@ $oldData = sessionValueGetFlash('old_data', []);
             <label for="password">Contraseña</label>
             <input  type="password" id="password" name="password" class="form-control shadow" >
         </div>
-        <div class="col-12 text-center">
-            <button class="btn btn-secondary col-10 shadow">Ingresar</button>
+        <div class="text-center">
+            <button class="btn btn-success botonRegistro">Ingresar</button>
         </div>
         <!--<button class="btn p-3">Ingresar</button>-->
     </form>
-    <p>¿No tenes cuenta? <a href="index.php?s=registro" class="text-success">Registrate ahora!</a> Te esperamos</p>
+    <p class="parraRegistro">¿No tenes cuenta? <a href="index.php?s=registro" class="text-success ">Registrate ahora!</a> Te esperamos</p>
 </section>
