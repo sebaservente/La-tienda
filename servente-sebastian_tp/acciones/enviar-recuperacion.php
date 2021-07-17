@@ -19,23 +19,14 @@ if (!$usuario){
 
 $token = usuarioGenerarTokenRecu($db, $usuario['id_usuario']);
 
-$cuerpo = <<<TEMPLATE
-    <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>La Tienda :: Recuperar Contraseña</title>
-</head>
-<body>
-    <section style="font-family: Verdana, Arial, sans-serif">
-      <h2>Recuperar Contraseña</h2>
-      <p>Recibimos un pedido de esta direccion <b>"xx@xx.xx"</b> para restablecer la contraseña de la cuenta asociada</p>
-      <p>Para proceder. hace click en el enlace a continuacion, o copia el texto del enlace y pegalo en la barra de direcciones de una pestaña en el navegador.</p>
-      <a href="#">Ir a Restablecer mi Contraseña</a>
-      <p>Enlace para copiar: #</p>
-      <p style="font-size: .9em">si no fuiste vos el que pidio restablecer la contraseña, podes simplemente ignorar este email.</p>
-    </section>
-</body>
-</html>
-TEMPLATE;
+//leo el template del email recuperar password
+$cuerpo = file_get_contents(__DIR__ . '/../email/recuperar-password.html');
 
+$link = "http://127.0.0.1/La-tienda/servente-sebastian_tp/index.php?s=nuevo-password&token=" . $token . "&email=" .$email;
+
+$cuerpo = str_replace('@@EMAIL@@', $email, $cuerpo);
+$cuerpo = str_replace('@@URL@@', $link, $cuerpo);
+
+// $destinatario = $email;
+$asunto = "La Tienda :: Restablecer Contraseña";
+$headers = "";
