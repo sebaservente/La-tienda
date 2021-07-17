@@ -3,37 +3,40 @@
 
 $secciones = [
     'home' => [
-        'title' => 'Tienda de Cervezas :: Cervezas De todas Partes del Mundo '
+        'title' => 'La Tienda :: Cervezas De todas Partes del Mundo '
     ],
     'login' => [
-        'title' => 'Tienda de Cervezas :: Iniciar Sesión',
+        'title' => 'La Tienda :: Iniciar Sesión',
         'js' => [
             'js/pass.js'
         ],
     ],
     'perfil' => [
-        'title' => 'Tienda de Cervezas :: Mi Perfil'
+        'title' => 'La Tienda :: Mi Perfil'
     ],
     'registro' => [
-        'title' => 'Tienda de Cervezas :: Registrarse',
+        'title' => 'La Tienda :: Registrarse',
         'js' => [
             'js/pass.js'
         ],
     ],
+    'recuperar-password' => [
+        'title' => 'La Tienda :: Recuperar Contraseña'
+    ],
     'productos' => [
-        'title' => 'Tienda de Cervezas :: Nuestros Productos'
+        'title' => 'La Tienda :: Nuestros Productos'
     ],
     'leer-producto' => [
-        'title' => 'Tienda de Cervezas:: Descripcion del Producto'
+        'title' => 'La Tienda :: Descripcion del Producto'
     ],
     'contacto' => [
-        'title' => 'Tienda de Cervezas :: Contactate con nosotros'
+        'title' => 'La Tienda :: Contactate con nosotros'
     ],
     '404' => [
-        'title' => 'Tienda de Cervezas :: Página no encontrada'
+        'title' => 'La Tienda :: Página no encontrada'
     ],
     'mantenimiento' => [
-        'title' => 'Tienda de Cervezas :: Mantenimiento en curso'
+        'title' => 'La Tienda :: Mantenimiento en curso'
     ],
 ];
 

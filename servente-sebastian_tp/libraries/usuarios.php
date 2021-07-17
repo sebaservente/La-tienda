@@ -1,5 +1,7 @@
 <?php
-
+/*
+ * @param $db
+ * **/
 function usuarioBuscaPorEmail($db, $email) {
     $email = mysqli_real_escape_string($db, $email);
 
@@ -16,7 +18,7 @@ function usuarioBuscaPorEmail($db, $email) {
     }
 }
 /*
- * qparam mysqli $db
+ * @param mysqli $db
  * @param array $data
  *              email: Required. string.
  *              password: Required. string.
@@ -40,4 +42,27 @@ function usuariosCrear($db, $data) {
     }
     return false;
 
+}
+/*
+ * generamos un token (criptograficamente !!)seguro
+ *
+ * @param mysqli $db
+ * @param int|string $id
+ * @return string|bool
+ * **/
+function usuarioGenerarTokenRecu($db, $id) {
+    $token = openssl_random_pseudo_bytes(32);
+
+    $token = bin2hex($token);
+
+    $fechaExpiracion = time() + 3600;
+    $fechaExpiracion = date("Y-m-d H:i:s", $fechaExpiracion);
+
+    $query = "INSERT INTO password_recuperar (id_usuario, token, fecha_expiracion) 
+              VALUES ('". $id ."','". $token ."','". $fechaExpiracion ."')";
+    $exito = mysqli_query($db, $query);
+    if(!$exito){
+         return false;
+    }
+    return $token;
 }

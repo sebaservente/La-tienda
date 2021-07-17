@@ -19,7 +19,7 @@ $oldData = sessionValueGetFlash('old_data', []);
                     value="<?= $oldData['email'] ?? '';?>">
             <?php
             if(isset($errores['email'])) : ?>
-                <div id="error-email" class="msj-error pl-4 bg-warning"><?= $errores['email'];?></div>
+                <div id="error-email" class="msj-error mt-2 pl-4 bg-warning"><i class="bi bi-backspace-reverse p-1"></i><?= $errores['email'];?></div>
             <?php
             endif; ?>
 
@@ -34,4 +34,5 @@ $oldData = sessionValueGetFlash('old_data', []);
         <!--<button class="btn p-3">Ingresar</button>-->
     </form>
     <p class="parraRegistro">¿No tenes cuenta? <a href="index.php?s=registro" class="text-success ">Registrate ahora!</a> Te esperamos</p>
+    <p class="parraRegistro">¿Olvidaste tu contraseña? <a href="index.php?s=recuperar-password" class="text-success ">Recupera tu contraseña</a>.</p>
 </section>
