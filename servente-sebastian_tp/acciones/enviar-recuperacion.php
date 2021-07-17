@@ -29,4 +29,22 @@ $cuerpo = str_replace('@@URL@@', $link, $cuerpo);
 
 // $destinatario = $email;
 $asunto = "La Tienda :: Restablecer Contraseña";
-$headers = "";
+$headers = "From: no-responder@la_tienda.com" . "\r\n";
+$headers .= "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-Type: text/html; charset=utf-8" . "\r\n";
+
+if(!mail($email, $asunto, $cuerpo, $headers)){
+    $nombreArchivo = date('Ymd_His') . "_recuperar-password.html";
+    file_put_contents(__DIR__ . "/../email/enviados/" . $nombreArchivo, $cuerpo);
+}
+$_SESSION['success_errors'] = "hemos enviado un email a tu casilla con los pasos para recuperar la contraseña. Por si acaso, si no ves el email, revisá el correo no deseado/span. ";
+header('Location: ../index.php?s=recuperar-password');
+
+
+
+
+
+
+
+
+

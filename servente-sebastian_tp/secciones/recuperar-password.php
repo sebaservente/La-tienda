@@ -1,3 +1,11 @@
+<?php
+
+
+$errores = sessionValueGetFlash('errores', []);
+$oldData = sessionValueGetFlash('old_data', []);
+
+
+?>
 <section class="sectionRegistro">
     <h2>Recuperar contraseña</h2>
     <p>Escribi tu direccion de email en el formulario y te vamos a enviar un enlace para que puedas crear una contraseña nueva</p>

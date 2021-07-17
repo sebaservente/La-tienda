@@ -3,7 +3,7 @@
 
 $secciones = [
     'home' => [
-        'title' => 'La Tienda :: Cervezas De todas Partes del Mundo '
+        'title' => 'La Tienda :: Cervezas del Mundo '
     ],
     'login' => [
         'title' => 'La Tienda :: Iniciar Sesión',
@@ -23,6 +23,9 @@ $secciones = [
     'recuperar-password' => [
         'title' => 'La Tienda :: Recuperar Contraseña'
     ],
+    'nuevo-password' => [
+        'title' => 'La Tienda :: Establecer Nueva Contraseña'
+    ],
     'productos' => [
         'title' => 'La Tienda :: Nuestros Productos'
     ],
@@ -30,7 +33,7 @@ $secciones = [
         'title' => 'La Tienda :: Descripcion del Producto'
     ],
     'contacto' => [
-        'title' => 'La Tienda :: Contactate con nosotros'
+        'title' => 'La Tienda :: Contactate con Nosotros'
     ],
     '404' => [
         'title' => 'La Tienda :: Página no encontrada'

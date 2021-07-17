@@ -66,3 +66,62 @@ function usuarioGenerarTokenRecu($db, $id) {
     }
     return $token;
 }
+/*
+ * Verificamos el token del usuario
+ *
+ * @param mysqli $db
+ * @param string $token
+ * @param string $email
+ * @return array|bool
+ * **/
+function usuarioTokenRecuperarValido($db, $token, $email){
+    $token = mysqli_real_escape_string($db, $token);
+    $email = mysqli_real_escape_string($db, $email);
+    $query = "SELECT * FROM usuarios u 
+                INNER JOIN password_recuperar pr 
+                ON u.id_usuario = pr.id_usuario 
+                WHERE pr.token = '" . $token . "' 
+                AND u.email = '" . $email . "' 
+                AND pr.fecha_expiracion >= NOW()";
+    $resultado = mysqli_query($db, $query);
+    $fila = mysqli_fetch_assoc($resultado);
+
+    if($fila === false){
+        return false;
+    }
+
+    return $fila;
+}
+/*
+ * Actualizamos la contraseña del usuario
+ *
+ * @param mysqli $db
+ * @param int|string $id
+ * @param string $passaword
+ * **/
+function usuarioActualizarPassword($db, $id, $password){
+    $id = mysqli_real_escape_string($db, $id);
+    $password = password_hash($password, PASSWORD_DEFAULT);
+
+    $query = "UPDATE usuarios 
+                SET password = '" . $password . "' 
+                WHERE id_usuario = '" . $id . "'";
+    $exito = mysqli_query($db, $query);
+
+    return $exito;
+}
+/*
+ * Eliminamos el token
+ *
+ * @param mysqli $db
+ * @param srting $token
+ * **/
+function usuarioTokenEliminar($db, $token){
+    $token = mysqli_real_escape_string($db, $token);
+
+    $query = "DELETE FROM password_recuperar 
+                WHERE token = '" . $token . "'";
+    $exito = mysqli_query($db, $query);
+
+    return $exito;
+}
