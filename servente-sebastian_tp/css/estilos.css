@@ -29,7 +29,10 @@
 .nav-index {
     background: #343a40;
 }
-
+#loginIndex {
+    max-width: 600px;
+    margin: auto;
+}
 /*------------------- formRegistro --------------------------------*/
 .formRegistro {
     background: #161514bf;
