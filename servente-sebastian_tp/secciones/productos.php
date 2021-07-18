@@ -8,13 +8,21 @@ $productos = getProducto($db);
    
     <div class="divs">
         <?php
-        foreach ($productos as $producto): 
+        foreach ($productos as $producto):
+            $tags = !empty($producto['tags']) ? explode(' | ', $producto['tags']) : [];
         ?>
        
         <article>       
                 <div class="bg-light">
                     <a href="index.php?s=leer-producto&id=<?= $producto['id_cerveza'];?>" class="text-dark" >
                         <h3><?= htmlspecialchars($producto['title']);?></h3>
+                        <div class="productos_tags">
+                            <?php
+                            foreach ($tags as $tag): ?>
+                            <span class="productos_item_tags"><?= htmlspecialchars($tag) ;?></span>
+                            <?php
+                            endforeach; ?>
+                        </div>
                         <p><?= htmlspecialchars($producto['intro']);?></p>
                         <p><?= htmlspecialchars($producto['definicion']);?></p>
                     </a>    

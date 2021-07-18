@@ -5,6 +5,12 @@ echo "<pre>";
 print_r($_SESSION);
 echo "</pre>";
 */
+require_once  '../libraries/tags.php';
+$tags = tagsTodos($db);
+
+/*echo "<pre>";
+print_r($tags);
+echo "</pre>";*/
 
 $errores = sessionValueGetFlash('errores', []);
 $oldData = sessionValueGetFlash('old_data', []);
@@ -95,6 +101,9 @@ $oldData = sessionValueGetFlash('old_data', []);
                             value="<?= $oldData['img_alt'] ?? '';?>">
                 </div>
             </div>
+            <fieldset>
+                <legend>Etiqueta / Tags</legend>
+            </fieldset>
             <div class="col-12 text-center">
                 <input type="submit" value="Ingresar" class="btn btn-success col-xl-6">
             </div>

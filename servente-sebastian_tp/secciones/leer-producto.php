@@ -6,7 +6,7 @@ require 'libraries/productos.php';
 //$iProducto = $_GET['id'];
 $producto = productosporid($db, $_GET['id']);
 //$producto = $productos[$iProducto];
-
+$tags = !empty($producto['tags']) ? explode(' | ', $producto['tags']) : [];
 ?>
 <section class="container pt-3 producto-descripcion">
     <h2><?= htmlspecialchars($producto['title']);?></h2>
@@ -16,6 +16,13 @@ $producto = productosporid($db, $_GET['id']);
             <img src="imgs/<?= $producto['img'];?>" class="img-fluid w-100 figure-img" alt="<?= htmlspecialchars($producto['alt_img']);?>">
         </figure>
         <h3><?= htmlspecialchars($producto['intro']);?></h3>
+        <div class="productos_tags">
+            <?php
+            foreach ($tags as $tag): ?>
+                <span class="productos_item_tags"><?= htmlspecialchars($tag);?></span>
+            <?php
+            endforeach; ?>
+        </div>
         <p class="texto-descripcion"><?= htmlspecialchars($producto['text']);?></p>
         <p class="precio-producto">Precio: $<?= htmlspecialchars($producto['precio']);?></p>
         <p class="definicion-producto"><?= htmlspecialchars($producto['definicion']);?></p>

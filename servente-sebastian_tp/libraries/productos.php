@@ -5,7 +5,14 @@
  * @param conectarnos a mysql
  */
 function getProducto($db) {
-    $query = "SELECT * FROM cervezas";
+    $query = "SELECT *,
+                    GROUP_CONCAT(t.nombre SEPARATOR ' | ' ) AS tags
+                FROM la_tienda.cervezas c 
+                LEFT JOIN la_tienda.cervezas_has_tags cht 
+                ON c.id_cerveza = cht.cervezas_id_cerveza
+                LEFT JOIN la_tienda.tags t
+                ON t.id_tags = cht.tags_id_tags
+                GROUP BY c.id_cerveza";
 
     $res = mysqli_query($db, $query);
 
@@ -26,8 +33,15 @@ function getProducto($db) {
 function productosporid ($db, $id) {
     // seguridad inyeccion SQL.
     $id = mysqli_real_escape_string($db, $id);
-    $query = " SELECT * FROM cervezas 
-                WHERE id_cerveza = '" . $id . "'";
+    $query = " SELECT *,
+                        GROUP_CONCAT(t.nombre SEPARATOR ' | ' ) AS tags
+                    FROM la_tienda.cervezas c 
+                    LEFT JOIN la_tienda.cervezas_has_tags cht 
+                    ON c.id_cerveza = cht.cervezas_id_cerveza
+                    LEFT JOIN la_tienda.tags t
+                    ON t.id_tags = cht.tags_id_tags
+                    WHERE c.id_cerveza = '" . $id . "' 
+                    GROUP BY c.id_cerveza";
 
     $res = mysqli_query($db, $query);
     
