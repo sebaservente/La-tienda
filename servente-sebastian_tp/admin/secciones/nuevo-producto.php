@@ -102,7 +102,13 @@ $oldData = sessionValueGetFlash('old_data', []);
                 </div>
             </div>
             <fieldset>
+                <?php
+                    foreach($tags as $tag): ?>
+                        <label for=""><input type="checkbox" name="tags[]" value="<?= $tag['id_tags'] ;?>"><?= $tag['nombre'];?></label>
+                <?php
+                endforeach;?>
                 <legend>Etiqueta / Tags</legend>
+
             </fieldset>
             <div class="col-12 text-center">
                 <input type="submit" value="Ingresar" class="btn btn-success col-xl-6">

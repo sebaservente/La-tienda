@@ -93,8 +93,19 @@ function productoEditar($db, $id, $title, $intro, $text, $definicion, $precio, $
     
     return $exito;       
 }
-
-function productoCrear($db, $title, $intro, $text, $definicion, $precio, $img, $imgAlt, $idUser) {
+/*
+ * @param mysqli $db
+ * @param string $title
+ * @param string $intro
+ * @param string $text
+ * @param string $definicion
+ * @param string $precio
+ * @param string $title
+ * @param string $imgAlt
+ * @param string $img
+ * @param string $tags
+ * **/
+function productoCrear($db, $title, $intro, $text, $definicion, $precio, $img, $imgAlt, $idUser, $tags) {
     // escapamos los valores
     // sin la $img array
     $title = mysqli_real_escape_string($db, $title);
@@ -103,6 +114,7 @@ function productoCrear($db, $title, $intro, $text, $definicion, $precio, $img, $
     $definicion = mysqli_real_escape_string($db, $definicion);
     $precio = mysqli_real_escape_string($db, $precio);
     $imgAlt = mysqli_real_escape_string($db, $imgAlt);
+
     
     // UPDATE 15/06/2020 reemplazamos el upload de imagen por la funcion que hace el resize
     // recibe 4 parametros 
@@ -133,6 +145,7 @@ function productoCrear($db, $title, $intro, $text, $definicion, $precio, $img, $
     // echo mysqli_error($db);
 
     if($exito){
+        
         return true;
     } else {
         return false;

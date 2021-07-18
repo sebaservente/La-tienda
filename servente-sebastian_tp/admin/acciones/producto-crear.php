@@ -11,12 +11,20 @@ $intro = trim($_POST['intro']);
 $text = trim($_POST['text']);
 $definicion = trim($_POST['definicion']);
 $precio = trim($_POST['precio']);
+$tags = $_POST['tags'];
 $imgAlt = trim($_POST['img-alt']);
 $img = $_FILES['img'];
 
-// validar formulario
 
+/*echo "<pre>";
+print_r($_POST);
+echo"</pre>";
+exit;*/
+
+
+// validar formulario
 $errores = [];
+
 // titulo intro texto obligatorio, 3caracteres
 
 if(empty($title)){
@@ -44,7 +52,7 @@ if(!empty($errores)){
 // en esta instancia se hardcodea el id_usuario hasta que tengamos uno
 $idUser = 1;
 // crea el producto.....
-$exito = productoCrear($db, $title, $intro, $text, $definicion, $precio, $img, $imgAlt, $idUser);
+$exito = productoCrear($db, $title, $intro, $text, $definicion, $precio, $img, $imgAlt, $idUser, $tags);
 
 if($exito){
     // Imprimimos un mensaje de éxito.
