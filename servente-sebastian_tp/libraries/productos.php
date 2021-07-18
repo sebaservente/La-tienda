@@ -2,7 +2,8 @@
 /*
  * funciones sobre los productos de nuestro sistema.
  * productos  de la base de datos.
- * @param conectarnos a mysql
+ * @param mysqli $db
+ *
  */
 function getProducto($db) {
     $query = "SELECT *,
@@ -50,10 +51,18 @@ function productosporid ($db, $id) {
 
 
 /*
-*
-*
-*
-*/
+ * @param mysqli $db
+ * @param string $title
+ * @param string $intro
+ * @param string $text
+ * @param string $definicion
+ * @param string $precio
+ * @param string $title
+ * @param string $imgAlt
+ * @param string $img
+ * @param array $tags
+ * @return bool
+ * **/
 function productoEditar($db, $id, $title, $intro, $text, $definicion, $precio, $img, $imgAlt, $idUser){
 
     $id = mysqli_real_escape_string($db, $id);
