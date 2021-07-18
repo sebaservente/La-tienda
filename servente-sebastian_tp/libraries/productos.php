@@ -103,7 +103,8 @@ function productoEditar($db, $id, $title, $intro, $text, $definicion, $precio, $
  * @param string $title
  * @param string $imgAlt
  * @param string $img
- * @param string $tags
+ * @param array $tags
+ * @return bool
  * **/
 function productoCrear($db, $title, $intro, $text, $definicion, $precio, $img, $imgAlt, $idUser, $tags) {
     // escapamos los valores
@@ -145,11 +146,20 @@ function productoCrear($db, $title, $intro, $text, $definicion, $precio, $img, $
     // echo mysqli_error($db);
 
     if($exito){
-        
-        return true;
-    } else {
+        $id_cerveza = mysqli_insert_id($db);
+            $values = [];
+            foreach ($tags as $tag) {
+                $values[] = "(". $id_cerveza . ",'" . mysqli_real_escape_string($db, $tag) . "')";
+            }
+            $query = "INSERT INTO cervezas_has_tags (id_cerveza, id_tags)
+                        VALUES " . implode(', ', $values);
+            $exito = mysqli_query($db, $query);
+
+            if ($exito){
+                return true;
+            }
+        }
         return false;
-    }
 }
 /**
  * Funcion para eliminar productos
