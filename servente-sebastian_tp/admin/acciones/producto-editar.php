@@ -13,6 +13,7 @@ $text = trim($_POST['text']);
 $definicion = trim($_POST['definicion']);
 $precio = trim($_POST['precio']);
 $imgAlt = trim($_POST['img-alt']);
+$tags = $_POST['tags'];
 $img = $_FILES['img'];
 
 // validar formulario
@@ -46,7 +47,7 @@ if(!empty($errores)){
 // en esta instancia se hardcodea el id_usuario hasta que tengamos uno
 $idUser = 1;
 // crea el producto.....
-$exito = productoEditar($db, $id, $title, $intro, $text, $definicion, $precio, $img, $imgAlt, $idUser);
+$exito = productoEditar($db, $id, $title, $intro, $text, $definicion, $precio, $img, $imgAlt, $idUser, $tags);
 
 if($exito){
    

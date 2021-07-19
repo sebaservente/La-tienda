@@ -14,6 +14,8 @@ $oldData = sessionValueGetFlash('old_data', []);
 if(empty($oldData)) {
     $producto = productosporid($db, $_GET['id']);
 
+    echo $producto['tags'];
+
     $oldData = [
         'title' => $producto['title'],
         'intro' => $producto['intro'],
@@ -123,7 +125,11 @@ echo "</pre>";
             <fieldset>
                 <?php
                 foreach($tags as $tag): ?>
-                    <label for=""><input type="checkbox" name="tags[]" value="<?= $tag['id_tags'] ;?>"><?= $tag['nombre'];?></label>
+                    <label for=""><input type="checkbox" name="tags[]" value="<?= $tag['id_tags'] ;?>"<?php
+                        if (isset($oldData['tags']) && in_array($tag['id_tags'], $oldData['tags'])) {
+                            echo "checked";
+                        }
+                        ?>><?= $tag['nombre'];?></label>
                 <?php
                 endforeach;?>
                 <legend>Etiqueta / Tags</legend>
