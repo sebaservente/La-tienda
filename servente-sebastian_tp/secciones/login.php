@@ -10,7 +10,7 @@ $oldData = sessionValueGetFlash('old_data', []);
 <section id="loginIndex" class="sectionRegistro">
     <h2>Iniciar Sesión</h2>
     <p class="primerParrafo">Ingresa tus credenciales</p>
-    <form action="acciones/login.php" method="post" class="p-3 m-auto formRegistro">
+    <form action="acciones/login.php" method="post" class="formRegistro">
 
         <div class="form-group">
             <label for="email">Email</label>
