@@ -18,8 +18,10 @@ $tags = !empty($producto['tags']) ? explode(' | ', $producto['tags']) : [];
         <h3><?= htmlspecialchars($producto['intro']);?></h3>
         <div class="productos_tags">
             <?php
-            foreach ($tags as $tag): ?>
-                <span class="productos_item_tags"><?= htmlspecialchars($tag);?></span>
+            foreach ($tags as $tag):
+                $dataTags = explode(' => ', $tag);
+                ?>
+                <span class="productos_item_tags"><?= htmlspecialchars($dataTags[1]) ;?></span>
             <?php
             endforeach; ?>
         </div>

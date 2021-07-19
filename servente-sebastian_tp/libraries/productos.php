@@ -7,7 +7,7 @@
  */
 function getProducto($db) {
     $query = "SELECT *,
-                    GROUP_CONCAT(t.nombre SEPARATOR ' | ' ) AS tags
+                    GROUP_CONCAT(t.id_tags, ' => ',t.nombre SEPARATOR ' | ' ) AS tags
                 FROM la_tienda.cervezas c 
                 LEFT JOIN la_tienda.cervezas_has_tags cht 
                 ON c.id_cerveza = cht.cervezas_id_cerveza
@@ -35,7 +35,7 @@ function productosporid ($db, $id) {
     // seguridad inyeccion SQL.
     $id = mysqli_real_escape_string($db, $id);
     $query = " SELECT *,
-                        GROUP_CONCAT(t.nombre SEPARATOR ' | ' ) AS tags
+                        GROUP_CONCAT(t.id_tags, ' => ',t.nombre SEPARATOR ' | ' ) AS tags
                     FROM la_tienda.cervezas c 
                     LEFT JOIN la_tienda.cervezas_has_tags cht 
                     ON c.id_cerveza = cht.cervezas_id_cerveza
@@ -63,7 +63,7 @@ function productosporid ($db, $id) {
  * @param array $tags
  * @return bool
  * **/
-function productoEditar($db, $id, $title, $intro, $text, $definicion, $precio, $img, $imgAlt, $idUser){
+function productoEditar($db, $id, $title, $intro, $text, $definicion, $precio, $img, $imgAlt, $idUser, $tags){
 
     $id = mysqli_real_escape_string($db, $id);
     $title = mysqli_real_escape_string($db, $title);
@@ -99,8 +99,31 @@ function productoEditar($db, $id, $title, $intro, $text, $definicion, $precio, $
             WHERE id_cerveza  = '" . $id . "'";      
 
     $exito = mysqli_query($db, $query);
-    
-    return $exito;       
+    if ($exito){
+        $query = "DELETE FROM cervezas_has_tags
+                    WHERE cervezas_id_cerveza = '" . $id . "'";
+        $exito = mysqli_query($db, $query);
+        if (!$exito) {
+            return false;
+        }
+
+        if(empty($tags)){
+            return true;
+        }
+
+        $values = [];
+        foreach ($tags as $tag) {
+            $values[] = "(". $id . ",'" . mysqli_real_escape_string($db, $tag) . "')";
+        }
+        $query = "INSERT INTO cervezas_has_tags (cervezas_id_cerveza, tags_id_tags)
+                    VALUES " . implode(', ', $values);
+        $exito = mysqli_query($db, $query);
+
+        if ($exito){
+            return true;
+        }
+    }
+    return false;
 }
 /*
  * @param mysqli $db
@@ -155,20 +178,24 @@ function productoCrear($db, $title, $intro, $text, $definicion, $precio, $img, $
     // echo mysqli_error($db);
 
     if($exito){
-        $id_cerveza = mysqli_insert_id($db);
-            $values = [];
-            foreach ($tags as $tag) {
-                $values[] = "(". $id_cerveza . ",'" . mysqli_real_escape_string($db, $tag) . "')";
-            }
-            $query = "INSERT INTO cervezas_has_tags (id_cerveza, id_tags)
-                        VALUES " . implode(', ', $values);
-            $exito = mysqli_query($db, $query);
-
-            if ($exito){
-                return true;
-            }
+        if(empty($tags)){
+            return true;
         }
-        return false;
+        $id_producto = mysqli_insert_id($db);
+
+        $values = [];
+        foreach ($tags as $tag) {
+            $values[] = "(". $id_producto . ",'" . mysqli_real_escape_string($db, $tag) . "')";
+        }
+        $query = "INSERT INTO cervezas_has_tags (cervezas_id_cerveza, tags_id_tags)
+                    VALUES " . implode(', ', $values);
+        $exito = mysqli_query($db, $query);
+
+        if ($exito){
+            return true;
+        }
+    }
+    return false;
 }
 /**
  * Funcion para eliminar productos

@@ -8,6 +8,11 @@
 * base  // a la que me conecto
 */
 // creamos conexion
+
+
+/*
+ * @param mysqli $db
+ * **/
 ini_set('display_errors', 'Off');
 
 

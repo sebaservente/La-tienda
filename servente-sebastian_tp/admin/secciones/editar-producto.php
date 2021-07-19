@@ -1,13 +1,20 @@
 <?php
 
 require '../libraries/productos.php';
+require '../libraries/tags.php';
 
+// traemos los tags
+$tags = tagsTodos($db);
+
+// traemos la array de errores
 $errores = sessionValueGetFlash('errores', []);
 $oldData = sessionValueGetFlash('old_data', []);
 
 // buscamos la noticia x id 
 if(empty($oldData)) {
     $producto = productosporid($db, $_GET['id']);
+
+    echo $producto['tags'];
 
     $oldData = [
         'title' => $producto['title'],
@@ -115,6 +122,19 @@ echo "</pre>";
                             value="<?= $oldData['img_alt'] ?? '';?>">
                 </div>
             </div>
+            <fieldset>
+                <?php
+                foreach($tags as $tag): ?>
+                    <label for=""><input type="checkbox" name="tags[]" value="<?= $tag['id_tags'] ;?>"<?php
+                        if (isset($oldData['tags']) && in_array($tag['id_tags'], $oldData['tags'])) {
+                            echo "checked";
+                        }
+                        ?>><?= $tag['nombre'];?></label>
+                <?php
+                endforeach;?>
+                <legend>Etiqueta / Tags</legend>
+
+            </fieldset>
             <div class="col-12 text-center">
                 <!--<input type="reset" value="limpiar" class="btn btn-warning">-->
                 <input type="submit" value="enviar" class="btn btn-success col-xl-6">
