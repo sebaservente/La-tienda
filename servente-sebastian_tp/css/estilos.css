@@ -69,6 +69,7 @@
     margin: auto;
     border-radius: 10px;
     box-shadow: 0px 0px 9px -1px orange;
+    padding-bottom: 3rem;
 }
 
 .formRegistro label {
