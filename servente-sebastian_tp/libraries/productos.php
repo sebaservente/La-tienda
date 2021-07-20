@@ -11,7 +11,8 @@ function getProducto($db, $busqueda = []) {
     if(count($busqueda) > 0){
         if (!empty($busqueda['b'])){
             $termino = mysqli_real_escape_string($db, $busqueda['b']);
-            $queryWhere = "WHERE c.title LIKE '%" . $termino . "%'";
+            $queryWhere = "WHERE c.title LIKE '%" . $termino . "%'
+                            OR c.intro LIKE '%" . $termino . "%'";
         }
     }
 
