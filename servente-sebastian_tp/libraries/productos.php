@@ -3,10 +3,12 @@
  * funciones sobre los productos de nuestro sistema.
  * productos  de la base de datos.
  * @param mysqli $db
+ * @param null|int $cantidadResultados
+ * @param $resultadoInicial
  * @param array $busqueda opcional
  * @return array
  */
-function getProducto($db, $busqueda = []) {
+function getProducto($db, $busqueda = [], $cantidadResultados = null, $resultadoInicial = 0) {
     $queryWhere = "";
     if(count($busqueda) > 0){
         if (!empty($busqueda['b'])){
@@ -14,6 +16,10 @@ function getProducto($db, $busqueda = []) {
             $queryWhere = "WHERE c.title LIKE '%" . $termino . "%'
                             OR c.intro LIKE '%" . $termino . "%'";
         }
+    }
+    $queryLimit = "";
+    if ($cantidadResultados !== null ){
+        $queryLimit = "LIMIT " . $resultadoInicial . ", " . $cantidadResultados;
     }
 
     $query = "SELECT *,
@@ -24,7 +30,8 @@ function getProducto($db, $busqueda = []) {
                 LEFT JOIN la_tienda.tags t
                 ON t.id_tags = cht.tags_id_tags
                 " . $queryWhere ."
-                GROUP BY c.id_cerveza";
+                GROUP BY c.id_cerveza 
+                " . $queryLimit;
 
     $res = mysqli_query($db, $query);
 

@@ -61,6 +61,10 @@
     color: #fefefe;
 
 }
+.producto h3 {
+    display: flex;
+    justify-content: center;
+}
 /*------------------- formRegistro --------------------------------*/
 .formRegistro {
     background: #161514bf;

@@ -1,11 +1,19 @@
 <?php
 require 'libraries/productos.php';
 
+// parametros de busqueda
 $b = $_GET['b'] ?? null;
 
+// datos de la paginacion
+$pagCantidad = 4;
+$pagina = $_GET['p'] ?? 1;
+$pagRegistroInicial = ($pagCantidad * $pagina) - $pagCantidad;
+
+// parametros de busqueda
 $productos = getProducto($db, [
         'b' => $b
-]);
+], $pagCantidad, $pagRegistroInicial);
+
 
 ?>
 <section id="productos" class="container-fluid producto">
