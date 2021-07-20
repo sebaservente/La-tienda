@@ -14,6 +14,15 @@ $productos = getProducto($db, [
         'b' => $b
 ], $pagCantidad, $pagRegistroInicial);
 
+// pedimos la cantidad total de registros
+$pagCantidadTotalRegistro = getProductosCantidadDeRegistro($db, [
+    'b' => $b
+]);
+
+// calculamos el total de las piginas
+// con ceil() redondea para arriba
+$pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
+
 
 ?>
 <section id="productos" class="container-fluid producto">
@@ -30,6 +39,7 @@ $productos = getProducto($db, [
             <button class="btn btn-success botonRegistro">Buscar</button>
         </form>
     </div>
+    <p>Mostrando <?= $pagCantidad;?> resulatdos de un total de <?= $pagCantidadTotalRegistro;?> </p>
     <div class="divs">
         <?php
         foreach ($productos as $producto):
@@ -65,4 +75,21 @@ $productos = getProducto($db, [
         ?>
     </div> 
     <h4 class="col-12 ">PROHIBIDA LA VENTA DE BEBIDAS ALCOHOLICAS A MENORES DE 18 AÑOS</h4>
+    <?php
+        if($pagTotal > 1):
+    ?>
+        <div class="paginador">
+            <p>Paguinas: </p>
+            <ul class="paginador-lista">
+                <?php
+                for($i = 1; $i <= $pagTotal; $i++): ?>
+                    <li><?= $i;?></li>
+                <?php
+                endfor;?>
+
+            </ul>
+        </div>
+    <?php
+    endif; ?>
+
 </section>

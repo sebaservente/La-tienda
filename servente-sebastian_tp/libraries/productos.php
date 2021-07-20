@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * funciones sobre los productos de nuestro sistema.
  * productos  de la base de datos.
  * @param mysqli $db
@@ -46,6 +46,35 @@ function getProducto($db, $busqueda = [], $cantidadResultados = null, $resultado
     //return json_decode($contenido, true);
 }
 
+/**
+ * retorna la cantidad de resutados
+ * @param mysqli $db
+ * @param array $busqueda
+ * @return int
+ */
+function getProductosCantidadDeRegistro($db, $busqueda){
+    $queryWhere = "";
+    if(count($busqueda) > 0){
+        if (!empty($busqueda['b'])){
+            $termino = mysqli_real_escape_string($db, $busqueda['b']);
+            $queryWhere = "WHERE c.title LIKE '%" . $termino . "%'
+                            OR c.intro LIKE '%" . $termino . "%'";
+        }
+    }
+
+    // armamos la consulta final
+    $query = "SELECT
+                COUNT(*) AS 'cantidad'
+                FROM la_tienda.cervezas c 
+                " . $queryWhere;
+
+    $res = mysqli_query($db, $query);
+
+    // nos devuelve un solo resultado, no hace falta hacer un bucle
+    $fila = mysqli_fetch_assoc($res);
+    return $fila['cantidad'];
+
+}
 // retornamos la noticia con el $id
 // retorna array con datos de los productos
 
@@ -68,7 +97,7 @@ function productosporid ($db, $id) {
 }
 
 
-/*
+/**
  * @param mysqli $db
  * @param string $title
  * @param string $intro
@@ -143,7 +172,7 @@ function productoEditar($db, $id, $title, $intro, $text, $definicion, $precio, $
     }
     return false;
 }
-/*
+/**
  * @param mysqli $db
  * @param string $title
  * @param string $intro
