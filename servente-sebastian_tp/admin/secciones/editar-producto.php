@@ -42,12 +42,12 @@ echo "</pre>";
 */
 
 ?>
-<section id="editar-producto" class="container-fluid producto-nuevo">
+<section id="editar-producto" class="container sectionRegistro">
    
         <h2 class="col-12">Editar productos</h2>
         
         <p>Completa el formulario</p>
-        <form action="acciones/producto-editar.php?id=<?= $_GET['id'];?>" method="post" enctype="multipart/form-data">		
+        <form action="acciones/producto-editar.php?id=<?= $_GET['id'];?>" method="post" enctype="multipart/form-data" class="formRegistro">
             <input type="hidden" name="imgActual" Value="<?= $oldData['imgActual'];?>">					   
             <div class="form-group col-12">
                 <div class="col-md-12  ">
