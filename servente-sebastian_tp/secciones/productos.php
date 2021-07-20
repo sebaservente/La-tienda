@@ -1,11 +1,27 @@
 <?php
 require 'libraries/productos.php';
-$productos = getProducto($db);
+
+$b = $_GET['b'] ?? null;
+
+$productos = getProducto($db, [
+        'b' => $b
+]);
+
 ?>
 <section id="productos" class="container-fluid producto">
    
-        <h2 class="col-12 text-center">Elige Tu Estilo</h2>
-   
+    <h2 class="col-12 text-center">Elige Tu Estilo</h2>
+    <div>
+        <h3>Buscar Cervezas</h3>
+        <form action="index.php" method="get" class="formRegistro">
+            <input type="hidden" name="s" value="productos">
+            <div class="form-file">
+                <label for="b">Buscar</label>
+                <input type="search" id="b" name="b" class="form-control" value="<?= $b;?>">
+            </div>
+            <button class="btn btn-success botonRegistro">Buscar</button>
+        </form>
+    </div>
     <div class="divs">
         <?php
         foreach ($productos as $producto):

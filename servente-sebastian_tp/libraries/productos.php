@@ -3,9 +3,18 @@
  * funciones sobre los productos de nuestro sistema.
  * productos  de la base de datos.
  * @param mysqli $db
- *
+ * @param array $busqueda opcional
+ * @return array
  */
-function getProducto($db) {
+function getProducto($db, $busqueda = []) {
+    $queryWhere = "";
+    if(count($busqueda) > 0){
+        if (!empty($busqueda['b'])){
+            $termino = mysqli_real_escape_string($db, $busqueda['b']);
+            $queryWhere = "WHERE c.title LIKE '%" . $termino . "%'";
+        }
+    }
+
     $query = "SELECT *,
                     GROUP_CONCAT(t.id_tags, ' => ',t.nombre SEPARATOR ' | ' ) AS tags
                 FROM la_tienda.cervezas c 
@@ -13,6 +22,7 @@ function getProducto($db) {
                 ON c.id_cerveza = cht.cervezas_id_cerveza
                 LEFT JOIN la_tienda.tags t
                 ON t.id_tags = cht.tags_id_tags
+                " . $queryWhere ."
                 GROUP BY c.id_cerveza";
 
     $res = mysqli_query($db, $query);
