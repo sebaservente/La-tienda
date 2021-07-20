@@ -13,8 +13,15 @@ $oldData = sessionValueGetFlash('old_data', []);
 // buscamos la noticia x id 
 if(empty($oldData)) {
     $producto = productosporid($db, $_GET['id']);
+    $productosTags = explode(' | ', $producto['tags']);
 
-    echo $producto['tags'];
+    $tagsId = [];
+
+    // foreach para generar id de los tags
+    foreach ($productosTags as $tag) {
+        $dataTag = explode(' => ',  $tag);
+        $tagsId[] = $dataTag[0];
+    }
 
     $oldData = [
         'title' => $producto['title'],
@@ -24,7 +31,7 @@ if(empty($oldData)) {
         'precio' => $producto['precio'],
         'imgActual' => $producto['img'],
         'img_alt' => $producto['alt_img'],
-        
+        'tags' => $tagsId
     ];
 }    
 //echo mysqli_error($db);

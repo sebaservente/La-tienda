@@ -15,7 +15,7 @@ echo "</pre>";*/
 $errores = sessionValueGetFlash('errores', []);
 $oldData = sessionValueGetFlash('old_data', []);
 ?>
-<section  class="container-fluid producto-nuevo">
+<section  class="container sectionRegistro">
    
         <h2 class="col-12">Nuevo Producto </h2>
         <!--<picture class="figure w-100">
@@ -25,7 +25,7 @@ $oldData = sessionValueGetFlash('old_data', []);
            
        
         <p>Completa el formulario</p>
-        <form action="acciones/producto-crear.php" method="post" enctype="multipart/form-data">							   
+        <form action="acciones/producto-crear.php" method="post" enctype="multipart/form-data" class="formRegistro">
             <div class="form-group col-12">
                 <div class="col-12  ">
                     <label for="title" class="col-md-lg-2 col-form-label">Titulo</label>
