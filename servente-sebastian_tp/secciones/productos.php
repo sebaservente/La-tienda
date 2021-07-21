@@ -81,11 +81,19 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
     <div class="paginador">
         <p>Paguinas</p>
         <ul class="paginador-lista">
+            <?php if($pagina > 1): ?>
+                <li><a href="index.php?s=productos&p=1&b=<?= $b;?>">Primera</a></li>
+                <li><a href="index.php?s=productos&p=<?=($pagina - 1);?>&b=<?= $b;?>"> <<< </a></li>
+            <?php
+            else: ?>
+               <!-- <li>Inicio</li>-->
+                <li> <<< </li>
+            <?php
+            endif; ?>
             <?php
             for($i = 1; $i <= $pagTotal; $i++):
             ?>
-                <li><a href="index.php?s=productos&p=1&b=<?= $b;?>">>Primera</a></li>
-                <li><a href="index.php?s=productos&p=<?=($pagina - 1);?>&b=<?= $b;?>">>Anterior</a></li>
+
             <?php
                 if($i != $pagina):
             ?>
@@ -96,12 +104,16 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
                 <li class="bg-warning"><b><?= $i;?></b></li>
             <?php
                 endif;
-            ?>
-                <li><a href="index.php?s=productos&p=<?=($pagina + 1);?>&b=<?= $b;?>">>Siguiente</a></li>
-                <li><a href="index.php?s=productos&p=<?= $pagTotal;?>&b=<?= $b;?>">>Ultima</a></li>
-            <?php
             endfor;?>
-
+            <?php if($pagina < $pagTotal): ?>
+                <li><a href="index.php?s=productos&p=<?=($pagina + 1);?>&b=<?= $b;?>"> >>> </a></li>
+                <li><a href="index.php?s=productos&p=<?= $pagTotal;?>&b=<?= $b;?>">Ultima</a></li>
+            <?php
+            else: ?>
+                <!-- <li>Final</li>-->
+                <li> >>> </li>
+            <?php
+            endif; ?>
         </ul>
     </div>
     <?php
