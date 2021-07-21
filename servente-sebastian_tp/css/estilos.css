@@ -71,6 +71,19 @@
     text-align: center;
     padding-top: 0.5rem;
 }
+.producto .paginador .paginador-lista {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.producto .paginador .paginador-lista li {
+    list-style: none;
+    padding: .5rem;
+}
+.producto .paginador .paginador-lista li a {
+    color: #121212;
+    text-decoration: none;
+}
 /*------------------- formRegistro --------------------------------*/
 
 .formRegistroBuscar {
