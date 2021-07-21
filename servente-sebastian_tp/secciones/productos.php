@@ -82,8 +82,23 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
         <p>Paguinas</p>
         <ul class="paginador-lista">
             <?php
-            for($i = 1; $i <= $pagTotal; $i++): ?>
-                <li><a href="index.php?s=productos&p=<?= $i;?>"><?= $i;?></a></li>
+            for($i = 1; $i <= $pagTotal; $i++):
+            ?>
+                <li><a href="index.php?s=productos&p=1&b=<?= $b;?>">>Primera</a></li>
+                <li><a href="index.php?s=productos&p=<?=($pagina - 1);?>&b=<?= $b;?>">>Anterior</a></li>
+            <?php
+                if($i != $pagina):
+            ?>
+                <li><a href="index.php?s=productos&p=<?= $i;?>&b=<?= $b;?>"><?= $i;?></a></li>
+            <?php
+                else:
+            ?>
+                <li class="bg-warning"><b><?= $i;?></b></li>
+            <?php
+                endif;
+            ?>
+                <li><a href="index.php?s=productos&p=<?=($pagina + 1);?>&b=<?= $b;?>">>Siguiente</a></li>
+                <li><a href="index.php?s=productos&p=<?= $pagTotal;?>&b=<?= $b;?>">>Ultima</a></li>
             <?php
             endfor;?>
 

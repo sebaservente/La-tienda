@@ -90,6 +90,9 @@
     color: #008000FF;
     text-decoration: none;
 }
+.producto .paginador .paginador-lista .bg-warning {
+    border-radius: 20%;
+}
 /*------------------- formRegistro --------------------------------*/
 
 .formRegistroBuscar {
