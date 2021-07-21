@@ -78,17 +78,17 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
     <?php
         if($pagTotal > 1):
     ?>
-        <div class="paginador">
-            <p class="text-center">Paguinas</p>
-            <ul class="paginador-lista">
-                <?php
-                for($i = 1; $i <= $pagTotal; $i++): ?>
-                    <li><a href="index.php?s=productos&p=<?= $i;?>"><?= $i;?></a></li>
-                <?php
-                endfor;?>
+    <div class="paginador">
+        <p>Paguinas</p>
+        <ul class="paginador-lista">
+            <?php
+            for($i = 1; $i <= $pagTotal; $i++): ?>
+                <li><a href="index.php?s=productos&p=<?= $i;?>"><?= $i;?></a></li>
+            <?php
+            endfor;?>
 
-            </ul>
-        </div>
+        </ul>
+    </div>
     <?php
     endif; ?>
 
