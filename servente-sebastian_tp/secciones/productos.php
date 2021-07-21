@@ -30,13 +30,13 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
     <h2 class="col-12 text-center">Elige Tu Estilo</h2>
     <div>
         <h3>Busca la cerveza que más te identifique</h3>
-        <form action="index.php" method="get" class="formRegistro">
+        <form action="index.php" method="get" class="formRegistroBuscar">
             <input type="hidden" name="s" value="productos">
             <div class="form-file">
                 <label for="b">Buscar</label>
                 <input type="search" id="b" name="b" class="form-control" value="<?= $b;?>">
             </div>
-            <button class="btn btn-success botonRegistro"><i class="bi bi-search"> Buscar</i></button>
+            <button class="btn btn-success botonRegistroBuscar"><i class="bi bi-search"> Buscar</i></button>
         </form>
     </div>
     <p class="parrafoResultados">Mostrando <?= $pagCantidad;?> resulatdos de un total de <?= $pagCantidadTotalRegistro;?> </p>
