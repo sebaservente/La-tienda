@@ -35,3 +35,4 @@ $oldData = sessionValueGetFlash('old_data', []);
     </div>
     <!--<button class="btn p-3">Ingresar</button>-->
 </form>
+<a href="../index.php?s=home">Home</a>

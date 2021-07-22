@@ -63,9 +63,9 @@ $successInfo = sessionValueGetFlash('successInfo');
                         </li>
                         <?php
                         if(!authEstaAutenticado()):?>
-                           <!-- <li class="nav-item">
-                                <a class="nav-link text-warning" href="admin/index.php?s=login">Administrador</a>
-                            </li>-->
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" href="admin/index.php?s=login">Admin</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link text-warning" href="index.php?s=login">Iniciar Sesión</a>
                             </li>
@@ -74,6 +74,15 @@ $successInfo = sessionValueGetFlash('successInfo');
                             </li>
                         <?php
                         else: ?>
+                            <?php
+                            if(authEstaAutenticado() && authEsAdmin()):
+                                ?>
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" href="admin/index.php?s=productos">Admin</a>
+                            </li>
+                            <?php
+                            endif;
+                            ?>
                             <li class="nav-item">
                                 <a class="nav-link text-warning" href="index.php?s=perfil">Mi Perfil</a>
                             </li>

@@ -5,6 +5,14 @@ require '../../data/bootstrap.php';
 require '../../libraries/productos.php';
 require '../../libraries/image.php';
 
+// tiene que estar autenticado para crear un producto
+if(!authEstaAutenticado() || !authEsAdmin()) {
+/*    $_SESSION['seccion_preten'] = $seccion;*/
+    $_SESSION['successInfo'] = "Necesitas estar autenticado para realizar esta accion";
+    header('Location: ../index.php?s=login');
+    exit;
+}
+
 // datos del formulario.
 $title = trim($_POST['title']);
 $intro = trim($_POST['intro']);
