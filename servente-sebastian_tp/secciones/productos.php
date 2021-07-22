@@ -6,7 +6,11 @@ $b = $_GET['b'] ?? null;
 
 // datos de la paginacion
 $pagCantidad = 4;
-$pagina = $_GET['p'] ?? 1;
+
+// numero de pagina con el casteo
+$pagina = (int) ($_GET['p'] ?? 1);
+
+// calculamos el inicio
 $pagRegistroInicial = ($pagCantidad * $pagina) - $pagCantidad;
 
 // parametros de busqueda
@@ -93,7 +97,6 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
             <?php
             for($i = 1; $i <= $pagTotal; $i++):
             ?>
-
             <?php
                 if($i != $pagina):
             ?>
