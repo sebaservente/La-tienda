@@ -12,5 +12,5 @@ echo "</pre>";
     <p>Nombre: <?= authObtenerUsuario()['nombre'] ?></p>
     <p>Apellido: <?= authObtenerUsuario()['apellido'] ?></p>
     <p>ID:<?= authObtenerUsuario()['id_usuario'] ?></p>
-    <a href="index.php?s=editar-usuario&id=<?=$usuario['id'];?>">Editar usuario</a>
+    <a href="index.php?s=editar-usuario&id=<?= authObtenerUsuario()['id_usuario'];?>">Editar usuario</a>
 </section>
