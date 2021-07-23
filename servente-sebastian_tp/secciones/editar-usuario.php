@@ -39,7 +39,7 @@ echo "</pre>";
     <h2 class="col-12">Editar Usuario</h2>
 
     <p>Completa el formulario</p>
-    <form action="acciones/editar-usuario.php?id=<?= $_GET['id_usuario'];?>" method="post" enctype="multipart/form-data" class="formRegistro">
+    <form action="acciones/editar-usuario.php?id=<?= $_GET['id'];?>" method="post" enctype="multipart/form-data" class="formRegistro">
         <!--<input type="hidden" name="imgActual" Value="<?/*= $oldData['imgActual'];*/?>">-->
         <div class="form-group col-12">
             <div class="col-md-12  ">
