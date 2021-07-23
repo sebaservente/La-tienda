@@ -1,6 +1,6 @@
 <?php
 
-/*require 'libraries/usuarios.php';*/
+require 'data/bootstrap.php';
 
 
 
@@ -8,10 +8,14 @@
 $errores = sessionValueGetFlash('errores', []);
 $oldData = sessionValueGetFlash('old_data', []);
 
+
+
+
+
 // buscamos la noticia x id
 if(empty($oldData)) {
-    $usuarios = usuarioBuscaPorEmail($db, $_GET['id_usuario']);
 
+    $usuarios = usuarioTraerPorId($db, $_GET['id']);
     $oldData = [
         'email' => $usuarios['email'],
         'password' => $usuarios['password'],
@@ -19,6 +23,9 @@ if(empty($oldData)) {
         'apellido' => $usuarios['apellido'],
     ];
 }
+echo "<pre>";
+print_r($usuarios);
+echo "</pre>";
 //echo mysqli_error($db);
 /*
 echo "<pre>";

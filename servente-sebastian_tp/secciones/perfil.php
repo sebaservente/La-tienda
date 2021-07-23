@@ -1,5 +1,5 @@
 <?php
-/*require_once '../libraries/usuarios.php';*/
+require 'data/bootstrap.php';
 
 $usuario = usuarioTodos($db);
 echo "<pre>";

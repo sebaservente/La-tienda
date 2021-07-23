@@ -36,6 +36,19 @@ function usuarioTodos($db) {
         //return json_decode($contenido, true);
 
 }
+/**
+ * @param mysqli $db
+ * @param mixed $id
+ * @return array
+ * **/
+function usuarioTraerPorId($db, $id) {
+    $id = mysqli_real_escape_string($db, $id);
+    $query = "SELECT * FROM usuarios 
+                WHERE id_usuario = '". $id ."'";
+    $res = mysqli_query($db, $query);
+
+    return mysqli_fetch_assoc($res);
+}
 
 /**
  * @param mysqli $db
