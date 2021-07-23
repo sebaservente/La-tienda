@@ -22,5 +22,5 @@ if($exito){
     //echo "No se Cargo el producto !!  Algo salio mal !!";
     $_SESSION['old_data'] = $_POST;
     $_SESSION['success_errors'] = "Algo malio sal en el servidor, al Editar el producto, Prueba mas tarde !! si no Comunicate con nosotros";
-    header('Location: index.php?s=editar-usuario&id=' . $id);
+    header('Location: index.php?s=perfil&id=' . $id);
 }

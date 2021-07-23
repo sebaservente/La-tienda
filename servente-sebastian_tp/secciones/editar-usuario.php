@@ -1,25 +1,16 @@
 <?php
 
-require 'libraries/usuarios.php';
+/*require 'libraries/usuarios.php';*/
 
 
 
 // traemos la array de errores
-$errores = sessionValueGetFlash('errores', []);
-$oldData = sessionValueGetFlash('old_data', []);
+/*$errores = sessionValueGetFlash('errores', []);
+$oldData = sessionValueGetFlash('old_data', []);*/
 
 // buscamos la noticia x id
-if(empty($oldData)) {
+/*if(empty($oldData)) {
     $usuarios = productosporid($db, $_GET['id']);
-   /* $productosTags = explode(' | ', $usuarios['tags']);*/
-
-    /*$tagsId = [];*/
-
-    // foreach para generar id de los tags
-    /*foreach ($productosTags as $tag) {
-        $dataTag = explode(' => ',  $tag);
-        $tagsId[] = $dataTag[0];
-    }*/
 
     $oldData = [
         'email' => $usuarios['email'],
@@ -27,7 +18,7 @@ if(empty($oldData)) {
         'nombre' => $usuarios['nombre'],
         'apellido' => $usuarios['apellido'],
     ];
-}
+}*/
 //echo mysqli_error($db);
 /*
 echo "<pre>";
@@ -38,18 +29,18 @@ echo "</pre>";
 ?>
 <section id="editar-producto" class="container sectionRegistro">
 
-    <h2 class="col-12">Editar productos</h2>
+    <h2 class="col-12">Editar Usuario</h2>
 
     <p>Completa el formulario</p>
     <form action="acciones/editar-usuario.php?id=<?= $_GET['id'];?>" method="post" enctype="multipart/form-data" class="formRegistro">
         <!--<input type="hidden" name="imgActual" Value="<?/*= $oldData['imgActual'];*/?>">-->
         <div class="form-group col-12">
             <div class="col-md-12  ">
-                <label for="title" class="col-md-lg-2 col-form-label">Email</label>
+                <label for="email" class="col-md-lg-2 col-form-label">Email</label>
                 <input  type="text"
                         class="form-control"
-                        id="title"
-                        name="title"
+                        id="email"
+                        name="email"
                         value="<?= $oldData['email'] ?? '';?>"
                     <?php if(isset($errores['email'])) echo 'aria-describedby="error-title"';?>>
                 <?php
@@ -60,11 +51,11 @@ echo "</pre>";
             </div>
 
             <div class="col-md-12 column">
-                <label for="intro" class="col-md-lg-2 col-form-label">Password</label>
+                <label for="password" class="col-md-lg-2 col-form-label">Password</label>
                 <input  type="text"
                         class="form-control"
-                        id="intro"
-                        name="intro"
+                        id="password"
+                        name="password"
                         value="<?= $oldData['password'] ?? '';?>"
                     <?php if(isset($errores['password'])) echo 'aria-describedby="error-intro"';?>>
                 <?php
@@ -75,19 +66,19 @@ echo "</pre>";
             </div>
 
             <div class="col-md-12 column">
-                <label for="definicion" class="col-md-lg-2 col-form-label">Nombre</label>
+                <label for="nombre" class="col-md-lg-2 col-form-label">Nombre</label>
                 <input  type="text"
                         class="form-control"
-                        id="definicion"
-                        name="definicion"
+                        id="nombre"
+                        name="nombre"
                         value="<?= $oldData['nombre'] ?? '';?>">
             </div>
             <div class="col-md-12 column">
-                <label for="precio" class="col-md-lg-2 col-form-label">apellido</label>
-                <input  type="number"
+                <label for="apellido" class="col-md-lg-2 col-form-label">apellido</label>
+                <input  type="text"
                         class="form-control"
-                        id="precio"
-                        name="precio"
+                        id="apellido"
+                        name="apellido"
                         value="<?= $oldData['apellido'] ?? '';?>"
                     <?php if(isset($errores['apellido'])) echo 'aria-describedby="error-precio"';?>>
                 <?php
