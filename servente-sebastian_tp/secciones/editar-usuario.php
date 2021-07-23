@@ -5,12 +5,12 @@
 
 
 // traemos la array de errores
-/*$errores = sessionValueGetFlash('errores', []);
-$oldData = sessionValueGetFlash('old_data', []);*/
+$errores = sessionValueGetFlash('errores', []);
+$oldData = sessionValueGetFlash('old_data', []);
 
 // buscamos la noticia x id
-/*if(empty($oldData)) {
-    $usuarios = productosporid($db, $_GET['id']);
+if(empty($oldData)) {
+    $usuarios = usuarioBuscaPorEmail($db, $_GET['id_usuario']);
 
     $oldData = [
         'email' => $usuarios['email'],
@@ -18,7 +18,7 @@ $oldData = sessionValueGetFlash('old_data', []);*/
         'nombre' => $usuarios['nombre'],
         'apellido' => $usuarios['apellido'],
     ];
-}*/
+}
 //echo mysqli_error($db);
 /*
 echo "<pre>";
@@ -32,7 +32,7 @@ echo "</pre>";
     <h2 class="col-12">Editar Usuario</h2>
 
     <p>Completa el formulario</p>
-    <form action="acciones/editar-usuario.php?id=<?= $_GET['id'];?>" method="post" enctype="multipart/form-data" class="formRegistro">
+    <form action="acciones/editar-usuario.php?id=<?= $_GET['id_usuario'];?>" method="post" enctype="multipart/form-data" class="formRegistro">
         <!--<input type="hidden" name="imgActual" Value="<?/*= $oldData['imgActual'];*/?>">-->
         <div class="form-group col-12">
             <div class="col-md-12  ">

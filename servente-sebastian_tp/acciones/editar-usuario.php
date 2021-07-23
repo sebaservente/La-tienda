@@ -6,7 +6,7 @@ require_once '../libraries/usuarios.php';
 require_once '../libraries/auth.php';
 
 
-$id = $_GET['id'];
+$id = $_GET['id_usuario'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 $nombre = $_POST['nombre'];

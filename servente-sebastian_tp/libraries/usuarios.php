@@ -1,6 +1,6 @@
 <?php
-/*
- * @param $db
+/**
+ * @param mysqli $db
  * **/
 function usuarioBuscaPorEmail($db, $email) {
     $email = mysqli_real_escape_string($db, $email);
@@ -17,6 +17,26 @@ function usuarioBuscaPorEmail($db, $email) {
         return null;
     }
 }
+/**
+ * @param mysqli $db
+ * **/
+function usuarioTodos($db) {
+        $query = "SELECT * FROM usuarios";
+
+        $res = mysqli_query($db, $query);
+
+        $salida = [];
+
+        while ($fila = mysqli_fetch_assoc($res)){
+            $salida[] = $fila;
+        }
+        return $salida;
+        //$fileName = "api/productos.json";
+        //$contenido = file_get_contents(PRODUCTOS_JSON_FILEPATH);
+        //return json_decode($contenido, true);
+
+}
+
 /**
  * @param mysqli $db
  * @param array $data
