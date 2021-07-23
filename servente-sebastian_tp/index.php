@@ -63,9 +63,9 @@ $successInfo = sessionValueGetFlash('successInfo');
                         </li>
                         <?php
                         if(!authEstaAutenticado()):?>
-                            <li class="nav-item">
+                           <!-- <li class="nav-item">
                                 <a class="nav-link text-warning" href="admin/index.php?s=login">Admin</a>
-                            </li>
+                            </li>-->
                             <li class="nav-item">
                                 <a class="nav-link text-warning" href="index.php?s=login">Iniciar Sesión</a>
                             </li>
