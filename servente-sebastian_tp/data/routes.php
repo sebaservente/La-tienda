@@ -20,6 +20,9 @@ $secciones = [
             'js/pass.js'
         ],
     ],
+    'editar-usuario' => [
+        'title' => 'La Tienda :: Editar Usuario'
+    ],
     'recuperar-password' => [
         'title' => 'La Tienda :: Recuperar Contraseña'
     ],

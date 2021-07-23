@@ -17,7 +17,7 @@ function usuarioBuscaPorEmail($db, $email) {
         return null;
     }
 }
-/*
+/**
  * @param mysqli $db
  * @param array $data
  *              email: Required. string.
@@ -25,7 +25,7 @@ function usuarioBuscaPorEmail($db, $email) {
  *              nombre: Opcional. string.
  *              apellido: Opcional. string.
  *              id_rol: Opcional. int. Default
- * @return boll | int
+ * @return boll|int
  * **/
 function usuariosCrear($db, $data) {
     $idRol      = isset($data['idRol']) ? mysqli_real_escape_string($db, $data['idRol']) : 2;
@@ -43,7 +43,39 @@ function usuariosCrear($db, $data) {
     return false;
 
 }
-/*
+/**
+ * @param mysqli $db
+ * @param string $email
+ * @param string $password
+ * @param string $nombre
+ * @param string $apellido
+ * @return bool
+ * **/
+function usuarioEditar($db, $id, $email, $nombre, $apellido, $password) {
+    $id = mysqli_real_escape_string($db, $id);
+    $email = mysqli_real_escape_string($db, $email);
+    $nombre = mysqli_real_escape_string($db, $nombre);
+    $apellido = mysqli_real_escape_string($db, $apellido);
+    $password = mysqli_real_escape_string($db, $password);
+
+    $query = "UPDATE usuarios
+            SET email = '" . $email . "', 
+                nombre = '" . $nombre . "',
+                apellido = '" . $apellido . "',
+                password = '" . $password . "',
+            WHERE id_usuario  = '" . $id . "'";
+
+    $exito = mysqli_query($db, $query);
+    if ($exito){
+        return true;
+    }
+    return false;
+
+}
+
+
+
+/**
  * generamos un token (criptograficamente !!)seguro
  *
  * @param mysqli $db
@@ -66,7 +98,7 @@ function usuarioGenerarTokenRecu($db, $id) {
     }
     return $token;
 }
-/*
+/**
  * Verificamos el token del usuario
  *
  * @param mysqli $db
@@ -92,7 +124,7 @@ function usuarioTokenRecuperarValido($db, $token, $email){
 
     return $fila;
 }
-/*
+/**
  * Actualizamos la contraseña del usuario
  *
  * @param mysqli $db
@@ -110,7 +142,7 @@ function usuarioActualizarPassword($db, $id, $password){
 
     return $exito;
 }
-/*
+/**
  * Eliminamos el token
  *
  * @param mysqli $db
