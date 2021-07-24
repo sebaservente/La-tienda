@@ -93,10 +93,10 @@ function usuarioEditar($db, $id, $email, $password, $nombre, $apellido) {
 
 
     $query = "UPDATE usuarios
-            SET email = '" . $email . "', 
-                password = '" . $password . "',
-                nombre = '" . $nombre . "',
-                apellido = '" . $apellido . "',
+            SET email       = '" . $email . "', 
+                password    = '" . $password . "',
+                nombre      = '" . $nombre . "',
+                apellido    = '" . $apellido . "'
             WHERE id_usuario  = '" . $id . "'";
 
     $exito = mysqli_query($db, $query);
@@ -106,9 +106,6 @@ function usuarioEditar($db, $id, $email, $password, $nombre, $apellido) {
     return false;
 
 }
-
-
-
 /**
  * generamos un token (criptograficamente !!)seguro
  *

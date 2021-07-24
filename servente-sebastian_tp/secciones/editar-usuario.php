@@ -8,10 +8,6 @@ require 'data/bootstrap.php';
 $errores = sessionValueGetFlash('errores', []);
 $oldData = sessionValueGetFlash('old_data', []);
 
-
-
-
-
 // buscamos la noticia x id
 if(empty($oldData)) {
 

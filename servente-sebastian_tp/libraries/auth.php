@@ -2,8 +2,9 @@
 
 require_once  __DIR__ . '/usuarios.php';
 
-/*
+/**
  * @param array $data
+ *
  * **/
 function authSetLogin($userData){
     $_SESSION['usuario_admin'] = $userData;
@@ -46,23 +47,20 @@ function authLogin($db, $email, $password) {
 function authLogout() {
     unset($_SESSION['usuario_admin']);
 }
-
 // confirmamos si esta autenticado
-/*
+/**
  * @return bool
  * **/
 function authEstaAutenticado() {
     return isset($_SESSION['usuario_admin']);
 }
-
 // autenticacion segun id_rol
-/*
+/**
  * @return bool
  * **/
 function authEsAdmin(){
     return $_SESSION['usuario_admin']['id_rol'] == 1;
 }
-
 // usuario autenticado
 function authObtenerUsuario(){
     return $_SESSION['usuario_admin'];

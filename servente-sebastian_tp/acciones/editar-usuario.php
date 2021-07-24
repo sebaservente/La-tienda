@@ -18,9 +18,9 @@ if(empty($email)){
 }
 
 if(empty($nombre)){
-    $errores['nombre'] = "Te olvidaste el Password";
-} else if(strlen($nombre) < 6){
-    $errores['nombre'] = "Minimo 6 caracteres";
+    $errores['apellido'] = "Te olvidaste el Apellido";
+} else if(strlen($apellido) < 6){
+    $errores['apellido'] = "Minimo 6 caracteres";
 }
 
 if(!empty($errores)){
@@ -30,7 +30,7 @@ if(!empty($errores)){
     //importante
     exit;
 }
-$exito = usuarioEditar($db, $id, $email, $password, $nombre,$apellido);
+$exito = usuarioEditar($db, $id, $email, $password, $nombre, $apellido);
 
 if($exito){
 
