@@ -3,6 +3,7 @@ require 'data/bootstrap.php';
 
 $usuario = usuarioTodos($db);
 /*echo "<pre>";
+
 print_r($usuario);
 echo "</pre>";*/
 if(!authEstaAutenticado()) {
@@ -17,14 +18,29 @@ if(!authEstaAutenticado()) {
     <?php
     foreach ($usuario as $usuarios):
     ?>
-    <div>
-        <p>Email: <?=$usuarios['email'];?></p>
-        <p>Nombre: <?= $usuarios['nombre']; ?></p>
-        <p>Apellido: <?=$usuarios['apellido']; ?></p>
-        <p>ID:<?=$usuarios['id_usuario']; ?></p>
-        <a href="index.php?s=editar-usuario&id=<?= authObtenerUsuario()['id_usuario'];?>">Editar usuario</a>
-    </div>
+    <table  class="table table-bordered table-striped">
+
+        <thead>
+        <tr>
+            <th>Email: </th>
+            <th>Nombre:</th>
+            <th>Apellido:</th>
+            <th>ID:</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><?=$usuarios['email'];?></td>
+            <td><?= $usuarios['nombre']; ?></td>
+            <td><?=$usuarios['apellido']; ?></td>
+            <td><?=$usuarios['id_usuario']; ?></td>
+            <td><a href="index.php?s=editar-usuario&id=<?= authObtenerUsuario()['id_usuario'];?>" class="p-2" >Editar usuario</a></td>
+        </tr>
+        </tbody>
+
+    </table>
     <?php
-    endforeach;
-    ?>
+        endforeach;
+        ?>
 </section>

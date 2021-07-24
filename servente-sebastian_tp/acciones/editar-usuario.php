@@ -34,7 +34,7 @@ $exito = usuarioEditar($db, $id, $email, $password, $nombre, $apellido);
 
 if($exito){
 
-    $_SESSION['success'] = "El Usuario <b>" . $nombre . "</b> fue Editado con Exito";
+    $_SESSION['success'] = "El Usuario <b>" . $email . "</b> fue Editado con Exito";
     header('Location: ../index.php?s=perfil');
 } else {
     //echo "No se Cargo el producto !!  Algo salio mal !!";

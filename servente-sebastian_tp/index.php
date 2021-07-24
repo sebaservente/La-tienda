@@ -84,7 +84,7 @@ $successInfo = sessionValueGetFlash('successInfo');
                             endif;
                             ?>
                             <li class="nav-item">
-                                <a class="nav-link text-warning" href="index.php?s=perfil">Mi Perfil</a>
+                                <a class="nav-link text-warning" href="index.php?s=perfil&id=<?= authObtenerUsuario()['id_usuario'];?>"">Mi Perfil</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-warning" href="acciones/logout.php"><?= authObtenerUsuario()['nombre'];?> (Cerrar Sesión)</a>
