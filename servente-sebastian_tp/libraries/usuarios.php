@@ -84,18 +84,19 @@ function usuariosCrear($db, $data) {
  * @param string $apellido
  * @return bool
  * **/
-function usuarioEditar($db, $id, $email, $nombre, $apellido, $password) {
+function usuarioEditar($db, $id, $email, $password, $nombre, $apellido) {
     $id = mysqli_real_escape_string($db, $id);
     $email = mysqli_real_escape_string($db, $email);
+    $password = mysqli_real_escape_string($db, $password);
     $nombre = mysqli_real_escape_string($db, $nombre);
     $apellido = mysqli_real_escape_string($db, $apellido);
-    $password = mysqli_real_escape_string($db, $password);
+
 
     $query = "UPDATE usuarios
             SET email = '" . $email . "', 
+                password = '" . $password . "',
                 nombre = '" . $nombre . "',
                 apellido = '" . $apellido . "',
-                password = '" . $password . "',
             WHERE id_usuario  = '" . $id . "'";
 
     $exito = mysqli_query($db, $query);
