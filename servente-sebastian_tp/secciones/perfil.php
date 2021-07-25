@@ -1,7 +1,9 @@
 <?php
 require 'data/bootstrap.php';
 
-$usuarios = usuarioTodos($db);
+/*$usuarios = usuarioTodos($db);*/
+
+$usuarios = usuarioTraerPorId($db, $_GET['id']);
 /*echo "<pre>";
 
 print_r($usuario);
@@ -27,20 +29,16 @@ echo "</pre>";*/
             <th>Acciones</th>
         </tr>
         </thead>
-        <?php
-        for ($i = 0; $i < 1; $i++) { ?>
         <tbody>
             <tr>
             <td><?=$usuarios['email'];?></td>
             <td><?=$usuarios['nombre']; ?></td>
             <td><?=$usuarios['apellido']; ?></td>
             <td><?=$usuarios['id_usuario']; ?></td>
-            <td><a href="index.php?s=editar-usuario&id=<?= authObtenerUsuario()['id_usuario'];?>" class="p-2" >Editar usuario</a></td>
+            <td><a href="index.php?s=editar-usuario&id=<?=$usuarios['id_usuario'];?>" class="p-2" >Editar usuario</a></td>
             </tr>
         </tbody>
-        <?php
-        }
-        ?>
+
     </table>
 
 </section>

@@ -16,8 +16,13 @@ $apellido = trim($_POST['apellido']);
 if(empty($email)){
     $errores['email'] = "Te estas olvidando el email";
 }
+if(empty($password)){
+    $errores['password'] = "Te olvidaste el Password";
+} else if(strlen($password) < 6){
+    $errores['password'] = "Minimo 6 caracteres";
+}
 
-if(empty($nombre)){
+if(empty($apellido)){
     $errores['apellido'] = "Te olvidaste el Apellido";
 } else if(strlen($apellido) < 6){
     $errores['apellido'] = "Minimo 6 caracteres";
@@ -35,7 +40,7 @@ $exito = usuarioEditar($db, $id, $email, $password, $nombre, $apellido);
 if($exito){
 
     $_SESSION['success'] = "El Usuario <b>" . $email . "</b> fue Editado con Exito";
-    header('Location: ../index.php?s=perfil');
+    header('Location: ../index.php?s=perfil&id=' . $id);
 } else {
     //echo "No se Cargo el producto !!  Algo salio mal !!";
     $_SESSION['old_data'] = $_POST;

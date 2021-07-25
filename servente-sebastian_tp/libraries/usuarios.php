@@ -88,7 +88,8 @@ function usuariosCrear($db, $data) {
 function usuarioEditar($db, $id, $email, $password, $nombre, $apellido) {
     $id = mysqli_real_escape_string($db, $id);
     $email = mysqli_real_escape_string($db, $email);
-    $password = mysqli_real_escape_string($db, $password);
+    $password = password_hash($password, PASSWORD_DEFAULT);
+    /*$password = mysqli_real_escape_string($db, $password);*/
     $nombre = mysqli_real_escape_string($db, $nombre);
     $apellido = mysqli_real_escape_string($db, $apellido);
 

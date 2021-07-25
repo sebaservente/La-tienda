@@ -14,14 +14,14 @@ if(empty($oldData)) {
     $usuarios = usuarioTraerPorId($db, $_GET['id']);
     $oldData = [
         'email' => $usuarios['email'],
-        'password' => $usuarios['password'],
+        'password' => '',
         'nombre' => $usuarios['nombre'],
         'apellido' => $usuarios['apellido'],
     ];
 }
-echo "<pre>";
+/*echo "<pre>";
 print_r($usuarios);
-echo "</pre>";
+echo "</pre>";*/
 //echo mysqli_error($db);
 /*
 echo "<pre>";
@@ -44,6 +44,7 @@ echo "</pre>";
                         class="form-control"
                         id="email"
                         name="email"
+                        placeholder="ejemplo@ejemplo.com.ar"
                         value="<?= $oldData['email'] ?? '';?>"
                     <?php if(isset($errores['email'])) echo 'aria-describedby="error-title"';?>>
                 <?php
@@ -59,6 +60,7 @@ echo "</pre>";
                         class="form-control"
                         id="password"
                         name="password"
+                        placeholder="Minimo 6 caracteres"
                         value="<?= $oldData['password'] ?? '';?>"
                     <?php if(isset($errores['password'])) echo 'aria-describedby="error-intro"';?>>
                 <?php
