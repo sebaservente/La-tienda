@@ -54,10 +54,11 @@ function usuarioTraerPorId($db, $id) {
 /**
  * @param mysqli $db
  * @param array $data
- *              email: Required. string.
+ *               @param email: Required. string.
  *              password: Required. string.
  *              nombre: Opcional. string.
  *              apellido: Opcional. string.
+ *              apodo: Opcional. string.
  *              id_rol: Opcional. int. Default
  * @return boll|int
  * **/
@@ -66,10 +67,11 @@ function usuariosCrear($db, $data) {
     $email      = mysqli_real_escape_string($db, $data['email']);
     $nombre     = mysqli_real_escape_string($db, $data['nombre'] ?? '');
     $apellido   = mysqli_real_escape_string($db, $data['apellido'] ?? '');
+    $apodo   = mysqli_real_escape_string($db, $data['apodo'] ?? '');
     $password   = password_hash($data['password'], PASSWORD_DEFAULT);
 
-    $query = "INSERT INTO usuarios (id_rol, email, password, nombre, apellido)
-                VALUES ('" . $idRol . "','" . $email . "','" . $password . "','" . $nombre . "','" . $apellido . "' )";
+    $query = "INSERT INTO usuarios (id_rol, email, password, nombre, apellido, apodo)
+                VALUES ('" . $idRol . "','" . $email . "','" . $password . "','" . $nombre . "','" . $apellido . "','" . $apodo . "')";
     $exito = mysqli_query($db, $query);
     if ($exito){
         return mysqli_insert_id($db);
@@ -83,22 +85,25 @@ function usuariosCrear($db, $data) {
  * @param string $password
  * @param string $nombre
  * @param string $apellido
+ * @param string $apodo
  * @return bool
  * **/
-function usuarioEditar($db, $id, $email, $password, $nombre, $apellido) {
+function usuarioEditar($db, $id, $email, $password, $nombre, $apellido, $apodo) {
     $id = mysqli_real_escape_string($db, $id);
     $email = mysqli_real_escape_string($db, $email);
     $password = password_hash($password, PASSWORD_DEFAULT);
     /*$password = mysqli_real_escape_string($db, $password);*/
     $nombre = mysqli_real_escape_string($db, $nombre);
     $apellido = mysqli_real_escape_string($db, $apellido);
+    $apodo = mysqli_real_escape_string($db, $apodo);
 
 
     $query = "UPDATE usuarios
             SET email       = '" . $email . "', 
                 password    = '" . $password . "',
                 nombre      = '" . $nombre . "',
-                apellido    = '" . $apellido . "'
+                apellido    = '" . $apellido . "',
+                apodo       = '" . $apodo . "'
             WHERE id_usuario  = '" . $id . "'";
 
     $exito = mysqli_query($db, $query);

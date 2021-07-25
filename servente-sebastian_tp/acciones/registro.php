@@ -8,6 +8,7 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
+$apodo = $_POST['apodo'];
 
 // todo validar
 if(empty($email)){
@@ -36,6 +37,7 @@ $idUsuario = usuariosCrear($db, [
     'password'  => $password,
     'nombre'    => $nombre,
     'apellido'  => $apellido,
+    'apodo'     => $apodo,
 
 ]);
 
@@ -51,9 +53,10 @@ if ($idUsuario !== false){
         'id_usuario' => $idUsuario,
         'id_rol'     => 2,
         'email'      => $email,
-        /*'password'  => $password,*/
+        /*'password' => $password,*/
         'nombre'     => $nombre,
         'apellido'   => $apellido,
+        'apodo'      => $apodo,
     ]);
 
     $_SESSION['success'] = "¡Regitro exitoso, gracias por unirte a nosotros, " . $email . "!";

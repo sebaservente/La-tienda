@@ -11,6 +11,7 @@ $email = trim($_POST['email']);
 $password = trim($_POST['password']);
 $nombre = trim($_POST['nombre']);
 $apellido = trim($_POST['apellido']);
+$apodo = trim($_POST['apodo']);
 
 // todo validar
 if(empty($email)){
@@ -21,13 +22,15 @@ if(empty($password)){
 } else if(strlen($password) < 6){
     $errores['password'] = "Minimo 6 caracteres";
 }
-
-if(empty($apellido)){
-    $errores['apellido'] = "Te olvidaste el Apellido";
-} else if(strlen($apellido) < 6){
-    $errores['apellido'] = "Minimo 6 caracteres";
+if(empty($nombre)){
+    $errores['nombre'] = "Te estas olvidando el nombre";
 }
-
+if(empty($apellido)){
+    $errores['apellido'] = "Te estas olvidando el apellido";
+}
+if(empty($apodo)){
+    $errores['apodo'] = "Te estas olvidando el apodo";
+}
 if(!empty($errores)){
     $_SESSION['errores'] = $errores;
     $_SESSION['old_data'] = $_POST;
@@ -35,7 +38,7 @@ if(!empty($errores)){
     //importante
     exit;
 }
-$exito = usuarioEditar($db, $id, $email, $password, $nombre, $apellido);
+$exito = usuarioEditar($db, $id, $email, $password, $nombre, $apellido, $apodo);
 
 if($exito){
 

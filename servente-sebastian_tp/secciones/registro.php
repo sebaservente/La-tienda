@@ -52,6 +52,10 @@ $oldData = sessionValueGetFlash('old_data', []);
                 <label for="apellido">Apellido</label>
                 <input type="text" id="apellido" name="apellido" class="form-control">
             </div>
+            <div class="form-file">
+                <label for="apodo">Apodo</label>
+                <input type="text" id="apodo" name="apodo" class="form-control">
+            </div>
         </fieldset>
         <button class="btn btn-success botonRegistro">Registrarse</button>
     </form>

@@ -17,6 +17,7 @@ if(empty($oldData)) {
         'password' => '',
         'nombre' => $usuarios['nombre'],
         'apellido' => $usuarios['apellido'],
+        'apodo' => $usuarios['apodo'],
     ];
 }
 /*echo "<pre>";
@@ -46,12 +47,12 @@ echo "</pre>";
                         name="email"
                         placeholder="ejemplo@ejemplo.com.ar"
                         value="<?= $oldData['email'] ?? '';?>"
-                    <?php if(isset($errores['email'])) echo 'aria-describedby="error-title"';?>>
-                <?php
-                if(isset($errores['email'])): ?>
-                    <div id="error-title" class="msj-error mt-2 pl-4 bg-warning"><i class="bi bi-backspace-reverse p-1"></i><?= $errores['email'];?></div>
-                <?php
-                endif; ?>
+                        <?php if(isset($errores['email'])) echo 'aria-describedby="error-title"';?>>
+                        <?php
+                        if(isset($errores['email'])): ?>
+                            <div id="error-title" class="msj-error mt-2 pl-4 bg-warning"><i class="bi bi-backspace-reverse p-1"></i><?= $errores['email'];?></div>
+                        <?php
+                        endif; ?>
             </div>
 
             <div class="col-md-12 column">
@@ -62,12 +63,12 @@ echo "</pre>";
                         name="password"
                         placeholder="Minimo 6 caracteres"
                         value="<?= $oldData['password'] ?? '';?>"
-                    <?php if(isset($errores['password'])) echo 'aria-describedby="error-intro"';?>>
-                <?php
-                if(isset($errores['password'])): ?>
-                    <div id="error-intro" class="msj-error mt-2 pl-4 bg-warning"><i class="bi bi-backspace-reverse p-1"></i><?= $errores['password'];?></div>
-                <?php
-                endif; ?>
+                        <?php if(isset($errores['password'])) echo 'aria-describedby="error-intro"';?>>
+                        <?php
+                        if(isset($errores['password'])): ?>
+                            <div id="error-intro" class="msj-error mt-2 pl-4 bg-warning"><i class="bi bi-backspace-reverse p-1"></i><?= $errores['password'];?></div>
+                        <?php
+                        endif; ?>
             </div>
 
             <div class="col-md-12 column">
@@ -76,7 +77,13 @@ echo "</pre>";
                         class="form-control"
                         id="nombre"
                         name="nombre"
-                        value="<?= $oldData['nombre'] ?? '';?>">
+                        value="<?= $oldData['nombre'] ?? '';?>"
+                        <?php if(isset($errores['nombre'])) echo 'aria-describedby="error-precio"';?>>
+                        <?php
+                        if(isset($errores['nombre'])): ?>
+                            <div id="error-precio" class="msj-error mt-2 pl-4 bg-warning"><i class="bi bi-backspace-reverse p-1"></i><?= $errores['nombre'];?></div>
+                        <?php
+                        endif; ?>
             </div>
             <div class="col-md-12 column">
                 <label for="apellido" class="col-md-lg-2 col-form-label">apellido</label>
@@ -85,14 +92,27 @@ echo "</pre>";
                         id="apellido"
                         name="apellido"
                         value="<?= $oldData['apellido'] ?? '';?>"
-                    <?php if(isset($errores['apellido'])) echo 'aria-describedby="error-precio"';?>>
-                <?php
-                if(isset($errores['apellido'])): ?>
-                    <div id="error-precio" class="msj-error mt-2 pl-4 bg-warning"><i class="bi bi-backspace-reverse p-1"></i><?= $errores['apellido'];?></div>
-                <?php
-                endif; ?>
+                        <?php if(isset($errores['apellido'])) echo 'aria-describedby="error-precio"';?>>
+                        <?php
+                        if(isset($errores['apellido'])): ?>
+                            <div id="error-precio" class="msj-error mt-2 pl-4 bg-warning"><i class="bi bi-backspace-reverse p-1"></i><?= $errores['apellido'];?></div>
+                        <?php
+                        endif; ?>
             </div>
-
+            <div class="col-md-12 column">
+                <label for="apodo" class="col-md-lg-2 col-form-label">apodo</label>
+                <input  type="text"
+                        class="form-control"
+                        id="apodo"
+                        name="apodo"
+                        value="<?= $oldData['apodo'] ?? '';?>"
+                        <?php if(isset($errores['apodo'])) echo 'aria-describedby="error-precio"';?>>
+                        <?php
+                        if(isset($errores['apodo'])): ?>
+                            <div id="error-precio" class="msj-error mt-2 pl-4 bg-warning"><i class="bi bi-backspace-reverse p-1"></i><?= $errores['apodo'];?></div>
+                        <?php
+                        endif; ?>
+            </div>
         <div class="col-12 text-center">
             <!--<input type="reset" value="limpiar" class="btn btn-warning">-->
             <input type="submit" value="enviar" class="btn btn-success col-12 mt-3">
