@@ -10,6 +10,12 @@ function authSetLogin($userData){
     $_SESSION['usuario_admin'] = $userData;
 }
 
+/**
+ * @param $db
+ * @param $email
+ * @param $password
+ * @return bool
+ * **/
 function authLogin($db, $email, $password) { 
 
      $usuario = usuarioBuscaPorEmail($db, $email);

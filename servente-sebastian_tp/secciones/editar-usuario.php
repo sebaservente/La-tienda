@@ -53,20 +53,20 @@ echo "</pre>";
                 endif; ?>
             </div>
 
-           <!-- <div class="col-md-12 column">
+            <div class="col-md-12 column">
                 <label for="password" class="col-md-lg-2 col-form-label">Password</label>
                 <input  type="text"
                         class="form-control"
                         id="password"
                         name="password"
-                        value="<?/*= $oldData['password'] ?? '';*/?>"
-                    <?php /*if(isset($errores['password'])) echo 'aria-describedby="error-intro"';*/?>>
+                        value="<?= $oldData['password'] ?? '';?>"
+                    <?php if(isset($errores['password'])) echo 'aria-describedby="error-intro"';?>>
                 <?php
-/*                if(isset($errores['password'])): */?>
-                    <div id="error-intro" class="msj-error pl-4"><?/*= $errores['password'];*/?></div>
+                if(isset($errores['password'])): ?>
+                    <div id="error-intro" class="msj-error pl-4"><?= $errores['password'];?></div>
                 <?php
-/*                endif; */?>
-            </div>-->
+                endif; ?>
+            </div>
 
             <div class="col-md-12 column">
                 <label for="nombre" class="col-md-lg-2 col-form-label">Nombre</label>

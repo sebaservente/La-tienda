@@ -1,23 +1,21 @@
 <?php
 require 'data/bootstrap.php';
 
-$usuario = usuarioTodos($db);
+$usuarios = usuarioTodos($db);
 /*echo "<pre>";
 
 print_r($usuario);
 echo "</pre>";*/
-if(!authEstaAutenticado()) {
+/*if(!authEstaAutenticado()) {*/
     /*    $_SESSION['seccion_preten'] = $seccion;*/
-    $_SESSION['successInfo'] = "Necesitas estar autenticado para realizar esta accion";
+/*    $_SESSION['successInfo'] = "Necesitas estar autenticado para realizar esta accion";
     header('Location: ../index.php?s=login');
     exit;
-}
+}*/
 ?>
 <section class="container">
     <h2>Perfil de Usuarios</h2>
-    <?php
-    foreach ($usuario as $usuarios):
-    ?>
+
     <table  class="table table-bordered table-striped">
 
         <thead>
@@ -29,18 +27,20 @@ if(!authEstaAutenticado()) {
             <th>Acciones</th>
         </tr>
         </thead>
+        <?php
+        for ($i = 0; $i < 1; $i++) { ?>
         <tbody>
-        <tr>
+            <tr>
             <td><?=$usuarios['email'];?></td>
-            <td><?= $usuarios['nombre']; ?></td>
+            <td><?=$usuarios['nombre']; ?></td>
             <td><?=$usuarios['apellido']; ?></td>
             <td><?=$usuarios['id_usuario']; ?></td>
             <td><a href="index.php?s=editar-usuario&id=<?= authObtenerUsuario()['id_usuario'];?>" class="p-2" >Editar usuario</a></td>
-        </tr>
+            </tr>
         </tbody>
-
-    </table>
-    <?php
-        endforeach;
+        <?php
+        }
         ?>
+    </table>
+
 </section>

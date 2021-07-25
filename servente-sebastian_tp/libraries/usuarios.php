@@ -1,6 +1,7 @@
 <?php
 /**
  * @param mysqli $db
+ * @param $email
  * **/
 function usuarioBuscaPorEmail($db, $email) {
     $email = mysqli_real_escape_string($db, $email);
