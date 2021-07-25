@@ -1,11 +1,13 @@
 <?php
 require 'data/bootstrap.php';
 
-/*$usuarios = usuarioTodos($db);*/
-
 $usuarios = usuarioTraerPorId($db, $_GET['id']);
-/*echo "<pre>";
 
+// traemos la array de errores
+$errores = sessionValueGetFlash('errores', []);
+$oldData = sessionValueGetFlash('old_data', []);
+
+/*echo "<pre>";
 print_r($usuario);
 echo "</pre>";*/
 /*if(!authEstaAutenticado()) {*/

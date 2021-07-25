@@ -127,7 +127,7 @@
 .formRegistro label {
     font-weight: bold;
     padding: .5rem .2rem;
-    color: orange;
+    color: #ffff00;
 }
 .formRegistro input {
     box-shadow: 1px 1px 5px -2px black;
@@ -164,13 +164,22 @@ fieldset legend {
     text-align: center;
 }
 .sectionRegistro p {
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     width: 100%;
     text-align: center;
+}
+.sectionRegistro h4 {
+    font-size: .8rem;
+    text-align: center;
+    padding-top: 2rem;
+    color: #ffff00;
 }
 .sectionRegistro .parraRegistro {
     text-align: center;
     padding: 2rem;
+}
+.sectionRegistro .formRegistro div div #error-intro {
+    border-radius: 5px;
 }
 /*--------------------*/
 main #err {

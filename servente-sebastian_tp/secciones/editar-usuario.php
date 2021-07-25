@@ -49,7 +49,7 @@ echo "</pre>";
                     <?php if(isset($errores['email'])) echo 'aria-describedby="error-title"';?>>
                 <?php
                 if(isset($errores['email'])): ?>
-                    <div id="error-title" class="msj-error pl-4"><?= $errores['email'];?></div>
+                    <div id="error-title" class="msj-error mt-2 pl-4 bg-warning"><i class="bi bi-backspace-reverse p-1"></i><?= $errores['email'];?></div>
                 <?php
                 endif; ?>
             </div>
@@ -65,7 +65,7 @@ echo "</pre>";
                     <?php if(isset($errores['password'])) echo 'aria-describedby="error-intro"';?>>
                 <?php
                 if(isset($errores['password'])): ?>
-                    <div id="error-intro" class="msj-error pl-4"><?= $errores['password'];?></div>
+                    <div id="error-intro" class="msj-error mt-2 pl-4 bg-warning"><i class="bi bi-backspace-reverse p-1"></i><?= $errores['password'];?></div>
                 <?php
                 endif; ?>
             </div>
@@ -88,15 +88,15 @@ echo "</pre>";
                     <?php if(isset($errores['apellido'])) echo 'aria-describedby="error-precio"';?>>
                 <?php
                 if(isset($errores['apellido'])): ?>
-                    <div id="error-precio" class="msj-error pl-4"><?= $errores['apellido'];?></div>
+                    <div id="error-precio" class="msj-error mt-2 pl-4 bg-warning"><i class="bi bi-backspace-reverse p-1"></i><?= $errores['apellido'];?></div>
                 <?php
                 endif; ?>
             </div>
 
         <div class="col-12 text-center">
             <!--<input type="reset" value="limpiar" class="btn btn-warning">-->
-            <input type="submit" value="enviar" class="btn btn-success col-xl-6">
+            <input type="submit" value="enviar" class="btn btn-success col-12 mt-3">
         </div>
     </form>
-    <h4 class="col-12 ">PROHIBIDA LA VENTA DE BEBIDAS ALCOHOLICAS A MENORES DE 18 AÑOS</h4>
+    <h4 class="col-12">PROHIBIDA LA VENTA DE BEBIDAS ALCOHOLICAS A MENORES DE 18 AÑOS</h4>
 </section>
