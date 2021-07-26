@@ -193,6 +193,19 @@ main #err {
     text-align: center;
     font-weight: bold;
 }
+#sectionPerfil .perfil .divDatos .divAccion {
+    width: 13%;
+    margin: auto;
+    display: flex;
+}
+#sectionPerfil .perfil .divImagen figure img {
+    border-radius: 50%;
+    width: 10%;
+    margin: 1.5rem;
+}
+#sectionPerfil .perfil {
+    text-align: center;
+}
 /*--------------mantenimientos-------------------------------------*/
 .reparar {
     display: grid;

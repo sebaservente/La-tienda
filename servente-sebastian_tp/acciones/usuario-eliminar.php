@@ -19,8 +19,8 @@ $exito = usuarioBorrar($db, $id);
 authLogout();
 if($exito){
     $_SESSION['success'] = "El Usuario Fue eliminado Exitosamente";
-    header('Location: ../index.php?s=productos');
+    header('Location: ../index.php?s=login');
 } else {
     $_SESSION['success_errors'] = "El Usuario No pudo ser borrado. Problemas con el Servidor, Prueba otra vez. Si el problema persiste, comunicate con nosotros";
-    header('Location: ../index.php?s=productos');
+    header('Location: ../index.php?s=perfil');
 }
