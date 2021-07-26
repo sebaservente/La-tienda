@@ -14,6 +14,9 @@ function authSetLogin($userData){
  * @param $db
  * @param $email
  * @param $password
+ * @param $nombre
+ * @param $apellido
+ * @param $apodo
  * @return bool
  * **/
 function authLogin($db, $email, $password) { 
@@ -41,6 +44,7 @@ function authLogin($db, $email, $password) {
                 'email' => $usuario['email'],
                 'nombre' => $usuario['nombre'],
                 'apellido' => $usuario['apellido'],
+                'apodo' => $usuario['apodo'],
                 'id_rol' => $usuario['id_rol'],
 
             ]);

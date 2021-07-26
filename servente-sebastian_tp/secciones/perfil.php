@@ -52,11 +52,13 @@ echo "</pre>";*/
             </figure>
         </div>
         <div class="divDatos">
-            <p>Email: <?=$usuarios['email'];?></p>
-            <p>Nombre: <?=$usuarios['nombre']; ?></p>
-            <p>Apellido: <?=$usuarios['apellido']; ?></p>
-            <p>Apodo: <?=$usuarios['apodo']; ?></p>
-            <p>Id: <?=$usuarios['id_usuario']; ?></p>
+            <p> <?=$usuarios['email'];?></p>
+            <div class="divNombreApellido">
+                <p><?=$usuarios['nombre']; ?></p>
+                <p> <?=$usuarios['apellido']; ?></p>
+            </div>
+            <p>@<?=$usuarios['apodo']; ?></p>
+            <!--<p>Id: <?/*=$usuarios['id_usuario']; */?></p>-->
             <div class="divAccion">
                 <p><i class="bi bi-pencil-square text-success"></i><a href="index.php?s=editar-usuario&id=<?=$usuarios['id_usuario'];?>" class="p-2 text-success" >Editar </a></p>
                 <p><i class="bi bi-trash text-danger"></i><a href="acciones/usuario-eliminar.php?id=<?=$usuarios['id_usuario'];?>" class="borrar p-2 text-danger">Eliminar</a></p>

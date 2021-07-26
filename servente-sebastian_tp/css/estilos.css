@@ -206,6 +206,13 @@ main #err {
 #sectionPerfil .perfil {
     text-align: center;
 }
+#sectionPerfil .perfil .divDatos .divNombreApellido {
+     display: flex;
+     justify-content: center;
+ }
+#sectionPerfil .perfil .divDatos .divNombreApellido p {
+    padding: .5rem;
+}
 /*--------------mantenimientos-------------------------------------*/
 .reparar {
     display: grid;
