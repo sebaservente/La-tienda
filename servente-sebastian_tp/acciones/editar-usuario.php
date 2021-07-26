@@ -12,6 +12,7 @@ $password = trim($_POST['password']);
 $nombre = trim($_POST['nombre']);
 $apellido = trim($_POST['apellido']);
 $apodo = trim($_POST['apodo']);
+/*$img = $_FILES['img'];*/
 
 // todo validar
 if(empty($email)){

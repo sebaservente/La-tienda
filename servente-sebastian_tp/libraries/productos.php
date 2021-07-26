@@ -45,7 +45,6 @@ function getProducto($db, $busqueda = [], $cantidadResultados = null, $resultado
     //$contenido = file_get_contents(PRODUCTOS_JSON_FILEPATH);
     //return json_decode($contenido, true);
 }
-
 /**
  * retorna la cantidad de resutados
  * @param mysqli $db
@@ -77,7 +76,10 @@ function getProductosCantidadDeRegistro($db, $busqueda){
 }
 // retornamos la noticia con el $id
 // retorna array con datos de los productos
-
+/**
+ * @param mysqli $db
+ * @param $id
+ * **/
 function productosporid ($db, $id) {
     // seguridad inyeccion SQL.
     $id = mysqli_real_escape_string($db, $id);
@@ -95,8 +97,6 @@ function productosporid ($db, $id) {
     
     return mysqli_fetch_assoc($res);
 }
-
-
 /**
  * @param mysqli $db
  * @param string $title

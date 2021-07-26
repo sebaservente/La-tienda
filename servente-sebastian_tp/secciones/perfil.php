@@ -24,6 +24,7 @@ echo "</pre>";*/
 
         <thead>
         <tr>
+            <th>Imagen:</th>
             <th>Email: </th>
             <th>Nombre:</th>
             <th>Apellido:</th>
@@ -34,6 +35,7 @@ echo "</pre>";*/
         </thead>
         <tbody>
             <tr>
+                <td></td>
             <td><?=$usuarios['email'];?></td>
             <td><?=$usuarios['nombre']; ?></td>
             <td><?=$usuarios['apellido']; ?></td>
@@ -44,5 +46,21 @@ echo "</pre>";*/
         </tbody>
 
     </table>
-
+    <article>
+        <div>
+            <p>imagen</p>
+           <!-- <figure>
+                <img src="imgs/<?/*= $usuarios['img'];*/?>" class="img-fluid w-100 figure-img" alt="<?/*= htmlspecialchars($usuarios['alt_img']);*/?>">
+            </figure>-->
+        </div>
+        <div>
+            <p>Email: <?=$usuarios['email'];?></p>
+            <p>Nombre: <?=$usuarios['nombre']; ?></p>
+            <p>Apellido: <?=$usuarios['apellido']; ?></p>
+            <p>Apodo: <?=$usuarios['apodo']; ?></p>
+            <p>Id: <?=$usuarios['id_usuario']; ?></p>
+            <p><a href="index.php?s=editar-usuario&id=<?=$usuarios['id_usuario'];?>" class="p-2 text-success" >Editar usuario</a></p>
+            <p><a href="acciones/usuario-eliminar.php?id=<?=$usuarios['id_usuario'];?>" class="borrar text-danger">Eliminar usuario</a></p>
+        </div>
+    </article>
 </section>

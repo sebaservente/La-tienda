@@ -44,6 +44,7 @@ $oldData = sessionValueGetFlash('old_data', []);
         </fieldset>
         <fieldset>
             <legend>Datos opcionales</legend>
+
             <div class="form-file">
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" class="form-control">
@@ -55,6 +56,22 @@ $oldData = sessionValueGetFlash('old_data', []);
             <div class="form-file">
                 <label for="apodo">Apodo</label>
                 <input type="text" id="apodo" name="apodo" class="form-control">
+            </div>
+            <div class="col-md-12 column">
+                <label for="img" class="col-md-lg-2 col-form-label">Imagen</label>
+                <input  type="file"
+                        class="form-control"
+                        id="img"
+                        name="img"
+                >
+            </div>
+            <div class="col-md-12 column">
+                <label for="img-alt" class="col-md-lg-2 col-form-label">Alt Imagen</label>
+                <input  type="text"
+                        class="form-control"
+                        id="img-alt"
+                        name="img-alt"
+                        value="<?= $oldData['img_alt'] ?? '';?>">
             </div>
         </fieldset>
         <button class="btn btn-success botonRegistro">Registrarse</button>

@@ -113,6 +113,22 @@ echo "</pre>";
                         <?php
                         endif; ?>
             </div>
+            <div class="col-md-12 column">
+                <label for="img" class="col-md-lg-2 col-form-label">Imagen</label>
+                <input  type="file"
+                        class="form-control"
+                        id="img"
+                        name="img"
+                >
+            </div>
+            <div class="col-md-12 column">
+                <label for="img-alt" class="col-md-lg-2 col-form-label">Alt Imagen</label>
+                <input  type="text"
+                        class="form-control"
+                        id="img-alt"
+                        name="img-alt"
+                        value="<?= $oldData['img_alt'] ?? '';?>">
+            </div>
         <div class="col-12 text-center">
             <!--<input type="reset" value="limpiar" class="btn btn-warning">-->
             <input type="submit" value="enviar" class="btn btn-success col-12 mt-3">

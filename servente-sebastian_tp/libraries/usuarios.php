@@ -114,6 +114,22 @@ function usuarioEditar($db, $id, $email, $password, $nombre, $apellido, $apodo) 
 
 }
 /**
+ * @param mysqli $db
+ * @param $id
+ * **/
+function usuarioBorrar($db, $id) {
+    // siempre escapamos valores que vienen del usuario
+    $id =  mysqli_real_escape_string($db, $id);
+    $query = "DELETE FROM usuarios
+              WHERE id_usuario = '" . $id . "'";
+
+    $exito = mysqli_query($db, $query);
+
+    return $exito;
+    //  *  return mysqli_query($db, $query);
+}
+
+/**
  * generamos un token (criptograficamente !!)seguro
  *
  * @param mysqli $db
