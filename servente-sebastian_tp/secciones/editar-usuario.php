@@ -18,6 +18,8 @@ if(empty($oldData)) {
         'nombre' => $usuarios['nombre'],
         'apellido' => $usuarios['apellido'],
         'apodo' => $usuarios['apodo'],
+        'imgActual' => $usuarios['img'],
+        'img_alt' => $usuarios['alt_img'],
     ];
 }
 /*echo "<pre>";
@@ -112,6 +114,10 @@ echo "</pre>";
                             <div id="error-precio" class="msj-error mt-2 pl-4 bg-warning"><i class="bi bi-backspace-reverse p-1"></i><?= $errores['apodo'];?></div>
                         <?php
                         endif; ?>
+            </div>
+            <div>
+                <p>Imagen Actual</p>
+                <img src="imgs/<?= $oldData['imgActual'];?>" alt="Imagen Actual del Producto" class="w-25">
             </div>
             <div class="col-md-12 column">
                 <label for="img" class="col-md-lg-2 col-form-label">Imagen</label>

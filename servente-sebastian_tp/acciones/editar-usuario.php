@@ -1,7 +1,8 @@
 <?php
 
 
-require  '../data/bootstrap.php';
+require '../data/bootstrap.php';
+require '../libraries/image.php';
 /*require_once '../libraries/usuarios.php';
 require_once '../libraries/auth.php';*/
 
@@ -12,7 +13,8 @@ $password = trim($_POST['password']);
 $nombre = trim($_POST['nombre']);
 $apellido = trim($_POST['apellido']);
 $apodo = trim($_POST['apodo']);
-/*$img = $_FILES['img'];*/
+$imgAlt = trim($_POST['img-alt']);
+$img = $_FILES['img'];
 
 // todo validar
 if(empty($email)){
@@ -39,7 +41,7 @@ if(!empty($errores)){
     //importante
     exit;
 }
-$exito = usuarioEditar($db, $id, $email, $password, $nombre, $apellido, $apodo);
+$exito = usuarioEditar($db, $id, $email, $password, $nombre, $apellido, $apodo, $img, $imgAlt);
 
 if($exito){
 

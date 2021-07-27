@@ -54,13 +54,12 @@ function usuarioTraerPorId($db, $id) {
 /**
  * @param mysqli $db
  * @param array $data
- * @param string $img
- *              email: Required. string.
- *              password: Required. string.
- *              nombre: Opcional. string.
- *              apellido: Opcional. string.
- *              apodo: Opcional. string.
- *              id_rol: Opcional. int. Default
+ * @param string $email: Required.
+ * @param string $password: Required
+ * @param string $nombre: Opcional.
+ * @param string $apellido: Opcional.
+ * @param string $apodo: Opcional.
+ * @param int $id_rol: Opcional
  * @return boll|int
  * **/
 function usuariosCrear($db, $data) {
@@ -72,11 +71,7 @@ function usuariosCrear($db, $data) {
     $apodo      = mysqli_real_escape_string($db, $data['apodo'] ?? '');
     $password   = password_hash($data['password'], PASSWORD_DEFAULT);
     $imgAlt     = mysqli_real_escape_string($db, $data['img-alt'] ?? '');
-   /* $img    = mysqli_real_escape_string($db, $data['img'] ?? '');*/
-
     $nombreImagenes = generateSiteImages($data['img'], PATH_IMG . "/", null, true);
-
-
 
 
     $query = "INSERT INTO usuarios (id_rol, email, password, nombre, apellido, apodo, img, alt_img)
@@ -97,7 +92,8 @@ function usuariosCrear($db, $data) {
  * @param string $apodo
  * @return bool
  * **/
-function usuarioEditar($db, $id, $email, $password, $nombre, $apellido, $apodo) {
+function usuarioEditar($db, $id, $email, $password, $nombre, $apellido, $apodo, $img, $imgAlt) {
+
     $id = mysqli_real_escape_string($db, $id);
     $email = mysqli_real_escape_string($db, $email);
     $password = password_hash($password, PASSWORD_DEFAULT);
@@ -105,6 +101,17 @@ function usuarioEditar($db, $id, $email, $password, $nombre, $apellido, $apodo) 
     $nombre = mysqli_real_escape_string($db, $nombre);
     $apellido = mysqli_real_escape_string($db, $apellido);
     $apodo = mysqli_real_escape_string($db, $apodo);
+    $imgAlt = mysqli_real_escape_string($db, $imgAlt);
+
+    if(!empty($img['tmp_name'])) {
+        $nombreImagenes = generateSiteImages($img, PATH_IMG . "/", null, true);
+        $nombreImagen   = $nombreImagenes['name'];
+
+        // si solicita la imagen
+        $queryImg = ", img = '" . $nombreImagen . "'";
+    } else {
+        $queryImg = "";
+    }
 
 
     $query = "UPDATE usuarios
@@ -112,7 +119,9 @@ function usuarioEditar($db, $id, $email, $password, $nombre, $apellido, $apodo) 
                 password    = '" . $password . "',
                 nombre      = '" . $nombre . "',
                 apellido    = '" . $apellido . "',
-                apodo       = '" . $apodo . "'
+                apodo       = '" . $apodo . "',
+                alt_img = '" . $imgAlt . "'
+                " . $queryImg . "
             WHERE id_usuario  = '" . $id . "'";
 
     $exito = mysqli_query($db, $query);
