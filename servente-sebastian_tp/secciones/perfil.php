@@ -54,8 +54,9 @@ echo "</pre>";*/
         <div class="divDatos">
             <p> <?=$usuarios['email'];?></p>
             <div class="divNombreApellido">
-                <p><?=$usuarios['nombre']; ?></p>
-                <p> <?=$usuarios['apellido']; ?></p>
+                <h3>Nombre Apellido</h3>
+                <p class="primero"><?=$usuarios['nombre']; ?></p>
+                <p class="segundo"> <?=$usuarios['apellido']; ?></p>
             </div>
             <p>@<?=$usuarios['apodo']; ?></p>
             <!--<p>Id: <?/*=$usuarios['id_usuario']; */?></p>-->

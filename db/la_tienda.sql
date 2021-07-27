@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-07-2021 a las 01:45:04
--- Versión del servidor: 10.4.18-MariaDB
--- Versión de PHP: 7.4.16
+-- Tiempo de generación: 27-07-2021 a las 02:17:14
+-- Versión del servidor: 10.4.19-MariaDB
+-- Versión de PHP: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -48,8 +48,7 @@ INSERT INTO `cervezas` (`id_cerveza`, `usuarios_id_usuario`, `title`, `intro`, `
 (2, 1, 'Pale APA v2', 'Cerveza Pale Ale', 'De cuerpo medio-liviano a medio. Carbonatación de moderada a alta. Acabado suave, sin astringencias, asociado a la alta tasa de lupulación.', 'rabieta-apa.jpg', 'Cerveza Artesanal Patagonica', '444', 'IBU 23 | 34'),
 (3, 1, 'Scottish', 'Cerveza Tennent’s', 'Cerveza Tennent’s Extra Strong Scottish Lager de Tennent\'s España. Una cerveza con carácter al más puro estilo Stout, de contraste dulce y amargo en boca, gran aroma y aspecto.', 'scottish.jpg', 'Cerveza Artesanal Patagonica', '300', 'IBU 23 | 34'),
 (5, 1, 'Blonde', 'Blonde española', 'La Blonde Ale de Espiga, destaca por su aroma intenso, con notas cítricas, fruta tropical, melón y uva. En boca destaca la fruta, con un amargor final que compensa la dulzura.', 'blonde-ale-0001.jpg', 'Cerveza Artesanal botella', '110', 'IBU 23 | 34'),
-(6, 1, 'Stout', 'Cervezas Irish Stout', 'Tostado pronunciado, similar al café. El balance varia desde bastante uniforme a bastante amargo, la version más balanceada teniendo un poco de dulzor a malta y la version amargas siendo bastante secas.', 'stout.jpg', 'Cerveza Artesanal botella 235ml', '250', 'IBU 23 | 34'),
-(7, 1, 'India Pale', 'Cerveza Pale Ale', 'Es un estilo de cerveza de tradición inglesa que se caracteriza como una ale pálida y espumosa con un alto nivel de alcohol y de lúpulo.', 'india-pale.jpg', 'Cerveza Artesanal botella 235ml', '500', 'IBU 23 | 34');
+(6, 1, 'Stout', 'Cervezas Irish Stout', 'Tostado pronunciado, similar al café. El balance varia desde bastante uniforme a bastante amargo, la version más balanceada teniendo un poco de dulzor a malta y la version amargas siendo bastante secas.', 'stout.jpg', 'Cerveza Artesanal botella 235ml', '250', 'IBU 23 | 34');
 
 -- --------------------------------------------------------
 
@@ -76,9 +75,7 @@ INSERT INTO `cervezas_has_tags` (`cervezas_id_cerveza`, `tags_id_tags`) VALUES
 (5, 6),
 (5, 7),
 (6, 3),
-(6, 8),
-(7, 3),
-(7, 5);
+(6, 8);
 
 -- --------------------------------------------------------
 
@@ -149,19 +146,19 @@ CREATE TABLE `usuarios` (
   `password` varchar(255) NOT NULL,
   `nombre` varchar(100) DEFAULT NULL,
   `apellido` varchar(100) DEFAULT NULL,
-  `apodo` varchar(100) DEFAULT NULL
+  `apodo` varchar(100) DEFAULT NULL,
+  `img` varchar(255) DEFAULT NULL,
+  `alt_img` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `id_rol`, `email`, `password`, `nombre`, `apellido`, `apodo`) VALUES
-(1, 1, 'ser@ser.com.ar', '$2y$10$dDYSR6mKY2g2AgxIsDKaWu9/r4O7Da3pVNOT8pi3WCmXbgcvWYaGS', 'sebastian', 'andres', 'Administrador'),
-(2, 2, 'sebas@sebas.com.ar', '$2y$10$L8Uw37w/F1n.dheSc/9bI.jOUZRBYdg5JQxU.bSz.KG/FbIaAmWXS', 'sebastian', 'servente', NULL),
-(3, 2, 'clau@clau.com.ar', '$2y$10$t5QSkaQ6kDK9cBCtD7FEM.T0a2ruTCeCv.040WeoqsOwdl8KFJbue', 'clau', 'boquita', 'laPetu078'),
-(6, 2, 'wil@wil.com.ar', '$2y$10$Y3R8k9JF9V67BOWTH6O0rudaS0n67kcpRcfINmVMf1bzUjNukteHS', 'arturo maximo', 'de la rua', NULL),
-(7, 2, 'oeste@oeste.com.ar', '$2y$10$bsxqXYj7UFETHAuVFN6MKOkXIQt3L8kCHljVBbrNH19ctrIDgR6mK', 'sebas', 'servente', 'yuyo080');
+INSERT INTO `usuarios` (`id_usuario`, `id_rol`, `email`, `password`, `nombre`, `apellido`, `apodo`, `img`, `alt_img`) VALUES
+(1, 1, 'ser@ser.com.ar', '$2y$10$OcrmnaovQKAsDm.pDRBMtO49zAdYSCZKf7QHi8L7PFA4DpaXS3x4y', 'sebita', 'andreus', 'Admin', 'logo-contacto.png', NULL),
+(2, 2, 'sebas@sebas.com.ar', '$2y$10$qPO8xB0VrWE23HZMX9k6COYXlmOS2J/4fPvMIZoE0dqUzG3epGG0W', 'sebastian', 'servente', 'sebita28', 'facebook.png', NULL),
+(10, 2, 'yu@yu.com.ar', '$2y$10$aLIWlbIIjXpy8UZmiaYlkOLNMMyM/UlWbxVS36bdh6LmammJg7sR2', 'sebas', 'serve', 'sersebas08', 'logo-contacto.png', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -235,7 +232,7 @@ ALTER TABLE `tags`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_usuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restricciones para tablas volcadas

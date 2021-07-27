@@ -207,11 +207,21 @@ main #err {
     text-align: center;
 }
 #sectionPerfil .perfil .divDatos .divNombreApellido {
-     display: flex;
-     justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
  }
-#sectionPerfil .perfil .divDatos .divNombreApellido p {
+#sectionPerfil .perfil .divDatos .divNombreApellido h3{
+   width: 100%;
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido .primero {
     padding: .5rem;
+    width: 50%;
+    text-align: end;
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido .segundo {
+    padding: .5rem;
+    width: 50%;
+    text-align: start;
 }
 /*--------------mantenimientos-------------------------------------*/
 .reparar {
