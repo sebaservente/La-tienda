@@ -17,6 +17,10 @@ $secciones = [
         'title' => 'Admin de Tienda de Cervezas:: Editar Producto',
         'requiresAuth' => true,
     ],
+    'leer-usuarios' => [
+        'title' => 'Admin de Tienda de Cervezas:: Todos los Usuarios',
+        'requiresAuth' => true,
+    ],
     'leer-producto' => [
         'title' => 'Admin de Tienda de Cervezas:: Descripcion del Producto',
         'requiresAuth' => true,

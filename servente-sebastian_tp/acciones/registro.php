@@ -1,8 +1,8 @@
 <?php
 
 require  '../data/bootstrap.php';
-/*require_once '../libraries/usuarios.php';
-require_once '../libraries/auth.php';*/
+
+/*require_once '../libraries/auth.php';*/
 require '../libraries/image.php';
 
 $email = $_POST['email'];

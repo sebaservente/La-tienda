@@ -93,6 +93,9 @@ if(isset($_SESSION['successErrors'])){
                         <li class="nav-item">
                             <a class="nav-link text-warning" href="index.php?s=productos">Productos</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" href="index.php?s=leer-usuarios">Usuarios</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link text-warning" href="acciones/logout.php"><?= authObtenerUsuario()['nombre'];?> (cerrar sesion) </a></li>
                         <!--<li class="nav-item">
                             <a class="nav-link" href="index.php?s=productos">Cerrar Sesion</a>
