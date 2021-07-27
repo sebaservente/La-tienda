@@ -8,6 +8,7 @@ $seccion = $_GET['s'] ?? "home";
 if(!isset($secciones[$seccion])) {
     $seccion = 404;
 }
+$usuarios = usuarioTraerPorId($db, $_GET['id']);
 
 if($enviromentState === ENVIROMENT_MANTAINANCE) {
     $seccion = "mantenimiento";
@@ -83,6 +84,7 @@ $successInfo = sessionValueGetFlash('successInfo');
                             <?php
                             endif;
                             ?>
+
                             <li class="nav-item">
                                 <a class="nav-link text-warning" href="index.php?s=perfil&id=<?= authObtenerUsuario()['id_usuario'];?>"">Mi Perfil</a>
                             </li>
@@ -94,6 +96,11 @@ $successInfo = sessionValueGetFlash('successInfo');
                         ?>
 
                     </ul>
+                    <!--<div class="divImagen">
+                        <figure>
+                            <img src="imgs/<?/*= $usuarios['img'];*/?>" class="img-fluid figure-img" alt="<?/*= htmlspecialchars($usuarios['alt_img']);*/?>">
+                        </figure>
+                    </div>-->
                 </div>
             </nav>
         </div>
