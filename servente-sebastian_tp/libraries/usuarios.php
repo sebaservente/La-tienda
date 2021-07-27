@@ -72,9 +72,10 @@ function usuariosCrear($db, $data) {
     $apodo      = mysqli_real_escape_string($db, $data['apodo'] ?? '');
     $password   = password_hash($data['password'], PASSWORD_DEFAULT);
     $imgAlt     = mysqli_real_escape_string($db, $data['img-alt'] ?? '');
-    $img    = mysqli_real_escape_string($db, $data['img'] ?? '');
+   /* $img    = mysqli_real_escape_string($db, $data['img'] ?? '');*/
 
-    $nombreImagenes = generateSiteImages($img, PATH_IMG . "/", null, true);
+    $nombreImagenes = generateSiteImages($data['img'], PATH_IMG . "/", null, true);
+
 
 
 
