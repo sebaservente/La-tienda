@@ -18,7 +18,7 @@ echo "</pre>";*/
 }*/
 ?>
 <section class="container" id="sectionPerfil">
-    <h2 class="text-center m-3">Perfil de Usuarios</h2>
+    <h2 class="m-4">Perfil de Usuarios</h2>
     <!--<table  class="table table-bordered table-striped">
 
         <thead>
@@ -54,11 +54,11 @@ echo "</pre>";*/
         <div class="divDatos">
             <p> <?=$usuarios['email'];?></p>
             <div class="divNombreApellido">
-                <h3>Nombre Apellido</h3>
+                <h3>Nombre y Apellido</h3>
                 <p class="primero"><?=$usuarios['nombre']; ?></p>
                 <p class="segundo"> <?=$usuarios['apellido']; ?></p>
             </div>
-            <p>@<?=$usuarios['apodo']; ?></p>
+            <p>Apodo: @<?=$usuarios['apodo']; ?></p>
             <!--<p>Id: <?/*=$usuarios['id_usuario']; */?></p>-->
             <div class="divAccion">
                 <p><i class="bi bi-pencil-square text-success"></i><a href="index.php?s=editar-usuario&id=<?=$usuarios['id_usuario'];?>" class="p-2 text-success" >Editar </a></p>
@@ -72,7 +72,7 @@ echo "</pre>";*/
         const linksEliminar = document.querySelectorAll('.borrar');
         linksEliminar.forEach(function(aElem) {
             aElem.addEventListener('click', function(ev){
-                if(!confirm('estas seguro de eliminar tu cuenta!')){
+                if(!confirm('¡Atención! Estas a punto de eliminar tu cuenta, se borrara toda la informacion asociada!')){
                     ev.preventDefault();
                 }
             });

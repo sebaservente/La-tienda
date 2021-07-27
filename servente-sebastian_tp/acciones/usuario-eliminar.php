@@ -22,5 +22,5 @@ if($exito){
     header('Location: ../index.php?s=login');
 } else {
     $_SESSION['success_errors'] = "El Usuario No pudo ser borrado. Problemas con el Servidor, Prueba otra vez. Si el problema persiste, comunicate con nosotros";
-    header('Location: ../index.php?s=perfil');
+    header('Location: ../index.php?s=login');
 }

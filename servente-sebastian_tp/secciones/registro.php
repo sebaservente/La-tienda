@@ -10,7 +10,7 @@ $oldData = sessionValueGetFlash('old_data', []);
     <h2>Registrarse</h2>
     <p>Completa el formulario para poder estar registardo</p>
 
-    <form action="acciones/registro.php" method="post" class="formRegistro">
+    <form action="acciones/registro.php" method="post" enctype="multipart/form-data" class="formRegistro">
         <fieldset >
             <legend>Datos de identificación</legend>
             <div class="form-file">
@@ -71,7 +71,7 @@ $oldData = sessionValueGetFlash('old_data', []);
                         class="form-control"
                         id="img-alt"
                         name="img-alt"
-                        value="<?= $oldData['img_alt'] ?? '';?>">
+                        value="<?= $oldData['img-alt'] ?? '';?>">
             </div>
         </fieldset>
         <button class="btn btn-success botonRegistro">Registrarse</button>

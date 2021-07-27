@@ -54,7 +54,8 @@ function usuarioTraerPorId($db, $id) {
 /**
  * @param mysqli $db
  * @param array $data
- *               @param email: Required. string.
+ * @param string $img
+ *              email: Required. string.
  *              password: Required. string.
  *              nombre: Opcional. string.
  *              apellido: Opcional. string.
@@ -63,15 +64,22 @@ function usuarioTraerPorId($db, $id) {
  * @return boll|int
  * **/
 function usuariosCrear($db, $data) {
+
     $idRol      = isset($data['idRol']) ? mysqli_real_escape_string($db, $data['idRol']) : 2;
     $email      = mysqli_real_escape_string($db, $data['email']);
     $nombre     = mysqli_real_escape_string($db, $data['nombre'] ?? '');
     $apellido   = mysqli_real_escape_string($db, $data['apellido'] ?? '');
-    $apodo   = mysqli_real_escape_string($db, $data['apodo'] ?? '');
+    $apodo      = mysqli_real_escape_string($db, $data['apodo'] ?? '');
     $password   = password_hash($data['password'], PASSWORD_DEFAULT);
+    $imgAlt     = mysqli_real_escape_string($db, $data['img-alt'] ?? '');
+    $img    = mysqli_real_escape_string($db, $data['img'] ?? '');
 
-    $query = "INSERT INTO usuarios (id_rol, email, password, nombre, apellido, apodo)
-                VALUES ('" . $idRol . "','" . $email . "','" . $password . "','" . $nombre . "','" . $apellido . "','" . $apodo . "')";
+    $nombreImagenes = generateSiteImages($img, PATH_IMG . "/", null, true);
+
+
+
+    $query = "INSERT INTO usuarios (id_rol, email, password, nombre, apellido, apodo, img, alt_img)
+                VALUES ('" . $idRol . "','" . $email . "','" . $password . "','" . $nombre . "','" . $apellido . "','" . $apodo . "','" . $nombreImagenes['name'] . "','" . $imgAlt . "')";
     $exito = mysqli_query($db, $query);
     if ($exito){
         return mysqli_insert_id($db);

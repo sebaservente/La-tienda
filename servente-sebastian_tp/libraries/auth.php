@@ -46,6 +46,8 @@ function authLogin($db, $email, $password) {
                 'apellido' => $usuario['apellido'],
                 'apodo' => $usuario['apodo'],
                 'id_rol' => $usuario['id_rol'],
+                'img' => $usuario['img'],
+                'img-alt' => $usuario['img-alt'],
 
             ]);
             return true;

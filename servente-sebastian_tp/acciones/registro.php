@@ -1,14 +1,17 @@
 <?php
 
 require  '../data/bootstrap.php';
-require_once '../libraries/usuarios.php';
-require_once '../libraries/auth.php';
+/*require_once '../libraries/usuarios.php';
+require_once '../libraries/auth.php';*/
+require '../libraries/image.php';
 
 $email = $_POST['email'];
 $password = $_POST['password'];
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $apodo = $_POST['apodo'];
+$imgAlt = $_POST['img-alt'];
+$img = $_FILES['img'];
 
 // todo validar
 if(empty($email)){
@@ -38,7 +41,8 @@ $idUsuario = usuariosCrear($db, [
     'nombre'    => $nombre,
     'apellido'  => $apellido,
     'apodo'     => $apodo,
-
+    'img'       => $img,
+    'img-alt'   => $imgAlt,
 ]);
 
 if ($idUsuario !== false){
@@ -57,6 +61,8 @@ if ($idUsuario !== false){
         'nombre'     => $nombre,
         'apellido'   => $apellido,
         'apodo'      => $apodo,
+        'img'        => $img,
+        'img-alt'    => $imgAlt,
     ]);
 
     $_SESSION['success'] = "¡Regitro exitoso, gracias por unirte a nosotros, " . $email . "!";
