@@ -8,7 +8,7 @@ $seccion = $_GET['s'] ?? "home";
 if(!isset($secciones[$seccion])) {
     $seccion = 404;
 }
-$usuarios = usuarioTraerPorId($db, $_GET['id']);
+/*$usuarios = usuarioTraerPorId($db, $_GET['id']);*/
 
 if($enviromentState === ENVIROMENT_MANTAINANCE) {
     $seccion = "mantenimiento";
