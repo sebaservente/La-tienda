@@ -27,7 +27,7 @@ echo "</pre>";*/
             <?php
             foreach ($usuario as $usuarios): ?>
             <tr>
-                <td>
+                <td class="text-center">
                     <figure>
                         <img src="../imgs/<?=$usuarios['img'];?>" class="img-fluid w-50 figure-img" alt="<?= htmlspecialchars($usuarios['alt_img']);?>">
                     </figure>

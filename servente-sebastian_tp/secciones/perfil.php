@@ -61,7 +61,7 @@ echo "</pre>";*/
             <p>Apodo: @<?=$usuarios['apodo']; ?></p>
             <!--<p>Id: <?/*=$usuarios['id_usuario']; */?></p>-->
             <div class="divAccion">
-                <p><i class="bi bi-pencil-square text-success"></i><a href="index.php?s=editar-usuario&id=<?=$usuarios['id_usuario'];?>" class="p-2 text-success" >Editar </a></p>
+                <p><i class="bi bi-pencil-square text-success"></i><a href="index.php?s=editar-usuario&id=<?=$usuarios['id_usuario'];?>" class="p-2 edit text-success" >Editar </a></p>
                 <p><i class="bi bi-trash text-danger"></i><a href="acciones/usuario-eliminar.php?id=<?=$usuarios['id_usuario'];?>" class="borrar p-2 text-danger">Eliminar</a></p>
             </div>
         </div>
@@ -73,6 +73,16 @@ echo "</pre>";*/
         linksEliminar.forEach(function(aElem) {
             aElem.addEventListener('click', function(ev){
                 if(!confirm('¡Atención! Estas a punto de eliminar tu cuenta, se borrara toda la informacion asociada!')){
+                    ev.preventDefault();
+                }
+            });
+        });
+    });
+    window.addEventListener('DOMContentLoaded', function(){
+        const linksEliminar = document.querySelectorAll('.edit');
+        linksEliminar.forEach(function(aElem) {
+            aElem.addEventListener('click', function(ev){
+                if(!confirm('¡Atención! deberas reiniciar la sesion para actualizar la imagen!')){
                     ev.preventDefault();
                 }
             });

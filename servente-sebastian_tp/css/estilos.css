@@ -232,6 +232,15 @@ main #err {
     width: 50%;
     text-align: start;
 }
+/*_______________________________________*/
+
+#header div .divImagen figure img {
+    border-radius: 25%;
+    width: 42%;
+    max-width: 100px;
+    margin-top: .7rem;
+    box-shadow: 1px 2px 5px -2px #000;
+}
 /*--------------mantenimientos-------------------------------------*/
 .reparar {
     display: grid;

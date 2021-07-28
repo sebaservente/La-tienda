@@ -62,47 +62,44 @@ $successInfo = sessionValueGetFlash('successInfo');
                         <li class="nav-item">
                             <a class="nav-link text-warning" href="index.php?s=productos">Productos</a>
                         </li>
-                        <?php
-                        if(!authEstaAutenticado()):?>
-                           <!-- <li class="nav-item">
-                                <a class="nav-link text-warning" href="admin/index.php?s=login">Admin</a>
-                            </li>-->
-                            <li class="nav-item">
-                                <a class="nav-link text-warning" href="index.php?s=login">Iniciar Sesión</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-warning" href="index.php?s=registro">Registrarse</a>
-                            </li>
+                    <?php
+                    if(!authEstaAutenticado()):?>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" href="index.php?s=login">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" href="index.php?s=registro">Registrarse</a>
+                        </li>
                         <?php
                         else: ?>
-                            <?php
-                            if(authEstaAutenticado() && authEsAdmin()):
-                                ?>
-                            <li class="nav-item">
-                                <a class="nav-link text-warning" href="admin/index.php?s=productos">Admin</a>
-                            </li>
-                            <?php
-                            endif;
+                        <?php
+                        if(authEstaAutenticado() && authEsAdmin()):
                             ?>
-
-                            <li class="nav-item">
-                                <a class="nav-link text-warning" href="index.php?s=perfil&id=<?= authObtenerUsuario()['id_usuario'];?>"">Mi Perfil</a>
-                            </li>
-                            <li class="nav-item" id="cerrarSesion">
-                                <a class="nav-link" href="acciones/logout.php"><?= authObtenerUsuario()['nombre'];?> (Cerrar Sesión)</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" href="admin/index.php?s=productos">Admin</a>
+                        </li>
+                        <?php
+                        endif;
+                        ?>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" href="index.php?s=perfil&id=<?= authObtenerUsuario()['id_usuario'];?>"">Mi Perfil</a>
+                        </li>
+                        <li class="nav-item" id="cerrarSesion">
+                            <a class="nav-link" href="acciones/logout.php"><?= authObtenerUsuario()['nombre'];?> (Cerrar Sesión)</a>
+                        </li>
                         <?php
                         endif;
                         ?>
 
                     </ul>
-                    <!--<div class="divImagen">
-                        <figure>
-                            <img src="imgs/<?/*= $usuarios['img'];*/?>" class="img-fluid figure-img" alt="<?/*= htmlspecialchars($usuarios['alt_img']);*/?>">
-                        </figure>
-                    </div>-->
+
                 </div>
             </nav>
+            <div class="divImagen">
+                    <figure>
+                        <img src="imgs/<?= authObtenerUsuario()['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars(authObtenerUsuario()['alt_img']);?>">
+                    </figure>
+            </div>
         </div>
     </header>
     <main>
