@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.header-home > h1  {
+    padding-top: .2em;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 0;
+}
+.header-home > p  {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+}
+.logo-home {
+    width: 25%;
+    position: relative;
+    text-align: center;
+    padding-left: .4em;
+
+}

@@ -629,6 +629,10 @@ footer {
 
 /*------------------------------------------------------------------Final paginas nuevo de producto--*/
 /*------------------------------------------------------------------Inicio paginas de producto--*/
+.producto {
+    background: #1c7430;
+}
+
 .producto > h2 {
     color: #121212;
     font-family: 'Roboto Slab', serif;
@@ -636,17 +640,20 @@ footer {
     padding: 1rem .5rem;
 }
 .producto > .divs {
-    display: grid;
-    grid-gap: 0.7em 0;
-    grid-template-columns: repeat(60, 1em);
-    grid-template-rows: repeat(30, auto);
+    display: flex;
     justify-content: center;
-    padding: 16px;
+    margin: .5rem;
+}
+.producto > .divs > article {
+    background: #ffc107;
+    padding: .5rem;
+    margin: .5rem;
+    display: flex;
 }
 .producto > .divs > article > div > a > h3 {
     font-family: 'Roboto Slab', serif;
 }
-.producto > .divs > article > div > a > p {
+/*.producto > .divs > article > div > a > p {
     font-family: 'Roboto Slab', serif;
 }
 .producto > .divs > article:nth-child(1){
@@ -876,6 +883,7 @@ footer {
     text-align: center;
     padding: 0.5em;
 }
+*/
 
 /*------------------------------------------------------------------Final pagina de producto--*/
 

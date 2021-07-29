@@ -30,7 +30,6 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
 
 ?>
 <section id="productos" class="container-fluid producto">
-   
     <h2 class="col-12 text-center">Elige Tu Estilo</h2>
     <div>
         <h3>Busca la cerveza que más te identifique</h3>
@@ -44,6 +43,8 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
         </form>
     </div>
     <p class="parrafoResultados">Mostrando <?= $pagCantidad;?> resulatdos de un total de <?= $pagCantidadTotalRegistro;?> </p>
+
+
     <div class="divs">
         <?php
         foreach ($productos as $producto):
@@ -54,6 +55,9 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
                 <div class="bg-light">
                     <a href="index.php?s=leer-producto&id=<?= $producto['id_cerveza'];?>" class="text-dark" >
                         <h3><?= htmlspecialchars($producto['title']);?></h3>
+                        <figure>
+                            <img src="imgs/<?= $producto['img'];?>" class="img-fluid w-100 figure-img" alt="<?= htmlspecialchars($producto['alt_img']);?>">
+                        </figure>
                         <div class="productos_tags">
                             <?php
                             foreach ($tags as $tag):
@@ -65,13 +69,13 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
                         </div>
                         <p><?= htmlspecialchars($producto['intro']);?></p>
                         <p><?= htmlspecialchars($producto['definicion']);?></p>
+                        <p class="ch5">Precio: <?= htmlspecialchars($producto['precio']);?></p>
+
                     </a>    
                     <button class="text-dark" >Comprar </button>     
                 </div>
-                <figure>                      
-                    <img src="imgs/<?= $producto['img'];?>" class="img-fluid w-100 figure-img" alt="<?= htmlspecialchars($producto['alt_img']);?>">
-                </figure>
-                <p class="ch5">Precio: <?= htmlspecialchars($producto['precio']);?></p> 
+
+
         </article>
       
         <?php
