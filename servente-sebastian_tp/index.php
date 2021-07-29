@@ -30,7 +30,8 @@ $successInfo = sessionValueGetFlash('successInfo');
     <script>document.createElement("picture");</script>
     <title><?= $title ?></title>
     <link rel="shortcut icon" href="imgs/favicon.ico" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap" rel="stylesheet">
@@ -41,7 +42,7 @@ $successInfo = sessionValueGetFlash('successInfo');
     <header class="header-home container-fluid bg-dark " id="header">
         <h1>La Tienda</h1>
         <div class="row bg-dark">
-            <nav class="nav-index col navbar navbar-expand-md navbar-dark ">               
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#">
                     <img src="imgs/logo-01.png" alt="by Vizzentino" class="logo-home">
                 </a>
