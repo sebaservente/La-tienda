@@ -35,15 +35,15 @@ $successInfo = sessionValueGetFlash('successInfo');
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
-    <!--<link rel="stylesheet" href="css/estilos_nuevo.css">-->
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilos_nuevo.css">
+    <!--<link rel="stylesheet" href="css/estilos.css">-->
 </head>
 <body>
     <header class="header-home container-fluid bg-dark " id="header">
         <h1>La Tienda</h1>
         <div class="row bg-dark">
             <nav class="nav-index col navbar navbar-expand-md navbar-dark ">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand w-75 m-0" href="#">
                     <img src="imgs/logo-01.png" alt="by Vizzentino" class="logo-home">
                 </a>
                 <button class="navbar-toggler " 
@@ -93,14 +93,14 @@ $successInfo = sessionValueGetFlash('successInfo');
                         ?>
 
                     </ul>
-
+                    <div class="divImagen">
+                        <figure>
+                            <img src="imgs/<?= authObtenerUsuario()['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars(authObtenerUsuario()['alt_img']);?>">
+                        </figure>
+                    </div>
                 </div>
             </nav>
-            <div class="divImagen">
-                    <figure>
-                        <img src="imgs/<?= authObtenerUsuario()['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars(authObtenerUsuario()['alt_img']);?>">
-                    </figure>
-            </div>
+
         </div>
     </header>
     <main>

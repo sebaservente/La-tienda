@@ -630,7 +630,7 @@ footer {
 /*------------------------------------------------------------------Final paginas nuevo de producto--*/
 /*------------------------------------------------------------------Inicio paginas de producto--*/
 .producto {
-    background: #1c7430;
+    background: #f8f3d4;
 }
 
 .producto > h2 {
@@ -641,14 +641,15 @@ footer {
 }
 .producto > .divs {
     display: flex;
-    justify-content: center;
     margin: .5rem;
 }
 .producto > .divs > article {
     background: #ffc107;
+    width: 25%;
     padding: .5rem;
     margin: .5rem;
     display: flex;
+    justify-content: center;
 }
 .producto > .divs > article > div > a > h3 {
     font-family: 'Roboto Slab', serif;
@@ -3379,6 +3380,7 @@ footer {
 
     .producto > h2 {
         font-size: 1.5em;
+        color: #ffc107;
     }
 
     .producto > .divs {

@@ -30,7 +30,7 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
 
 ?>
 <section id="productos" class="container-fluid producto">
-    <h2 class="col-12 text-center">Elige Tu Estilo</h2>
+    <h2>Elige Tu Estilo</h2>
     <div>
         <h3>Busca la cerveza que más te identifique</h3>
         <form action="index.php" method="get" class="formRegistroBuscar">
@@ -45,13 +45,12 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
     <p class="parrafoResultados">Mostrando <?= $pagCantidad;?> resulatdos de un total de <?= $pagCantidadTotalRegistro;?> </p>
 
 
-    <div class="divs">
+    <div class="divs bg-danger">
         <?php
         foreach ($productos as $producto):
             $tags = !empty($producto['tags']) ? explode(' | ', $producto['tags']) : [];
         ?>
-       
-        <article>       
+        <article>
                 <div class="bg-light">
                     <a href="index.php?s=leer-producto&id=<?= $producto['id_cerveza'];?>" class="text-dark" >
                         <h3><?= htmlspecialchars($producto['title']);?></h3>
@@ -74,10 +73,7 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
                     </a>    
                     <button class="text-dark" >Comprar </button>     
                 </div>
-
-
         </article>
-      
         <?php
         endforeach;
         ?>
