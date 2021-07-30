@@ -54,9 +54,6 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
                 <div class="divInfoProducto">
                     <a href="index.php?s=leer-producto&id=<?= $producto['id_cerveza'];?>" class="text-dark" >
                         <h3><?= htmlspecialchars($producto['intro']);?></h3>
-                        <figure>
-                            <img src="imgs/<?= $producto['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars($producto['alt_img']);?>">
-                        </figure>
                         <div class="productos_tags">
                             <?php
                             foreach ($tags as $tag):
@@ -66,6 +63,10 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
                             <?php
                             endforeach; ?>
                         </div>
+                        <figure>
+                            <img src="imgs/<?= $producto['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars($producto['alt_img']);?>">
+                        </figure>
+
                         <div class="divDatosProducto">
                             <p><?= htmlspecialchars($producto['title']);?></p>
                             <p><?= htmlspecialchars($producto['definicion']);?></p>

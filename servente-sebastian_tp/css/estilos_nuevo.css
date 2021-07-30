@@ -178,11 +178,13 @@ footer {
 .producto > .divs > .articleProducto > .divInfoProducto > a {
     display: flex;
     flex-wrap: wrap;
+    text-decoration: none;
 }
 .articleProducto > .divInfoProducto > a > h3 {
-    width: 100%;
+    width: 53%;
     margin: 1rem;
     font-weight: bold;
+    text-align: end;
 }
 .articleProducto > .divInfoProducto > a > figure {
     width: 50%;
@@ -209,9 +211,6 @@ a > .productos_tags > .productos_item_tags {
     padding: 0.1rem;
     border-radius: 5px;
     font-weight: 900;
-    position: absolute;
-    margin-left: -2.5rem;
-    margin-top: 6.5rem;
 }
 .producto .paginador {
     display: flex;
@@ -234,4 +233,13 @@ a > .productos_tags > .productos_item_tags {
 }
 .producto .paginador .paginador-lista .bg-warning {
     border-radius: 20%;
+}
+
+
+@media (min-width: 400px) and (max-width: 480px){
+
+    .articleProducto > .divInfoProducto > a > figure {
+        width: 40%;
+
+    }
 }
