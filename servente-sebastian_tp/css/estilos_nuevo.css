@@ -167,5 +167,35 @@ footer {
     text-align: center;
 }
 .producto .divs {
-    background: #ffc107;
+    /*background: #ffc107;*/
+}
+
+.producto > .divs > .articleProducto > .divInfoProducto > a {
+    display: flex;
+    flex-wrap: wrap;
+}
+.articleProducto > .divInfoProducto > a > h3 {
+    width: 100%;
+    margin: .5rem;
+    font-weight: bold;
+}
+.articleProducto > .divInfoProducto > a > figure {
+    width: 50%;
+   /* background: #e40d0d;*/
+}
+.articleProducto > .divInfoProducto > a > .divDatosProducto {
+    width: 50%;
+    /*background: #17a2b8;*/
+}
+a > .divDatosProducto > .productos_tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+a > .divDatosProducto > .productos_tags > .productos_item_tags {
+    margin: auto;
+    background: black;
+    color: #ffff;
+    padding: .3rem;
+    border-radius: 5px;
+
 }

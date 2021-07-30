@@ -50,14 +50,14 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
         foreach ($productos as $producto):
             $tags = !empty($producto['tags']) ? explode(' | ', $producto['tags']) : [];
         ?>
-        <article>
-                <div class="bg-light">
+        <article class="articleProducto">
+                <div class="divInfoProducto">
                     <a href="index.php?s=leer-producto&id=<?= $producto['id_cerveza'];?>" class="text-dark" >
                         <h3><?= htmlspecialchars($producto['title']);?></h3>
                         <figure>
-                            <img src="imgs/<?= $producto['img'];?>" class="img-fluid w-50  figure-img" alt="<?= htmlspecialchars($producto['alt_img']);?>">
+                            <img src="imgs/<?= $producto['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars($producto['alt_img']);?>">
                         </figure>
-                        <div>
+                        <div class="divDatosProducto">
                             <div class="productos_tags">
                                 <?php
                                 foreach ($tags as $tag):
@@ -72,7 +72,7 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
                             <p class="ch5">Precio: <?= htmlspecialchars($producto['precio']);?></p>
                         </div>
                     </a>    
-                    <button class="text-dark" >Comprar </button>     
+                    <button class="text-dark btn btn-success w-100" >Comprar </button>
                 </div>
         </article>
         <?php
