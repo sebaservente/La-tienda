@@ -45,7 +45,7 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
     <p class="parrafoResultados">Mostrando <?= $pagCantidad;?> resulatdos de un total de <?= $pagCantidadTotalRegistro;?> </p>
 
 
-    <div class="divs bg-danger">
+    <div class="divs">
         <?php
         foreach ($productos as $producto):
             $tags = !empty($producto['tags']) ? explode(' | ', $producto['tags']) : [];
@@ -55,21 +55,22 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
                     <a href="index.php?s=leer-producto&id=<?= $producto['id_cerveza'];?>" class="text-dark" >
                         <h3><?= htmlspecialchars($producto['title']);?></h3>
                         <figure>
-                            <img src="imgs/<?= $producto['img'];?>" class="img-fluid w-100 figure-img" alt="<?= htmlspecialchars($producto['alt_img']);?>">
+                            <img src="imgs/<?= $producto['img'];?>" class="img-fluid w-50  figure-img" alt="<?= htmlspecialchars($producto['alt_img']);?>">
                         </figure>
-                        <div class="productos_tags">
-                            <?php
-                            foreach ($tags as $tag):
-                                $dataTags = explode(' => ', $tag);
-                            ?>
-                            <span class="productos_item_tags"><?= htmlspecialchars($dataTags[1]) ;?></span>
-                            <?php
-                            endforeach; ?>
+                        <div>
+                            <div class="productos_tags">
+                                <?php
+                                foreach ($tags as $tag):
+                                    $dataTags = explode(' => ', $tag);
+                                ?>
+                                <span class="productos_item_tags"><?= htmlspecialchars($dataTags[1]) ;?></span>
+                                <?php
+                                endforeach; ?>
+                            </div>
+                            <p><?= htmlspecialchars($producto['intro']);?></p>
+                            <p><?= htmlspecialchars($producto['definicion']);?></p>
+                            <p class="ch5">Precio: <?= htmlspecialchars($producto['precio']);?></p>
                         </div>
-                        <p><?= htmlspecialchars($producto['intro']);?></p>
-                        <p><?= htmlspecialchars($producto['definicion']);?></p>
-                        <p class="ch5">Precio: <?= htmlspecialchars($producto['precio']);?></p>
-
                     </a>    
                     <button class="text-dark" >Comprar </button>     
                 </div>

@@ -161,3 +161,11 @@ footer {
     width: 65%;
     margin: auto;
 }
+.producto .parrafoResultados {
+    font-size: .8rem;
+    margin: 1rem;
+    text-align: center;
+}
+.producto .divs {
+    background: #ffc107;
+}
