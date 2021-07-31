@@ -181,10 +181,10 @@ footer {
     text-decoration: none;
 }
 .articleProducto > .divInfoProducto > a > h3 {
-    width: 53%;
+    width: 100%;
     margin: 1rem;
     font-weight: bold;
-    text-align: end;
+    text-align: center;
 }
 .articleProducto > .divInfoProducto > a > figure {
     width: 50%;
@@ -211,6 +211,7 @@ a > .productos_tags > .productos_item_tags {
     padding: 0.1rem;
     border-radius: 5px;
     font-weight: 900;
+    position: absolute;
 }
 .producto .paginador {
     display: flex;
