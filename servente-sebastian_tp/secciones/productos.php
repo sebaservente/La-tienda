@@ -5,7 +5,7 @@ require 'libraries/productos.php';
 $b = $_GET['b'] ?? null;
 
 // datos de la paginacion
-$pagCantidad = 4;
+$pagCantidad = 6;
 
 // numero de pagina con el casteo
 $pagina = (int) ($_GET['p'] ?? 1);

@@ -119,9 +119,7 @@
     margin: 1rem;
     text-align: center;
 }
-.producto .divs {
-    /*background: #ffc107;*/
-}
+
 .producto h4 {
     font-size: .8rem;
     display: flex;
@@ -225,6 +223,7 @@ footer .contenedores .divNavegacion {
     padding-left: 2rem;
     /*width: 20%;*/
     padding-top: 3rem;
+    margin: auto;
 }
 footer .contenedores .divNavegacion .parrafoNavegacion {
     cursor: pointer;
@@ -243,6 +242,7 @@ footer .contenedores .divContacto {
     padding-left: 2rem;
     /*width: 20%;*/
     padding-top: 3rem;
+    margin: auto;
 }
 footer .contenedores .divContacto ul {
     padding-left: 0;
@@ -292,18 +292,41 @@ footer .contenedores .contenedor .divUbicacion p{
         width: 95%;
     }
 }
-@media (min-width: 401px) and (max-width: 580px){
+@media (min-width: 481px) and (max-width: 680px){
 
     .articleProducto > .divInfoProducto > a > figure {
-        width: 40%;
+        width: 75%;
 
     }
-    .producto > .divs {
+    .producto .divs {
+        /*background: #ffc107;*/
         display: flex;
+        flex-wrap: wrap;
+    }
+    .producto > .divs > .articleProducto {
+        width: 50%;
     }
     .producto > .divs > .articleProducto > .divInfoProducto > a {
         margin: 1.5rem auto;
         width: 90%;
     }
 
+}
+@media (min-width: 681px) and (max-width: 780px){
+    .articleProducto > .divInfoProducto > a > figure {
+        width: 75%;
+
+    }
+    .producto .divs {
+        /*background: #ffc107;*/
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .producto > .divs > .articleProducto {
+        width: 33%;
+    }
+    .producto > .divs > .articleProducto > .divInfoProducto > a {
+        margin: 1.5rem auto;
+        width: 90%;
+    }
 }
