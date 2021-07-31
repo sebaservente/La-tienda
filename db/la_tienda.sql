@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-07-2021 a las 02:17:14
+-- Tiempo de generación: 31-07-2021 a las 02:38:35
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 7.3.28
 
@@ -48,7 +48,9 @@ INSERT INTO `cervezas` (`id_cerveza`, `usuarios_id_usuario`, `title`, `intro`, `
 (2, 1, 'Pale APA v2', 'Cerveza Pale Ale', 'De cuerpo medio-liviano a medio. Carbonatación de moderada a alta. Acabado suave, sin astringencias, asociado a la alta tasa de lupulación.', 'rabieta-apa.jpg', 'Cerveza Artesanal Patagonica', '444', 'IBU 23 | 34'),
 (3, 1, 'Scottish', 'Cerveza Tennent’s', 'Cerveza Tennent’s Extra Strong Scottish Lager de Tennent\'s España. Una cerveza con carácter al más puro estilo Stout, de contraste dulce y amargo en boca, gran aroma y aspecto.', 'scottish.jpg', 'Cerveza Artesanal Patagonica', '300', 'IBU 23 | 34'),
 (5, 1, 'Blonde', 'Blonde española', 'La Blonde Ale de Espiga, destaca por su aroma intenso, con notas cítricas, fruta tropical, melón y uva. En boca destaca la fruta, con un amargor final que compensa la dulzura.', 'blonde-ale-0001.jpg', 'Cerveza Artesanal botella', '110', 'IBU 23 | 34'),
-(6, 1, 'Stout', 'Cervezas Irish Stout', 'Tostado pronunciado, similar al café. El balance varia desde bastante uniforme a bastante amargo, la version más balanceada teniendo un poco de dulzor a malta y la version amargas siendo bastante secas.', 'stout.jpg', 'Cerveza Artesanal botella 235ml', '250', 'IBU 23 | 34');
+(6, 1, 'Stout', 'Cervezas Irish Stout', 'Tostado pronunciado, similar al café. El balance varia desde bastante uniforme a bastante amargo, la version más balanceada teniendo un poco de dulzor a malta y la version amargas siendo bastante secas.', '1627603805.jpg', 'Cerveza Artesanal botella 235ml', '250', 'IBU 23 | 34'),
+(138, 1, 'Honey Weiss', 'Cerveza IPA Torpedo', 'la mehro cerveza', '1627356091.jpg', 'botella de cerveza nueva black 355cm3', '250', 'IBU 23 | 34'),
+(139, 1, 'Stout', 'Cerveza IPA Torpedo', 'sdfdg fdghdf fgh sfgh fhb fghthrh fghghgf gfhgfn fgfhf fg f  fghfh dfghh df thh', '1627577228.jpg', 'lokij', '250', 'IBU 23 | 34');
 
 -- --------------------------------------------------------
 
@@ -67,15 +69,12 @@ CREATE TABLE `cervezas_has_tags` (
 
 INSERT INTO `cervezas_has_tags` (`cervezas_id_cerveza`, `tags_id_tags`) VALUES
 (1, 1),
-(1, 2),
 (2, 1),
-(2, 2),
-(3, 4),
-(3, 5),
+(3, 1),
 (5, 6),
-(5, 7),
-(6, 3),
-(6, 8);
+(6, 8),
+(138, 8),
+(139, 1);
 
 -- --------------------------------------------------------
 
@@ -124,14 +123,14 @@ CREATE TABLE `tags` (
 --
 
 INSERT INTO `tags` (`id_tags`, `nombre`) VALUES
-(1, 'enero'),
-(2, 'febrero'),
-(3, 'marzo'),
-(4, 'abril'),
-(5, 'mayo'),
-(6, 'pascuas'),
-(7, 'dia del padre'),
-(8, 'carnaval');
+(1, '10%'),
+(2, '15%'),
+(3, '20%'),
+(4, '25%'),
+(5, '30%'),
+(6, '2x1'),
+(7, '3x2'),
+(8, 'Envios');
 
 -- --------------------------------------------------------
 
@@ -156,9 +155,10 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `id_rol`, `email`, `password`, `nombre`, `apellido`, `apodo`, `img`, `alt_img`) VALUES
-(1, 1, 'ser@ser.com.ar', '$2y$10$OcrmnaovQKAsDm.pDRBMtO49zAdYSCZKf7QHi8L7PFA4DpaXS3x4y', 'sebita', 'andreus', 'Admin', 'logo-contacto.png', NULL),
-(2, 2, 'sebas@sebas.com.ar', '$2y$10$qPO8xB0VrWE23HZMX9k6COYXlmOS2J/4fPvMIZoE0dqUzG3epGG0W', 'sebastian', 'servente', 'sebita28', 'facebook.png', NULL),
-(10, 2, 'yu@yu.com.ar', '$2y$10$aLIWlbIIjXpy8UZmiaYlkOLNMMyM/UlWbxVS36bdh6LmammJg7sR2', 'sebas', 'serve', 'sersebas08', 'logo-contacto.png', NULL);
+(1, 1, 'ser@ser.com.ar', '$2y$10$6CvW2rOC/RTnBh3Yv7i6EeKmZrpnPju8qOw3ArTXGl/mIgbB1HQJS', 'sebita', 'andreus', 'Admin', 'logo-contacto.png', 'imagen del usuario'),
+(2, 2, 'sebas@sebas.com.ar', '$2y$10$xWcbYGxLHRUUW7x1vmiQ2.7G97zIBjvAi29slSKgx.0Pz5/ceAIw2', 'sebastian', 'servente', 'sebita28', '1627444939.jpg', 'imagen hombre en la nieve'),
+(11, 2, 'yu@yu.com.ar', '$2y$10$2TMsXjJaIPyTBbYh2WVSse.dpHP8FqW/FrKYczXEmpL3p3wLF.UGS', 'sebastian', 'andres', 'yuyo', '1627416953.jpg', 'imagen del usuario'),
+(29, 2, 'lo@lo.com.ar', '$2y$10$EtOpeGG98hzSXBz78xRYTet8AlcRhNhKWGHvYoKujZeHKoSzRy9iO', 'sebastian', 'servente', 'sersebas', '1627436954.jpg', 'botella de cerveza nueva black 355cm3');
 
 --
 -- Índices para tablas volcadas
@@ -214,7 +214,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `cervezas`
 --
 ALTER TABLE `cervezas`
-  MODIFY `id_cerveza` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
+  MODIFY `id_cerveza` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -232,7 +232,7 @@ ALTER TABLE `tags`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_usuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- Restricciones para tablas volcadas
