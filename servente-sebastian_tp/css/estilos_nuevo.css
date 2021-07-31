@@ -286,7 +286,10 @@ footer .contenedores .contenedor .divUbicacion p{
 
     .articleProducto > .divInfoProducto > a > figure {
         width: 40%;
-
+    }
+    .producto > .divs > .articleProducto > .divInfoProducto > a {
+        margin: 1.5rem auto;
+        width: 95%;
     }
 }
 @media (min-width: 401px) and (max-width: 580px){
@@ -295,4 +298,12 @@ footer .contenedores .contenedor .divUbicacion p{
         width: 40%;
 
     }
+    .producto > .divs {
+        display: flex;
+    }
+    .producto > .divs > .articleProducto > .divInfoProducto > a {
+        margin: 1.5rem auto;
+        width: 90%;
+    }
+
 }
