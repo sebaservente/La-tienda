@@ -163,14 +163,13 @@
     flex-wrap: wrap;
 }
 a > .productos_tags > .productos_item_tags {
-    margin: auto;
     background: black;
     color: #d39e00;
     padding: 0.1rem;
     border-radius: 5px;
     font-weight: 900;
     position: absolute;
-    margin-left: 4rem;
+    margin-left: 3rem;
 }
 .producto .paginador {
     display: flex;
@@ -210,15 +209,19 @@ footer .contenedores .divInstitucion {
 }
 footer .contenedores .divInstitucion  .institucion {
     font-size: 0;
-    margin-top: 1rem;
     background: url("../imgs/descarga.png") no-repeat center;
-    height: 12vh;
+    height: 11vh;
+}
+footer .contenedores .divInstitucion ul {
+    display: block;
 }
 footer .contenedores .divInstitucion ul li {
     list-style:  none;
     color: #fff;
     text-align: center;
+
 }
+
 footer .contenedores .ambos {
     display: flex;
     flex-wrap: wrap;
@@ -295,8 +298,11 @@ footer .contenedores .contenedor .divUbicacion p{
         margin: 1.5rem auto;
         width: 95%;
     }
+    footer .contenedores .divInstitucion ul {
+        display: block;
+    }
 }
-@media (min-width: 481px) and (max-width: 680px){
+@media (min-width: 481px) and (max-width: 580px){
 
     .articleProducto > .divInfoProducto > a > figure {
         width: 75%;
@@ -316,10 +322,18 @@ footer .contenedores .contenedor .divUbicacion p{
     }
     footer .contenedores .ambos {
         width: 75%;
-        text-align: center;
+        /*text-align: center;*/
     }
+    footer .contenedores .divInstitucion ul {
+      display: block;
+    }
+    footer .contenedores .divInstitucion ul li{
+        text-align: center;
+        padding: 0 0.2rem;
+    }
+
 }
-@media (min-width: 681px) and (max-width: 780px){
+@media (min-width: 581px) and (max-width: 680px){
 
     .articleProducto > .divInfoProducto > a > figure {
         width: 75%;
@@ -336,5 +350,122 @@ footer .contenedores .contenedor .divUbicacion p{
     .producto > .divs > .articleProducto > .divInfoProducto > a {
         margin: 1.5rem auto;
         width: 90%;
+    }
+    footer .contenedores .divInstitucion ul {
+        display: flex;
+        justify-content: center;
+    }
+    footer .contenedores .divInstitucion ul li {
+        font-size: .7rem;
+        padding: 0rem 0.2rem;
+    }
+    footer .contenedores .ambos {
+        margin-top: 0rem;
+    }
+    footer .contenedores .ambos .divNavegacion {
+        padding-top: 1rem;
+    }
+    footer .contenedores .ambos .divContacto {
+        padding-top: .5rem;
+        margin-top: 0.5rem;
+    }
+    footer .contenedores .contenedor {
+        padding-top: 0rem;
+        font-size: 0.8rem;
+    }
+    .logo-home {
+        width: 10%;
+
+    }
+
+}
+@media (min-width: 681px) and (max-width: 780px){
+    .producto .divs {
+        /*background: #ffc107;*/
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .producto > .divs > .articleProducto {
+        width: 33%;
+    }
+    .producto > .divs > .articleProducto > .divInfoProducto > a {
+        margin: 1.5rem auto;
+        width: 90%;
+    }
+    footer .contenedores .divInstitucion ul {
+        display: flex;
+        justify-content: center;
+    }
+    footer .contenedores .divInstitucion ul li {
+        font-size: .7rem;
+        padding: 0rem 0.2rem;
+    }
+    footer .contenedores .ambos {
+        margin-top: 0rem;
+    }
+    footer .contenedores .ambos .divNavegacion {
+        padding-top: 1rem;
+    }
+    footer .contenedores .ambos .divContacto {
+        padding-top: .5rem;
+        margin-top: 0.5rem;
+    }
+    footer .contenedores .contenedor {
+        padding-top: 0rem;
+        font-size: 0.8rem;
+    }
+    .logo-home {
+        width: 10%;
+
+    }
+}
+@media (min-width: 781px) and (max-width: 980px){
+    .producto .divs {
+        /*background: #ffc107;*/
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .producto > .divs > .articleProducto {
+        width: 33%;
+    }
+    .producto > .divs > .articleProducto > .divInfoProducto > a {
+        margin: 1.5rem auto;
+        width: 90%;
+    }
+    footer .contenedores .divInstitucion ul {
+        display: flex;
+        justify-content: center;
+    }
+    footer .contenedores .divInstitucion ul li {
+        font-size: .7rem;
+        padding: 0rem 0.2rem;
+    }
+    footer .contenedores .ambos {
+        margin-top: 0rem;
+        width: 50%;
+    }
+    footer .contenedores .ambos .divNavegacion {
+        padding-top: 1rem;
+    }
+    footer .contenedores .ambos .divContacto {
+        padding-top: .5rem;
+        margin-top: 0.5rem;
+    }
+    footer .contenedores .contenedor {
+        padding-top: 0rem;
+        font-size: 0.8rem;
+    }
+    .logo-home {
+        width: 10%;
+
+    }
+
+}
+@media (min-width: 981px){
+    footer .contenedores .divInstitucion {
+        width: 25%;
+    }
+    footer .contenedores .ambos {
+        width: 44%;
     }
 }

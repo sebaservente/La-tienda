@@ -133,9 +133,9 @@ $successInfo = sessionValueGetFlash('successInfo');
             <div class="divInstitucion">
                 <p class="institucion">Escuela Davinci</p>
                 <ul>
-                    <li>Carrera: Diseño y Desarrollo Web</li>
-                    <li>Docente: Gallino, santiago</li>
-                    <li>Alumno: Servente, sebastian andres</li>
+                    <li>Carrera: Diseño y Desarrollo Web.</li>
+                    <li>Docente: Gallino, Santiago.</li>
+                    <li>Alumno: Servente, Sebastian andres.</li>
                 </ul>
             </div>
 
