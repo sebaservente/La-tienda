@@ -39,9 +39,9 @@ $successInfo = sessionValueGetFlash('successInfo');
     <!--<link rel="stylesheet" href="css/estilos.css">-->
 </head>
 <body>
-    <header class="header-home container-fluid bg-dark " id="header">
+    <header class="header-home container-fluid " id="header">
         <h1>La Tienda</h1>
-        <div class="row bg-dark">
+        <div class="row">
             <nav class="nav-index col navbar navbar-expand-md navbar-dark ">
                 <a class="navbar-brand w-75 m-0" href="#">
                     <img src="imgs/logo-01.png" alt="by Vizzentino" class="logo-home">
