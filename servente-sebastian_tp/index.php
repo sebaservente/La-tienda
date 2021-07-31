@@ -138,23 +138,26 @@ $successInfo = sessionValueGetFlash('successInfo');
                     <li>Alumno: Servente, sebastian andres</li>
                 </ul>
             </div>
-            <div class="divNavegacion">
-                <p class="parrafoNavegacion">Sobre Nosotros</p>
-                <ul>
-                    <li>Desarrollo</li>
-                    <li>Diseño</li>
-                    <li>Tecnologias</li>
-                    <li>Equipo</li>
-                </ul>
-            </div>
-            <div class="divContacto">
-                <p class="">Redes Sociales</p>
-                <ul>
-                    <li><i class="bi bi-linkedin"></i>Inkedin</li>
-                    <li><i class="bi bi-github"></i>Github</li>
-                    <li><i class="bi bi-facebook"></i>Facebook</li>
-                    <li><i class="bi bi-instagram"></i>Instagram</li>
-                </ul>
+
+            <div class="ambos">
+                <div class="divNavegacion">
+                    <p class="parrafoNavegacion">Sobre Nosotros</p>
+                    <ul>
+                        <li>Desarrollo</li>
+                        <li>Diseño</li>
+                        <li>Tecnologias</li>
+                        <li>Equipo</li>
+                    </ul>
+                </div>
+                <div class="divContacto">
+                    <p class="">Redes Sociales</p>
+                    <ul>
+                        <li><i class="bi bi-linkedin"></i>Inkedin</li>
+                        <li><i class="bi bi-github"></i>Github</li>
+                        <li><i class="bi bi-facebook"></i>Facebook</li>
+                        <li><i class="bi bi-instagram"></i>Instagram</li>
+                    </ul>
+                </div>
             </div>
             <div class="contenedor">
                 <div class="divUbicacion">

@@ -205,8 +205,7 @@ footer .contenedores {
     flex-wrap: wrap;
 }
 footer .contenedores .divInstitucion {
-    /*   background: #00eaff;*/
-    /*width: 35%;*/
+    width: 100%;
     margin: auto;
 }
 footer .contenedores .divInstitucion  .institucion {
@@ -218,47 +217,52 @@ footer .contenedores .divInstitucion  .institucion {
 footer .contenedores .divInstitucion ul li {
     list-style:  none;
     color: #fff;
+    text-align: center;
 }
-footer .contenedores .divNavegacion {
-    padding-left: 2rem;
-    /*width: 20%;*/
-    padding-top: 3rem;
+footer .contenedores .ambos {
+    display: flex;
+    flex-wrap: wrap;
     margin: auto;
 }
-footer .contenedores .divNavegacion .parrafoNavegacion {
+
+footer .contenedores .ambos .divNavegacion {
+
+    padding-top: 2rem;
+    margin: auto;
+}
+footer .contenedores  .ambos .divNavegacion .parrafoNavegacion {
     cursor: pointer;
 }
 
-footer .contenedores .divNavegacion ul {
+footer .contenedores  .ambos .divNavegacion ul {
     padding-left: 0;
 }
-footer .contenedores .divNavegacion ul li {
+footer .contenedores  .ambos .divNavegacion ul li {
     list-style:  none;
     color: #fff;
     cursor: pointer;
     padding: 0.2rem;
 }
-footer .contenedores .divContacto {
-    padding-left: 2rem;
-    /*width: 20%;*/
-    padding-top: 3rem;
+footer .contenedores .ambos .divContacto {
+    padding-left: 3rem;
+    padding-top: .9rem;
     margin: auto;
 }
-footer .contenedores .divContacto ul {
+footer .contenedores .ambos .divContacto ul {
     padding-left: 0;
 }
-footer .contenedores .divContacto ul li {
+footer .contenedores .ambos .divContacto ul li {
     list-style:  none;
     color: #fff;
     cursor: pointer;
     display: flex;
     align-items: center;
 }
-footer .contenedores .divContacto ul li i{
+footer .contenedores .ambos .divContacto ul li i{
     padding: 0.3rem;
     color: orange;
 }
-footer .contenedores .divContacto ul li:nth-child(4){
+footer .contenedores .ambos .divContacto ul li:nth-child(4){
     /*    background: url(../imgs/instagram_108043.png) no-repeat 15%;*/
     /*   height: 10vh;*/
     position: absolute;
@@ -267,18 +271,18 @@ footer .contenedores .divContacto ul li:nth-child(4){
     flex-wrap: nowrap;
 }
 footer .contenedores .contenedor {
-    /*width: 25%;*/
     display: flex;
     flex-direction: column;
     padding-top: 2.6rem;
+    margin: auto;
 }
 footer .contenedores .contenedor .divUbicacion {
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
+    flex-direction: column;
 }
 footer .contenedores .contenedor .divUbicacion p{
-    padding: .5rem;
+  /*  padding: .5rem;*/
 }
 /* ------------------fin Footer login--------------------- */
 
@@ -310,9 +314,13 @@ footer .contenedores .contenedor .divUbicacion p{
         margin: 1.5rem auto;
         width: 90%;
     }
-
+    footer .contenedores .ambos {
+        width: 75%;
+        text-align: center;
+    }
 }
 @media (min-width: 681px) and (max-width: 780px){
+
     .articleProducto > .divInfoProducto > a > figure {
         width: 75%;
 
