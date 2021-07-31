@@ -83,56 +83,6 @@
     background: url(../imgs/images.png) no-repeat center 100%;
 }
 /*------------------------------------------------------------Final 404 -------------------*/
-/*-------------------------------------------------------------inicio Footer------*/
-footer {
-    background-color: #343a40;
-}
-#footer {
-    background-color: #343a40;
-    justify-content:center;
-    margin-top: 1em;
-}
-
-#footer :nth-child(1){
-    width: 40px;
-}
-
-#footer :nth-child(3){
-    width: 40px;
-}
-#footer :nth-child(2){
-    width: 40px;
-}
-#footer :nth-child(4){
-    width: 40px;
-}
-#footer :nth-child(5){
-    width: 40px;
-}
-
-#footer01 > ul > li {
-    background-color: #343a40;;
-    display: inline-block;
-    justify-content: center;
-    color:white;
-    list-style: none;
-    line-height: 2.5;
-
-}
-.bis {
-    background-color: #343a40;
-    display: flex;
-    flex-direction: row;
-    font-size: 0.7em;
-    margin: auto;
-}
-.bis :nth-child(2) {
-    margin: auto;
-
-
-}
-
-/*------------------------------------------------------------------Final Footer--*/
 
 /*------------------------------------------------------------------Imagen menu---*/
 #header div .divImagen figure img {
@@ -235,7 +185,91 @@ a > .productos_tags > .productos_item_tags {
 .producto .paginador .paginador-lista .bg-warning {
     border-radius: 20%;
 }
+/* ------------------Footer login--------------------- */
+footer {
+    margin-top: 1rem;
+    background: #1d2124;
+    color: orange;
+}
+footer .contenedores {
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .contenedores .divInstitucion {
+    /*   background: #00eaff;*/
+    /*width: 35%;*/
+    margin: auto;
+}
+footer .contenedores .divInstitucion  .institucion {
+    font-size: 0;
+    margin-top: 1rem;
+    background: url("../imgs/descarga.png") no-repeat center;
+    height: 12vh;
+}
+footer .contenedores .divInstitucion ul li {
+    list-style:  none;
+    color: #fff;
+}
+footer .contenedores .divNavegacion {
+    padding-left: 2rem;
+    /*width: 20%;*/
+    padding-top: 3rem;
+}
+footer .contenedores .divNavegacion .parrafoNavegacion {
+    cursor: pointer;
+}
 
+footer .contenedores .divNavegacion ul {
+    padding-left: 0;
+}
+footer .contenedores .divNavegacion ul li {
+    list-style:  none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.2rem;
+}
+footer .contenedores .divContacto {
+    padding-left: 2rem;
+    /*width: 20%;*/
+    padding-top: 3rem;
+}
+footer .contenedores .divContacto ul {
+    padding-left: 0;
+}
+footer .contenedores .divContacto ul li {
+    list-style:  none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+footer .contenedores .divContacto ul li i{
+    padding: 0.3rem;
+    color: orange;
+}
+footer .contenedores .divContacto ul li:nth-child(4){
+    /*    background: url(../imgs/instagram_108043.png) no-repeat 15%;*/
+    /*   height: 10vh;*/
+    position: absolute;
+    display: flex;
+    /* align-items: center;*/
+    flex-wrap: nowrap;
+}
+footer .contenedores .contenedor {
+    /*width: 25%;*/
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.6rem;
+}
+footer .contenedores .contenedor .divUbicacion {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+footer .contenedores .contenedor .divUbicacion p{
+    padding: .5rem;
+}
+/* ------------------fin Footer login--------------------- */
 
 @media (min-width: 400px) and (max-width: 480px){
 

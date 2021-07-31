@@ -128,7 +128,51 @@ $successInfo = sessionValueGetFlash('successInfo');
         ?>
 
     </main>
-    <footer class="container-fluid page-footer font-small cyan darken-2 ">
+    <footer>
+        <div class="contenedores">
+            <div class="divInstitucion">
+                <p class="institucion">Escuela Davinci</p>
+                <ul>
+                    <li>Carrera: Diseño y Desarrollo Web</li>
+                    <li>Docente: Gallino, santiago</li>
+                    <li>Alumno: Servente, sebastian andres</li>
+                </ul>
+            </div>
+            <div class="divNavegacion">
+                <p class="parrafoNavegacion">Sobre Nosotros</p>
+                <ul>
+                    <li>Desarrollo</li>
+                    <li>Diseño</li>
+                    <li>Tecnologias</li>
+                    <li>Equipo</li>
+                </ul>
+            </div>
+            <div class="divContacto">
+                <p class="">Redes Sociales</p>
+                <ul>
+                    <li><i class="bi bi-linkedin"></i>Inkedin</li>
+                    <li><i class="bi bi-github"></i>Github</li>
+                    <li><i class="bi bi-facebook"></i>Facebook</li>
+                    <li><i class="bi bi-instagram"></i>Instagram</li>
+                </ul>
+            </div>
+            <div class="contenedor">
+                <div class="divUbicacion">
+                    <p><i class="bi bi-geo-alt-fill"></i></p>
+                    <p class="text-light">Argentina, Ciudad de Buenos Aires</p>
+                </div>
+                <div class="divUbicacion">
+                    <p><i class="bi bi-envelope"></i></p>
+                    <p class="text-light">sebastian.servente@davinci.edu.ar</p>
+                </div>
+                <div class="divUbicacion">
+                    <p><i class="bi bi-whatsapp"></i></p>
+                    <p class="text-light">(011)6811-5765</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--<footer class="container-fluid page-footer font-small cyan darken-2 ">
 		<div class="row  ">
 			<div id="footer01" class="col-12 text-center m-auto" >
                 <ul>
@@ -153,7 +197,7 @@ $successInfo = sessionValueGetFlash('successInfo');
 				<a href="#"> <p class="card-text text-justify text-center text-white">Informacion Compañia | Privacion y Politica | Terminos y Condiciones.</p></a>
 			</div>
 		</div>
-    </footer>
+    </footer>-->
     <?php
     if(isset($secciones[$seccion]['js'])):
         foreach ($secciones[$seccion]['js'] as $script): ?>
