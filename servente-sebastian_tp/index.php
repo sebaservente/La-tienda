@@ -95,7 +95,7 @@ $successInfo = sessionValueGetFlash('successInfo');
                     </ul>
                     <div class="divImagen">
                         <figure>
-                            <img src="imgs/<?= authObtenerUsuario()['img'];?>" class="img-fluid figure-img w-50 d-flex justify-content-center" alt="<?= htmlspecialchars(authObtenerUsuario()['alt_img']);?>">
+                            <img src="imgs/<?= authObtenerUsuario()['img'];?>" class="img-fluid figure-img d-flex justify-content-center" alt="<?= htmlspecialchars(authObtenerUsuario()['alt_img']);?>">
                         </figure>
                     </div>
                 </div>
