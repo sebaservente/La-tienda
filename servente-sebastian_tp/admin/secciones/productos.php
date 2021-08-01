@@ -38,8 +38,8 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
         foreach ($productos as $producto): 
         ?>      
         <article class="articleProducto">
-                <div class="divInfoProducto">
-                    <a href="#" class="text-dark" >
+                <div class="divInfoProducto rounded">
+                    <a href="#" class="text-dark text-decoration-none" >
                         <h3>Id:  <?=$producto['id_cerveza'];?></h3>
                         <figure>
                             <img src="../imgs/<?= $producto['img'];?>" class="img-fluid  figure-img" alt="<?= htmlspecialchars($producto['alt_img']);?>">
@@ -50,9 +50,9 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
                             <p> <?= htmlspecialchars($producto['definicion']);?></p>
                             <p class="ch5">Precio: <?= htmlspecialchars($producto['precio']);?></p>
                         </div>
-                        <p class="m-1 p-2  m-auto text-center w-75">
-                            <a href="index.php?s=editar-producto&id=<?=$producto['id_cerveza'];?>" class="text-warning">Editar /</a>
-                            <a href="acciones/producto-eliminar.php?id=<?=$producto['id_cerveza'];?>" class="borrar text-danger">Eliminar</a>
+                        <p class="m-1 p-2 bg-dark rounded m-auto text-center w-75 text text-decoration-none ">
+                            <a href="index.php?s=editar-producto&id=<?=$producto['id_cerveza'];?>" class=" text-decoration-none text-warning ">Editar /</a>
+                            <a href="acciones/producto-eliminar.php?id=<?=$producto['id_cerveza'];?>" class="borrar text-decoration-none text-danger">Eliminar</a>
                         </p>
                     </a>
                 </div>

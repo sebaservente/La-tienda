@@ -54,7 +54,8 @@ if(isset($_SESSION['successErrors'])){
     <script>document.createElement("picture");</script>
     <title><?= $title ?></title>
     <link rel="shortcut icon" href="../imgs/favicon.ico" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
@@ -62,12 +63,12 @@ if(isset($_SESSION['successErrors'])){
     <link rel="stylesheet" href="../css/estilos_nuevo.css">
 </head>
 <body>
-    <header class="header-home container-fluid bg-dark ">
+    <header class="header-home container-fluid " id="header">
         <h1>Panel de Administracion para Tienda de Cervezas</h1>
        
         <div class="row bg-dark">
-            <nav class="nav-index col navbar navbar-expand-md navbar-dark ">               
-                <a class="navbar-brand" href="index.php">
+            <nav class="nav-index col navbar navbar-expand-md navbar-dark ">
+                <a class="navbar-brand w-25 m-0" href="#">
                     <img src="imgs/logo-01.png" alt="by Vizzentino" class="logo-home">
                 </a>
                 <button class="navbar-toggler " 
@@ -96,12 +97,17 @@ if(isset($_SESSION['successErrors'])){
                         <li class="nav-item">
                             <a class="nav-link text-warning" href="index.php?s=leer-usuarios">Usuarios</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link text-warning" href="acciones/logout.php"><?= authObtenerUsuario()['nombre'];?> (cerrar sesion) </a></li>
+                        <li class="nav-item"><a class="nav-link " href="acciones/logout.php">@<?= authObtenerUsuario()['nombre'];?> (cerrar sesion) </a></li>
                         <!--<li class="nav-item">
                             <a class="nav-link" href="index.php?s=productos">Cerrar Sesion</a>
                         </li>-->
                         
                     </ul>
+                    <div class="divImagen d-none d-md-block d-sm-none ">
+                        <figure>
+                            <img src="imgs/<?= authObtenerUsuario()['img'];?>" class="img-fluid figure-img d-flex justify-content-center" alt="<?= htmlspecialchars(authObtenerUsuario()['alt_img']);?>">
+                        </figure>
+                    </div>
                 </div>
                 <?php 
                 endif; 

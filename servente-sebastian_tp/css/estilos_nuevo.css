@@ -294,7 +294,7 @@ fieldset legend {
     border-radius: 50%;
 }
 .articleProducto > .divInfoProducto > a > .divDatosProducto {
-    width: 75%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;

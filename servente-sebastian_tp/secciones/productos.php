@@ -51,7 +51,7 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
             $tags = !empty($producto['tags']) ? explode(' | ', $producto['tags']) : [];
         ?>
         <article class="articleProducto">
-                <div class="divInfoProducto">
+                <div class="divInfoProducto rounded">
                     <a href="index.php?s=leer-producto&id=<?= $producto['id_cerveza'];?>" class="text-dark" >
                         <h3><?= htmlspecialchars($producto['title']);?></h3>
                         <div class="productos_tags">
