@@ -25,6 +25,53 @@
 #header .row {
     background: #1d2124;
 }
+main #err {
+    background: deeppink;
+}
+.msj-success{
+    background: #ffc107;
+    text-align: center;
+    font-weight: bold;
+}
+#sectionPerfil h2 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+#sectionPerfil .perfil .divDatos .divAccion {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 78%;
+    max-width: 250px;
+}
+#sectionPerfil .perfil .divImagen figure img {
+    border-radius: 25%;
+    width: 42%;
+    max-width: 100px;
+    margin-top: .7rem;
+    box-shadow: 1px 2px 5px -2px #000;
+}
+#sectionPerfil .perfil {
+    text-align: center;
+    margin: 2rem;
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido {
+    display: flex;
+    flex-wrap: wrap;
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido h3{
+    width: 100%;
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido .primero {
+    padding: .5rem;
+    width: 50%;
+    text-align: end;
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido .segundo {
+    padding: .5rem;
+    width: 50%;
+    text-align: start;
+}
 /*--------------mantenimientos-------------------------------------*/
 .reparar {
     display: grid;
@@ -92,7 +139,7 @@
     border-radius: 50%;
     max-width: 100px;
     box-shadow: 1px 2px 5px -2px #000;
-    margin-left: 10rem;
+    margin-left: 2rem;
 }
 
 /*------------------------------------------------------------------home----------*/
@@ -202,6 +249,7 @@ footer {
 footer .contenedores {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 1rem;
 }
 footer .contenedores .divInstitucion {
     width: 100%;
@@ -301,9 +349,12 @@ footer .contenedores .contenedor .divUbicacion p{
     footer .contenedores .divInstitucion ul {
         display: block;
     }
+
 }
 @media (min-width: 481px) and (max-width: 580px){
-
+    .logo-home {
+        width: 20%;
+    }
     .articleProducto > .divInfoProducto > a > figure {
         width: 75%;
 
@@ -379,7 +430,7 @@ footer .contenedores .contenedor .divUbicacion p{
     }
 
 }
-@media (min-width: 681px) and (max-width: 780px){
+@media (min-width: 681px) and (max-width: 767px){
     .producto .divs {
         /*background: #ffc107;*/
         display: flex;
@@ -419,7 +470,7 @@ footer .contenedores .contenedor .divUbicacion p{
 
     }
 }
-@media (min-width: 781px) and (max-width: 980px){
+@media (min-width: 768px) and (max-width: 880px){
     .producto .divs {
         /*background: #ffc107;*/
         display: flex;
@@ -455,17 +506,36 @@ footer .contenedores .contenedor .divUbicacion p{
         padding-top: 0rem;
         font-size: 0.8rem;
     }
-    .logo-home {
-        width: 10%;
 
+    .logo-home {
+        width: 40%;
     }
 
 }
-@media (min-width: 981px){
+@media (min-width: 881px){
+    .producto .divs {
+        /*background: #ffc107;*/
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .producto > .divs > .articleProducto {
+        width: 33%;
+    }
+    .producto > .divs > .articleProducto > .divInfoProducto > a {
+        margin: 1.5rem auto;
+        width: 90%;
+    }
     footer .contenedores .divInstitucion {
         width: 25%;
     }
     footer .contenedores .ambos {
         width: 44%;
     }
+    footer .contenedores .contenedor .divUbicacion {
+        flex-direction: row;
+    }
+    footer .contenedores .contenedor .divUbicacion p {
+        padding: .5rem;
+    }
+
 }

@@ -43,7 +43,7 @@ $successInfo = sessionValueGetFlash('successInfo');
         <h1>La Tienda</h1>
         <div class="row">
             <nav class="nav-index col navbar navbar-expand-md navbar-dark ">
-                <a class="navbar-brand w-75 m-0" href="#">
+                <a class="navbar-brand w-25 m-0" href="#">
                     <img src="imgs/logo-01.png" alt="by Vizzentino" class="logo-home">
                 </a>
                 <button class="navbar-toggler " 
@@ -95,7 +95,7 @@ $successInfo = sessionValueGetFlash('successInfo');
                     </ul>
                     <div class="divImagen">
                         <figure>
-                            <img src="imgs/<?= authObtenerUsuario()['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars(authObtenerUsuario()['alt_img']);?>">
+                            <img src="imgs/<?= authObtenerUsuario()['img'];?>" class="img-fluid figure-img w-50 d-flex justify-content-center" alt="<?= htmlspecialchars(authObtenerUsuario()['alt_img']);?>">
                         </figure>
                     </div>
                 </div>
