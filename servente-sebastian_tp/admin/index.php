@@ -58,8 +58,8 @@ if(isset($_SESSION['successErrors'])){
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="../css/estilos.css">
+    <!--<link rel="stylesheet" href="css/estilos.css">-->
+    <link rel="stylesheet" href="../css/estilos_nuevo.css">
 </head>
 <body>
     <header class="header-home container-fluid bg-dark ">
@@ -135,31 +135,52 @@ if(isset($_SESSION['successErrors'])){
         ?>
         
     </main>
-    <footer class="container-fluid page-footer font-small cyan darken-2 ">
-		<div class="row  ">
-			<div id="footer01" class="col-12 text-center m-auto" >
+    <footer>
+        <div class="contenedores">
+            <div class="divInstitucion">
+                <p class="institucion">Escuela Davinci</p>
                 <ul>
-                    <li>Diseño y Desarrollo Web</li>									
-                    <li>Comisión DwTn3A</li> 
-                    <li>Profesor Santiago Gallino</li>
+                    <li>Carrera: Diseño y Desarrollo Web.</li>
+                    <li>Docente: Gallino, Santiago.</li>
+                    <li>Alumno: Servente, Sebastian andres.</li>
                 </ul>
-			</div>						
-			<div id="footer" class="row  m-auto col-12 justify-content-center  "> 
-                <a href="#"><img class="d-block w-100 img-fluid p-2" src="imgs/facebook.png" alt="redes sociales facebook"></a>
-                <a href="#"><img class="d-block  w-100 img-fluid p-2" src="imgs/instagram.png"  alt="redes sociales instagram"></a>              
-                <a href="#"><img class="d-block  w-100 img-fluid p-2" src="imgs/twitter.png"  alt="redes sociales twitter"></a>              
-                <a href="#"><img class="d-block  w-100 img-fluid p-2" src="imgs/whatsapp.png"  alt="redes sociales twitter"></a>              
-                <a href="#"><img class="d-block  w-100 img-fluid p-2" src="imgs/pinterest.png"  alt="redes sociales twitter"></a>								
-			</div>
-		</div>	
-		<div class="bis row m-0">
-			<div id="hover1" class="footer-copyright text-white text-center py-3 col-12 col-md-6 ">© 2020 Copyright/Todos los derechos Reservados:
-				<a href="#" class="text-success"> sebaservente.com.ar</a>
-			</div>
-			 <div id="hover" class="footer-copyright  text-white  py-3 col-12  col-md-6">
-				<a href="#"> <p class="card-text text-justify text-center text-white">Informacion Compañia | Privacion y Politica | Terminos y Condiciones.</p></a>
-			</div>
-		</div>
+            </div>
+
+            <div class="ambos">
+                <div class="divNavegacion">
+                    <p class="parrafoNavegacion">Sobre Nosotros</p>
+                    <ul>
+                        <li>Desarrollo</li>
+                        <li>Diseño</li>
+                        <li>Tecnologias</li>
+                        <li>Equipo</li>
+                    </ul>
+                </div>
+                <div class="divContacto">
+                    <p class="">Redes Sociales</p>
+                    <ul>
+                        <li><i class="bi bi-linkedin"></i>Inkedin</li>
+                        <li><i class="bi bi-github"></i>Github</li>
+                        <li><i class="bi bi-facebook"></i>Facebook</li>
+                        <li><i class="bi bi-instagram"></i>Instagram</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="divUbicacion">
+                    <p><i class="bi bi-geo-alt-fill"></i></p>
+                    <p class="text-light">Argentina, Ciudad de Buenos Aires</p>
+                </div>
+                <div class="divUbicacion">
+                    <p><i class="bi bi-envelope"></i></p>
+                    <p class="text-light">sebastian.servente@davinci.edu.ar</p>
+                </div>
+                <div class="divUbicacion">
+                    <p><i class="bi bi-whatsapp"></i></p>
+                    <p class="text-light">(011)6811-5765</p>
+                </div>
+            </div>
+        </div>
     </footer>
     <script src="../js/jquery-3.4.1.js"></script>
     <script src="../js/bootstrap.bundle.js"></script>
