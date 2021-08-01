@@ -93,7 +93,7 @@ $successInfo = sessionValueGetFlash('successInfo');
                         ?>
 
                     </ul>
-                    <div class="divImagen">
+                    <div class="divImagen d-none d-md-block d-sm-none ">
                         <figure>
                             <img src="imgs/<?= authObtenerUsuario()['img'];?>" class="img-fluid figure-img d-flex justify-content-center" alt="<?= htmlspecialchars(authObtenerUsuario()['alt_img']);?>">
                         </figure>

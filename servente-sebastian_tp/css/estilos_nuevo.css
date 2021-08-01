@@ -16,7 +16,7 @@
     text-align: center;
 }
 .logo-home {
-    width: 25%;
+    width: 50%;
     position: relative;
     text-align: center;
     padding-left: .4em;
@@ -24,6 +24,11 @@
 }
 #header .row {
     background: #1d2124;
+}
+#barra .divImagen figure {
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 main #err {
     background: deeppink;
@@ -114,7 +119,7 @@ main #err {
     box-shadow: 0px 0px 9px -1px orange;
     color: #ffc107;
     display: flex;
-    width: 50%;
+    width: 75%;
 }
 .formRegistroBuscar div {
   /*  width: 50%;*/
@@ -181,7 +186,7 @@ fieldset legend {
     font-size: .8rem;
     text-align: center;
     padding-top: 2rem;
-    color: #ffff00;
+    color: #d39e00;
 }
 .sectionRegistro .parraRegistro {
     text-align: center;
@@ -223,9 +228,9 @@ fieldset legend {
 
 /*------------------------------------------------------------------Imagen menu---*/
 #header div .divImagen figure img {
-    width: 40%;
+    width: 55%;
     border-radius: 50%;
-    max-width: 100px;
+    max-width: 50px;
     box-shadow: 1px 2px 5px -2px #000;
     margin-left: 2rem;
 }
@@ -439,11 +444,13 @@ footer .contenedores .contenedor .divUbicacion p{
     footer .contenedores .divInstitucion ul {
         display: block;
     }
-
+    .logo-home {
+        width: 50%;
+    }
 }
 @media (min-width: 481px) and (max-width: 580px){
     .logo-home {
-        width: 20%;
+        width: 50%;
     }
     .articleProducto > .divInfoProducto > a > figure {
         width: 75%;
@@ -475,7 +482,9 @@ footer .contenedores .contenedor .divUbicacion p{
 
 }
 @media (min-width: 581px) and (max-width: 680px){
-
+    .logo-home {
+        width: 50%;
+    }
     .articleProducto > .divInfoProducto > a > figure {
         width: 75%;
 
@@ -514,10 +523,7 @@ footer .contenedores .contenedor .divUbicacion p{
         padding-top: 0rem;
         font-size: 0.8rem;
     }
-    .logo-home {
-        width: 10%;
 
-    }
 
 }
 @media (min-width: 681px) and (max-width: 767px){
@@ -556,7 +562,7 @@ footer .contenedores .contenedor .divUbicacion p{
         font-size: 0.8rem;
     }
     .logo-home {
-        width: 10%;
+        width: 40%;
 
     }
 }
@@ -598,11 +604,11 @@ footer .contenedores .contenedor .divUbicacion p{
     }
 
     .logo-home {
-        width: 40%;
+        width: 35%;
     }
 
 }
-@media (min-width: 881px){
+@media (min-width: 881px) and (max-width: 1280px){
     .producto .divs {
         /*background: #ffc107;*/
         display: flex;
@@ -627,5 +633,23 @@ footer .contenedores .contenedor .divUbicacion p{
     footer .contenedores .contenedor .divUbicacion p {
         padding: .5rem;
     }
+    .logo-home {
+        width: 25%;
 
+    }
+}
+@media (min-width: 1281px){
+    .producto .divs {
+        /*background: #ffc107;*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .producto > .divs > .articleProducto {
+        width: 15%;
+    }
+    .producto > .divs > .articleProducto > .divInfoProducto > a {
+        margin: 1.5rem auto;
+        width: 90%;
+    }
 }

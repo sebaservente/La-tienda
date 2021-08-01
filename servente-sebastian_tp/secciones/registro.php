@@ -57,7 +57,7 @@ $oldData = sessionValueGetFlash('old_data', []);
                 <label for="apodo">Apodo</label>
                 <input type="text" id="apodo" name="apodo" class="form-control">
             </div>
-            <div class="col-md-12 column">
+            <div class="column">
                 <label for="img" class="col-md-lg-2 col-form-label">Imagen</label>
                 <input  type="file"
                         class="form-control"
@@ -65,7 +65,7 @@ $oldData = sessionValueGetFlash('old_data', []);
                         name="img"
                 >
             </div>
-            <div class="col-md-12 column">
+            <div class="column">
                 <label for="img-alt" class="col-md-lg-2 col-form-label">Alt Imagen</label>
                 <input  type="text"
                         class="form-control"

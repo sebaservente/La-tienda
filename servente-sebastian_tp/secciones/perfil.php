@@ -82,7 +82,7 @@ echo "</pre>";*/
         const linksEliminar = document.querySelectorAll('.edit');
         linksEliminar.forEach(function(aElem) {
             aElem.addEventListener('click', function(ev){
-                if(!confirm('¡Atención! deberas reiniciar la sesion para actualizar la imagen!')){
+                if(!confirm('¡Atención! La imagen del menu se actualizara al reiniciar sesion!')){
                     ev.preventDefault();
                 }
             });

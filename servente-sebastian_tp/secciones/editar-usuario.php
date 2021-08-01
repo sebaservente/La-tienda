@@ -41,7 +41,7 @@ echo "</pre>";
     <form action="acciones/editar-usuario.php?id=<?= $_GET['id'];?>" method="post" enctype="multipart/form-data" class="formRegistro">
         <!--<input type="hidden" name="imgActual" Value="<?/*= $oldData['imgActual'];*/?>">-->
         <div class="form-group col-12">
-            <div class="col-md-12  ">
+            <div class="column">
                 <label for="email" class="col-md-lg-2 col-form-label">Email</label>
                 <input  type="text"
                         class="form-control"
@@ -57,7 +57,7 @@ echo "</pre>";
                         endif; ?>
             </div>
 
-            <div class="col-md-12 column">
+            <div class="column">
                 <label for="password" class="col-md-lg-2 col-form-label">Password</label>
                 <input  type="text"
                         class="form-control"
@@ -73,7 +73,7 @@ echo "</pre>";
                         endif; ?>
             </div>
 
-            <div class="col-md-12 column">
+            <div class="column">
                 <label for="nombre" class="col-md-lg-2 col-form-label">Nombre</label>
                 <input  type="text"
                         class="form-control"
@@ -87,7 +87,7 @@ echo "</pre>";
                         <?php
                         endif; ?>
             </div>
-            <div class="col-md-12 column">
+            <div class="column">
                 <label for="apellido" class="col-md-lg-2 col-form-label">apellido</label>
                 <input  type="text"
                         class="form-control"
@@ -101,7 +101,7 @@ echo "</pre>";
                         <?php
                         endif; ?>
             </div>
-            <div class="col-md-12 column">
+            <div class="column">
                 <label for="apodo" class="col-md-lg-2 col-form-label">apodo</label>
                 <input  type="text"
                         class="form-control"
@@ -115,11 +115,11 @@ echo "</pre>";
                         <?php
                         endif; ?>
             </div>
-            <div>
-                <p>Imagen Actual</p>
-                <img src="imgs/<?= $oldData['imgActual'];?>" alt="Imagen Actual del Producto" class="w-25">
+            <div class="row d-flex justify-content-center">
+                <p class="pt-3 text-warning font-weight-bold">Imagen Actual</p>
+                <img src="imgs/<?= $oldData['imgActual'];?>" alt="Imagen Actual del Producto" class="w-25 rounded-circle">
             </div>
-            <div class="col-md-12 column">
+            <div class="column">
                 <label for="img" class="col-md-lg-2 col-form-label">Imagen</label>
                 <input  type="file"
                         class="form-control"
@@ -127,7 +127,7 @@ echo "</pre>";
                         name="img"
                 >
             </div>
-            <div class="col-md-12 column">
+            <div class="column">
                 <label for="img-alt" class="col-md-lg-2 col-form-label">Alt Imagen</label>
                 <input  type="text"
                         class="form-control"
@@ -135,7 +135,7 @@ echo "</pre>";
                         name="img-alt"
                         value="<?= $oldData['img_alt'] ?? '';?>">
             </div>
-        <div class="col-12 text-center">
+        <div class="text-center pt-3">
             <!--<input type="reset" value="limpiar" class="btn btn-warning">-->
             <input type="submit" value="enviar" class="btn btn-success col-12 mt-3">
         </div>
