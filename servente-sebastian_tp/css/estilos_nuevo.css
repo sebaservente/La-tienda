@@ -652,4 +652,20 @@ footer .contenedores .contenedor .divUbicacion p{
         margin: 1.5rem auto;
         width: 90%;
     }
+    footer .contenedores .divInstitucion {
+        width: 25%;
+    }
+    footer .contenedores .ambos {
+        width: 44%;
+    }
+    footer .contenedores .contenedor .divUbicacion {
+        flex-direction: row;
+    }
+    footer .contenedores .contenedor .divUbicacion p {
+        padding: .5rem;
+    }
+    .logo-home {
+        width: 25%;
+
+    }
 }
