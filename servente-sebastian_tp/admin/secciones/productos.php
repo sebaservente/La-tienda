@@ -30,7 +30,7 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
 ?>
 <section id="productos" class="container-fluid producto">
    
-    <h2 class="col-12">Productos</h2>
+    <h2>Productos</h2>
     <p>Administra tus Productos desde Aqui</p>
     <p>Para Ingresar Productos <a href="index.php?s=nuevo-producto" class="text-success">Click Aca</a></p>
     <div class="divs">    
@@ -39,19 +39,24 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
         ?>      
         <article class="articleProducto">
                 <div class="divInfoProducto">
+                    <a href="#" class="text-dark" >
                         <h3>Id:  <?=$producto['id_cerveza'];?></h3>
-                        <p><?= htmlspecialchars($producto['title']);?></p>
-                        <p> <?= htmlspecialchars($producto['intro']);?></p>
-                        <p> <?= htmlspecialchars($producto['definicion']);?></p>
-                        <p class="ch5">Precio: <?= htmlspecialchars($producto['precio']);?></p>
-                        <p class="p-2 border border-dark bg-dark">
+                        <figure>
+                            <img src="../imgs/<?= $producto['img'];?>" class="img-fluid  figure-img" alt="<?= htmlspecialchars($producto['alt_img']);?>">
+                        </figure>
+                        <div class="divDatosProducto">
+                            <p><?= htmlspecialchars($producto['title']);?></p>
+                            <p> <?= htmlspecialchars($producto['intro']);?></p>
+                            <p> <?= htmlspecialchars($producto['definicion']);?></p>
+                            <p class="ch5">Precio: <?= htmlspecialchars($producto['precio']);?></p>
+                        </div>
+                        <p class="m-1 p-2  m-auto text-center w-75">
                             <a href="index.php?s=editar-producto&id=<?=$producto['id_cerveza'];?>" class="text-warning">Editar /</a>
                             <a href="acciones/producto-eliminar.php?id=<?=$producto['id_cerveza'];?>" class="borrar text-danger">Eliminar</a>
                         </p>
+                    </a>
                 </div>
-                <figure>
-                    <img src="../imgs/<?= $producto['img'];?>" class="img-fluid  figure-img" alt="<?= htmlspecialchars($producto['alt_img']);?>">
-                </figure>
+
         </article>  
         <?php
         endforeach;

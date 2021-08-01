@@ -246,7 +246,10 @@ fieldset legend {
 /*------------------------------------------------------------------productos----------*/
 .producto h2 {
     text-align: center;
-    margin: 1rem;
+    margin: 2rem 0;
+}
+.producto p {
+    text-align: center;
 }
 .producto div h3 {
     font-size: 1rem;
@@ -291,7 +294,7 @@ fieldset legend {
     border-radius: 50%;
 }
 .articleProducto > .divInfoProducto > a > .divDatosProducto {
-    width: 50%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
