@@ -7,41 +7,32 @@ $usuario = usuarioTodos($db);
 print_r($usuario);
 echo "</pre>";*/
 ?>
-<section class="container" id="sectionPerfil">
+<section class="container-fluid producto" id="sectionPerfil">
     <h2 class="m-4">Perfil de Usuarios</h2>
-    <table  class="table table-bordered table-striped">
-
-        <thead>
-        <tr>
-            <th>Imagen:</th>
-            <th>Email: </th>
-            <th>Nombre:</th>
-            <th>Apellido:</th>
-            <th>Apodo:</th>
-            <th>ID:</th>
-            <!--<th>Acciones</th>-->
-        </tr>
-        </thead>
-        <tbody>
-
+    <div class="divs">
             <?php
             foreach ($usuario as $usuarios): ?>
-            <tr>
-                <td class="text-center">
-                    <figure>
-                        <img src="../imgs/<?=$usuarios['img'];?>" class="img-fluid w-50 figure-img" alt="<?= htmlspecialchars($usuarios['alt_img']);?>">
-                    </figure>
-                </td>
-                <td><?=$usuarios['email'];?></td>
-                <td><?=$usuarios['nombre']; ?></td>
-                <td><?=$usuarios['apellido']; ?></td>
-                <td><?=$usuarios['apodo']; ?></td>
-                <td><?=$usuarios['id_usuario']; ?></td>
-                <!--<td><a href="index.php?s=editar-usuario&id=<?/*=$usuarios['id_usuario'];*/?>" class="p-2" >Editar usuario</a></td>-->
-            </tr>
+            <article class="articleProducto">
+                <div class="divInfoProducto rounded">
+                    <a href="#" class="text-dark text-decoration-none" >
+                        <div>
+                            <figure>
+                                <img src="../imgs/<?=$usuarios['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars($usuarios['alt_img']);?>">
+                            </figure>
+                        </div>
+                        <div  class="divDatosProducto">
+                            <p>Email: <?=$usuarios['email'];?></p>
+                            <p>Nombre: <?=$usuarios['nombre']; ?></p>
+                            <p>Apellido: <?=$usuarios['apellido']; ?></p>
+                            <p>Apodo: <?=$usuarios['apodo']; ?></p>
+                            <!--<p><?/*=$usuarios['id_usuario']; */?></p>-->
+                            <!--<p><a href="index.php?s=editar-usuario&id=<?/*=$usuarios['id_usuario'];*/?>" class="p-2" >Editar usuario</a></p>-->
+                        </div>
+                    </a>
+                </div>
+            </article>
             <?php
             endforeach;
             ?>
-</tbody>
-
-</table>
+    </div>
+</section>

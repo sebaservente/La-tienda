@@ -38,11 +38,33 @@ main #err {
     text-align: center;
     font-weight: bold;
 }
-#sectionPerfil h2 {
-    font-size: 1.8rem;
+/*#sectionPerfil h2 {
+    font-size: 1rem;
     text-align: center;
 }
-#sectionPerfil .perfil .divDatos .divAccion {
+#sectionPerfil .divs {
+    margin: 1.5rem 0;
+    background: #f5f6fbbd;
+    padding: 1rem 0;
+}
+#sectionPerfil .divs div {
+    margin: auto;
+}
+#sectionPerfil .divs div figure {
+    width: 35%;
+    margin: auto;
+}
+#sectionPerfil .divs div figure img{
+    border-radius: 50%;
+}
+#sectionPerfil .divs .divsPerfil {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}*/
+
+/*#sectionPerfil .perfil .divDatos .divAccion {
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -76,7 +98,7 @@ main #err {
     padding: .5rem;
     width: 50%;
     text-align: start;
-}
+}*/
 /*--------------mantenimientos-------------------------------------*/
 .reparar {
     display: grid;
@@ -612,6 +634,7 @@ footer .contenedores .contenedor .divUbicacion p{
 
 }
 @media (min-width: 881px) and (max-width: 1280px){
+
     .producto .divs {
         /*background: #ffc107;*/
         display: flex;
@@ -625,7 +648,7 @@ footer .contenedores .contenedor .divUbicacion p{
         width: 90%;
     }
     footer .contenedores .divInstitucion {
-        width: 25%;
+        width: 30%;
     }
     footer .contenedores .ambos {
         width: 44%;
@@ -640,8 +663,12 @@ footer .contenedores .contenedor .divUbicacion p{
         width: 25%;
 
     }
+    footer .contenedores .contenedor {
+        flex-direction: row
+    }
 }
 @media (min-width: 1281px){
+
     .producto .divs {
         /*background: #ffc107;*/
         display: flex;
@@ -656,7 +683,7 @@ footer .contenedores .contenedor .divUbicacion p{
         width: 90%;
     }
     footer .contenedores .divInstitucion {
-        width: 25%;
+        width: 30%;
     }
     footer .contenedores .ambos {
         width: 44%;
@@ -668,7 +695,7 @@ footer .contenedores .contenedor .divUbicacion p{
         padding: .5rem;
     }
     .logo-home {
-        width: 25%;
+        width: 20%;
 
     }
 }
