@@ -308,6 +308,10 @@ fieldset legend {
     font-weight: bold;
     text-align: center;
 }
+.articleProducto > .divInfoProducto > a > p {
+    font-size: .8rem;
+    margin: 1.5rem;
+}
 .articleProducto > .divInfoProducto > a > figure {
     width: 50%;
    /* background: #e40d0d;*/

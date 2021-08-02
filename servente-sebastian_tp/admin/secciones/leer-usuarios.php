@@ -15,7 +15,7 @@ echo "</pre>";*/
             <article class="articleProducto">
                 <div class="divInfoProducto rounded">
                     <a href="#" class="text-dark text-decoration-none" >
-                        <p>Email: <?=$usuarios['email'];?></p>
+                        <p><?=$usuarios['email'];?></p>
                         <figure>
                             <img src="../imgs/<?=$usuarios['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars($usuarios['alt_img']);?>">
                         </figure>
