@@ -15,13 +15,12 @@ echo "</pre>";*/
             <article class="articleProducto">
                 <div class="divInfoProducto rounded">
                     <a href="#" class="text-dark text-decoration-none" >
-                        <div>
-                            <figure>
-                                <img src="../imgs/<?=$usuarios['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars($usuarios['alt_img']);?>">
-                            </figure>
-                        </div>
+                        <p>Email: <?=$usuarios['email'];?></p>
+                        <figure>
+                            <img src="../imgs/<?=$usuarios['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars($usuarios['alt_img']);?>">
+                        </figure>
                         <div  class="divDatosProducto">
-                            <p>Email: <?=$usuarios['email'];?></p>
+
                             <p>Nombre: <?=$usuarios['nombre']; ?></p>
                             <p>Apellido: <?=$usuarios['apellido']; ?></p>
                             <p>Apodo: <?=$usuarios['apodo']; ?></p>
