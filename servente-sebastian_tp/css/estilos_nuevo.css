@@ -295,8 +295,11 @@ fieldset legend {
     padding: 2rem;
 }
 .producto > .divs > .articleProducto {
-    background: #f5f6fbbd;
-    margin: 1.5rem 1rem;
+
+    margin: 1.5rem 0rem;
+}
+.producto > .divs > .articleProducto > .divInfoProducto {
+
 }
 .producto > .divs > .articleProducto > .divInfoProducto > a {
     display: flex;
@@ -304,7 +307,7 @@ fieldset legend {
     flex-direction: column;
     align-items: center;
     margin: 1.5rem 0;
-
+    background: #f5f6fbbd;
 }
 .articleProducto > .divInfoProducto > a > h3 {
     width: 100%;
@@ -329,6 +332,7 @@ fieldset legend {
     flex-direction: column;
     align-items: center;
     margin: auto;
+
 }
 .articleProducto > .divInfoProducto > a > .divDatosProducto .parrafoPrecio {
     font-weight: bold;
