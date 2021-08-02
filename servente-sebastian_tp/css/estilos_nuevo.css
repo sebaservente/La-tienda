@@ -294,13 +294,17 @@ fieldset legend {
     justify-content: center;
     padding: 2rem;
 }
+.producto > .divs > .articleProducto {
+    background: #f5f6fbbd;
+    margin: 1.5rem 1rem;
+}
 .producto > .divs > .articleProducto > .divInfoProducto > a {
     display: flex;
     text-decoration: none;
     flex-direction: column;
     align-items: center;
     margin: 1.5rem 0;
-    background: #f5f6fbbd;
+
 }
 .articleProducto > .divInfoProducto > a > h3 {
     width: 100%;
