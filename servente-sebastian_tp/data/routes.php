@@ -20,6 +20,9 @@ $secciones = [
             'js/pass.js'
         ],
     ],
+    'carrito' => [
+        'title' => 'La Tienda :: Carrito de compras'
+    ],
     'editar-usuario' => [
         'title' => 'La Tienda :: Editar Usuario'
     ],
