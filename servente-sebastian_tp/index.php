@@ -89,7 +89,7 @@ $successInfo = sessionValueGetFlash('successInfo');
                             <a class="nav-link text-warning" href="index.php?s=carrito"> Mi Carrito</a>
                         </li>
                         <li class="nav-item" id="cerrarSesion">
-                            <a class="nav-link" href="acciones/logout.php">@<?= authObtenerUsuario()['nombre'];?> (Cerrar Sesión)</a>
+                            <a class="nav-link" href="acciones/logout.php">@<?= authObtenerUsuario()['apodo'];?> (Cerrar Sesión)</a>
                         </li>
 
                         <?php
@@ -179,32 +179,6 @@ $successInfo = sessionValueGetFlash('successInfo');
             </div>
         </div>
     </footer>
-    <!--<footer class="container-fluid page-footer font-small cyan darken-2 ">
-		<div class="row  ">
-			<div id="footer01" class="col-12 text-center m-auto" >
-                <ul>
-                    <li>Diseño y Desarrollo Web</li>									
-                    <li>Comisión DwTn3A</li> 
-                    <li>Profesor Santiago Gallinooo</li>
-                </ul>
-			</div>						
-			<div id="footer" class="row  m-auto col-12 justify-content-center  "> 
-                <a href="#"><img class="d-block w-100 img-fluid p-2" src="imgs/facebook.png" alt="redes sociales facebook"></a>
-                <a href="#"><img class="d-block  w-100 img-fluid p-2" src="imgs/instagram.png"  alt="redes sociales instagram"></a>              
-                <a href="#"><img class="d-block  w-100 img-fluid p-2" src="imgs/twitter.png"  alt="redes sociales twitter"></a>              
-                <a href="#"><img class="d-block  w-100 img-fluid p-2" src="imgs/whatsapp.png"  alt="redes sociales twitter"></a>              
-                <a href="#"><img class="d-block  w-100 img-fluid p-2" src="imgs/pinterest.png"  alt="redes sociales twitter"></a>								
-			</div>
-		</div>	
-		<div class="bis row m-0">
-			<div id="hovera" class="footer-copyright text-white text-center py-3 col-12 col-md-6 ">© 2020 Copyright/Todos los derechos Reservados:
-				<a href="#" class="text-success"> sebaservente.com.ar</a>
-			</div>
-			 <div id="hoverb" class="footer-copyright  text-white  py-3 col-12  col-md-6">
-				<a href="#"> <p class="card-text text-justify text-center text-white">Informacion Compañia | Privacion y Politica | Terminos y Condiciones.</p></a>
-			</div>
-		</div>
-    </footer>-->
     <?php
     if(isset($secciones[$seccion]['js'])):
         foreach ($secciones[$seccion]['js'] as $script): ?>
