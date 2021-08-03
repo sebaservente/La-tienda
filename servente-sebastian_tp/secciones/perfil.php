@@ -24,20 +24,28 @@ echo "</pre>";*/
             <figure>
                 <img src="imgs/<?= $usuarios['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars($usuarios['alt_img']);?>">
             </figure>
+
         </div>
         <div class="divDatos">
-            <p> <?=$usuarios['email'];?></p>
             <div class="divNombreApellido">
-                <h3>Nombre y Apellido</h3>
+                <p class="anterior"><i class="bi bi-person-circle mr-2"></i>Email</p>
+                <p class="primero"> <?=$usuarios['email'];?></p>
+            </div>
+            <div class="divNombreApellido">
+                <p class="anterior"><i class="bi bi-person-circle mr-2"></i>Nombre</p>
                 <p class="primero"><?=$usuarios['nombre']; ?></p>
-                <p class="segundo"> <?=$usuarios['apellido']; ?></p>
+                <!--<p class="segundo p-2"> <?/*=$usuarios['apellido']; */?></p>-->
             </div>
-            <p>Apodo: @<?=$usuarios['apodo']; ?></p>
-            <!--<p>Id: <?/*=$usuarios['id_usuario']; */?></p>-->
-            <div class="divAccion">
-                <p><i class="bi bi-pencil-square text-success"></i><a href="index.php?s=editar-usuario&id=<?=$usuarios['id_usuario'];?>" class="p-2 edit text-success" >Editar </a></p>
-                <p><i class="bi bi-trash text-danger"></i><a href="acciones/usuario-eliminar.php?id=<?=$usuarios['id_usuario'];?>" class="borrar p-2 text-danger">Eliminar</a></p>
+            <div class="divNombreApellido">
+                <p class="anterior"><i class="bi bi-exclamation-circle mr-2"></i>Apodo</p>
+                <p class="primero">@<?=$usuarios['apodo']; ?></p>
+                <!--<p>Id: <?/*=$usuarios['id_usuario']; */?></p>-->
             </div>
+
+        </div>
+        <div class="divAccion">
+            <p class="bg-dark p-2 mr-2"><i class="bi bi-pencil-square text-success"></i><a href="index.php?s=editar-usuario&id=<?=$usuarios['id_usuario'];?>" class="p-2 edit" >Editar </a></p>
+            <p class="bg-dark p-2 mr-2"><i class="bi bi-trash text-danger"></i><a href="acciones/usuario-eliminar.php?id=<?=$usuarios['id_usuario'];?>" class="borrar p-2 ">Eliminar</a></p>
         </div>
     </article>
 </section>
