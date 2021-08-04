@@ -377,17 +377,17 @@ a > .productos_tags > .productos_item_tags {
 #sectionPerfil h2 {
     font-size: 1.3rem;
     text-align: center;
-    font-weight: 300;
+    font-weight: 700;
 }
 #sectionPerfil .perfil {
     display: flex;
     flex-wrap: wrap;
 }
 #sectionPerfil .perfil .divDatos {
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: auto;
 }
 #sectionPerfil .perfil .divDatos p {
    /* text-align: center;*/
@@ -424,7 +424,7 @@ a > .productos_tags > .productos_item_tags {
     color: #fff;
 }
 #sectionPerfil .perfil .divImagen {
-    width: 34%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     margin: 3rem 1rem;
@@ -545,6 +545,12 @@ footer .contenedores .contenedor .divUbicacion p{
     .articleProducto > .divInfoProducto > a > figure {
         width: 40%;
     }
+    #sectionPerfil .perfil .divImagen {
+        width: 45%;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 30%;
+    }
     .producto > .divs > .articleProducto > .divInfoProducto > a {
         margin: 1.5rem auto;
         width: 95%;
@@ -562,10 +568,14 @@ footer .contenedores .contenedor .divUbicacion p{
     }
     .articleProducto > .divInfoProducto > a > figure {
         width: 75%;
-
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 45%;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 25%;
     }
     .producto .divs {
-        /*background: #ffc107;*/
         display: flex;
         flex-wrap: wrap;
     }
@@ -578,7 +588,6 @@ footer .contenedores .contenedor .divUbicacion p{
     }
     footer .contenedores .ambos {
         width: 75%;
-        /*text-align: center;*/
     }
     footer .contenedores .divInstitucion ul {
       display: block;
@@ -596,6 +605,12 @@ footer .contenedores .contenedor .divUbicacion p{
     .articleProducto > .divInfoProducto > a > figure {
         width: 75%;
 
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 45%;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 25%;
     }
     .producto .divs {
         /*background: #ffc107;*/
@@ -643,6 +658,12 @@ footer .contenedores .contenedor .divUbicacion p{
     .producto > .divs > .articleProducto {
         width: 33%;
     }
+    #sectionPerfil .perfil .divImagen {
+        width: 45%;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 25%;
+    }
     .producto > .divs > .articleProducto > .divInfoProducto > a {
         margin: 1.5rem auto;
         width: 90%;
@@ -682,6 +703,16 @@ footer .contenedores .contenedor .divUbicacion p{
     }
     .producto > .divs > .articleProducto {
         width: 33%;
+    }
+    #sectionPerfil .perfil {
+        display: flex;
+        flex-direction: column;
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 45%;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 25%;
     }
     .producto > .divs > .articleProducto > .divInfoProducto > a {
         margin: 1.5rem auto;
