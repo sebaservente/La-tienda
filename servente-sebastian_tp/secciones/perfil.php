@@ -38,7 +38,7 @@ echo "</pre>";*/
             </div>
             <div class="divNombreApellido">
                 <p class="anterior"><i class="bi bi-exclamation-circle mr-2"></i>Apodos</p>
-                <p class="primero">@<?=$usuarios['apodo']; ?></p>
+                <p class="primero"><?=$usuarios['apodo']; ?></p>
                 <!--<p>Id: <?/*=$usuarios['id_usuario']; */?></p>-->
             </div>
 

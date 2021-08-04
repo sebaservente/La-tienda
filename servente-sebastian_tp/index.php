@@ -44,7 +44,7 @@ $successInfo = sessionValueGetFlash('successInfo');
         <div class="row">
             <nav class="nav-index col navbar navbar-expand-md navbar-dark ">
                 <a class="navbar-brand w-25 m-0" href="#">
-                    <img src="imgs/logo-01.png" alt="by Vizzentino" class="logo-home">
+                    <img src="imgs/logo-01.png" alt="logo de la marca by Vizzentino" class="logo-home">
                 </a>
                 <button class="navbar-toggler " 
                         type="button" 
@@ -83,10 +83,10 @@ $successInfo = sessionValueGetFlash('successInfo');
                         endif;
                         ?>
                         <li class="nav-item">
-                            <a class="nav-link text-warning" href="index.php?s=perfil&id=<?= authObtenerUsuario()['id_usuario'];?>"">Mi Perfil</a>
+                            <a class="nav-link text-warning" href="index.php?s=perfil&id=<?= authObtenerUsuario()['id_usuario'];?>"">Perfil</a>
                         </li>
                         <li class="nav-item" id="cerrarSesion">
-                            <a class="nav-link text-warning" href="index.php?s=carrito"> Mi Carrito</a>
+                            <a class="nav-link text-warning" href="index.php?s=carrito">Carrito</a>
                         </li>
                         <li class="nav-item" id="cerrarSesion">
                             <a class="nav-link" href="acciones/logout.php">@<?= authObtenerUsuario()['apodo'];?> (Cerrar Sesión)</a>
