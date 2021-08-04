@@ -32,7 +32,7 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
 <section id="productos" class="container-fluid producto">
     <h2>Elige Tu Estilo</h2>
     <div>
-        <h3>Busca la cerveza que más te identifique</h3>
+        <h3 class="h3Buscar">Busca la cerveza que más te identifique</h3>
         <form action="index.php" method="get" class="formRegistroBuscar">
             <input type="hidden" name="s" value="productos">
             <div class="form-file">

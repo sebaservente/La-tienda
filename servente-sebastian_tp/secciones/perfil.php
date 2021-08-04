@@ -29,16 +29,16 @@ echo "</pre>";*/
         <div class="divDatos">
             <div class="divNombreApellido">
                 <p class="anterior"><i class="bi bi-person-circle mr-2"></i>Email</p>
-                <p class="primero"> <?=$usuarios['email'];?></p>
+                <p class="primero" title="<?=$usuarios['email'];?>"> <?=$usuarios['email'];?></p>
             </div>
             <div class="divNombreApellido">
                 <p class="anterior"><i class="bi bi-person-circle mr-2"></i>Nombre</p>
-                <p class="primero"><?=$usuarios['nombre']; ?></p>
+                <p class="primero"  title="<?=$usuarios['nombre'];?>"><?=$usuarios['nombre']; ?></p>
                 <!--<p class="segundo p-2"> <?/*=$usuarios['apellido']; */?></p>-->
             </div>
             <div class="divNombreApellido">
                 <p class="anterior"><i class="bi bi-exclamation-circle mr-2"></i>Apodos</p>
-                <p class="primero"><?=$usuarios['apodo']; ?></p>
+                <p class="primero"  title="<?=$usuarios['apodo'];?>"><?=$usuarios['apodo']; ?></p>
                 <!--<p>Id: <?/*=$usuarios['id_usuario']; */?></p>-->
             </div>
 

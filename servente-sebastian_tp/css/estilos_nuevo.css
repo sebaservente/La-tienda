@@ -269,10 +269,17 @@ fieldset legend {
 /*------------------------------------------------------------------productos----------*/
 .producto h2 {
     text-align: center;
-    margin: 2rem 0;
+    margin: 1rem 2rem auto;
 }
 .producto p {
     text-align: center;
+}
+.producto div .h3Buscar {
+    font-size: .8rem;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
 }
 .producto div h3 {
     font-size: 1rem;
@@ -292,8 +299,14 @@ fieldset legend {
     display: flex;
     font-weight: bold;
     margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.producto > .divs {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 2rem;
 }
 .producto > .divs > .articleProducto {
 
@@ -308,7 +321,7 @@ fieldset legend {
     flex-direction: column;
     align-items: center;
     margin: 1.5rem 0;
-    background: #f5f6fbbd;
+    background: #ecedf5bd;
 }
 .articleProducto > .divInfoProducto > a > h3 {
     width: 100%;
@@ -319,6 +332,16 @@ fieldset legend {
 .articleProducto > .divInfoProducto > a > p {
     font-size: .8rem;
     margin: 1.5rem;
+}
+.articleProducto > .divInfoProducto > a > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.articleProducto > .divInfoProducto > a > div > .precio-producto,
+.articleProducto > .divInfoProducto > a > div > .definicion-producto {
+    font-size: .8rem;
+    margin: .5rem;
 }
 .articleProducto > .divInfoProducto > a > figure {
     width: 50%;
@@ -338,10 +361,12 @@ fieldset legend {
 .articleProducto > .divInfoProducto > a > .divDatosProducto .parrafoPrecio {
     font-weight: bold;
 }
+
 .divInfoProducto > a >  .productos_tags {
     display: flex;
     flex-wrap: wrap;
 }
+
 a > .productos_tags > .productos_item_tags {
     background: black;
     color: #d39e00;
@@ -373,6 +398,127 @@ a > .productos_tags > .productos_item_tags {
 .producto .paginador .paginador-lista .bg-warning {
     border-radius: 20%;
 }
+/*-----------------------------------------------------*/
+
+/*------------------------------------------------------------------productos----------*/
+.productos h2 {
+    text-align: center;
+    margin: 1rem 2rem auto;
+}
+.productos p {
+    text-align: center;
+}
+.productos div .h3Buscar {
+    font-size: .8rem;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+}
+.productos div h3 {
+    font-size: 1rem;
+    text-align: center;
+    width: 65%;
+    margin: auto;
+    padding: 1rem;
+}
+.productos .parrafoResultados {
+    font-size: .8rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.productos h4 {
+    font-size: .8rem;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.productos > .divs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+.productos > .divs > .articleProductos {
+
+    margin: 1.5rem 0rem;
+}
+.productos > .divs > .articleProductos > .divInfoProductos {
+
+}
+.productos > .divs > .articleProductos > .divInfoProductos > a {
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+    background: #ecedf5bd;
+}
+.articleProductos > .divInfoProductos > a > h3 {
+    width: 100%;
+    margin: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+.articleProductos > .divInfoProductos > a > p {
+    font-size: .8rem;
+    margin: 1.5rem;
+}
+.articleProductos > .divInfoProductos > a > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.articleProductos > .divInfoProductos > a > div > .precio-producto,
+.articleProductos > .divInfoProductos > a > div > .definicion-producto {
+    font-size: .8rem;
+    margin: .5rem;
+}
+.articleProductos > .divInfoProductos > a > figure {
+    width: 50%;
+    /* background: #e40d0d;*/
+}
+.divInfoProductos > a > figure > img {
+    border-radius: 50%;
+}
+.articleProductos > .divInfoProductos > a > .divDatosProducto {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+}
+.articleProductos > .divInfoProductos > a > .divDatosProducto .parrafoPrecio {
+    font-weight: bold;
+}
+.divInfoProductos > .botones > button >  i {
+   margin: .5rem;
+}
+.divInfoProductos > a >  .productos_tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+a > .productos_tags > .productos_item_tags {
+    background: black;
+    color: #d39e00;
+    padding: 0.1rem;
+    border-radius: 5px;
+    font-weight: 900;
+    position: absolute;
+    margin-left: 3rem;
+}
+
+
+
+
+
 /*--------------------perfil de usuarios --------------*/
 #sectionPerfil h2 {
     font-size: 1.3rem;
@@ -404,8 +550,11 @@ a > .productos_tags > .productos_item_tags {
     font-weight: 700;
 }
 #sectionPerfil .perfil .divDatos .divNombreApellido .primero {
-    width: 100%;
+    width: auto;
     font-size: .8rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     /*padding-left: 1.9rem;*/
    /* text-align: justify;*/
 }
@@ -612,6 +761,9 @@ footer .contenedores .contenedor .divUbicacion p{
     #sectionPerfil .perfil .divDatos {
         width: 25%;
     }
+    .productos > .divs {
+        width: 80%;
+    }
     .producto .divs {
         /*background: #ffc107;*/
         display: flex;
@@ -654,6 +806,9 @@ footer .contenedores .contenedor .divUbicacion p{
         /*background: #ffc107;*/
         display: flex;
         flex-wrap: wrap;
+    }
+    .productos > .divs {
+        width: 60%;
     }
     .producto > .divs > .articleProducto {
         width: 33%;
@@ -700,6 +855,9 @@ footer .contenedores .contenedor .divUbicacion p{
         /*background: #ffc107;*/
         display: flex;
         flex-wrap: wrap;
+    }
+    .productos > .divs {
+        width: 60%;
     }
     .producto > .divs > .articleProducto {
         width: 33%;
@@ -772,6 +930,9 @@ footer .contenedores .contenedor .divUbicacion p{
         display: flex;
         flex-wrap: wrap;
     }
+    .productos > .divs {
+        width: 60%;
+    }
     .producto > .divs > .articleProducto {
         width: 33%;
     }
@@ -834,6 +995,9 @@ footer .contenedores .contenedor .divUbicacion p{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .productos > .divs {
+        width: 60%;
     }
     .producto > .divs > .articleProducto {
         width: 15%;
