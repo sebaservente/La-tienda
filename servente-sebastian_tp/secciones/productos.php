@@ -39,7 +39,7 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
                 <label for="b">Buscar</label>
                 <input type="search" id="b" name="b" class="form-control" value="<?= $b;?>">
             </div>
-            <button class="btn btn-success botonRegistroBuscar"><i class="bi bi-search"> Buscar</i></button>
+            <button class="btn btn-light botonRegistroBuscar"><i class="bi bi-search"></i></button>
         </form>
     </div>
     <p class="parrafoResultados">Mostrando <?= $pagCantidad;?> resulatdos de un total de <?= $pagCantidadTotalRegistro;?> </p>

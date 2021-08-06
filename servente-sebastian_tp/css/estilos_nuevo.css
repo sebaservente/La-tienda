@@ -267,6 +267,18 @@ fieldset legend {
     position: absolute;
 }
 /*------------------------------------------------------------------productos----------*/
+.producto div .formRegistroBuscar div #b {
+    border-radius: 0;
+    border: 1px solid #fff;
+}
+.producto div .formRegistroBuscar button {
+    border-radius: 0;
+    border: 1px solid #fff;
+    text-align: end;
+}
+.producto div .formRegistroBuscar button:hover {
+    background: #fff;
+}
 .producto h2 {
     text-align: center;
     margin: 1rem 2rem auto;
@@ -296,7 +308,6 @@ fieldset legend {
 
 .producto h4 {
     font-size: .8rem;
-    display: flex;
     font-weight: bold;
     margin: auto;
     padding: 1rem;
@@ -309,8 +320,7 @@ fieldset legend {
     justify-content: center;
 }
 .producto > .divs > .articleProducto {
-
-    margin: 1.5rem 0rem;
+    margin: 1rem 0rem;
 }
 .producto > .divs > .articleProducto > .divInfoProducto {
 
@@ -367,7 +377,7 @@ fieldset legend {
     flex-wrap: wrap;
 }
 
-a > .productos_tags > .productos_item_tags {
+/*a > .productos_tags > .productos_item_tags {
     background: black;
     color: #d39e00;
     padding: 0.1rem;
@@ -375,7 +385,7 @@ a > .productos_tags > .productos_item_tags {
     font-weight: 900;
     position: absolute;
     margin-left: 3rem;
-}
+}*/
 .producto .paginador {
     display: flex;
     justify-content: center;
@@ -511,8 +521,8 @@ a > .productos_tags > .productos_item_tags {
     padding: 0.1rem;
     border-radius: 5px;
     font-weight: 900;
+    margin-left: 6rem;
     position: absolute;
-    margin-left: 3rem;
 }
 
 
