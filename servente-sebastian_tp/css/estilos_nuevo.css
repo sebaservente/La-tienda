@@ -507,7 +507,7 @@ a > .productos_tags > .productos_item_tags {
 }
 a > .productos_tags > .productos_item_tags {
     background: black;
-    color: #d39e00;
+    color: #fff;
     padding: 0.1rem;
     border-radius: 5px;
     font-weight: 900;
