@@ -517,7 +517,7 @@ fieldset legend {
 }
 a > .productos_tags > .productos_item_tags {
     background: black;
-    color: #fff;
+    color: #ffc107;
     padding: 0.1rem;
     border-radius: 5px;
     font-weight: 900;
