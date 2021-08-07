@@ -58,7 +58,8 @@ $successInfo = sessionValueGetFlash('successInfo');
                 <div class="collapse navbar-collapse" id="barra">
                     <ul class="navbar-nav text-right ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-warning" href="index.php?s=home" title="Home"><i class="bi bi-house-door"></i></a>
+                            <a class="nav-link text-warning d-md-none" href="index.php?s=home" title="Home">Home</a>
+                            <a class="nav-link text-warning d-sm-none d-md-block" href="index.php?s=home" title="Home"><i class="bi bi-house-door"></i></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-warning" href="index.php?s=productos" title="Productos"><i class="bi bi-shop"></i></a>
