@@ -58,10 +58,10 @@ $successInfo = sessionValueGetFlash('successInfo');
                 <div class="collapse navbar-collapse" id="barra">
                     <ul class="navbar-nav text-right ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-warning" href="index.php?s=home">Home</a>
+                            <a class="nav-link text-warning" href="index.php?s=home" title="Home"><i class="bi bi-house-door"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-warning" href="index.php?s=productos">Productos</a>
+                            <a class="nav-link text-warning" href="index.php?s=productos" title="Productos"><i class="bi bi-shop"></i></a>
                         </li>
                     <?php
                     if(!authEstaAutenticado()):?>
@@ -77,19 +77,19 @@ $successInfo = sessionValueGetFlash('successInfo');
                         if(authEstaAutenticado() && authEsAdmin()):
                             ?>
                         <li class="nav-item">
-                            <a class="nav-link  " href="admin/index.php?s=productos">Admin</a>
+                            <a class="nav-link text-warning " href="admin/index.php?s=productos" title="Panel del administrador"><i class="bi bi-building"></i></a>
                         </li>
                         <?php
                         endif;
                         ?>
                         <li class="nav-item">
-                            <a class="nav-link text-warning" href="index.php?s=perfil&id=<?= authObtenerUsuario()['id_usuario'];?>"">Perfil</a>
+                            <a class="nav-link text-warning" title="Perfil del usuario" href="index.php?s=perfil&id=<?= authObtenerUsuario()['id_usuario'];?>""><i class="bi bi-person"></i></a>
                         </li>
                         <li class="nav-item" id="cerrarSesion">
-                            <a class="nav-link text-warning" href="index.php?s=carrito">Carrito</a>
+                            <a class="nav-link text-warning" href="index.php?s=carrito" title="Carrito de compras"><i class="bi bi-cart4"></i></a>
                         </li>
                         <li class="nav-item" id="cerrarSesion">
-                            <a class="nav-link" href="acciones/logout.php">@<?= authObtenerUsuario()['apodo'];?> (Cerrar Sesión)</a>
+                            <a class="nav-link" title="Cerrar sesion" href="acciones/logout.php"><!--@--><?/*= authObtenerUsuario()['apodo'];*/?> <i class="bi bi-x-octagon"></i></a>
                         </li>
 
                         <?php
