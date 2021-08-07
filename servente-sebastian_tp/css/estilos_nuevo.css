@@ -332,6 +332,7 @@ fieldset legend {
     align-items: center;
     margin: 1.5rem 0;
     background: #ecedf5bd;
+    border-radius: 5px;
 }
 .articleProducto > .divInfoProducto > a > h3 {
     width: 100%;
@@ -532,7 +533,7 @@ a > .productos_tags > .productos_item_tags {
 
 /*--------------------perfil de usuarios --------------*/
 #sectionPerfil h2 {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     text-align: center;
     font-weight: 700;
 }
