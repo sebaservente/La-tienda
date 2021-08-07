@@ -16,7 +16,7 @@
     text-align: center;
 }
 .logo-home {
-    width: 50%;
+    width: 75%;
     position: relative;
     text-align: center;
     padding-left: .4em;
@@ -37,6 +37,7 @@ main #err {
     background: #ffc107;
     text-align: center;
     font-weight: bold;
+    font-size: .8rem;
 }
 /*#sectionPerfil h2 {
     font-size: 1rem;
@@ -266,12 +267,31 @@ fieldset legend {
     position: absolute;
 }
 /*------------------------------------------------------------------productos----------*/
+.producto div .formRegistroBuscar div #b {
+    border-radius: 0;
+    border: 1px solid #fff;
+}
+.producto div .formRegistroBuscar button {
+    border-radius: 0;
+    border: 1px solid #fff;
+    text-align: end;
+}
+.producto div .formRegistroBuscar button:hover {
+    background: #fff;
+}
 .producto h2 {
     text-align: center;
-    margin: 2rem 0;
+    margin: 1rem 2rem auto;
 }
 .producto p {
     text-align: center;
+}
+.producto div .h3Buscar {
+    font-size: .8rem;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
 }
 .producto div h3 {
     font-size: 1rem;
@@ -288,15 +308,19 @@ fieldset legend {
 
 .producto h4 {
     font-size: .8rem;
-    display: flex;
     font-weight: bold;
     margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.producto > .divs {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 2rem;
 }
 .producto > .divs > .articleProducto {
-
-    margin: 1.5rem 0rem;
+    margin: 1rem 0rem;
 }
 .producto > .divs > .articleProducto > .divInfoProducto {
 
@@ -307,7 +331,8 @@ fieldset legend {
     flex-direction: column;
     align-items: center;
     margin: 1.5rem 0;
-    background: #f5f6fbbd;
+    background: #ecedf5bd;
+    border-radius: 5px;
 }
 .articleProducto > .divInfoProducto > a > h3 {
     width: 100%;
@@ -318,6 +343,16 @@ fieldset legend {
 .articleProducto > .divInfoProducto > a > p {
     font-size: .8rem;
     margin: 1.5rem;
+}
+.articleProducto > .divInfoProducto > a > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.articleProducto > .divInfoProducto > a > div > .precio-producto,
+.articleProducto > .divInfoProducto > a > div > .definicion-producto {
+    font-size: .8rem;
+    margin: .5rem;
 }
 .articleProducto > .divInfoProducto > a > figure {
     width: 50%;
@@ -337,11 +372,13 @@ fieldset legend {
 .articleProducto > .divInfoProducto > a > .divDatosProducto .parrafoPrecio {
     font-weight: bold;
 }
+
 .divInfoProducto > a >  .productos_tags {
     display: flex;
     flex-wrap: wrap;
 }
-a > .productos_tags > .productos_item_tags {
+
+/*a > .productos_tags > .productos_item_tags {
     background: black;
     color: #d39e00;
     padding: 0.1rem;
@@ -349,7 +386,7 @@ a > .productos_tags > .productos_item_tags {
     font-weight: 900;
     position: absolute;
     margin-left: 3rem;
-}
+}*/
 .producto .paginador {
     display: flex;
     justify-content: center;
@@ -372,6 +409,201 @@ a > .productos_tags > .productos_item_tags {
 .producto .paginador .paginador-lista .bg-warning {
     border-radius: 20%;
 }
+/*-----------------------------------------------------*/
+
+/*------------------------------------------------------------------productos----------*/
+.productos h2 {
+    text-align: center;
+    margin: 1rem 2rem auto;
+}
+.productos p {
+    text-align: center;
+}
+.productos div .h3Buscar {
+    font-size: .8rem;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+}
+.productos div h3 {
+    font-size: 1rem;
+    text-align: center;
+    width: 65%;
+    margin: auto;
+    padding: 1rem;
+}
+.productos .parrafoResultados {
+    font-size: .8rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.productos h4 {
+    font-size: .8rem;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.productos > .divs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+.productos > .divs > .articleProductos {
+
+    margin: 1.5rem 0rem;
+}
+.productos > .divs > .articleProductos > .divInfoProductos {
+
+}
+.productos > .divs > .articleProductos > .divInfoProductos > a {
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+    background: #ecedf5bd;
+    border-radius: 5px;
+}
+.articleProductos > .divInfoProductos > a > h3 {
+    width: 100%;
+    margin: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+.articleProductos > .divInfoProductos > a > p {
+    font-size: .8rem;
+    margin: 1.5rem;
+}
+.articleProductos > .divInfoProductos > a > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.articleProductos > .divInfoProductos > a > div > .precio-producto,
+.articleProductos > .divInfoProductos > a > div > .definicion-producto {
+    font-size: .8rem;
+    margin: .5rem;
+}
+.articleProductos > .divInfoProductos > a > figure {
+    width: 50%;
+    /* background: #e40d0d;*/
+}
+.divInfoProductos > a > figure > img {
+    border-radius: 50%;
+}
+.articleProductos > .divInfoProductos > a > .divDatosProducto {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+}
+.articleProductos > .divInfoProductos > a > .divDatosProducto .parrafoPrecio {
+    font-weight: bold;
+}
+.divInfoProductos > .botones > button >  i {
+   margin: .5rem;
+}
+.divInfoProductos > a >  .productos_tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+a > .productos_tags > .productos_item_tags {
+    background: black;
+    color: #ffc107;
+    padding: 0.1rem;
+    border-radius: 5px;
+    font-weight: 900;
+    margin-left: 6rem;
+    position: absolute;
+}
+
+
+
+
+
+/*--------------------perfil de usuarios --------------*/
+#sectionPerfil h2 {
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: 700;
+}
+#sectionPerfil .perfil {
+    display: flex;
+    flex-wrap: wrap;
+}
+#sectionPerfil .perfil .divDatos {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+#sectionPerfil .perfil .divDatos p {
+   /* text-align: center;*/
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido {
+    display: flex;
+    flex-wrap: wrap;
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido .anterior {
+    width: 100%;
+    /*text-align: center; */
+    /*padding-left: .5rem;*/
+    margin-bottom: 0;
+    font-weight: 700;
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido .primero {
+    width: auto;
+    font-size: .8rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /*padding-left: 1.9rem;*/
+   /* text-align: justify;*/
+}
+#sectionPerfil .perfil .divAccion {
+    width: 100%;
+    display: flex;
+    justify-content:  space-around;
+/*    margin-top: 2rem;*/
+}
+#sectionPerfil .perfil .divAccion p {
+    border-radius: 5px;
+    text-decoration: none;
+}
+#sectionPerfil .perfil .divAccion p a {
+    text-decoration: none;
+    color: #fff;
+}
+#sectionPerfil .perfil .divImagen {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 1rem;
+}
+/*#sectionPerfil .perfil .divImagen .parrafoEmailUsuarios {
+    !*text-align: center;*!
+}*/
+#sectionPerfil .perfil .divImagen figure {
+    display: flex;
+    justify-content: center;
+}
+#sectionPerfil .perfil .divImagen figure img {
+    border-radius: 50%;
+    box-shadow: 1px 3px 9px -2px black;
+    width: 80%;
+    display: flex;
+}
+
 /* ------------------Footer login--------------------- */
 footer {
     margin-top: 1rem;
@@ -474,6 +706,12 @@ footer .contenedores .contenedor .divUbicacion p{
     .articleProducto > .divInfoProducto > a > figure {
         width: 40%;
     }
+    #sectionPerfil .perfil .divImagen {
+        width: 45%;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 30%;
+    }
     .producto > .divs > .articleProducto > .divInfoProducto > a {
         margin: 1.5rem auto;
         width: 95%;
@@ -491,10 +729,14 @@ footer .contenedores .contenedor .divUbicacion p{
     }
     .articleProducto > .divInfoProducto > a > figure {
         width: 75%;
-
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 45%;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 25%;
     }
     .producto .divs {
-        /*background: #ffc107;*/
         display: flex;
         flex-wrap: wrap;
     }
@@ -507,7 +749,6 @@ footer .contenedores .contenedor .divUbicacion p{
     }
     footer .contenedores .ambos {
         width: 75%;
-        /*text-align: center;*/
     }
     footer .contenedores .divInstitucion ul {
       display: block;
@@ -525,6 +766,15 @@ footer .contenedores .contenedor .divUbicacion p{
     .articleProducto > .divInfoProducto > a > figure {
         width: 75%;
 
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 45%;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 25%;
+    }
+    .productos > .divs {
+        width: 80%;
     }
     .producto .divs {
         /*background: #ffc107;*/
@@ -563,14 +813,23 @@ footer .contenedores .contenedor .divUbicacion p{
 
 
 }
-@media (min-width: 681px) and (max-width: 767px){
+@media (min-width: 681px) and (max-width: 768px){
     .producto .divs {
         /*background: #ffc107;*/
         display: flex;
         flex-wrap: wrap;
     }
+    .productos > .divs {
+        width: 60%;
+    }
     .producto > .divs > .articleProducto {
         width: 33%;
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 45%;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 25%;
     }
     .producto > .divs > .articleProducto > .divInfoProducto > a {
         margin: 1.5rem auto;
@@ -609,8 +868,39 @@ footer .contenedores .contenedor .divUbicacion p{
         display: flex;
         flex-wrap: wrap;
     }
+    .productos > .divs {
+        width: 60%;
+    }
     .producto > .divs > .articleProducto {
         width: 33%;
+    }
+    #sectionPerfil .perfil {
+        display: flex;
+        flex-direction: column;
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 30%;
+        margin: 1rem auto;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    #sectionPerfil .perfil .divAccion {
+        justify-content: space-evenly;
+        width: 70%;
+        margin: 1rem auto;
+    }
+    #sectionPerfil .perfil .divDatos .divNombreApellido {
+        flex-direction: column;
+        text-align: center;
+    }
+    #sectionPerfil .perfil .divDatos .divNombreApellido p {
+        padding: .5rem;
     }
     .producto > .divs > .articleProducto > .divInfoProducto > a {
         margin: 1.5rem auto;
@@ -652,12 +942,43 @@ footer .contenedores .contenedor .divUbicacion p{
         display: flex;
         flex-wrap: wrap;
     }
+    .productos > .divs {
+        width: 60%;
+    }
     .producto > .divs > .articleProducto {
         width: 33%;
     }
     .producto > .divs > .articleProducto > .divInfoProducto > a {
         margin: 1.5rem auto;
         width: 90%;
+    }
+    #sectionPerfil .perfil {
+        display: flex;
+        flex-direction: column;
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 30%;
+        margin: 1rem auto;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    #sectionPerfil .perfil .divAccion {
+        justify-content: space-evenly;
+        width: 70%;
+        margin: 1rem  auto;
+    }
+    #sectionPerfil .perfil .divDatos .divNombreApellido {
+        flex-direction: column;
+        text-align: center;
+    }
+    #sectionPerfil .perfil .divDatos .divNombreApellido p {
+        padding: .5rem;
     }
     footer .contenedores .divInstitucion {
         width: 30%;
@@ -687,12 +1008,44 @@ footer .contenedores .contenedor .divUbicacion p{
         flex-wrap: wrap;
         justify-content: center;
     }
+    .productos > .divs {
+        width: 60%;
+    }
     .producto > .divs > .articleProducto {
         width: 15%;
     }
     .producto > .divs > .articleProducto > .divInfoProducto > a {
         margin: 1.5rem auto;
         width: 90%;
+    }
+    #sectionPerfil .perfil {
+        display: flex;
+        flex-direction: column;
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 30%;
+        margin: 1rem auto;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    #sectionPerfil .perfil .divAccion {
+        justify-content: space-evenly;
+        width: 70%;
+        margin: 1rem auto;
+
+    }
+    #sectionPerfil .perfil .divDatos .divNombreApellido {
+        flex-direction: column;
+        text-align: center;
+    }
+    #sectionPerfil .perfil .divDatos .divNombreApellido p {
+        padding: .5rem;
     }
     footer .contenedores .divInstitucion {
         width: 30%;

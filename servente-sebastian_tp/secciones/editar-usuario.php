@@ -40,7 +40,7 @@ echo "</pre>";
     <p>Completa el formulario</p>
     <form action="acciones/editar-usuario.php?id=<?= $_GET['id'];?>" method="post" enctype="multipart/form-data" class="formRegistro">
         <!--<input type="hidden" name="imgActual" Value="<?/*= $oldData['imgActual'];*/?>">-->
-        <div class="form-group col-12">
+        <div class="form-group">
             <div class="column">
                 <label for="email" class="col-md-lg-2 col-form-label">Email</label>
                 <input  type="text"

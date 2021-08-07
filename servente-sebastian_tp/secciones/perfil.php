@@ -19,51 +19,33 @@ echo "</pre>";*/
 ?>
 <section class="container" id="sectionPerfil">
     <h2 class="m-4">Perfil de Usuarios</h2>
-    <!--<table  class="table table-bordered table-striped">
-
-        <thead>
-        <tr>
-            <th>Imagen:</th>
-            <th>Email: </th>
-            <th>Nombre:</th>
-            <th>Apellido:</th>
-            <th>Apodo:</th>
-            <th>ID:</th>
-            <th>Acciones</th>
-        </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-            <td><?/*=$usuarios['email'];*/?></td>
-            <td><?/*=$usuarios['nombre']; */?></td>
-            <td><?/*=$usuarios['apellido']; */?></td>
-            <td><?/*=$usuarios['apodo']; */?></td>
-            <td><?/*=$usuarios['id_usuario']; */?></td>
-            <td><a href="index.php?s=editar-usuario&id=<?/*=$usuarios['id_usuario'];*/?>" class="p-2" >Editar usuario</a></td>
-            </tr>
-        </tbody>
-
-    </table>-->
     <article class="perfil">
         <div class="divImagen">
             <figure>
                 <img src="imgs/<?= $usuarios['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars($usuarios['alt_img']);?>">
             </figure>
+
         </div>
         <div class="divDatos">
-            <p> <?=$usuarios['email'];?></p>
             <div class="divNombreApellido">
-                <h3>Nombre y Apellido</h3>
-                <p class="primero"><?=$usuarios['nombre']; ?></p>
-                <p class="segundo"> <?=$usuarios['apellido']; ?></p>
+                <p class="anterior"><i class="bi bi-person-circle mr-2"></i>Email</p>
+                <p class="primero" title="<?=$usuarios['email'];?>"> <?=$usuarios['email'];?></p>
             </div>
-            <p>Apodo: @<?=$usuarios['apodo']; ?></p>
-            <!--<p>Id: <?/*=$usuarios['id_usuario']; */?></p>-->
-            <div class="divAccion">
-                <p><i class="bi bi-pencil-square text-success"></i><a href="index.php?s=editar-usuario&id=<?=$usuarios['id_usuario'];?>" class="p-2 edit text-success" >Editar </a></p>
-                <p><i class="bi bi-trash text-danger"></i><a href="acciones/usuario-eliminar.php?id=<?=$usuarios['id_usuario'];?>" class="borrar p-2 text-danger">Eliminar</a></p>
+            <div class="divNombreApellido">
+                <p class="anterior"><i class="bi bi-person-circle mr-2"></i>Nombre</p>
+                <p class="primero"  title="<?=$usuarios['nombre'];?>"><?=$usuarios['nombre']; ?></p>
+                <!--<p class="segundo p-2"> <?/*=$usuarios['apellido']; */?></p>-->
             </div>
+            <div class="divNombreApellido">
+                <p class="anterior"><i class="bi bi-exclamation-circle mr-2"></i>Apodos</p>
+                <p class="primero"  title="<?=$usuarios['apodo'];?>"><?=$usuarios['apodo']; ?></p>
+                <!--<p>Id: <?/*=$usuarios['id_usuario']; */?></p>-->
+            </div>
+
+        </div>
+        <div class="divAccion">
+            <p class="bg-dark p-2 mr-2"><i class="bi bi-pencil-square text-success"></i><a href="index.php?s=editar-usuario&id=<?=$usuarios['id_usuario'];?>" class="p-2 edit" >Editar </a></p>
+            <p class="bg-dark p-2 mr-2"><i class="bi bi-trash text-danger"></i><a href="acciones/usuario-eliminar.php?id=<?=$usuarios['id_usuario'];?>" class="borrar p-2 ">Eliminar</a></p>
         </div>
     </article>
 </section>
