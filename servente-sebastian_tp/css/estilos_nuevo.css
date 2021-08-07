@@ -469,6 +469,7 @@ fieldset legend {
     align-items: center;
     margin: 1.5rem 0;
     background: #ecedf5bd;
+    border-radius: 5px;
 }
 .articleProductos > .divInfoProductos > a > h3 {
     width: 100%;
