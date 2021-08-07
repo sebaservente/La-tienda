@@ -248,6 +248,12 @@ fieldset legend {
     background: url(../imgs/images.png) no-repeat center 100%;
 }
 /*------------------------------------------------------------Final 404 -------------------*/
+/*------------------------------------------------------------Menu-------------------------*/
+
+#header div #barra ul .homes {
+    display: flex;
+    justify-content: flex-end;
+}
 
 /*------------------------------------------------------------------Imagen menu---*/
 #header div .divImagen figure img {
