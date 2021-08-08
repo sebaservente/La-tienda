@@ -1,15 +1,18 @@
 <?php
 require 'data/bootstrap.php';
 
+$idUsuario = authObtenerUsuario()['id_usuario'];
+echo "<pre>";
+print_r($idUsuario);
+echo "</pre>";
+
 $usuarios = usuarioTraerPorId($db, $_GET['id']);
 
 // traemos la array de errores
 $errores = sessionValueGetFlash('errores', []);
 $oldData = sessionValueGetFlash('old_data', []);
 
-/*echo "<pre>";
-print_r($usuario);
-echo "</pre>";*/
+
 /*if(!authEstaAutenticado()) {*/
     /*    $_SESSION['seccion_preten'] = $seccion;*/
 /*    $_SESSION['successInfo'] = "Necesitas estar autenticado para realizar esta accion";
@@ -24,7 +27,6 @@ echo "</pre>";*/
             <figure>
                 <img src="imgs/<?= $usuarios['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars($usuarios['alt_img']);?>">
             </figure>
-
         </div>
         <div class="divDatos">
             <div class="divNombreApellido">

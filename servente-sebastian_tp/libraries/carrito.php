@@ -1,14 +1,22 @@
 <?php
-
-
-
+/*$idUsuario = authObtenerUsuario()['id_usuario'];*/
 /**
  * @param mysqli $db
- * @param int $idCerveza
+ * @param int $idUsuario
  * @return array
  * */
-function traerProductosDelCarrito($db, $idCerveza){
-    $idCerveza = mysqli_real_escape_string($db, $idCerveza);
+function traerProductosDelCarrito($db, $idUsuario){
+    $idUsuario = mysqli_real_escape_string($db, $idUsuario);
+    $query = "SELECT  title, precio, img, alt_img FROM carritos 
+                INNER JOIN cervezas 
+                ON carritos.cervezas_id_cerveza = cervezas.id_cerveza
+                WHERE carritos.id_usuario = '". $idUsuario ."'";
+    $res = mysqli_query($db, $query);
+    $salida = [];
+    while ($fila = mysqli_fetch_assoc($res)) {
+        $salida[] = $fila;
+    }
+    return $salida;
 }
 
 
@@ -40,7 +48,7 @@ function caAgregarProducto ($db, $idCerveza, $idUsuario) {
  * @param int $idUsuario
  * @return bool
  * */
-/*function caUsuarioTieneProducto($db, $idCerveza, $idUsuario){
+function caUsuarioTieneProducto($db, $idCerveza, $idUsuario){
     $idCerveza = mysqli_real_escape_string($db, $idCerveza);
     $idUsuario = mysqli_real_escape_string($db, $idUsuario);
     $query = "SELECT * FROM carritos 
@@ -48,7 +56,7 @@ function caAgregarProducto ($db, $idCerveza, $idUsuario) {
                 AND id_usuario = '" . $idUsuario ."'";
     $res = mysqli_query($db, $query);
     return mysqli_num_rows($res) === 1;
-}*/
+}
 /**
  * @param mysqli $db
  * @param mixed $id
