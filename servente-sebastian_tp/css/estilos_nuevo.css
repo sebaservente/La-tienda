@@ -131,6 +131,22 @@ main #err {
     width: 100%;
 }
 /*------------------------------------------------------------Final mantenimientos -------------------*/
+/*------------------- carrito de compras----------------------------*/
+.carritoCompras {
+    padding: 1rem;
+}
+.carritoCompras h2 {
+    font-family: 'Roboto Slab', serif;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+}
+.carritoCompras .carritoProductos {
+    display: flex;
+}
+/*------------------- final carrito de compras----------------------------*/
+
+
 /*------------------- formRegistro --------------------------------*/
 
 .formRegistroBuscar {

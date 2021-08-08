@@ -1,10 +1,10 @@
 <?php
 require 'data/bootstrap.php';
 
-$idUsuario = authObtenerUsuario()['id_usuario'];
+/*$idUsuario = authObtenerUsuario()['id_usuario'];
 echo "<pre>";
 print_r($idUsuario);
-echo "</pre>";
+echo "</pre>";*/
 
 $usuarios = usuarioTraerPorId($db, $_GET['id']);
 

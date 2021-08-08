@@ -7,7 +7,7 @@
  * */
 function traerProductosDelCarrito($db, $idUsuario){
     $idUsuario = mysqli_real_escape_string($db, $idUsuario);
-    $query = "SELECT  title, precio, img, alt_img FROM carritos 
+    $query = "SELECT  id_cerveza, title, precio, img, alt_img FROM carritos 
                 INNER JOIN cervezas 
                 ON carritos.cervezas_id_cerveza = cervezas.id_cerveza
                 WHERE carritos.id_usuario = '". $idUsuario ."'";
@@ -18,8 +18,6 @@ function traerProductosDelCarrito($db, $idUsuario){
     }
     return $salida;
 }
-
-
 /**
  * @param mysqli $db
  * @param int $idCerveza
@@ -41,7 +39,28 @@ function caAgregarProducto ($db, $idCerveza, $idUsuario) {
     }
     return false;
 }
+/**
+ * @param mysqli $db
+ * @param int $idCerveza
+ * @param int $idUsuario
+ * @return bool
+ * */
+function caEliminarProducto ($db, $idCerveza, $idUsuario) {
 
+    $idCerveza = mysqli_real_escape_string($db, $idCerveza);
+    $idUsuario = mysqli_real_escape_string($db, $idUsuario);
+
+    $query = "DELETE FROM carritos 
+                WHERE cervezas_id_cerveza = '". $idCerveza."' 
+                AND id_usuario = '". $idUsuario ."'";
+
+    $exito = mysqli_query($db, $query);
+
+    if ($exito){
+        return true;
+    }
+    return false;
+}
 /**
  * @param mysqli $db
  * @param int $idCerveza
@@ -91,7 +110,6 @@ function carritoTodos($db) {
     return $salida;
 
 }
-
 /**
  * @param mysqli $db
  * @param int $idCerveza
