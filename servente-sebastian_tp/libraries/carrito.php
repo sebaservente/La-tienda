@@ -37,3 +37,54 @@ function caAgregarProducto ($db, $idCerveza, $idUsuario) {
     $res = mysqli_query($db, $query);
     return mysqli_num_rows($res) === 1;
 }*/
+/**
+ * @param mysqli $db
+ * @param mixed $id
+ * @return array
+ * **/
+function carritoPorId($db, $id) {
+    $id = mysqli_real_escape_string($db, $id);
+    $query = "SELECT * FROM carritos 
+                WHERE id_carrito = '". $id ."'";
+    $res = mysqli_query($db, $query);
+
+    if($fila = mysqli_fetch_assoc($res)){
+        return $fila;
+    } else {
+        return null;
+    }
+
+}
+/**
+ * @param mysqli $db
+ * **/
+function carritoTodos($db) {
+    $query = "SELECT * FROM carritos";
+
+    $res = mysqli_query($db, $query);
+
+    $salida = [];
+
+    while ($fila = mysqli_fetch_assoc($res)){
+        $salida[] = $fila;
+    }
+    return $salida;
+
+}
+
+/**
+ * @param mysqli $db
+ * @param int $idCerveza
+ * @return array|null
+ * **/
+function productoPorId($db, $idCerveza) {
+    $idCerveza =  mysqli_real_escape_string($db, $idCerveza);
+    $query = "SELECT * FROM cervezas 
+                WHERE id_cerveza =  '". $idCerveza ."'";
+
+    $res = mysqli_query($db, $query);
+    if ($fila = mysqli_fetch_assoc($res)) {
+        return $fila;
+    }
+    return null;
+}

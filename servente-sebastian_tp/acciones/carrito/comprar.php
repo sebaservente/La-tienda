@@ -22,6 +22,13 @@ if(!authEstaAutenticado()) {
 $idCerveza = $_GET['id'];
 $idUsuario = authObtenerUsuario()['id_usuario'];
 
+$product = productoPorId($db, $idCerveza);
+if ($product === null){
+    $_SESSION['success_errors'] = "¡ Este producto que trataste de agregar no exite !";
+    header('Location: ../../index.php?s=productos');
+    exit;
+}
+
 /*if(caUsuarioTieneProducto($db, $idCerveza, $idUsuario)){
     $_SESSION['success_errors'] = "¡ Este producto ya esta en tu carrtio !";
     header('Location: ../../index.php?s=productos');
@@ -33,9 +40,8 @@ $exito = caAgregarProducto($db, $idCerveza, $idUsuario);
 
 
 if($exito){
-    $_SESSION['success'] = "¡ Se agrego el producto a tu carrtio !";
+    $_SESSION['success'] = "¡ Se agrego el producto " . $product['intro'] . " a tu carrito !";
     header('Location: ../../index.php?s=productos');
-    exit();
 } else {
     $_SESSION['success_errors'] = "¡ No se pudo agregar el producto a tu carrtio !";
     header('Location: ../../index.php?s=productos');
