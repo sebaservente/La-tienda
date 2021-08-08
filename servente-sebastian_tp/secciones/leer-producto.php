@@ -34,8 +34,8 @@ $tags = !empty($producto['tags']) ? explode(' | ', $producto['tags']) : [];
                     </div>
                 </a>
                 <div class="botones text-center d-flex row justify-content-between">
-                    <button class="btn btn-success agregar w-100 m-2"><i class="bi bi-cart-plus"></i>Agregar</button>
-                    <button class="comprar btn btn-info w-100 m-2"><i class="bi bi-cart4"></i>Comprar</button>
+                    <a href="#" class="btn btn-success agregar text-light w-100 m-2"><i class="bi bi-cart-plus"></i>Agregar</a>
+                    <a href="acciones/carrito/comprar.php?id=<?= htmlspecialchars($producto['id_cerveza']);?>" class="comprar btn btn-info text-light w-100 m-2"><i class="bi bi-cart4"></i>Comprar</a>
                 </div>
             </div>
          </article>
