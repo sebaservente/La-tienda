@@ -48,25 +48,4 @@ exit;*/
     <?php
     endif;?>
 
-
-
-    <?php
-/*    $total = 0;
-    foreach ($product as $carritos):
-            $total += $carritos['precio'];
-        */?><!--
-        <div class="carritoProductos">
-            <p class="pr-3"><?/*=$carritos['title'];*/?></p>
-            <p class="pr-3"><?/*=$carritos['precio'];*/?></p>
-            <div class="divImagen">
-                <figure>
-                    <img src="imgs/<?/*= $carritos['img'];*/?>" class="img-fluid w-25 figure-img" alt="<?/*= htmlspecialchars($carritos['alt_img']);*/?>">
-                </figure>
-            </div>
-            <p><a href="#" class="text-danger">eliminar</a></p>
-        </div>
-    --><?php
-/*    endforeach;
-    */?>
-
 </section>

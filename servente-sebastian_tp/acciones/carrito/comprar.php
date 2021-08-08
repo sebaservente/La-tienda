@@ -28,6 +28,7 @@ if(caUsuarioTieneProducto($db, $idCerveza, $idUsuario)){
 }
 
 $exito = caAgregarProducto($db, $idCerveza, $idUsuario);
+$exito = caAgregarPedido($db, $idCerveza, $idUsuario);
 
 if($exito){
     $_SESSION['success'] = "¡ Se agrego el producto <b>" . $product['title'] . "</b> a tu carrito !";

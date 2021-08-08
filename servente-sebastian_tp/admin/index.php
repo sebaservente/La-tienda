@@ -97,17 +97,20 @@ if(isset($_SESSION['successErrors'])){
                         <li class="nav-item">
                             <a class="nav-link text-warning" href="index.php?s=leer-usuarios">Usuarios</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" href="index.php?s=leer-pedidos">Pedidos</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link " href="acciones/logout.php">@<?= authObtenerUsuario()['nombre'];?> (cerrar sesion) </a></li>
                         <!--<li class="nav-item">
                             <a class="nav-link" href="index.php?s=productos">Cerrar Sesion</a>
                         </li>-->
                         
                     </ul>
-                    <div class="divImagen d-none d-md-block d-sm-none ">
+                  <!--  <div class="divImagen d-none d-md-block d-sm-none ">
                         <figure>
-                            <img src="imgs/<?= authObtenerUsuario()['img'];?>" class="img-fluid figure-img d-flex justify-content-center" alt="<?= htmlspecialchars(authObtenerUsuario()['alt_img']);?>">
+                            <img src="imgs/<?/*= authObtenerUsuario()['img'];*/?>" class="img-fluid figure-img d-flex justify-content-center" alt="<?/*= htmlspecialchars(authObtenerUsuario()['alt_img']);*/?>">
                         </figure>
-                    </div>
+                    </div>-->
                 </div>
                 <?php 
                 endif; 
