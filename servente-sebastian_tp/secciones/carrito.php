@@ -3,6 +3,7 @@ require 'libraries/carrito.php';
 require 'libraries/productos.php';
 
 $carrito = carritoTodos($db);
+$product = traerProductosDelCarrito($db, $user['id_cerveza']);
 /*$productos = productoPorId($db, $idCerveza);*/
 echo"<pre>";
 print_r($carrito);

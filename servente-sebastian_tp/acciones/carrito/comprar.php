@@ -40,9 +40,9 @@ $exito = caAgregarProducto($db, $idCerveza, $idUsuario);
 
 
 if($exito){
-    $_SESSION['success'] = "¡ Se agrego el producto " . $product['intro'] . " a tu carrito !";
+    $_SESSION['success'] = "¡ Se agrego el producto <b>" . $product['intro'] . "</b> a tu carrito !";
     header('Location: ../../index.php?s=productos');
 } else {
-    $_SESSION['success_errors'] = "¡ No se pudo agregar el producto a tu carrtio !";
+    $_SESSION['success_errors'] = "¡ No se pudo agregar el producto " . $product['intro'] . " a tu carrtio !";
     header('Location: ../../index.php?s=productos');
 }

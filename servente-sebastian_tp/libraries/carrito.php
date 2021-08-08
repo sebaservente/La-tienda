@@ -1,5 +1,17 @@
 <?php
 
+
+
+/**
+ * @param mysqli $db
+ * @param int $idCerveza
+ * @return array
+ * */
+function traerProductosDelCarrito($db, $idCerveza){
+    $idCerveza = mysqli_real_escape_string($db, $idCerveza);
+}
+
+
 /**
  * @param mysqli $db
  * @param int $idCerveza
