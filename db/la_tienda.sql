@@ -3,9 +3,15 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
+<<<<<<< Updated upstream
 -- Tiempo de generación: 07-08-2021 a las 20:12:54
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 7.3.28
+=======
+-- Tiempo de generación: 08-08-2021 a las 02:55:17
+-- Versión del servidor: 10.4.18-MariaDB
+-- Versión de PHP: 7.4.16
+>>>>>>> Stashed changes
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,9 +36,32 @@ SET time_zone = "+00:00";
 CREATE TABLE `carritos` (
   `id_carrito` int(10) UNSIGNED NOT NULL,
   `cervezas_id_cerveza` int(10) UNSIGNED NOT NULL,
+<<<<<<< Updated upstream
   `fecha` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+=======
+  `id_usuario` int(10) UNSIGNED NOT NULL,
+  `fecha` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `carritos`
+--
+
+INSERT INTO `carritos` (`id_carrito`, `cervezas_id_cerveza`, `id_usuario`, `fecha`) VALUES
+(3, 1, 29, '2021-08-07 16:58:11'),
+(5, 2, 29, '2021-08-07 17:08:00'),
+(6, 1, 29, '2021-08-07 17:11:07'),
+(7, 1, 29, '2021-08-07 17:32:53'),
+(8, 1, 29, '2021-08-07 17:34:37'),
+(9, 1, 29, '2021-08-07 17:39:48'),
+(10, 1, 29, '2021-08-07 20:46:25'),
+(11, 1, 29, '2021-08-07 21:51:18'),
+(12, 5, 29, '2021-08-07 21:51:54'),
+(13, 3, 29, '2021-08-07 21:52:48');
+
+>>>>>>> Stashed changes
 -- --------------------------------------------------------
 
 --
@@ -165,7 +194,11 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `id_rol`, `carritos_id_carrito`, `email`, `password`, `nombre`, `apellido`, `apodo`, `img`, `alt_img`, `domicilio`) VALUES
+<<<<<<< Updated upstream
 (1, 1, 0, 'ser@ser.com.ar', '$2y$10$NouG05OFMdy12w2r/ASazevqsadOUqKtIevfF17zwRh1W7AszGQ5m', 'sebita', 'andreus', 'Admin', '1627866939.png', 'imagen del usuario', NULL),
+=======
+(1, 1, 0, 'ser@ser.com.ar', '$2y$10$ZP2JbziCFNkkJZ1vljsF9eff0sFOuvjwQeUCwWwV8r5i7i12nvu0q', 'sebita', 'andreus', 'Administrador rolando rivas', '1627866939.png', 'imagen del usuario', NULL),
+>>>>>>> Stashed changes
 (2, 2, 0, 'sebas@sebas.com.ar', '$2y$10$xWcbYGxLHRUUW7x1vmiQ2.7G97zIBjvAi29slSKgx.0Pz5/ceAIw2', 'sebastian', 'servente', 'sebita28', '1627444939.jpg', 'imagen hombre en la nieve', NULL),
 (11, 2, 0, 'yu@yu.com.ar', '$2y$10$2TMsXjJaIPyTBbYh2WVSse.dpHP8FqW/FrKYczXEmpL3p3wLF.UGS', 'sebastian', 'andres', 'yuyo', '1627416953.jpg', 'imagen del usuario', NULL),
 (29, 2, 0, 'lo@lo.com.ar', '$2y$10$I5kQbFICNB82BG5lDb4iceYlblWcDnZ2/JjBz.Vy8rdU9nnahAnw2', 'sebastian', 'servente', 'sersebas', '1628084702.jpg', 'imagen del usuario', NULL),
@@ -233,7 +266,11 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `carritos`
 --
 ALTER TABLE `carritos`
+<<<<<<< Updated upstream
   MODIFY `id_carrito` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id_carrito` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT de la tabla `cervezas`
