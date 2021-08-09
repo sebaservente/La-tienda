@@ -68,10 +68,14 @@ $successInfo = sessionValueGetFlash('successInfo');
                     <?php
                     if(!authEstaAutenticado()):?>
                         <li class="nav-item homes">
-                            <a class="nav-link text-warning" href="index.php?s=login">Iniciar Sesión</a>
+                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=login">Iniciar Sesión</a>
+                            <a class="nav-link text-warning" href="index.php?s=login" title="Iniciar Sesión"><i class="bi bi-door-open"></i></a>
+
                         </li>
                         <li class="nav-item homes">
-                            <a class="nav-link text-warning" href="index.php?s=registro">Registrarse</a>
+                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=registro">Registrarse</a>
+                            <a class="nav-link text-warning" href="index.php?s=registro" title="Registrarse"><i class="bi bi-pencil-square"></i></a>
+
                         </li>
                         <?php
                         else: ?>

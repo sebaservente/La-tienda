@@ -85,22 +85,30 @@ if(isset($_SESSION['successErrors'])){
                 ?>
                 <div class="collapse navbar-collapse" id="barra">
                     <ul class="navbar-nav text-right ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-warning" href="index.php?s=home">Home</a>
+                        <li class="nav-item homes">
+                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=home">Home</a>
+                            <a class="nav-link text-warning " href="index.php?s=home" title="Home"><i class="bi bi-house-door"></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-warning" href="../index.php?s=home">Publicado</a>
+                        <li class="nav-item homes">
+                            <a class="nav-link text-warning d-md-none mr-3" href="../index.php?s=home">Publicaciones</a>
+                            <a class="nav-link text-warning " href="../index.php?s=home" title="Publicaciones"><i class="bi bi-cloud-arrow-up"></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-warning" href="index.php?s=productos">Productos</a>
+                        <li class="nav-item homes">
+                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=productos">Productos</a>
+                            <a class="nav-link text-warning " href="index.php?s=productos" title="Productos"><i class="bi bi-shop"></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-warning" href="index.php?s=leer-usuarios">Usuarios</a>
+                        <li class="nav-item homes">
+                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=leer-usuarios">Usuarios</a>
+                            <a class="nav-link text-warning " href="index.php?s=leer-usuarios" title="Usuarios"><i class="bi bi-people"></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-warning" href="index.php?s=leer-pedidos">Pedidos</a>
+                        <li class="nav-item homes">
+                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=leer-pedidos">Pedidos</a>
+                            <a class="nav-link text-warning " href="index.php?s=leer-pedidos" title="Pedidos"><i class="bi bi-truck"></i></a>
                         </li>
-                        <li class="nav-item"><a class="nav-link " href="acciones/logout.php">@<?= authObtenerUsuario()['nombre'];?> (cerrar sesion) </a></li>
+                        <li class="nav-item homes">
+                            <a class="nav-link  d-md-none mr-3" href="acciones/logout.php">@<?= authObtenerUsuario()['nombre'];?> (cerrar sesion) </a>
+                            <a class="nav-link " href="acciones/logout.php" title="Cerrar sesión"><i class="bi bi-x-octagon"></i></a>
+                        </li>
                         <!--<li class="nav-item">
                             <a class="nav-link" href="index.php?s=productos">Cerrar Sesion</a>
                         </li>-->

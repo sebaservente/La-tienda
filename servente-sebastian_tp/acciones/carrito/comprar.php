@@ -1,8 +1,8 @@
 <?php
 
 require_once '../../data/bootstrap.php';
-require_once '../../libraries/productos.php';
-require_once '../../libraries/carrito.php';
+require '../../libraries/productos.php';
+require '../../libraries/carrito.php';
 
 if(!authEstaAutenticado()) {
     /*    $_SESSION['seccion_preten'] = $seccion;*/
