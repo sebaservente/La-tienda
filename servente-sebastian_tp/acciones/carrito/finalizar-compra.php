@@ -27,7 +27,6 @@ if(caUsuarioTieneProducto($db, $idCerveza, $idUsuario)){
     exit;
 }
 
-$exito = caAgregarProducto($db, $idCerveza, $idUsuario);
 $exito = caAgregarPedido($db, $idCerveza, $idUsuario);
 
 if($exito){

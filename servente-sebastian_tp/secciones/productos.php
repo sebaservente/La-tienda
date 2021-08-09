@@ -72,8 +72,11 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
                             <p><?= htmlspecialchars($producto['definicion']);?></p>
                             <p class="parrafoPrecio">Precio: $ <?= htmlspecialchars($producto['precio']);?></p>
                         </div>
-                    </a>    
-                    <!--<button class="text-dark btn btn-success w-100" >Comprar </button>-->
+                    </a>
+                    <div class="botones text-center m-2 d-flex row justify-content-between">
+                        <a href="#" class="btn btn-success agregar text-light w-100 m-2"><i class="bi bi-cart-plus"></i>Agregar</a>
+                        <a href="acciones/carrito/comprar.php?id=<?= htmlspecialchars($producto['id_cerveza']);?>" class="comprar btn btn-info text-light w-100 m-2"><i class="bi bi-cart4"></i>Comprar</a>
+                    </div>
                 </div>
         </article>
         <?php

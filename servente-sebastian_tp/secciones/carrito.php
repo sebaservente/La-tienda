@@ -40,11 +40,18 @@ exit;*/
             ?>
             </tbody>
         </table>
-        <p>Cantidad de productos:  <?= count($product);?> </p>
-        <p>Total a pagar:  $<?= $total;?> </p>
+        <div class="text-center">
+            <p>Cantidad de productos:  <?= count($product);?> </p>
+            <p>Total a pagar:  $<?= $total;?> </p>
+            <a href="#" class="btn btn-success">Finalizar Compra</a>
+        </div>
     <?php
     else:?>
-        <p>Todavia no tenes a ninguna cerveza en tu carrito, no esperes mas. ¡Podes empezar ya mismo a <a href="index.php?s=productos">elegir cervezas</a> y armar tu pedido!</p>
+    <div class="text-center m-4 p-2 ">
+        <p class="text-center text-justify">¿No sabes que comprar?</p>
+        <p class="text-center text-justify">¡MIles de cervezas te esperan!</p>
+        <p class="text-center text-justify"><a href="index.php?s=productos">Comenza a llenar el carrito ahora</a></p>
+    </div>
     <?php
     endif;?>
 

@@ -140,6 +140,7 @@ main #err {
     padding: 1rem 0;
     width: 100%;
     text-align: center;
+    font-size: 1.5rem;
 }
 .carritoCompras .carritoProductos {
     display: flex;
