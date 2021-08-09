@@ -134,6 +134,8 @@ main #err {
 /*------------------- carrito de compras----------------------------*/
 .carritoCompras {
     padding: 1rem;
+    margin: auto;
+    max-width: 600px;
 }
 .carritoCompras h2 {
     font-family: 'Roboto Slab', serif;
@@ -142,6 +144,16 @@ main #err {
     text-align: center;
     font-size: 1.5rem;
 }
+.carritoCompras div .parrafoBotones {
+    display: flex;
+    justify-content: space-between;
+}
+.carritoCompras div .cantidadCarrito,
+.carritoCompras div .totalCarrito {
+    text-align: end;
+    margin: 1rem;
+}
+
 .carritoCompras .carritoProductos {
     display: flex;
 }
