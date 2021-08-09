@@ -25,10 +25,10 @@ function traerProductosDelCarrito($db, $idUsuario){
  * */
 function leerProductosDelCarrito($db, $idUsuario){
     $idUsuario = mysqli_real_escape_string($db, $idUsuario);
-    $query = "SELECT  id_cerveza, title, precio, img, alt_img FROM pedidos 
+    $query = "SELECT  id_cerveza, title, precio, img, alt_img FROM carritos 
                 INNER JOIN cervezas 
-                ON pedidos.cervezas_id_cerveza = cervezas.id_cerveza
-                WHERE pedidos.id_usuario = '". $idUsuario ."'";
+                ON carritos.cervezas_id_cerveza = cervezas.id_cerveza
+                WHERE carritos.id_usuario = '". $idUsuario ."'";
     $res = mysqli_query($db, $query);
     $salida = [];
     while ($fila = mysqli_fetch_assoc($res)) {
@@ -139,7 +139,7 @@ function carritoPorId($db, $id) {
  * @param mysqli $db
  * **/
 function carritoTodos($db) {
-    $query = "SELECT * FROM carritos";
+    $query = "SELECT * FROM pedidos";
 
     $res = mysqli_query($db, $query);
 
