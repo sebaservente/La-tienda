@@ -91,13 +91,13 @@ $successInfo = sessionValueGetFlash('successInfo');
                             <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=perfil&id=<?= authObtenerUsuario()['id_usuario'];?>" title="Perfil">Perfil</a>
                             <a class="nav-link text-warning" title="Perfil del usuario" href="index.php?s=perfil&id=<?= authObtenerUsuario()['id_usuario'];?>"><i class="bi bi-person"></i></a>
                         </li>
-                        <li class="nav-item homes" id="cerrarSesion">
+                        <li class="nav-item homes">
                             <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=carrito" title="Carrito de compras">Mi Carrito</a>
                             <a class="nav-link text-warning" href="index.php?s=carrito" title="Carrito de compras"><i class="bi bi-cart4"></i></a>
                         </li>
                         <li class="nav-item homes" id="cerrarSesion">
                             <a class="nav-link text-warning d-md-none mr-3" href="acciones/logout.php" title="Cerrar sesión">Cerrar Sesión</a>
-                            <a class="nav-link" title="Cerrar sesion" href="acciones/logout.php"><!--@--><?/*= authObtenerUsuario()['apodo'];*/?> <i class="bi bi-x-octagon"></i></a>
+                            <a class="nav-link" title="Cerrar sesion" href="acciones/logout.php">@<?= authObtenerUsuario()['apodo'];?> <i class="bi bi-x-octagon"></i></a>
                         </li>
 
                         <?php

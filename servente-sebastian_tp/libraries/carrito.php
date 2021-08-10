@@ -80,6 +80,21 @@ function caAgregarPedido ($db, $idCerveza, $idUsuario) {
     }
     return false;
 }
+function caFinalizarPedido($db, $idCerveza, $idUsuario) {
+    $idCerveza = mysqli_real_escape_string($db, $idCerveza);
+    $idUsuario = mysqli_real_escape_string($db, $idUsuario);
+
+    $query = "DELETE FROM carritos";
+
+    $exito = mysqli_query($db, $query);
+
+    if ($exito){
+        return true;
+    }
+    return false;
+}
+
+
 /**
  * @param mysqli $db
  * @param int $idCerveza

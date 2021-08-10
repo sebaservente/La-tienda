@@ -47,6 +47,9 @@ $secciones = [
     'mantenimiento' => [
         'title' => 'La Tienda :: Mantenimiento en curso'
     ],
+    'finalizar-compra' => [
+        'title' => 'La Tienda :: Gracias por su compra'
+    ],
 ];
 
 

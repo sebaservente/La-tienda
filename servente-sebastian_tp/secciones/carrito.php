@@ -19,7 +19,7 @@ exit;*/
         <table class="table table-bordered">
             <thead class="table-dark">
                 <tr>
-                    <th class="text-center">Cerveza</th>
+                    <th class="text-center">Productos</th>
                     <th class="text-center">Precio</th>
                     <th class="text-center">Acciones</th>
                 </tr>
@@ -31,8 +31,8 @@ exit;*/
                 $total += $carritos['precio'];
                 ?>
                <tr>
-                   <td><?=$carritos['title'];?></td>
-                   <td><?=$carritos['precio'];?></td>
+                   <td class="text-center"><?=$carritos['title'];?></td>
+                   <td class="text-center"><?=$carritos['precio'];?></td>
                    <td><a href="acciones/carrito/eliminar.php?id=<?=$carritos['id_cerveza'];?>" class="text-danger d-flex justify-content-center"><i class="bi bi-trash text-danger"></i></a></td>
                </tr>
             <?php
@@ -45,7 +45,7 @@ exit;*/
             <p class="totalCarrito">Total a pagar:  $<?= $total;?> </p>
             <p class="parrafoBotones">
                 <a href="index.php?s=productos" class="btn btn-info m-2">Seguir Comprando</a>
-                <a href="#" class="btn btn-success m-2">Finalizar Compra</a>
+                <a href="acciones/carrito/finalizar-compra.php?id=<?=$carritos['id_cerveza'];?>" class="btn btn-success m-2">Comprar</a>
             </p>
 
         </div>
