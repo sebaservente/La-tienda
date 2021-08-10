@@ -39,6 +39,16 @@ main #err {
     font-weight: bold;
     font-size: .8rem;
 }
+/*--------------------------------------- home --------------------*/
+#homes .carru {
+
+    margin: auto;
+}
+#homes .card {
+    margin: auto;
+}
+
+/*---------------------------------------fin home -----------------*/
 /*#sectionPerfil h2 {
     font-size: 1rem;
     text-align: center;
@@ -1036,7 +1046,24 @@ footer .contenedores .contenedor .divUbicacion p{
     }
 }
 @media (min-width: 1281px){
-
+    /*--------------------------------------- home --------------------*/
+    #homes .carru {
+        display: flex;
+        margin: auto;
+    }
+    #homes .carru .carruPrimero {
+        width: 33%;
+        margin: 1rem;
+    }
+    #homes .carru .carruSegundo {
+        width: 33%;
+        margin: 1rem;
+    }
+    #homes .carru .carruTercero {
+        width: 33%;
+        margin: 1rem;
+    }
+    /*---------------------------------------fin home -----------------*/
     .producto .divs {
         /*background: #ffc107;*/
         display: flex;
