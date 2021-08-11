@@ -44,8 +44,8 @@ exit;*/
             <p class="cantidadCarrito">Cantidad de productos:  <?= count($product);?> </p>
             <p class="totalCarrito">Total a pagar:  $<?= $total;?> </p>
             <p class="parrafoBotones">
-                <a href="index.php?s=productos" class="btn btn-info m-2">Seguir Comprando</a>
-                <a href="acciones/carrito/finalizar-compra.php?id=<?=$carritos['id_cerveza'];?>" class="btn btn-success m-2">Finalizar Compra</a>
+                <a href="index.php?s=productos" class="btn btn-info m-2"><i class="bi bi-cart-plus mr-2"></i>Seguir Comprando</a>
+                <a href="acciones/carrito/finalizar-compra.php?id=<?=$carritos['id_cerveza'];?>" class="btn btn-success m-2"><i class="bi bi-cart-check mr-2"></i>Finalizar Compra</a>
             </p>
 
         </div>

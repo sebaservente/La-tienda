@@ -163,6 +163,7 @@ main #inff {
 }
 .carritoCompras div .parrafoBotones {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 .carritoCompras div .cantidadCarrito,
@@ -781,6 +782,9 @@ footer .contenedores .contenedor .divUbicacion p{
 /* ------------------fin Footer login--------------------- */
 
 @media (min-width: 400px) and (max-width: 480px){
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
 
     .articleProducto > .divInfoProducto > a > figure {
         width: 40%;
@@ -803,7 +807,9 @@ footer .contenedores .contenedor .divUbicacion p{
     }
 }
 @media (min-width: 481px) and (max-width: 580px){
-
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
     .logo-home {
         width: 50%;
     }
@@ -840,7 +846,9 @@ footer .contenedores .contenedor .divUbicacion p{
 
 }
 @media (min-width: 581px) and (max-width: 680px){
-
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
     .logo-home {
         width: 50%;
     }
@@ -895,6 +903,9 @@ footer .contenedores .contenedor .divUbicacion p{
 
 }
 @media (min-width: 681px) and (max-width: 768px){
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
     .msj-success,
     .msj-error,
     .msj-info {
@@ -949,6 +960,9 @@ footer .contenedores .contenedor .divUbicacion p{
     }
 }
 @media (min-width: 768px) and (max-width: 880px){
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
     .msj-success,
     .msj-error,
     .msj-info {
@@ -1027,6 +1041,9 @@ footer .contenedores .contenedor .divUbicacion p{
 
 }
 @media (min-width: 881px) and (max-width: 1280px){
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
 
     .msj-success,
     .msj-error,
@@ -1097,6 +1114,9 @@ footer .contenedores .contenedor .divUbicacion p{
     }
 }
 @media (min-width: 1281px){
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
     /*--------------------------------------- home --------------------*/
     .msj-success,
     .msj-error,
