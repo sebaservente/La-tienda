@@ -22,7 +22,7 @@ $oldData = sessionValueGetFlash('old_data', []);
 ?>
 <section class="container" id="sectionPerfil">
     <h2 class="m-4">Perfil de Usuarios</h2>
-    <article class="perfil">
+    <div class="perfil">
         <div class="divImagen">
             <figure>
                 <img src="imgs/<?= $usuarios['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars($usuarios['alt_img']);?>">
@@ -49,7 +49,7 @@ $oldData = sessionValueGetFlash('old_data', []);
             <p class="bg-dark p-2 mr-2"><i class="bi bi-pencil-square text-success"></i><a href="index.php?s=editar-usuario&id=<?=$usuarios['id_usuario'];?>" class="p-2 edit" >Editar </a></p>
             <p class="bg-dark p-2 mr-2"><i class="bi bi-trash text-danger"></i><a href="acciones/usuario-eliminar.php?id=<?=$usuarios['id_usuario'];?>" class="borrar p-2 ">Eliminar</a></p>
         </div>
-    </article>
+    </div>
 </section>
 <script>
     window.addEventListener('DOMContentLoaded', function(){

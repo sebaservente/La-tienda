@@ -92,11 +92,11 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
         <ul class="paginador-lista">
             <?php if($pagina > 1): ?>
                 <li><a href="index.php?s=productos&p=1&b=<?= $b;?>">Primera</a></li>
-                <li><a href="index.php?s=productos&p=<?=($pagina - 1);?>&b=<?= $b;?>"> <<< </a></li>
+                <li><a href="index.php?s=productos&p=<?=($pagina - 1);?>&b=<?= $b;?>"><i class="bi bi-chevron-double-left"></i></a></li>
             <?php
             else: ?>
                <!-- <li>Inicio</li>-->
-                <li> <<< </li>
+                <li><i class="bi bi-chevron-double-left"></i></li>
             <?php
             endif; ?>
             <?php
@@ -114,12 +114,12 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
                 endif;
             endfor;?>
             <?php if($pagina < $pagTotal): ?>
-                <li><a href="index.php?s=productos&p=<?=($pagina + 1);?>&b=<?= $b;?>"> >>> </a></li>
+                <li><a href="index.php?s=productos&p=<?=($pagina + 1);?>&b=<?= $b;?>"><i class="bi bi-chevron-double-right"></i></a></li>
                 <li><a href="index.php?s=productos&p=<?= $pagTotal;?>&b=<?= $b;?>">Ultima</a></li>
             <?php
             else: ?>
                 <!-- <li>Final</li>-->
-                <li> >>> </li>
+                <li><i class="bi bi-chevron-double-right"></i></li>
             <?php
             endif; ?>
         </ul>

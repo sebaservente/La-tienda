@@ -19,7 +19,7 @@ exit;*/
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>Cerveza</th>
+                <th>Productos</th>
                 <th>Precio</th>
                 <th>Acciones</th>
             </tr>
@@ -33,7 +33,7 @@ exit;*/
                 <tr>
                     <td><?=$carritos['title'];?></td>
                     <td><?=$carritos['precio'];?></td>
-                  <!--  <td><a href="acciones/carrito/eliminar.php?id=<?/*=$carritos['id_cerveza'];*/?>" class="text-danger">eliminar</a></td>-->
+                    <td><a href="acciones/carrito/eliminar.php?id=<?=$carritos['id_cerveza'];?>" class="text-danger">eliminar</a></td>
                 </tr>
             <?php
             endforeach;

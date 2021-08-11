@@ -184,10 +184,10 @@ main #err {
     width: 75%;
 }
 .formRegistroBuscar div {
-  /*  width: 50%;*/
+    width: 100%;
 }
 .formRegistroBuscar .botonRegistroBuscar {
-    width: 50%;
+    width: 10%;
     margin-top: 2rem;
 }
 
