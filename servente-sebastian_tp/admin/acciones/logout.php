@@ -14,5 +14,5 @@ if(!authEstaAutenticado() || !authEsAdmin()) {
 
 authLogout();
 
-header('Location: ../index.php?s=login');
+header('Location: ../index.php?s=home');
 

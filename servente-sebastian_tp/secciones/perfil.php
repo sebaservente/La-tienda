@@ -47,7 +47,7 @@ $oldData = sessionValueGetFlash('old_data', []);
         </div>
         <div class="divAccion">
             <p class="bg-dark p-2 mr-2"><i class="bi bi-pencil-square text-success"></i><a href="index.php?s=editar-usuario&id=<?=$usuarios['id_usuario'];?>" class="p-2 edit" >Editar </a></p>
-            <p class="bg-dark p-2 mr-2"><i class="bi bi-trash text-danger"></i><a href="acciones/usuario-eliminar.php?id=<?=$usuarios['id_usuario'];?>" class="borrar p-2 ">Eliminar</a></p>
+            <p class="bg-dark p-2 mr-2"><i class="bi bi-trash text-danger"></i><a href="acciones/eliminar-usuario.php?id=<?=$usuarios['id_usuario'];?>" class="borrar p-2 ">Eliminar</a></p>
         </div>
     </div>
 </section>

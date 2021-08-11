@@ -14,13 +14,6 @@ if (!authEstaAutenticado()) {
 $idCerveza = $_GET['id'];
 $idUsuario = authObtenerUsuario()['id_usuario'];
 
-/*$product = productoPorId($db, $idCerveza);*/
-
-/*if ($product === null) {
-    $_SESSION['success_errors'] = "¡ Este producto que trataste de quitar no exite !";
-    header('Location: ../../index.php?s=carrito');
-    exit;
-}*/
 $exito = caFinalizarPedido($db, $idCerveza, $idUsuario);
 
 if ($exito) {

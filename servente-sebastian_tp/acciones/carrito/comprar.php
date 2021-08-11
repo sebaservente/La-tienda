@@ -22,7 +22,7 @@ if ($product === null){
 }
 
 if(caUsuarioTieneProducto($db, $idCerveza, $idUsuario)){
-    $_SESSION['success_errors'] = "¡ Este producto ya esta en tu carrtio !";
+    $_SESSION['successInfo'] = "¡ Este producto ya esta en tu carrtio !";
     header('Location: ../../index.php?s=productos');
     exit;
 }

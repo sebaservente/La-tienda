@@ -16,6 +16,12 @@ if($enviromentState === ENVIROMENT_MANTAINANCE) {
     $seccion = "mantenimiento";
 }
 
+$title = $secciones[$seccion]['title'];
+
+$success = sessionValueGetFlash('success');
+$successErrors = sessionValueGetFlash('success_errors');
+$successInfo = sessionValueGetFlash('successInfo');
+
 if(isset($secciones[$seccion]['requiresAuth']) && $secciones[$seccion]['requiresAuth']) {
     // verificamos uqe este autenticado
     if(!authEstaAutenticado() || !authEsAdmin()) {
@@ -26,11 +32,7 @@ if(isset($secciones[$seccion]['requiresAuth']) && $secciones[$seccion]['requires
     }
 }
 
-$title = $secciones[$seccion]['title'];
 
-$success = sessionValueGetFlash('success');
-$successErrors = sessionValueGetFlash('success_errors');
-$successInfo = sessionValueGetFlash('successInfo');
 /*if(isset($_SESSION['success'])){
     $success = $_SESSION['success'];
     unset($_SESSION['success']);
@@ -131,19 +133,19 @@ if(isset($_SESSION['successErrors'])){
 
         <?php
         if($success !== null): ?>
-        <div class="msj-success mt-3 pl-4"><?= $success;?></div>
+        <div class="msj-success mt-3"><?= $success;?></div>
         <?php
         endif; ?>
 
         <?php
         if($successErrors !== null): ?>
-        <div class="msj-error pl-4"><?= $successErrors;?></div>
+        <div id="err" class="msj-error"><?= $successErrors;?></div>
         <?php
         endif; ?>
          <?php
 
         if($successInfo !== null): ?>
-        <div class="msj-info pl-4"><?= $successInfo;?></div>
+        <div id="inff" class="msj-info"><?= $successInfo;?></div>
         <?php
         endif; ?>
 

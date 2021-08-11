@@ -97,7 +97,7 @@ $successInfo = sessionValueGetFlash('successInfo');
                         </li>
                         <li class="nav-item homes" id="cerrarSesion">
                             <a class="nav-link text-warning d-md-none mr-3" href="acciones/logout.php" title="Cerrar sesión">Cerrar Sesión</a>
-                            <a class="nav-link" title="Cerrar sesion" href="acciones/logout.php">@<?= authObtenerUsuario()['apodo'];?> <i class="bi bi-x-octagon"></i></a>
+                            <a class="nav-link" title="Cerrar sesion" href="acciones/logout.php"><i class="bi bi-x-octagon"></i></a>
                         </li>
 
                         <?php
@@ -119,19 +119,19 @@ $successInfo = sessionValueGetFlash('successInfo');
         <!-- todo: ajustar el css -->
         <?php
         if($success !== null): ?>
-            <div class="msj-success mt-3 pl-4"><?= $success;?></div>
+            <div class="msj-success"><?= $success;?></div>
         <?php
         endif; ?>
 
         <?php
         if($successErrors !== null): ?>
-            <div id="err" class="msj-error pl-4 bg-warning"><?= $successErrors;?></div>
+            <div id="err" class="msj-error"><?= $successErrors;?></div>
         <?php
         endif; ?>
         <?php
 
         if($successInfo !== null): ?>
-            <div class="msj-info pl-4"><?= $successInfo;?></div>
+            <div id="inff" class="msj-info"><?= $successInfo;?></div>
         <?php
         endif; ?>
 
