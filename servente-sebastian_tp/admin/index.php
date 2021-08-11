@@ -27,7 +27,7 @@ if(isset($secciones[$seccion]['requiresAuth']) && $secciones[$seccion]['requires
     if(!authEstaAutenticado() || !authEsAdmin()) {
         $_SESSION['seccion_preten'] = $seccion;
         $_SESSION['successInfo'] = "Necesitas estar autenticado para ingresar";
-        header('Location: index.php?s=login');
+        header('Location: ../index.php?s=home');
         exit;
     }
 }
