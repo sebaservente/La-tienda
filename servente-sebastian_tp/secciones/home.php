@@ -4,13 +4,16 @@ $productos = getProducto($db);
 ?>
 <section id="homes">
     <h2> La Tienda </h2>
+    <p class="parrafoInicio">Mas de 500 etiquetas nacionales e importadas</p>
     <picture class="figure w-100">
-        <source media="(min-width: 61.25em)" srcset="imgs/playa-mobile-743.jpg">
-        <source media="(min-width: 46.25em)" srcset="imgs/playa-mobile-742.jpg">
+        <source media="(min-width: 30.05em)" srcset="imgs/playa-mobile-743.jpg">
+        <source media="(min-width: 25.05em)" srcset="imgs/vasoCervezaInicio.jpg">
+        <source media="(min-width: 14.25em)" srcset="imgs/vasoCervezaInicio.jpg">
         <img src="imgs/playa-mobile-002.jpg" alt="foto" class="img-fluid figure-img">
     </picture>
     <div class="card card-body">
         <h4 class="card-title text-center"> La Tienda </h4>
+
         <p class="card-text text-center">Gran variedad de cerveza, novedosas y de calidad. Conocé nuestros Combos y Comprá Online! ¿Querés conocer nuestra Variedad
             de Cervezas? Ingresá y encontrá los Packs Destacados. La Revolución de la Cerveza. En La Tienda nos esforzamos para  buscar y seleccionar gran variedad de cervezas,
             novedosas, diferentes y de calidad. Las embarrilamos y enlatamos con mucha pasión, amor y arte. Si querés buena

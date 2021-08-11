@@ -295,14 +295,25 @@ fieldset legend {
 }
 
 /*------------------------------------------------------------------home----------*/
-#homes > h2 {
+#homes > h2{
     font-size: 2em;
     margin: 1rem;
     font-family: 'Roboto Slab', serif;
     color: #f1f1f1;
     position: absolute;
+    padding-top: 7%;
+    padding-left: 4%;
 }
-/*------------------------------------------------------------------productos----------*/
+#homes > .parrafoInicio {
+    font-size: 1em;
+    margin: 1rem;
+    font-family: 'Roboto Slab', serif;
+    color: #f1f1f1;
+    position: absolute;
+    padding-top: 25%;
+    padding-left: 4%;
+}
+    /*------------------------------------------------------------------productos----------*/
 .formRegistroBuscar {
     /*background: #161514bf;*/
     padding: 1rem;
