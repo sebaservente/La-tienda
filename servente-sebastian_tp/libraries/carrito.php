@@ -94,7 +94,26 @@ function caFinalizarPedido($db, $idCerveza, $idUsuario) {
     }
     return false;
 }
+/**
+ * @param mysqli $db
+ * @param int $idCerveza
+ * @return bool
+ * */
+function caEliminarPedidos($db, $idCerveza) {
 
+   /* $idCerveza = mysqli_real_escape_string($db, $idCerveza);*/
+    /*$idUsuario = mysqli_real_escape_string($db, $idUsuario);*/
+
+   /* $query = "DELETE FROM pedidos
+                WHERE cervezas_id_cerveza";
+
+    $exito = mysqli_query($db, $query);
+
+    if ($exito){
+        return true;
+    }
+    return false;*/
+}
 
 /**
  * @param mysqli $db

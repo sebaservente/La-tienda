@@ -39,7 +39,7 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
         ?>      
         <article class="articleProducto">
                 <div class="divInfoProducto rounded">
-                    <a href="#" class="text-dark text-decoration-none" >
+                    <a href="index.php?s=leer-producto&id=<?= $producto['id_cerveza'];?>"" class="text-dark text-decoration-none" >
                         <h3>Id:  <?=$producto['id_cerveza'];?></h3>
                         <figure>
                             <img src="../imgs/<?= $producto['img'];?>" class="img-fluid  figure-img" alt="<?= htmlspecialchars($producto['alt_img']);?>">
