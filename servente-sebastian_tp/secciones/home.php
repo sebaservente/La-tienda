@@ -4,9 +4,13 @@ $productos = getProducto($db);
 ?>
 <section id="homes">
     <h2> La Tienda </h2>
-    <p class="parrafoInicio">Mas de 500 etiquetas nacionales e importadas</p>
+    <div class="divParrafosInicio position-absolute">
+        <p class="parrafoInicio">Mas de 500 etiquetas</p>
+        <p class="parrafoInicios">nacionales e importadas.</p>
+    </div>
+    <button class="btnInicios btn btn-light text-dark">Ingresar</button>
     <picture class="figure w-100">
-        <source media="(min-width: 30.05em)" srcset="imgs/playa-mobile-743.jpg">
+        <source media="(min-width: 30.05em)" srcset="imgs/vasoCerveza-Grande.jpg">
         <source media="(min-width: 25.05em)" srcset="imgs/vasoCervezaInicio.jpg">
         <source media="(min-width: 14.25em)" srcset="imgs/vasoCervezaInicio.jpg">
         <img src="imgs/playa-mobile-002.jpg" alt="foto" class="img-fluid figure-img">

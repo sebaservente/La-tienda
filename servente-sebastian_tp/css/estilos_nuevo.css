@@ -297,21 +297,38 @@ fieldset legend {
 /*------------------------------------------------------------------home----------*/
 #homes > h2{
     font-size: 2em;
-    margin: 1rem;
     font-family: 'Roboto Slab', serif;
     color: #f1f1f1;
     position: absolute;
-    padding-top: 7%;
-    padding-left: 4%;
+    margin-top: 19%;
+    margin-left: 8%;
 }
-#homes > .parrafoInicio {
+#homes > .divParrafosInicio {
+    display: contents;
+}
+#homes > .divParrafosInicio > .parrafoInicio {
     font-size: 1em;
-    margin: 1rem;
-    font-family: 'Roboto Slab', serif;
     color: #f1f1f1;
     position: absolute;
-    padding-top: 25%;
-    padding-left: 4%;
+    margin-top: 33%;
+    margin-left: 8%;
+}
+#homes > .divParrafosInicio > .parrafoInicios {
+    font-size: 1em;
+    color: #f1f1f1;
+    position: absolute;
+    margin-top: 40%;
+    margin-left: 8%;
+}
+#homes > .btnInicios {
+    font-size: 1em;
+    margin-top: 55%;
+    margin-left: 8%;
+    font-family: 'Roboto Slab', italic;
+    color: #f1f1f1;
+    position: absolute;
+   /* padding-top: 33%;
+    padding-left: 4%;*/
 }
     /*------------------------------------------------------------------productos----------*/
 .formRegistroBuscar {
@@ -793,6 +810,9 @@ footer .contenedores .contenedor .divUbicacion p{
 /* ------------------fin Footer login--------------------- */
 
 @media (min-width: 400px) and (max-width: 480px){
+    #homes > h2{
+        margin-top: 21%;
+    }
     .carritoCompras div .parrafoBotones {
         flex-direction: row;
     }
@@ -818,6 +838,20 @@ footer .contenedores .contenedor .divUbicacion p{
     }
 }
 @media (min-width: 481px) and (max-width: 580px){
+    #homes > h2{
+        margin-top: 10%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 18%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 22%;
+    }
+    #homes > .btnInicios {
+        font-size: .8em;
+        margin-top: 28%;
+    }
+
     .carritoCompras div .parrafoBotones {
         flex-direction: row;
     }
@@ -857,6 +891,19 @@ footer .contenedores .contenedor .divUbicacion p{
 
 }
 @media (min-width: 581px) and (max-width: 680px){
+    #homes > h2{
+        margin-top: 10%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 18%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 22%;
+    }
+    #homes > .btnInicios {
+        font-size: .8em;
+        margin-top: 28%;
+    }
     .carritoCompras div .parrafoBotones {
         flex-direction: row;
     }
@@ -914,6 +961,19 @@ footer .contenedores .contenedor .divUbicacion p{
 
 }
 @media (min-width: 681px) and (max-width: 768px){
+    #homes > h2{
+        margin-top: 10%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 16%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 20%;
+    }
+    #homes > .btnInicios {
+        font-size: .8em;
+        margin-top: 26%;
+    }
     .carritoCompras div .parrafoBotones {
         flex-direction: row;
     }
@@ -971,6 +1031,19 @@ footer .contenedores .contenedor .divUbicacion p{
     }
 }
 @media (min-width: 768px) and (max-width: 880px){
+    #homes > h2{
+        margin-top: 10%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 16%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 19%;
+    }
+    #homes > .btnInicios {
+        font-size: .8em;
+        margin-top: 25%;
+    }
     .carritoCompras div .parrafoBotones {
         flex-direction: row;
     }
@@ -1052,6 +1125,20 @@ footer .contenedores .contenedor .divUbicacion p{
 
 }
 @media (min-width: 881px) and (max-width: 1280px){
+    #homes > h2{
+        font-size: 3em;
+        margin-top: 9%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 16%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 18%;
+    }
+    #homes > .btnInicios {
+        font-size: .8em;
+        margin-top: 23%;
+    }
     .carritoCompras div .parrafoBotones {
         flex-direction: row;
     }
@@ -1125,6 +1212,22 @@ footer .contenedores .contenedor .divUbicacion p{
     }
 }
 @media (min-width: 1281px){
+    #homes > h2{
+        font-size: 4em;
+        margin-top: 11%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 16%;
+        font-size: 2rem;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 19%;
+        font-size: 2rem;
+    }
+    #homes > .btnInicios {
+        font-size: 1.5rem;
+        margin-top: 23%;
+    }
     .carritoCompras div .parrafoBotones {
         flex-direction: row;
     }
