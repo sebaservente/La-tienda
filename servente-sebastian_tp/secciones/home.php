@@ -8,7 +8,7 @@ $productos = getProducto($db);
         <p class="parrafoInicio">Mas de 500 etiquetas</p>
         <p class="parrafoInicios">nacionales e importadas.</p>
     </div>
-    <button class="btnInicios btn btn-light text-dark">Ingresar</button>
+    <button class="btnInicios btn btn-light text-dark" onclick="window.location='index.php?s=login'">Ingresar</button>
     <picture class="figure w-100">
         <source media="(min-width: 30.05em)" srcset="imgs/vasoCerveza-Grande.jpg">
         <source media="(min-width: 25.05em)" srcset="imgs/vasoCervezaInicio.jpg">
