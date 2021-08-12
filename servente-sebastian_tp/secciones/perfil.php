@@ -1,15 +1,18 @@
 <?php
 require 'data/bootstrap.php';
 
+/*$idUsuario = authObtenerUsuario()['id_usuario'];
+echo "<pre>";
+print_r($idUsuario);
+echo "</pre>";*/
+
 $usuarios = usuarioTraerPorId($db, $_GET['id']);
 
 // traemos la array de errores
 $errores = sessionValueGetFlash('errores', []);
 $oldData = sessionValueGetFlash('old_data', []);
 
-/*echo "<pre>";
-print_r($usuario);
-echo "</pre>";*/
+
 /*if(!authEstaAutenticado()) {*/
     /*    $_SESSION['seccion_preten'] = $seccion;*/
 /*    $_SESSION['successInfo'] = "Necesitas estar autenticado para realizar esta accion";
@@ -19,12 +22,11 @@ echo "</pre>";*/
 ?>
 <section class="container" id="sectionPerfil">
     <h2 class="m-4">Perfil de Usuarios</h2>
-    <article class="perfil">
+    <div class="perfil">
         <div class="divImagen">
             <figure>
                 <img src="imgs/<?= $usuarios['img'];?>" class="img-fluid figure-img" alt="<?= htmlspecialchars($usuarios['alt_img']);?>">
             </figure>
-
         </div>
         <div class="divDatos">
             <div class="divNombreApellido">
@@ -45,9 +47,9 @@ echo "</pre>";*/
         </div>
         <div class="divAccion">
             <p class="bg-dark p-2 mr-2"><i class="bi bi-pencil-square text-success"></i><a href="index.php?s=editar-usuario&id=<?=$usuarios['id_usuario'];?>" class="p-2 edit" >Editar </a></p>
-            <p class="bg-dark p-2 mr-2"><i class="bi bi-trash text-danger"></i><a href="acciones/usuario-eliminar.php?id=<?=$usuarios['id_usuario'];?>" class="borrar p-2 ">Eliminar</a></p>
+            <p class="bg-dark p-2 mr-2"><i class="bi bi-trash text-danger"></i><a href="acciones/eliminar-usuario.php?id=<?=$usuarios['id_usuario'];?>" class="borrar p-2 ">Eliminar</a></p>
         </div>
-    </article>
+    </div>
 </section>
 <script>
     window.addEventListener('DOMContentLoaded', function(){

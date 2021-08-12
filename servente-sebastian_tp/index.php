@@ -43,7 +43,7 @@ $successInfo = sessionValueGetFlash('successInfo');
         <h1>La Tienda</h1>
         <div class="row">
             <nav class="nav-index col navbar navbar-expand-md navbar-dark ">
-                <a class="navbar-brand w-25 m-0" href="#">
+                <a class="navbar-brand w-25 m-0" href="index.php?s=home">
                     <img src="imgs/logo-01.png" alt="logo de la marca by Vizzentino" class="logo-home">
                 </a>
                 <button class="navbar-toggler " 
@@ -68,10 +68,12 @@ $successInfo = sessionValueGetFlash('successInfo');
                     <?php
                     if(!authEstaAutenticado()):?>
                         <li class="nav-item homes">
-                            <a class="nav-link text-warning" href="index.php?s=login">Iniciar Sesión</a>
+                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=login">Iniciar Sesión</a>
+                            <a class="nav-link text-warning" href="index.php?s=login" title="Iniciar Sesión"><i class="bi bi-door-open"></i></a>
                         </li>
                         <li class="nav-item homes">
-                            <a class="nav-link text-warning" href="index.php?s=registro">Registrarse</a>
+                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=registro">Registrarse</a>
+                            <a class="nav-link text-warning" href="index.php?s=registro" title="Registrarse"><i class="bi bi-pencil-square"></i></a>
                         </li>
                         <?php
                         else: ?>
@@ -89,13 +91,13 @@ $successInfo = sessionValueGetFlash('successInfo');
                             <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=perfil&id=<?= authObtenerUsuario()['id_usuario'];?>" title="Perfil">Perfil</a>
                             <a class="nav-link text-warning" title="Perfil del usuario" href="index.php?s=perfil&id=<?= authObtenerUsuario()['id_usuario'];?>"><i class="bi bi-person"></i></a>
                         </li>
-                        <li class="nav-item homes" id="cerrarSesion">
+                        <li class="nav-item homes">
                             <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=carrito" title="Carrito de compras">Mi Carrito</a>
                             <a class="nav-link text-warning" href="index.php?s=carrito" title="Carrito de compras"><i class="bi bi-cart4"></i></a>
                         </li>
                         <li class="nav-item homes" id="cerrarSesion">
                             <a class="nav-link text-warning d-md-none mr-3" href="acciones/logout.php" title="Cerrar sesión">Cerrar Sesión</a>
-                            <a class="nav-link" title="Cerrar sesion" href="acciones/logout.php"><!--@--><?/*= authObtenerUsuario()['apodo'];*/?> <i class="bi bi-x-octagon"></i></a>
+                            <a class="nav-link" title="Cerrar sesion" href="acciones/logout.php"><i class="bi bi-x-octagon"></i></a>
                         </li>
 
                         <?php
@@ -117,19 +119,19 @@ $successInfo = sessionValueGetFlash('successInfo');
         <!-- todo: ajustar el css -->
         <?php
         if($success !== null): ?>
-            <div class="msj-success mt-3 pl-4"><?= $success;?></div>
+            <div class="msj-success"><?= $success;?></div>
         <?php
         endif; ?>
 
         <?php
         if($successErrors !== null): ?>
-            <div id="err" class="msj-error pl-4 bg-warning"><?= $successErrors;?></div>
+            <div id="err" class="msj-error"><?= $successErrors;?></div>
         <?php
         endif; ?>
         <?php
 
         if($successInfo !== null): ?>
-            <div class="msj-info pl-4"><?= $successInfo;?></div>
+            <div id="inff" class="msj-info"><?= $successInfo;?></div>
         <?php
         endif; ?>
 

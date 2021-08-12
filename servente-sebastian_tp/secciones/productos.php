@@ -32,11 +32,11 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
 <section id="productos" class="container-fluid producto">
     <h2>Elige Tu Estilo</h2>
     <div>
-        <h3 class="h3Buscar">Busca la cerveza que más te identifique</h3>
+        <!--<h3 class="h3Buscar">Busca la cerveza que más te identifique</h3>-->
         <form action="index.php" method="get" class="formRegistroBuscar">
             <input type="hidden" name="s" value="productos">
             <div class="form-file">
-                <label for="b">Buscar</label>
+                <!--<label for="b" >Tus cervezas favoritas</label>-->
                 <input type="search" id="b" name="b" class="form-control" value="<?= $b;?>" placeholder="Buscar">
             </div>
             <button class="btn btn-light botonRegistroBuscar"><i class="bi bi-search"></i></button>
@@ -72,8 +72,11 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
                             <p><?= htmlspecialchars($producto['definicion']);?></p>
                             <p class="parrafoPrecio">Precio: $ <?= htmlspecialchars($producto['precio']);?></p>
                         </div>
-                    </a>    
-                    <!--<button class="text-dark btn btn-success w-100" >Comprar </button>-->
+                    </a>
+                    <div class="botones text-center m-2 d-flex row justify-content-between">
+                        <!--<a href="#" class="btn btn-success agregar text-light w-100 m-2"><i class="bi bi-cart-plus"></i>Agregar</a>-->
+                        <a href="acciones/carrito/comprar.php?id=<?= htmlspecialchars($producto['id_cerveza']);?>" class="comprar btn btn-info text-light w-100 "><i class="bi bi-cart4 mr-2"></i>Comprar</a>
+                    </div>
                 </div>
         </article>
         <?php
@@ -89,11 +92,11 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
         <ul class="paginador-lista">
             <?php if($pagina > 1): ?>
                 <li><a href="index.php?s=productos&p=1&b=<?= $b;?>">Primera</a></li>
-                <li><a href="index.php?s=productos&p=<?=($pagina - 1);?>&b=<?= $b;?>"> <<< </a></li>
+                <li><a href="index.php?s=productos&p=<?=($pagina - 1);?>&b=<?= $b;?>"><i class="bi bi-chevron-double-left"></i></a></li>
             <?php
             else: ?>
                <!-- <li>Inicio</li>-->
-                <li> <<< </li>
+                <li><i class="bi bi-chevron-double-left"></i></li>
             <?php
             endif; ?>
             <?php
@@ -111,12 +114,12 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
                 endif;
             endfor;?>
             <?php if($pagina < $pagTotal): ?>
-                <li><a href="index.php?s=productos&p=<?=($pagina + 1);?>&b=<?= $b;?>"> >>> </a></li>
+                <li><a href="index.php?s=productos&p=<?=($pagina + 1);?>&b=<?= $b;?>"><i class="bi bi-chevron-double-right"></i></a></li>
                 <li><a href="index.php?s=productos&p=<?= $pagTotal;?>&b=<?= $b;?>">Ultima</a></li>
             <?php
             else: ?>
                 <!-- <li>Final</li>-->
-                <li> >>> </li>
+                <li><i class="bi bi-chevron-double-right"></i></li>
             <?php
             endif; ?>
         </ul>

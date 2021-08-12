@@ -31,14 +31,31 @@
     justify-content: center;
 }
 main #err {
-    background: deeppink;
+    background: #f85c70;
+    color: #7a0101;
 }
-.msj-success{
+main #inff {
+    background: #5cb4f8;
+    color: #011f7a;
+}
+.msj-success,
+.msj-error,
+.msj-info {
     background: #ffc107;
     text-align: center;
     font-weight: bold;
     font-size: .8rem;
 }
+/*--------------------------------------- home --------------------*/
+/*#homes .carru {
+
+    margin: auto;
+}
+#homes .card {
+    margin: auto;
+}*/
+
+/*---------------------------------------fin home -----------------*/
 /*#sectionPerfil h2 {
     font-size: 1rem;
     text-align: center;
@@ -131,26 +148,39 @@ main #err {
     width: 100%;
 }
 /*------------------------------------------------------------Final mantenimientos -------------------*/
+/*------------------- carrito de compras----------------------------*/
+.carritoCompras {
+    padding: 1rem;
+    margin: auto;
+    max-width: 600px;
+}
+.carritoCompras h2 {
+    font-family: 'Roboto Slab', serif;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.carritoCompras div .parrafoBotones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.carritoCompras div .cantidadCarrito,
+.carritoCompras div .totalCarrito {
+    text-align: end;
+    margin: 1rem;
+}
+
+.carritoCompras .carritoProductos {
+    display: flex;
+}
+/*------------------- final carrito de compras----------------------------*/
+
+
 /*------------------- formRegistro --------------------------------*/
 
-.formRegistroBuscar {
-    background: #161514bf;
-    padding: 1rem;
-    max-width: 400px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0px 0px 9px -1px orange;
-    color: #ffc107;
-    display: flex;
-    width: 75%;
-}
-.formRegistroBuscar div {
-  /*  width: 50%;*/
-}
-.formRegistroBuscar .botonRegistroBuscar {
-    width: 50%;
-    margin-top: 2rem;
-}
+
 
 .formRegistro {
     background: #161514bf;
@@ -265,21 +295,119 @@ fieldset legend {
 }
 
 /*------------------------------------------------------------------home----------*/
-#homes > h2 {
+#homes > h2{
     font-size: 2em;
-    margin: 1rem;
     font-family: 'Roboto Slab', serif;
     color: #f1f1f1;
     position: absolute;
+    margin-top: 19%;
+    margin-left: 8%;
 }
-/*------------------------------------------------------------------productos----------*/
+#homes h5  {
+    font-size: 1rem;
+    margin: 2rem auto;
+}
+#homes > .divParrafosInicio {
+    display: contents;
+}
+#homes > .divParrafosInicio > .parrafoInicio {
+    font-size: 1em;
+    color: #f1f1f1;
+    position: absolute;
+    margin-top: 33%;
+    margin-left: 8%;
+}
+#homes > .divParrafosInicio > .parrafoInicios {
+    font-size: 1em;
+    color: #f1f1f1;
+    position: absolute;
+    margin-top: 40%;
+    margin-left: 8%;
+}
+#homes > .btnInicios {
+    font-size: 1em;
+    margin-top: 55%;
+    margin-left: 8%;
+    font-family: 'Roboto Slab', italic;
+    color: #f1f1f1;
+    position: absolute;
+   /* padding-top: 33%;
+    padding-left: 4%;*/
+}
+#homes .divPresentacion {
+    display: flex;
+    flex-wrap: wrap;
+}
+#homes .divPresentacion h3 {
+    margin-bottom: 2rem;
+    font-family: 'Roboto Slab', italic;
+    font-size: 2rem;
+}
+#homes .divPresentacion .divPresent {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    line-height: 1.7;
+}
+#homes .divPresentacion .carru {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+#homes .divPresentacion .carru .carruPrimero {
+    width: 80%;
+    margin: 1rem auto;
+}
+#homes .divPresentacion .carru .carruSegundo {
+    width: 80%;
+    margin: 1rem auto;
+}
+#homes .divPresentacion .carruTercero {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+    /*------------------------------------------------------------------productos----------*/
+.formRegistroBuscar {
+    /*background: #161514bf;*/
+    padding: 1rem;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    /*box-shadow: 0px 0px 9px -1px orange;*/
+    /*color: #ffc107;*/
+    display: flex;
+    align-items: baseline;
+    /*width: 75%;*/
+}
+.formRegistroBuscar div {
+    width: 100%;
+}
+.formRegistroBuscar div label {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.formRegistroBuscar .botonRegistroBuscar {
+    width: 21%;
+    margin-top: 2.5rem;
+}
 .producto div .formRegistroBuscar div #b {
     border-radius: 0;
-    border: 1px solid #fff;
+    border-left: 1px solid #999;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #fff;
 }
 .producto div .formRegistroBuscar button {
     border-radius: 0;
-    border: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #999;
     text-align: end;
 }
 .producto div .formRegistroBuscar button:hover {
@@ -609,6 +737,20 @@ a > .productos_tags > .productos_item_tags {
     width: 80%;
     display: flex;
 }
+.articleProducto .divInfoProducto a .divDatosProducto p {
+    width: 80%;
+    font-size: 1rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.articleProducto .divInfoProducto a p {
+    width: 80%;
+    font-size: 1rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 
 /* ------------------Footer login--------------------- */
 footer {
@@ -708,6 +850,16 @@ footer .contenedores .contenedor .divUbicacion p{
 /* ------------------fin Footer login--------------------- */
 
 @media (min-width: 400px) and (max-width: 480px){
+    #homes > h2{
+        margin-top: 21%;
+    }
+    #homes .divPresentacion .carruTercero {
+        max-width: 400px;
+        margin: 5rem auto;
+    }
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
 
     .articleProducto > .divInfoProducto > a > figure {
         width: 40%;
@@ -730,6 +882,33 @@ footer .contenedores .contenedor .divUbicacion p{
     }
 }
 @media (min-width: 481px) and (max-width: 580px){
+    #homes > h2{
+        margin-top: 10%;
+    }
+    #homes .divPresentacion .carruTercero {
+        max-width: 400px;
+        margin: 4rem auto;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 18%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 22%;
+    }
+    #homes > .btnInicios {
+        font-size: .8em;
+        margin-top: 28%;
+    }
+    #homes .divPresentacion .carru {
+        flex-direction: row;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 35%;
+    }
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
     .logo-home {
         width: 50%;
     }
@@ -766,6 +945,36 @@ footer .contenedores .contenedor .divUbicacion p{
 
 }
 @media (min-width: 581px) and (max-width: 680px){
+    #homes > h2{
+        margin-top: 10%;
+    }
+    #homes .divPresentacion .carruTercero {
+        max-width: 500px;
+        margin: 2rem auto;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 18%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 22%;
+    }
+    #homes > .btnInicios {
+        font-size: .8em;
+        margin-top: 28%;
+    }
+    #homes .divPresentacion .carru {
+        flex-direction: row;
+        margin-top: 1rem;
+        max-width: 500px;
+        margin-bottom: 4rem;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 35%;
+    }
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
     .logo-home {
         width: 50%;
     }
@@ -820,6 +1029,41 @@ footer .contenedores .contenedor .divUbicacion p{
 
 }
 @media (min-width: 681px) and (max-width: 768px){
+    #homes > h2{
+        margin-top: 10%;
+    }
+    #homes .divPresentacion .carruTercero {
+       max-width: 500px;
+        margin: auto;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 16%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 20%;
+    }
+    #homes > .btnInicios {
+        font-size: .8em;
+        margin-top: 26%;
+    }
+    #homes .divPresentacion .carru {
+        flex-direction: row;
+        margin-top: 1rem;
+        max-width: 600px;
+        margin-bottom: 4rem;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 35%;
+    }
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
+    .msj-success,
+    .msj-error,
+    .msj-info {
+        font-size: 1rem;
+    }
     .producto .divs {
         /*background: #ffc107;*/
         display: flex;
@@ -869,6 +1113,45 @@ footer .contenedores .contenedor .divUbicacion p{
     }
 }
 @media (min-width: 768px) and (max-width: 880px){
+    #homes > h2{
+        margin-top: 10%;
+    }
+    #homes .divPresentacion .carruTercero {
+        max-width: 700px;
+        margin: 4rem auto ;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 16%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 19%;
+    }
+    #homes > .btnInicios {
+        font-size: .8em;
+        margin-top: 25%;
+    }
+    #homes .divPresentacion .carru {
+        flex-direction: row;
+        margin-top: 1rem;
+        max-width: 600px;
+        margin-bottom: 4rem;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 30%;
+    }
+    #homes .divPresentacion .divPresent {
+        margin: auto;
+        width: 90%;
+    }
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
+    .msj-success,
+    .msj-error,
+    .msj-info {
+        font-size: 1rem;
+    }
     .producto .divs {
         /*background: #ffc107;*/
         display: flex;
@@ -942,7 +1225,47 @@ footer .contenedores .contenedor .divUbicacion p{
 
 }
 @media (min-width: 881px) and (max-width: 1280px){
-
+    #homes > h2{
+        font-size: 3em;
+        margin-top: 9%;
+    }
+    #homes .divPresentacion .carruTercero {
+        max-width: 1100px;
+        margin: auto;
+        flex-direction: row;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 16%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 18%;
+    }
+    #homes > .btnInicios {
+        font-size: .8em;
+        margin-top: 23%;
+    }
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
+    #homes .divPresentacion .carru {
+        flex-direction: row;
+        margin-top: 1rem;
+        width: 80%;
+        margin-bottom: 4rem;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 30%;
+    }
+    #homes .divPresentacion .divPresent {
+        margin: auto;
+        width: 75%;
+    }
+    .msj-success,
+    .msj-error,
+    .msj-info {
+        font-size: 1.2rem;
+    }
     .producto .divs {
         /*background: #ffc107;*/
         display: flex;
@@ -1007,7 +1330,72 @@ footer .contenedores .contenedor .divUbicacion p{
     }
 }
 @media (min-width: 1281px){
-
+    #homes > h2{
+        font-size: 4em;
+        margin-top: 11%;
+    }
+    #homes .divPresentacion .carruTercero {
+        max-width: 1100px;
+        margin: auto;
+        flex-direction: row;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 17%;
+        font-size: 2rem;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 20%;
+        font-size: 2rem;
+    }
+    #homes > .btnInicios {
+        font-size: 1.5rem;
+        margin-top: 25%;
+    }
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
+    #homes .divPresentacion {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #homes .divPresentacion .divPresent {
+        width: 30%;
+        padding: 1rem 3rem;
+        line-height: 2;
+    }
+    #homes .divPresentacion .carru {
+        margin: auto;
+        flex-direction: row;
+        width: 70%;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 30%;
+    }
+    /*--------------------------------------- home --------------------*/
+    .msj-success,
+    .msj-error,
+    .msj-info {
+        font-size: 1.2rem;
+    }
+    #homes .carru {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    #homes .carru .carruPrimero {
+        width: 33%;
+        margin: 1rem 3rem;
+    }
+    #homes .carru .carruSegundo {
+        width: 33%;
+        margin: 1rem 3rem;
+    }
+    #homes .carru .carruTercero {
+       /* width: 33%;
+        margin: 1rem;*/
+    }
+    /*---------------------------------------fin home -----------------*/
     .producto .divs {
         /*background: #ffc107;*/
         display: flex;

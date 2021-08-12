@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-08-2021 a las 20:12:54
--- Versión del servidor: 10.4.19-MariaDB
--- Versión de PHP: 7.3.28
+-- Tiempo de generación: 09-08-2021 a las 02:24:55
+-- Versión del servidor: 10.4.18-MariaDB
+-- Versión de PHP: 7.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,8 +30,16 @@ SET time_zone = "+00:00";
 CREATE TABLE `carritos` (
   `id_carrito` int(10) UNSIGNED NOT NULL,
   `cervezas_id_cerveza` int(10) UNSIGNED NOT NULL,
+  `id_usuario` int(10) UNSIGNED NOT NULL,
   `fecha` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `carritos`
+--
+
+INSERT INTO `carritos` (`id_carrito`, `cervezas_id_cerveza`, `id_usuario`, `fecha`) VALUES
+(26, 2, 37, '2021-08-08 20:46:39');
 
 -- --------------------------------------------------------
 
@@ -99,6 +107,27 @@ CREATE TABLE `password_recuperar` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `pedidos`
+--
+
+CREATE TABLE `pedidos` (
+  `id_pedido` int(10) UNSIGNED NOT NULL,
+  `cervezas_id_cerveza` int(10) UNSIGNED NOT NULL,
+  `id_usuario` int(10) UNSIGNED NOT NULL,
+  `fecha` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `pedidos`
+--
+
+INSERT INTO `pedidos` (`id_pedido`, `cervezas_id_cerveza`, `id_usuario`, `fecha`) VALUES
+(2, 2, 37, '2021-08-08 20:12:05'),
+(3, 2, 37, '2021-08-08 20:46:39');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `roles`
 --
 
@@ -149,7 +178,7 @@ INSERT INTO `tags` (`id_tags`, `nombre`) VALUES
 CREATE TABLE `usuarios` (
   `id_usuario` int(10) UNSIGNED NOT NULL,
   `id_rol` tinyint(3) UNSIGNED NOT NULL,
-  `carritos_id_carrito` int(10) UNSIGNED NOT NULL,
+  `carritos_id_carrito` int(10) UNSIGNED DEFAULT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `nombre` varchar(100) DEFAULT NULL,
@@ -165,11 +194,12 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `id_rol`, `carritos_id_carrito`, `email`, `password`, `nombre`, `apellido`, `apodo`, `img`, `alt_img`, `domicilio`) VALUES
-(1, 1, 0, 'ser@ser.com.ar', '$2y$10$NouG05OFMdy12w2r/ASazevqsadOUqKtIevfF17zwRh1W7AszGQ5m', 'sebita', 'andreus', 'Admin', '1627866939.png', 'imagen del usuario', NULL),
+(1, 1, 0, 'ser@ser.com.ar', '$2y$10$ZP2JbziCFNkkJZ1vljsF9eff0sFOuvjwQeUCwWwV8r5i7i12nvu0q', 'sebita', 'andreus', 'Administrador rolando rivas', '1627866939.png', 'imagen del usuario', NULL),
 (2, 2, 0, 'sebas@sebas.com.ar', '$2y$10$xWcbYGxLHRUUW7x1vmiQ2.7G97zIBjvAi29slSKgx.0Pz5/ceAIw2', 'sebastian', 'servente', 'sebita28', '1627444939.jpg', 'imagen hombre en la nieve', NULL),
 (11, 2, 0, 'yu@yu.com.ar', '$2y$10$2TMsXjJaIPyTBbYh2WVSse.dpHP8FqW/FrKYczXEmpL3p3wLF.UGS', 'sebastian', 'andres', 'yuyo', '1627416953.jpg', 'imagen del usuario', NULL),
 (29, 2, 0, 'lo@lo.com.ar', '$2y$10$I5kQbFICNB82BG5lDb4iceYlblWcDnZ2/JjBz.Vy8rdU9nnahAnw2', 'sebastian', 'servente', 'sersebas', '1628084702.jpg', 'imagen del usuario', NULL),
-(30, 2, 0, 'clau@clau.com.ar', '$2y$10$p6/uj5wpTW8dYXZOap4.eeN9Pxemc.sfk3GfZDVy1d11R2VDzB8NW', 'claudia', 'gerban', 'Boquita', '1627917587.jpg', 'imagen hombre en la nieve', NULL);
+(30, 2, 0, 'clau@clau.com.ar', '$2y$10$p6/uj5wpTW8dYXZOap4.eeN9Pxemc.sfk3GfZDVy1d11R2VDzB8NW', 'claudia', 'gerban', 'Boquita', '1627917587.jpg', 'imagen hombre en la nieve', NULL),
+(37, 2, NULL, 'lost@lost.com.ar', '$2y$10$R/4/fEEdzDkAP.cW/nWzD.0r.1s9GoJjk6YJAbSV7DvsrIfxL3/P6', 'sebastian', 'servente', 'Administrador', '1628465336.png', 'imagen del usuario', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -205,6 +235,13 @@ ALTER TABLE `password_recuperar`
   ADD PRIMARY KEY (`id_usuario`);
 
 --
+-- Indices de la tabla `pedidos`
+--
+ALTER TABLE `pedidos`
+  ADD PRIMARY KEY (`id_pedido`),
+  ADD KEY `fk_pedidos_cervezas1_idx` (`cervezas_id_cerveza`);
+
+--
 -- Indices de la tabla `roles`
 --
 ALTER TABLE `roles`
@@ -233,7 +270,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `carritos`
 --
 ALTER TABLE `carritos`
-  MODIFY `id_carrito` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_carrito` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `cervezas`
@@ -246,6 +283,12 @@ ALTER TABLE `cervezas`
 --
 ALTER TABLE `password_recuperar`
   MODIFY `id_usuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `pedidos`
+--
+ALTER TABLE `pedidos`
+  MODIFY `id_pedido` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -263,7 +306,7 @@ ALTER TABLE `tags`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id_usuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- Restricciones para tablas volcadas
@@ -293,6 +336,12 @@ ALTER TABLE `cervezas_has_tags`
 --
 ALTER TABLE `password_recuperar`
   ADD CONSTRAINT `id_password_recuperar_usuario1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `pedidos`
+--
+ALTER TABLE `pedidos`
+  ADD CONSTRAINT `fk_pedidos_cervezas1` FOREIGN KEY (`cervezas_id_cerveza`) REFERENCES `cervezas` (`id_cerveza`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Filtros para la tabla `usuarios`

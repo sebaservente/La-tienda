@@ -16,21 +16,23 @@ if($enviromentState === ENVIROMENT_MANTAINANCE) {
     $seccion = "mantenimiento";
 }
 
-if(isset($secciones[$seccion]['requiresAuth']) && $secciones[$seccion]['requiresAuth']) {
-    // verificamos uqe este autenticado
-    if(!authEstaAutenticado() || !authEsAdmin()) {
-        $_SESSION['seccion_preten'] = $seccion;
-        $_SESSION['successInfo'] = "Necesitas estar autenticado para ingresar";
-        header('Location: index.php?s=login');
-        exit;
-    }
-}
-
 $title = $secciones[$seccion]['title'];
 
 $success = sessionValueGetFlash('success');
 $successErrors = sessionValueGetFlash('success_errors');
 $successInfo = sessionValueGetFlash('successInfo');
+
+if(isset($secciones[$seccion]['requiresAuth']) && $secciones[$seccion]['requiresAuth']) {
+    // verificamos uqe este autenticado
+    if(!authEstaAutenticado() || !authEsAdmin()) {
+        $_SESSION['seccion_preten'] = $seccion;
+        $_SESSION['successInfo'] = "Necesitas estar autenticado para ingresar";
+        header('Location: ../index.php?s=home');
+        exit;
+    }
+}
+
+
 /*if(isset($_SESSION['success'])){
     $success = $_SESSION['success'];
     unset($_SESSION['success']);
@@ -85,29 +87,40 @@ if(isset($_SESSION['successErrors'])){
                 ?>
                 <div class="collapse navbar-collapse" id="barra">
                     <ul class="navbar-nav text-right ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-warning" href="index.php?s=home">Home</a>
+                        <li class="nav-item homes">
+                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=home">Home</a>
+                            <a class="nav-link text-warning " href="index.php?s=home" title="Home"><i class="bi bi-house-door"></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-warning" href="../index.php?s=home">Publicado</a>
+                        <li class="nav-item homes">
+                            <a class="nav-link text-warning d-md-none mr-3" href="../index.php?s=home">Publicaciones</a>
+                            <a class="nav-link text-warning " href="../index.php?s=home" title="Publicaciones"><i class="bi bi-cloud-arrow-up"></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-warning" href="index.php?s=productos">Productos</a>
+                        <li class="nav-item homes">
+                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=productos">Productos</a>
+                            <a class="nav-link text-warning " href="index.php?s=productos" title="Productos"><i class="bi bi-shop"></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-warning" href="index.php?s=leer-usuarios">Usuarios</a>
+                        <li class="nav-item homes">
+                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=leer-usuarios">Usuarios</a>
+                            <a class="nav-link text-warning " href="index.php?s=leer-usuarios" title="Usuarios"><i class="bi bi-people"></i></a>
                         </li>
-                        <li class="nav-item"><a class="nav-link " href="acciones/logout.php">@<?= authObtenerUsuario()['nombre'];?> (cerrar sesion) </a></li>
+                        <li class="nav-item homes">
+                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=leer-pedidos">Pedidos</a>
+                            <a class="nav-link text-warning " href="index.php?s=leer-pedidos" title="Pedidos"><i class="bi bi-truck"></i></a>
+                        </li>
+                        <li class="nav-item homes">
+                            <a class="nav-link  d-md-none mr-3" href="acciones/logout.php">@<?= authObtenerUsuario()['nombre'];?> (cerrar sesion) </a>
+                            <a class="nav-link " href="acciones/logout.php" title="Cerrar sesión"><i class="bi bi-x-octagon"></i></a>
+                        </li>
                         <!--<li class="nav-item">
                             <a class="nav-link" href="index.php?s=productos">Cerrar Sesion</a>
                         </li>-->
                         
                     </ul>
-                    <div class="divImagen d-none d-md-block d-sm-none ">
+                  <!--  <div class="divImagen d-none d-md-block d-sm-none ">
                         <figure>
-                            <img src="imgs/<?= authObtenerUsuario()['img'];?>" class="img-fluid figure-img d-flex justify-content-center" alt="<?= htmlspecialchars(authObtenerUsuario()['alt_img']);?>">
+                            <img src="imgs/<?/*= authObtenerUsuario()['img'];*/?>" class="img-fluid figure-img d-flex justify-content-center" alt="<?/*= htmlspecialchars(authObtenerUsuario()['alt_img']);*/?>">
                         </figure>
-                    </div>
+                    </div>-->
                 </div>
                 <?php 
                 endif; 
@@ -120,19 +133,19 @@ if(isset($_SESSION['successErrors'])){
 
         <?php
         if($success !== null): ?>
-        <div class="msj-success mt-3 pl-4"><?= $success;?></div>
+        <div class="msj-success mt-3"><?= $success;?></div>
         <?php
         endif; ?>
 
         <?php
         if($successErrors !== null): ?>
-        <div class="msj-error pl-4"><?= $successErrors;?></div>
+        <div id="err" class="msj-error"><?= $successErrors;?></div>
         <?php
         endif; ?>
          <?php
 
         if($successInfo !== null): ?>
-        <div class="msj-info pl-4"><?= $successInfo;?></div>
+        <div id="inff" class="msj-info"><?= $successInfo;?></div>
         <?php
         endif; ?>
 
