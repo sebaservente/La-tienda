@@ -47,13 +47,13 @@ main #inff {
     font-size: .8rem;
 }
 /*--------------------------------------- home --------------------*/
-#homes .carru {
+/*#homes .carru {
 
     margin: auto;
 }
 #homes .card {
     margin: auto;
-}
+}*/
 
 /*---------------------------------------fin home -----------------*/
 /*#sectionPerfil h2 {
@@ -329,6 +329,38 @@ fieldset legend {
     position: absolute;
    /* padding-top: 33%;
     padding-left: 4%;*/
+}
+#homes .divPresentacion {
+    display: flex;
+    flex-wrap: wrap;
+}
+#homes .divPresentacion .divPresent {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    line-height: 1.7;
+}
+#homes .divPresentacion .carru {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+#homes .divPresentacion .carru .carruPrimero {
+    width: 80%;
+    margin-top: 1rem;
+    margin: auto;
+}
+#homes .divPresentacion .carru .carruSegundo {
+    width: 80%;
+    margin-top: 1rem;
+    margin: auto;
+}
+#homes .divPresentacion .carru .carruTercero {
+    /* width: 33%;
+     margin: 1rem;*/
 }
     /*------------------------------------------------------------------productos----------*/
 .formRegistroBuscar {
@@ -851,7 +883,13 @@ footer .contenedores .contenedor .divUbicacion p{
         font-size: .8em;
         margin-top: 28%;
     }
-
+    #homes .divPresentacion .carru {
+        flex-direction: row;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 35%;
+    }
     .carritoCompras div .parrafoBotones {
         flex-direction: row;
     }
@@ -903,6 +941,14 @@ footer .contenedores .contenedor .divUbicacion p{
     #homes > .btnInicios {
         font-size: .8em;
         margin-top: 28%;
+    }
+    #homes .divPresentacion .carru {
+        flex-direction: row;
+        margin-top: 1rem;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 35%;
     }
     .carritoCompras div .parrafoBotones {
         flex-direction: row;
@@ -974,6 +1020,14 @@ footer .contenedores .contenedor .divUbicacion p{
         font-size: .8em;
         margin-top: 26%;
     }
+    #homes .divPresentacion .carru {
+        flex-direction: row;
+        margin-top: 1rem;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 35%;
+    }
     .carritoCompras div .parrafoBotones {
         flex-direction: row;
     }
@@ -1043,6 +1097,18 @@ footer .contenedores .contenedor .divUbicacion p{
     #homes > .btnInicios {
         font-size: .8em;
         margin-top: 25%;
+    }
+    #homes .divPresentacion .carru {
+        flex-direction: row;
+        margin-top: 1rem;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 30%;
+    }
+    #homes .divPresentacion .divPresent {
+        margin: auto;
+        width: 90%;
     }
     .carritoCompras div .parrafoBotones {
         flex-direction: row;
@@ -1142,7 +1208,18 @@ footer .contenedores .contenedor .divUbicacion p{
     .carritoCompras div .parrafoBotones {
         flex-direction: row;
     }
-
+    #homes .divPresentacion .carru {
+        flex-direction: row;
+        margin-top: 1rem;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 20%;
+    }
+    #homes .divPresentacion .divPresent {
+        margin: auto;
+        width: 75%;
+    }
     .msj-success,
     .msj-error,
     .msj-info {
@@ -1231,6 +1308,24 @@ footer .contenedores .contenedor .divUbicacion p{
     .carritoCompras div .parrafoBotones {
         flex-direction: row;
     }
+    #homes .divPresentacion {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #homes .divPresentacion .divPresent {
+        width: 30%;
+        padding: 1rem 3rem;
+        line-height: 2;
+    }
+    #homes .divPresentacion .carru {
+        margin: auto;
+        flex-direction: row;
+        width: 70%;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 30%;
+    }
     /*--------------------------------------- home --------------------*/
     .msj-success,
     .msj-error,
@@ -1239,19 +1334,20 @@ footer .contenedores .contenedor .divUbicacion p{
     }
     #homes .carru {
         display: flex;
+        justify-content: center;
         margin: auto;
     }
     #homes .carru .carruPrimero {
         width: 33%;
-        margin: 1rem;
+        margin: 1rem 3rem;
     }
     #homes .carru .carruSegundo {
         width: 33%;
-        margin: 1rem;
+        margin: 1rem 3rem;
     }
     #homes .carru .carruTercero {
-        width: 33%;
-        margin: 1rem;
+       /* width: 33%;
+        margin: 1rem;*/
     }
     /*---------------------------------------fin home -----------------*/
     .producto .divs {
