@@ -16,7 +16,7 @@ $productos = getProducto($db);
         <img src="imgs/playa-mobile-002.jpg" alt="foto" class="img-fluid figure-img">
     </picture>
     <div class="divPresentacion">
-        <div class="divPresent">
+        <div class="divPresent mt-4 mb-4 ">
             <h3 class="text-center"> Nosostros </h3>
             <p>Gran variedad de cerveza, novedosas y de calidad. Conocé nuestros Combos y Comprá Online! ¿Querés conocer nuestra Variedad
                 de Cervezas? Ingresá y encontrá los Packs Destacados. La Revolución de la Cerveza. En La Tienda nos esforzamos para  buscar y seleccionar gran variedad de cervezas,
@@ -33,15 +33,15 @@ $productos = getProducto($db);
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100 rounded-circle" src="imgs/india-pale.jpg" alt="botella de cerveza india-pale">
+                        <img class="d-block w-75 m-auto rounded-circle" src="imgs/india-pale.jpg" alt="botella de cerveza india-pale">
                         <p class="text-center m-2">Cerveza India Pale</p>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 rounded-circle" src="imgs/blonde-pale.jpg" alt="botella de cerveza blonde-pale">
+                        <img class="d-block w-75 m-auto rounded-circle" src="imgs/blonde-pale.jpg" alt="botella de cerveza blonde-pale">
                         <p class="text-center m-2">Cerveza Blonde Pale</p>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 rounded-circle" src="imgs/apa-0001.jpg" alt="botella de cerveza apa">
+                        <img class="d-block w-75 m-auto rounded-circle" src="imgs/apa-0001.jpg" alt="botella de cerveza apa">
                         <p class="text-center m-2">Cerveza Apa</p>
                     </div>
                 </div>
@@ -62,15 +62,15 @@ $productos = getProducto($db);
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100 rounded-circle" src="imgs/india-pale.jpg" alt="botella de cerveza india-pale">
+                        <img class="d-block w-75 m-auto rounded-circle" src="imgs/india-pale.jpg" alt="botella de cerveza india-pale">
                         <p class="text-center m-2">Cerveza India Pale</p>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 rounded-circle" src="imgs/blonde-pale.jpg" alt="botella de cerveza blonde-pale">
+                        <img class="d-block w-75 m-auto rounded-circle" src="imgs/blonde-pale.jpg" alt="botella de cerveza blonde-pale">
                         <p class="text-center m-2">Cerveza Blonde Pale</p>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 rounded-circle" src="imgs/apa-0001.jpg" alt="botella de cerveza apa">
+                        <img class="d-block w-75 m-auto rounded-circle" src="imgs/apa-0001.jpg" alt="botella de cerveza apa">
                         <p class="text-center m-2">Cerveza Apa</p>
                     </div>
                 </div>
@@ -86,19 +86,20 @@ $productos = getProducto($db);
         </div>
         <div class="card card-body carruTercero">
             <div class="card card-body m-3">
-                <h4 class="card-title text-center"> Ingresar</h4>
+                <h4 class="card-title text-center"> Conoce nuestros productos</h4>
                 <p class="card-text text-center">Elegí la cerveza que más te guste, tenemos Muchas
                     variedades en marcas Nacionales e Importadas</p>
-                <button class="btn btn-info shadow" onclick="window.location='index.php?s=login'">Ingresar</button>
+                <button class="btn btn-info shadow m-auto w-50" onclick="window.location='index.php?s=login'">Ingresar</button>
             </div>
             <div class="card card-body m-3">
-                <h4 class="card-title text-center"> Regístrate </h4>
+                <h4 class="card-title text-center"> Las mejores ofertas </h4>
                 <p class="card-text text-center">Se parte de La Tienda y Recibiras incleibles Descuentos.
                     Participar De Nuestros Cursos  sobre Cervezas Artesanales</p>
-                <button class="btn btn-info shadow " onclick="window.location='index.php?s=registro'">Registrate</button>
+                <button class="btn btn-info shadow m-auto w-50" onclick="window.location='index.php?s=registro'">Registrate</button>
             </div>
         </div>
     </div>
+    <h5 class="text-center">PROHIBIDA LA VENTA DE BEBIDAS ALCOHOLICAS A MENORES DE 18 AÑOS</h5>
 
   <!-- <div class="row row-cols-1 row-cols-md-2 carta-1">
         <div class="col-12">
