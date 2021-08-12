@@ -154,6 +154,19 @@ function caUsuarioTieneProducto($db, $idCerveza, $idUsuario){
 }
 /**
  * @param mysqli $db
+ * @param int $idUsuario
+ * @return int
+ * */
+function caUsuarioAgregarProducto($db, $idUsuario){
+    $idUsuario = mysqli_real_escape_string($db, $idUsuario);
+    $query = "SELECT COUNT(*) AS cantidad FROM carritos 
+                WHERE id_usuario= '" . $idUsuario . "'";
+    $res = mysqli_query($db, $query);
+    $fila = mysqli_fetch_assoc($res);
+    return $fila['cantidad'];
+}
+/**
+ * @param mysqli $db
  * @param mixed $id
  * @return array
  * **/

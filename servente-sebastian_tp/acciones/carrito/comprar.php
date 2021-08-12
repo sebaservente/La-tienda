@@ -20,7 +20,11 @@ if ($product === null){
     header('Location: ../../index.php?s=productos');
     exit;
 }
-
+if(caUsuarioAgregarProducto($db, $idUsuario) >= 12){
+    $_SESSION['successInfo'] = "¡ Ya tenes el maximo permitido de productos en tu carrtio !";
+    header('Location: ../../index.php?s=productos');
+    exit;
+}
 if(caUsuarioTieneProducto($db, $idCerveza, $idUsuario)){
     $_SESSION['successInfo'] = "¡ Este producto ya esta en tu carrtio !";
     header('Location: ../../index.php?s=productos');
