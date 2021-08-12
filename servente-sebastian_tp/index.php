@@ -43,7 +43,7 @@ $successInfo = sessionValueGetFlash('successInfo');
         <h1>La Tienda</h1>
         <div class="row">
             <nav class="nav-index col navbar navbar-expand-md navbar-dark ">
-                <a class="navbar-brand w-25 m-0" href="#">
+                <a class="navbar-brand w-25 m-0" href="index.php?s=home">
                     <img src="imgs/logo-01.png" alt="logo de la marca by Vizzentino" class="logo-home">
                 </a>
                 <button class="navbar-toggler " 
