@@ -7,7 +7,7 @@ $idUsuario = authObtenerUsuario()['id_usuario'];
 /*$carrito = carritoTodos($db);*/
 /*$product = leerProductosDelCarrito($db);*/
 
-$product = traerProductosDelCarrito($db, $idUsuario);
+$product = leerProductosDelCarrito($db);
 /*echo"<pre>";
 print_r($product);
 echo"</pre>";
@@ -18,12 +18,10 @@ exit;*/
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>ID_Pedido</th>
-                <th>Email</th>
-                <th>title</th>
-                <th>Precio</th>
-                <th>Apodo</th>
-                <th>Acciones</th>
+                <th class="text-center">ID_Usuario</th>
+                <th class="text-center">ID_Pedido</th>
+                <th class="text-center">Fecha</th>
+                <th class="text-center">Acciones</th>
             </tr>
             </thead>
             <tbody>
@@ -33,12 +31,10 @@ exit;*/
                 $total += $carritos['precio'];
                 ?>
                 <tr>
-                    <td><?=$carritos['id_cerveza'];?></td>
-                    <td><?=$carritos['email'];?></td>
-                    <td><?=$carritos['title'];?></td>
-                    <td><?=$carritos['precio'];?></td>
-                    <td><?=$carritos['apodo'];?></td>
-                   <!-- <td><a href="acciones/carrito/finalizar-pedidos.php?id=<?/*=htmlspecialchars($carritos['id_cerveza']);*/?>" class="text-danger">eliminar</a></td>-->
+                    <td class="text-center"><?=$carritos['id_usuario'];?></td>
+                    <td class="text-center"><?=$carritos['id_pedido'];?></td>
+                    <td class="text-center"><?=$carritos['fecha'];?></td>
+                    <td class="text-center"><a href="acciones/finalizar-pedidos.php?id=<?=htmlspecialchars($carritos['id_pedido']);?>" class="text-danger"><i class="bi bi-trash text-danger"></i></a></td>
                 </tr>
             <?php
             endforeach;
