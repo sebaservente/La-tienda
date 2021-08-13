@@ -20,12 +20,11 @@ function traerProductosDelCarrito($db, $idUsuario){
 }
 /**
  * @param mysqli $db
- * @param int $idUsuario
  * @return array
  * */
 function leerProductosDelCarrito($db){
     /*$idUsuario = mysqli_real_escape_string($db, $idUsuario);*/
-    $query = "SELECT id_pedido, email, title, precio, apodo FROM la_tienda.pedidos
+    $query = "SELECT id_pedido, email FROM la_tienda.pedidos
                 INNER JOIN la_tienda.cervezas
                 INNER JOIN la_tienda.usuarios;";
     $res = mysqli_query($db, $query);
@@ -113,7 +112,6 @@ function caEliminarPedidos($db) {
     }
     return false;
 }
-
 /**
  * @param mysqli $db
  * @param int $idCerveza
