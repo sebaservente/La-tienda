@@ -20,11 +20,10 @@ exit;*/
             <thead>
             <tr>
                 <th>ID_Pedido</th>
-                <th>ID_Usuario</th>
                 <th>Email</th>
-                <th>Apodo</th>
-                <th>Producto</th>
+                <th>title</th>
                 <th>Precio</th>
+                <th>Apodo</th>
                 <th>Acciones</th>
             </tr>
             </thead>
@@ -36,12 +35,11 @@ exit;*/
                 ?>
                 <tr>
                     <td><?=$carritos['id_pedido'];?></td>
-                    <td><?=$carritos['id_usuario'];?></td>
-                    <td><?=$carritos['title'];?></td>
-                    <td>@<?=$carritos['intro'];?></td>
+                    <td><?=$carritos['email'];?></td>
                     <td><?=$carritos['title'];?></td>
                     <td><?=$carritos['precio'];?></td>
-                    <!--<td><a href="acciones/carrito/finalizar-pedidos.php?id=<?/*=$carritos['id_cerveza'];*/?>" class="text-danger">eliminar</a></td>-->
+                    <td><?=$carritos['apodo'];?></td>
+                    <td><a href="acciones/carrito/finalizar-pedidos.php?id=<?=htmlspecialchars($carritos['id_pedido']);?>" class="text-danger">eliminar</a></td>
                 </tr>
             <?php
             endforeach;

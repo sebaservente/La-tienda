@@ -25,10 +25,9 @@ function traerProductosDelCarrito($db, $idUsuario){
  * */
 function leerProductosDelCarrito($db){
     /*$idUsuario = mysqli_real_escape_string($db, $idUsuario);*/
-    $query = "SELECT * FROM la_tienda.carritos
+    $query = "SELECT id_pedido, email, title, precio, apodo FROM la_tienda.pedidos
                 INNER JOIN la_tienda.cervezas
-                ON carritos.id_usuario = cervezas.usuarios_id_usuario
-                WHERE carritos.id_usuario";
+                INNER JOIN la_tienda.usuarios;";
     $res = mysqli_query($db, $query);
     $salida = [];
     while ($fila = mysqli_fetch_assoc($res)) {
@@ -96,23 +95,23 @@ function caFinalizarPedido($db, $idCerveza, $idUsuario) {
 }
 /**
  * @param mysqli $db
- * @param int $idCerveza
- * @return bool
+ * @param int $idPedido
+ * @return int
  * */
-function caEliminarPedidos($db, $idCerveza) {
+function caEliminarPedidos($db) {
 
-   /* $idCerveza = mysqli_real_escape_string($db, $idCerveza);*/
+    $idPedido = mysqli_real_escape_string($db);
     /*$idUsuario = mysqli_real_escape_string($db, $idUsuario);*/
 
-   /* $query = "DELETE FROM pedidos
-                WHERE cervezas_id_cerveza";
+    $query = "DELETE FROM pedidos 
+                WHERE id_pedido";
 
     $exito = mysqli_query($db, $query);
 
     if ($exito){
         return true;
     }
-    return false;*/
+    return false;
 }
 
 /**
@@ -186,7 +185,7 @@ function carritoPorId($db, $id) {
 /**
  * @param mysqli $db
  * **/
-function carritoTodos($db) {
+/*function carritoTodos($db) {
     $query = "SELECT * FROM pedidos";
 
     $res = mysqli_query($db, $query);
@@ -198,7 +197,7 @@ function carritoTodos($db) {
     }
     return $salida;
 
-}
+}*/
 /**
  * @param mysqli $db
  * @param int $idCerveza
