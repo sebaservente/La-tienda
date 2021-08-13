@@ -5,7 +5,7 @@ require '../libraries/productos.php';
 
 $idUsuario = authObtenerUsuario()['id_usuario'];
 /*$carrito = carritoTodos($db);*/
-$product = leerProductosDelCarrito($db, $idUsuario);
+$product = leerProductosDelCarrito($db);
 
 /*echo"<pre>";
 print_r($product);
@@ -19,7 +19,11 @@ exit;*/
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>Productos</th>
+                <th>ID_Pedido</th>
+                <th>ID_Usuario</th>
+                <th>Email</th>
+                <th>Apodo</th>
+                <th>Producto</th>
                 <th>Precio</th>
                 <th>Acciones</th>
             </tr>
@@ -31,6 +35,10 @@ exit;*/
                 $total += $carritos['precio'];
                 ?>
                 <tr>
+                    <td><?=$carritos['id_pedido'];?></td>
+                    <td><?=$carritos['id_usuario'];?></td>
+                    <td><?=$carritos['title'];?></td>
+                    <td>@<?=$carritos['intro'];?></td>
                     <td><?=$carritos['title'];?></td>
                     <td><?=$carritos['precio'];?></td>
                     <!--<td><a href="acciones/carrito/finalizar-pedidos.php?id=<?/*=$carritos['id_cerveza'];*/?>" class="text-danger">eliminar</a></td>-->
@@ -40,8 +48,8 @@ exit;*/
             ?>
             </tbody>
         </table>
-        <p>Cantidad de productos:  <?= count($product);?> </p>
-        <p>Total a pagar:  $<?= $total;?> </p>
+        <p>Total de productos:  <?= count($product);?> </p>
+        <p>Total Ingresos  $<?= $total;?> </p>
    <!-- <?php
 /*    else:*/?>
         <p>Todavia no tenes a ninguna cerveza en tu carrito, no esperes mas. ¡Podes empezar ya mismo a <a href="index.php?s=productos">elegir cervezas</a> y armar tu pedido!</p>

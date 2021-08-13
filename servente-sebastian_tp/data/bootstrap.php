@@ -10,6 +10,12 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 // constantes de rutas
 const PATH_IMG = __DIR__ . "/../imgs";
 
+// constante monto maximo por usuario
+const CA_MONTO_MAXIMO = 5000;
+
+// constante cantidad maxima de productos por usuario
+const CA_CANTIDAD_MAXIMA = 12;
+
 // constantes de estado
 const ENVIROMENT_DEV = 0;
 const ENVIROMENT_PROD = 1;
