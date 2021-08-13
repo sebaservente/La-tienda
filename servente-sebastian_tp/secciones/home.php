@@ -13,7 +13,7 @@ $productos = getProducto($db);
         <source media="(min-width: 30.05em)" srcset="imgs/vasoCerveza-Grande.jpg">
         <source media="(min-width: 25.05em)" srcset="imgs/vasoCervezaInicio.jpg">
         <source media="(min-width: 14.25em)" srcset="imgs/vasoCervezaInicio.jpg">
-        <img src="imgs/playa-mobile-002.jpg" alt="foto" class="img-fluid figure-img">
+        <img src="imgs/vaso-Cerveza-Inicio-Original.jpg" alt="vaso de cerveza" class="img-fluid figure-img">
     </picture>
     <div class="divPresentacion">
         <div class="divPresent mt-4 mb-4 ">

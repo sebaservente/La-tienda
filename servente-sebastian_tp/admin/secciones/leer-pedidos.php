@@ -10,7 +10,7 @@ $product = leerProductosDelCarrito($db);
 ?>
 <section class="carritoCompras">
     <h2>Pedidos de los usuarios</h2>
-        <table class="table table-bordered">
+        <table class="table table-responsive mt-5 pt-3">
             <thead>
             <tr>
                 <th class="text-center">ID_Usuario</th>
@@ -36,7 +36,7 @@ $product = leerProductosDelCarrito($db);
             ?>
             </tbody>
         </table>
-        <p>Total de productos:  <?= count($product);?> </p>
+        <p class="mt-5 pt-3">Total de productos:  <?= count($product);?> </p>
         <p>Total Ingresos  $<?= $total;?> </p>
 
 </section>

@@ -1359,7 +1359,7 @@ footer .contenedores .contenedor .divUbicacion p{
     }
     #homes .divPresentacion .carruTercero {
         max-width: 1100px;
-        margin: auto;
+        margin: 3rem auto;
         flex-direction: row;
     }
     #homes > .divParrafosInicio > .parrafoInicio {
@@ -1382,9 +1382,9 @@ footer .contenedores .contenedor .divUbicacion p{
         flex-wrap: wrap;
     }
     #homes .divPresentacion .divPresent {
-        width: 30%;
-        padding: 1rem 3rem;
+        padding: 4rem 12rem;
         line-height: 2;
+        font-size: 1.5rem;
     }
     #homes .divPresentacion .carru {
         margin: auto;
