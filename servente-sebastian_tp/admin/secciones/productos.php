@@ -31,8 +31,8 @@ $pagTotal = ceil($pagCantidadTotalRegistro / $pagCantidad);
 <section id="productos" class="container-fluid producto">
    
     <h2>Productos</h2>
-    <p>Administra tus Productos desde Aqui</p>
-    <p>Para Ingresar Productos <a href="index.php?s=nuevo-producto" class="text-success">Click Aca</a></p>
+    <p class="pIndex">Administra tus Productos desde Aqui</p>
+    <p class="pIndex">Para Ingresar Productos <a href="index.php?s=nuevo-producto" class="text-success">Click Aca</a></p>
     <div class="divs">    
         <?php
         foreach ($productos as $producto): 

@@ -51,14 +51,14 @@ exit;*/
         </div>
     <?php
     else:?>
-    <div class="text-center m-4 p-2 ">
+    <div class="avisoCompra">
         <p class="text-center text-justify">¿No sabes que comprar?</p>
         <p class="text-center text-justify">¡MIles de productos te esperan!</p>
-        <p class="text-center text-justify btn btn-info"><a href="index.php?s=productos" class="text-light">¡Comenzar ahora!</a></p>
+        <a href="index.php?s=productos" class="text-light btnAvisoCompra text-center text-justify btn btn-info">¡Comenzar ahora!</a>
     </div>
     <?php
     endif;?>
-
+    <h4 class="col-12 ">PROHIBIDA LA VENTA DE BEBIDAS ALCOHOLICAS A MENORES DE 18 AÑOS</h4>
 
 
 </section>

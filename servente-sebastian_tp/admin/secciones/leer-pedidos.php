@@ -4,14 +4,9 @@ require '../libraries/carrito.php';
 require '../libraries/productos.php';
 
 $idUsuario = authObtenerUsuario()['id_usuario'];
-/*$carrito = carritoTodos($db);*/
-/*$product = leerProductosDelCarrito($db);*/
 
 $product = leerProductosDelCarrito($db);
-/*echo"<pre>";
-print_r($product);
-echo"</pre>";
-exit;*/
+
 ?>
 <section class="carritoCompras">
     <h2>Pedidos de los usuarios</h2>

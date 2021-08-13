@@ -61,8 +61,7 @@ if(isset($_SESSION['successErrors'])){
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
-    <!--<link rel="stylesheet" href="css/estilos.css">-->
-    <link rel="stylesheet" href="../css/estilos_nuevo.css">
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
     <header class="header-home container-fluid " id="header">

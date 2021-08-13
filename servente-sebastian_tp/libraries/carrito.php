@@ -1,5 +1,5 @@
 <?php
-/*$idUsuario = authObtenerUsuario()['id_usuario'];*/
+
 /**
  * @param mysqli $db
  * @param int $idUsuario
@@ -23,7 +23,7 @@ function traerProductosDelCarrito($db, $idUsuario){
  * @return array
  * */
 function leerProductosDelCarrito($db){
-    /*$idUsuario = mysqli_real_escape_string($db, $idUsuario);*/
+
     $query = "SELECT id_usuario, id_pedido, fecha, precio FROM la_tienda.pedidos
                 INNER JOIN la_tienda.cervezas
                  ON pedidos.cervezas_id_cerveza = cervezas.id_cerveza";
@@ -98,7 +98,6 @@ function caFinalizarPedido($db, $idCerveza, $idUsuario) {
 function caEliminarPedidos($db, int $idPedido) {
 
     $idPedido = mysqli_real_escape_string($db, $idPedido);
-   /* $idUsuario = mysqli_real_escape_string($db, $idUsuario);*/
 
     $query = "DELETE FROM pedidos
                 WHERE id_pedido = '". $idPedido."'";
