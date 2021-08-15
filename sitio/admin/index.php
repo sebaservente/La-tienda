@@ -3,8 +3,6 @@
 
 require '../data/bootstrap.php';
 require 'data/routes.php';
-/*require_once __DIR__ . '../libraries/sessiones.php';
-require_once __DIR__ . '../libraries/auth.php';*/
 
 $seccion = $_GET['s'] ?? "home";
 
@@ -87,24 +85,19 @@ if(isset($_SESSION['successErrors'])){
                 <div class="collapse navbar-collapse" id="barra">
                     <ul class="navbar-nav text-right ml-auto">
                         <li class="nav-item homes">
-                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=home">Home</a>
-                            <a class="nav-link text-warning " href="index.php?s=home" title="Home"><i class="bi bi-house-door"></i></a>
+                            <a class="nav-link text-warning  mr-3" href="index.php?s=home">Home</a>
                         </li>
                         <li class="nav-item homes">
-                            <a class="nav-link text-warning d-md-none mr-3" href="../index.php?s=home">Publicaciones</a>
-                            <a class="nav-link text-warning " href="../index.php?s=home" title="Publicaciones"><i class="bi bi-cloud-arrow-up"></i></a>
+                            <a class="nav-link text-warning  mr-3" href="../index.php?s=home">Publicaciones</a>
                         </li>
                         <li class="nav-item homes">
-                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=productos">Productos</a>
-                            <a class="nav-link text-warning " href="index.php?s=productos" title="Productos"><i class="bi bi-shop"></i></a>
+                            <a class="nav-link text-warning  mr-3" href="index.php?s=productos">Productos</a>
                         </li>
                         <li class="nav-item homes">
-                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=leer-usuarios">Usuarios</a>
-                            <a class="nav-link text-warning " href="index.php?s=leer-usuarios" title="Usuarios"><i class="bi bi-people"></i></a>
+                            <a class="nav-link text-warning  mr-3" href="index.php?s=leer-usuarios">Usuarios</a>
                         </li>
                         <li class="nav-item homes">
-                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=leer-pedidos">Pedidos</a>
-                            <a class="nav-link text-warning " href="index.php?s=leer-pedidos" title="Pedidos"><i class="bi bi-truck"></i></a>
+                            <a class="nav-link text-warning  mr-3" href="index.php?s=leer-pedidos">Pedidos</a>
                         </li>
                         <li class="nav-item homes">
                             <a class="nav-link  d-md-none mr-3" href="acciones/logout.php">@<?= authObtenerUsuario()['nombre'];?> (cerrar sesion) </a>

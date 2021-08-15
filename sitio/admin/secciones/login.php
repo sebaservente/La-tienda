@@ -8,9 +8,9 @@ $oldData = sessionValueGetFlash('old_data', []);
 ?>
 
 <section class="sectionRegistro">
-    <h2 class="p-3">Iniciar Sesion</h2>
-
-    <p class="p-3">Ingresar Datos del Administrador</p>
+    <h2 class="pt-3">Iniciar Sesion</h2>
+    <p>Panel de ingreso para el administrador del sitio</p>
+    <p class="pb-3">Ingresar Datos del Administrador</p>
 
     <form action="acciones/login.php" method="post" class="formRegistro">
 
@@ -35,5 +35,5 @@ $oldData = sessionValueGetFlash('old_data', []);
         </div>
         <!--<button class="btn p-3">Ingresar</button>-->
     </form>
-    <p class="text-center mt-4"><a href="../index.php?s=home">Volver a la Home</a></p>
+    <p class="text-center mt-4 "><a href="../index.php?s=home" class="text-warning font-weight-bold">Volver a la Home</a></p>
 </section>

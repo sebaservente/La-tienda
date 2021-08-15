@@ -13,6 +13,6 @@ if(!authEstaAutenticado() || !authEsAdmin()) {
 }
 
 authLogout();
-
-header('Location: ../index.php?s=home');
+$_SESSION['success'] = "¡ Cerraste sesión exitosamente !";
+header('Location: ../../index.php?s=home');
 

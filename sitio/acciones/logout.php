@@ -6,5 +6,5 @@ require_once '../data/bootstrap.php';
 
 authLogout();
 
-$_SESSION['success'] = "¡Cerraste sesion exitosamente!";
+$_SESSION['success'] = "¡ Cerraste sesion exitosamente !";
 header('Location: ../index.php?s=home');
