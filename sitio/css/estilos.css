@@ -297,11 +297,14 @@ fieldset legend {
 /*------------------------------------------------------------Final 404 -------------------*/
 /*------------------------------------------------------------Menu-------------------------*/
 
-#header div #barra ul .homes {
+#header div #barra .home {
     display: flex;
     justify-content: flex-end;
 }
-
+#header div #barra .home .homes {
+    display: flex;
+    flex-direction: column;
+}
 /*------------------------------------------------------------------Imagen menu---*/
 #header div .divImagen figure img {
     width: 55%;

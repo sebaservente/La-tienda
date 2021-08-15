@@ -55,24 +55,20 @@ $successInfo = sessionValueGetFlash('successInfo');
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="barra">
-                    <ul class="navbar-nav text-right ml-auto">
+                    <ul class="navbar-nav text-right ml-auto home">
                         <li class="nav-item homes">
-                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=home" title="Home">Home</a>
-                            <a class="nav-link text-warning " href="index.php?s=home" title="Home"><i class="bi bi-house-door"></i>Home</a>
+                            <a class="nav-link text-warning mr-3" href="index.php?s=home" title="Home">Home</a>
                         </li>
                         <li class="nav-item homes">
-                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=productos" title="Productos">Productos</a>
-                            <a class="nav-link text-warning" href="index.php?s=productos" title="Productos"><i class="bi bi-shop"></i></a>
+                            <a class="nav-link text-warning mr-3" href="index.php?s=productos" title="Productos">Tienda</a>
                         </li>
                     <?php
                     if(!authEstaAutenticado()):?>
                         <li class="nav-item homes">
-                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=login">Iniciar Sesión</a>
-                            <a class="nav-link text-warning" href="index.php?s=login" title="Iniciar Sesión"><i class="bi bi-door-open"></i></a>
+                            <a class="nav-link text-warning mr-3" href="index.php?s=login">Iniciar Sesión</a>
                         </li>
                         <li class="nav-item homes">
-                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=registro">Registrarse</a>
-                            <a class="nav-link text-warning" href="index.php?s=registro" title="Registrarse"><i class="bi bi-pencil-square"></i></a>
+                            <a class="nav-link text-warning mr-3" href="index.php?s=registro">Registrarse</a>
                         </li>
                         <?php
                         else: ?>
@@ -80,15 +76,13 @@ $successInfo = sessionValueGetFlash('successInfo');
                         if(authEstaAutenticado() && authEsAdmin()):
                             ?>
                         <li class="nav-item homes">
-                            <a class="nav-link text-warning d-md-none mr-3" href="admin/index.php?s=productos" title="Admin">Admin</a>
-                            <a class="nav-link text-warning " href="admin/index.php?s=productos" title="Panel del administrador"><i class="bi bi-building"></i></a>
+                            <a class="nav-link text-warning mr-3" href="admin/index.php?s=productos" title="Admin">Admin</a>
                         </li>
                         <?php
                         endif;
                         ?>
                         <li class="nav-item homes">
-                            <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=perfil&id=<?= authObtenerUsuario()['id_usuario'];?>" title="Perfil">Perfil</a>
-                            <a class="nav-link text-warning" title="Perfil del usuario" href="index.php?s=perfil&id=<?= authObtenerUsuario()['id_usuario'];?>"><i class="bi bi-person"></i></a>
+                            <a class="nav-link text-warning  mr-3" href="index.php?s=perfil&id=<?= authObtenerUsuario()['id_usuario'];?>" title="Perfil">Perfil</a>
                         </li>
                         <li class="nav-item homes">
                             <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=carrito" title="Carrito de compras">Mi Carrito</a>
