@@ -59,7 +59,7 @@ $successInfo = sessionValueGetFlash('successInfo');
                     <ul class="navbar-nav text-right ml-auto">
                         <li class="nav-item homes">
                             <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=home" title="Home">Home</a>
-                            <a class="nav-link text-warning " href="index.php?s=home" title="Home"><i class="bi bi-house-door"></i></a>
+                            <a class="nav-link text-warning " href="index.php?s=home" title="Home"><i class="bi bi-house-door"></i>Home</a>
                         </li>
                         <li class="nav-item homes">
                             <a class="nav-link text-warning d-md-none mr-3" href="index.php?s=productos" title="Productos">Productos</a>
