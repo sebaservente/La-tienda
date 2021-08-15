@@ -5,3 +5,5 @@ DER/latienda.mwb
 *.bak
 DER/latienda.mwb
 DER/latienda.mwb.bak
+db/la_tienda.sql
+*.sql

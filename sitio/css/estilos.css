@@ -1,0 +1,1486 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.header-home > h1  {
+    padding-top: .2em;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 0;
+}
+.header-home > p  {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+}
+.logo-home {
+    width: 75%;
+    position: relative;
+    text-align: center;
+    padding-left: .4em;
+
+}
+#header .row {
+    background: #1d2124;
+}
+#barra .divImagen figure {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+main #err {
+    background: #f85c70;
+    color: #7a0101;
+}
+main #inff {
+    background: #5cb4f8;
+    color: #011f7a;
+}
+.msj-success,
+.msj-error,
+.msj-info {
+    background: #ffc107;
+    text-align: center;
+    font-weight: bold;
+    font-size: .8rem;
+}
+/*--------------------------------------- home --------------------*/
+/*#homes .carru {
+
+    margin: auto;
+}
+#homes .card {
+    margin: auto;
+}*/
+
+/*---------------------------------------fin home -----------------*/
+/*#sectionPerfil h2 {
+    font-size: 1rem;
+    text-align: center;
+}
+#sectionPerfil .divs {
+    margin: 1.5rem 0;
+    background: #f5f6fbbd;
+    padding: 1rem 0;
+}
+#sectionPerfil .divs div {
+    margin: auto;
+}
+#sectionPerfil .divs div figure {
+    width: 35%;
+    margin: auto;
+}
+#sectionPerfil .divs div figure img{
+    border-radius: 50%;
+}
+#sectionPerfil .divs .divsPerfil {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}*/
+
+/*#sectionPerfil .perfil .divDatos .divAccion {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 78%;
+    max-width: 250px;
+}
+#sectionPerfil .perfil .divImagen figure img {
+    border-radius: 25%;
+    width: 42%;
+    max-width: 100px;
+    margin-top: .7rem;
+    box-shadow: 1px 2px 5px -2px #000;
+}
+#sectionPerfil .perfil {
+    text-align: center;
+    margin: 2rem;
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido {
+    display: flex;
+    flex-wrap: wrap;
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido h3{
+    width: 100%;
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido .primero {
+    padding: .5rem;
+    width: 50%;
+    text-align: end;
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido .segundo {
+    padding: .5rem;
+    width: 50%;
+    text-align: start;
+}*/
+/*--------------mantenimientos-------------------------------------*/
+.reparar {
+    display: grid;
+    grid-template-columns: repeat(59, 1em);
+    grid-template-rows: repeat(28, 1em);
+    justify-content: center;
+    padding-top: 2em;
+}
+.reparar > h2 {
+    grid-column:  1 / -1;
+    grid-row: 1 / 4 ;
+    margin: auto;
+}
+.reparar :nth-child(2) {
+    grid-column:  1 / -1;
+    grid-row: 4 / 6 ;
+    margin: auto;
+}
+.reparar :nth-child(3) {
+    grid-column:  1 / -1;
+    grid-row: 6 / 8 ;
+    margin: auto;
+}
+
+.reparar > div {
+    grid-column:  1 / -1;
+    grid-row: 10 / 25 ;
+    background: url(../imgs/mantenimiento.jpg) no-repeat center 100%;
+    width: 100%;
+}
+/*------------------------------------------------------------Final mantenimientos -------------------*/
+/*------------------- carrito de compras----------------------------*/
+.carritoCompras {
+    padding: 1rem;
+    margin: auto;
+    max-width: 600px;
+}
+.carritoCompras .avisoCompra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 4rem auto;
+    max-width: 500px;
+}
+.carritoCompras .avisoCompra .btnAvisoCompra {
+    margin: 4rem 1rem auto;
+}
+.carritoCompras h4 {
+    font-size: .7rem;
+    font-weight: bold;
+    margin-top: 4rem;
+    padding: 1rem;
+    text-align: center;
+}
+.carritoCompras h2 {
+    font-family: 'Roboto Slab', serif;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.carritoCompras div .parrafoBotones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.carritoCompras div .cantidadCarrito,
+.carritoCompras div .totalCarrito {
+    text-align: end;
+    margin: 1rem;
+}
+
+.carritoCompras .carritoProductos {
+    display: flex;
+}
+/*------------------- final carrito de compras----------------------------*/
+
+
+/*------------------- formRegistro --------------------------------*/
+
+
+
+.formRegistro {
+    background: #161514bf;
+    padding: 1rem;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px -1px orange;
+}
+
+.formRegistro label {
+    font-weight: bold;
+    padding: .5rem .2rem;
+    color: #f3ab22;
+}
+.formRegistro input {
+    box-shadow: 1px 1px 5px -2px black;
+}
+.formRegistro .botonRegistro {
+    margin-top: 2.5rem;
+    width: 100%;
+    box-shadow: 1px 1px 5px -2px green;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.formRegistro fieldset:nth-child(1) .form-file button {
+    border: none;
+    padding: 0.5rem;
+    background: none;
+    cursor: pointer;
+}
+fieldset {
+    padding: 0.4rem;
+}
+fieldset legend {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    color: #fff;
+}
+.sectionRegistro {
+    padding: 1rem;
+}
+.sectionRegistro h2 {
+    font-family: 'Roboto Slab', serif;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+}
+.sectionRegistro p {
+    padding-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+.sectionRegistro h4 {
+    font-size: .8rem;
+    text-align: center;
+    padding-top: 2rem;
+    color: #d39e00;
+}
+.sectionRegistro .parraRegistro {
+    text-align: center;
+    padding: 2rem;
+}
+.sectionRegistro .formRegistro div div #error-intro {
+    border-radius: 5px;
+}
+/*------------------------------------------------------------404-------------------------------------*/
+.error {
+    display: grid;
+    grid-template-columns: repeat(59, 1em);
+    grid-template-rows: repeat(36, 1em);
+    justify-content: center;
+    padding-top: 2em;
+}
+.error > h2 {
+    grid-column:  1 / -1;
+    grid-row: 1 / 4 ;
+    margin: auto;
+}
+.error :nth-child(2) {
+    grid-column:  1 / -1;
+    grid-row: 4 / 6 ;
+    margin: auto;
+}
+.error :nth-child(3) {
+    grid-column:  1 / -1;
+    grid-row: 6 / 8 ;
+    margin: auto;
+}
+
+.error > div {
+    grid-column:  1 / -1;
+    grid-row: 9 / 38 ;
+    background: url(../imgs/images.png) no-repeat center 100%;
+}
+/*------------------------------------------------------------Final 404 -------------------*/
+/*------------------------------------------------------------Menu-------------------------*/
+
+#header div #barra .home {
+    display: flex;
+    justify-content: flex-end;
+}
+#header div #barra .home .homes {
+    display: flex;
+    flex-direction: column;
+}
+/*------------------------------------------------------------------Imagen menu---*/
+#header div .divImagen figure img {
+    width: 55%;
+    border-radius: 50%;
+    max-width: 50px;
+    box-shadow: 1px 2px 5px -2px #000;
+    margin-left: 2rem;
+}
+
+/*------------------------------------------------------------------home----------*/
+#homes > h2{
+    font-size: 2em;
+    font-family: 'Roboto Slab', serif;
+    color: #f1f1f1;
+    position: absolute;
+    margin-top: 19%;
+    margin-left: 8%;
+}
+#homes h5  {
+    font-size: 1rem;
+    margin: 2rem auto;
+}
+#homes > .divParrafosInicio {
+    display: contents;
+}
+#homes > .divParrafosInicio > .parrafoInicio {
+    font-size: 1em;
+    color: #f1f1f1;
+    position: absolute;
+    margin-top: 33%;
+    margin-left: 8%;
+}
+#homes > .divParrafosInicio > .parrafoInicios {
+    font-size: 1em;
+    color: #f1f1f1;
+    position: absolute;
+    margin-top: 40%;
+    margin-left: 8%;
+}
+#homes > .btnInicios {
+    font-size: 1em;
+    margin-top: 55%;
+    margin-left: 8%;
+    font-family: 'Roboto Slab', italic;
+    color: #f1f1f1;
+    position: absolute;
+   /* padding-top: 33%;
+    padding-left: 4%;*/
+}
+#homes .divPresentacion {
+    display: flex;
+    flex-wrap: wrap;
+}
+#homes .divPresentacion h3 {
+    margin-bottom: 2rem;
+    font-family: 'Roboto Slab', italic;
+    font-size: 2rem;
+}
+#homes .divPresentacion .divPresent {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    line-height: 1.7;
+}
+#homes .divPresentacion .carru {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+#homes .divPresentacion .carru .carruPrimero {
+    width: 80%;
+    margin: 1rem auto;
+}
+#homes .divPresentacion .carru .carruSegundo {
+    width: 80%;
+    margin: 1rem auto;
+}
+#homes .divPresentacion .carruTercero {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+    /*------------------------------------------------------------------productos----------*/
+.formRegistroBuscar {
+    /*background: #161514bf;*/
+    padding: 1rem;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    /*box-shadow: 0px 0px 9px -1px orange;*/
+    /*color: #ffc107;*/
+    display: flex;
+    align-items: baseline;
+    /*width: 75%;*/
+}
+.formRegistroBuscar div {
+    width: 100%;
+}
+.formRegistroBuscar div label {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.formRegistroBuscar .botonRegistroBuscar {
+    width: 21%;
+    margin-top: 2.5rem;
+}
+.producto div .formRegistroBuscar div #b {
+    border-radius: 0;
+    border-left: 1px solid #999;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #fff;
+}
+.producto div .formRegistroBuscar button {
+    border-radius: 0;
+    border-left: 1px solid #fff;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #999;
+    text-align: end;
+}
+.producto div .formRegistroBuscar button:hover {
+    background: #fff;
+}
+.producto h2 {
+    text-align: center;
+    font-family: 'Roboto Slab', italic;
+    margin: 2rem 2rem auto;
+    font-size: 1.5rem;
+}
+.producto .pIndex {
+    margin: 2rem auto;
+}
+.producto p {
+    text-align: center;
+}
+.producto div .h3Buscar {
+    font-size: .8rem;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+}
+.producto div h3 {
+    font-size: 1rem;
+    text-align: center;
+    width: 65%;
+    margin: auto;
+    padding: 1rem;
+}
+.producto .parrafoResultados {
+    font-size: .8rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.producto h4 {
+    font-size: .7rem;
+    font-weight: bold;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.producto > .divs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.producto > .divs > .articleProducto {
+    margin: 1rem 0rem;
+}
+.producto > .divs > .articleProducto > .divInfoProducto {
+
+}
+.producto > .divs > .articleProducto > .divInfoProducto > a {
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+    background: #ecedf5bd;
+    border-radius: 5px;
+}
+.articleProducto > .divInfoProducto > a > h3 {
+    width: 100%;
+    margin: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+.articleProducto > .divInfoProducto > a > p {
+    font-size: .8rem;
+    margin: 1.5rem;
+}
+.articleProducto > .divInfoProducto > a > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.articleProducto > .divInfoProducto > a > div > .precio-producto,
+.articleProducto > .divInfoProducto > a > div > .definicion-producto {
+    font-size: .8rem;
+    margin: .5rem;
+}
+.articleProducto > .divInfoProducto > a > figure {
+    width: 50%;
+   /* background: #e40d0d;*/
+}
+.divInfoProducto > a > figure > img {
+    border-radius: 50%;
+}
+.articleProducto > .divInfoProducto > a > .divDatosProducto {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+}
+.articleProducto > .divInfoProducto > a > .divDatosProducto .parrafoPrecio {
+    font-weight: bold;
+}
+
+.divInfoProducto > a >  .productos_tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*a > .productos_tags > .productos_item_tags {
+    background: black;
+    color: #d39e00;
+    padding: 0.1rem;
+    border-radius: 5px;
+    font-weight: 900;
+    position: absolute;
+    margin-left: 3rem;
+}*/
+.producto .paginador {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.producto .paginador p {
+    margin-bottom: 0;
+}
+.producto .paginador .paginador-lista {
+    display: flex;
+}
+.producto .paginador .paginador-lista li {
+    list-style: none;
+    padding: .5rem;
+}
+.producto .paginador .paginador-lista li a {
+    color: #008000FF;
+    text-decoration: none;
+}
+.producto .paginador .paginador-lista .bg-warning {
+    border-radius: 20%;
+}
+/*-----------------------------------------------------*/
+
+/*------------------------------------------------------------------productos----------*/
+.productos h2 {
+    text-align: center;
+    margin: 1rem 2rem auto;
+}
+.productos p {
+    text-align: center;
+}
+.productos div .h3Buscar {
+    font-size: .8rem;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+}
+.productos div h3 {
+    font-size: 1rem;
+    text-align: center;
+    width: 65%;
+    margin: auto;
+    padding: 1rem;
+}
+.productos .parrafoResultados {
+    font-size: .8rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.productos h4 {
+    font-size: .8rem;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.productos > .divs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+.productos > .divs > .articleProductos {
+
+    margin: 1.5rem 0rem;
+}
+.productos > .divs > .articleProductos > .divInfoProductos {
+
+}
+.productos > .divs > .articleProductos > .divInfoProductos > a {
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+    background: #ecedf5bd;
+    border-radius: 5px;
+}
+.articleProductos > .divInfoProductos > a > h3 {
+    width: 100%;
+    margin: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+.articleProductos > .divInfoProductos > a > p {
+    font-size: .8rem;
+    margin: 1.5rem;
+}
+.articleProductos > .divInfoProductos > a > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.articleProductos > .divInfoProductos > a > div > .precio-producto,
+.articleProductos > .divInfoProductos > a > div > .definicion-producto {
+    font-size: .8rem;
+    margin: .5rem;
+}
+.articleProductos > .divInfoProductos > a > figure {
+    width: 50%;
+    /* background: #e40d0d;*/
+}
+.divInfoProductos > a > figure > img {
+    border-radius: 50%;
+}
+.articleProductos > .divInfoProductos > a > .divDatosProducto {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+}
+.articleProductos > .divInfoProductos > a > .divDatosProducto .parrafoPrecio {
+    font-weight: bold;
+}
+.divInfoProductos > .botones > button >  i {
+   margin: .5rem;
+}
+.divInfoProductos > a >  .productos_tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+a > .productos_tags > .productos_item_tags {
+    background: black;
+    color: #ffc107;
+    padding: 0.1rem;
+    border-radius: 5px;
+    font-weight: 900;
+    margin-left: 6rem;
+    position: absolute;
+}
+
+
+
+
+
+/*--------------------perfil de usuarios --------------*/
+#sectionPerfil h2 {
+    text-align: center;
+    font-family: 'Roboto Slab', italic;
+    margin: 2rem 2rem auto;
+    font-size: 1.5rem;
+}
+#sectionPerfil .perfil {
+    display: flex;
+    flex-wrap: wrap;
+}
+#sectionPerfil .perfil .divDatos {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+#sectionPerfil .perfil .divDatos p {
+   /* text-align: center;*/
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido {
+    display: flex;
+    flex-wrap: wrap;
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido .anterior {
+    width: 100%;
+    /*text-align: center; */
+    /*padding-left: .5rem;*/
+    margin-bottom: 0;
+    font-weight: 700;
+}
+#sectionPerfil .perfil .divDatos .divNombreApellido .primero {
+    width: auto;
+    font-size: .8rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /*padding-left: 1.9rem;*/
+   /* text-align: justify;*/
+}
+#sectionPerfil .perfil .divAccion {
+    width: 100%;
+    display: flex;
+    justify-content:  space-around;
+/*    margin-top: 2rem;*/
+}
+#sectionPerfil .perfil .divAccion p {
+    border-radius: 5px;
+    text-decoration: none;
+}
+#sectionPerfil .perfil .divAccion p a {
+    text-decoration: none;
+    color: #fff;
+}
+#sectionPerfil .perfil .divImagen {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 1rem;
+}
+/*#sectionPerfil .perfil .divImagen .parrafoEmailUsuarios {
+    !*text-align: center;*!
+}*/
+#sectionPerfil .perfil .divImagen figure {
+    display: flex;
+    justify-content: center;
+}
+#sectionPerfil .perfil .divImagen figure img {
+    border-radius: 50%;
+    box-shadow: 1px 3px 9px -2px black;
+    width: 80%;
+    display: flex;
+}
+.articleProducto .divInfoProducto a .divDatosProducto p {
+    width: 80%;
+    font-size: 1rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.articleProducto .divInfoProducto a p {
+    width: 80%;
+    font-size: 1rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* ------------------Footer login--------------------- */
+footer {
+    margin-top: 1rem;
+    background: #1d2124;
+    color: orange;
+}
+footer .contenedores {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+}
+footer .contenedores .divInstitucion {
+    width: 100%;
+    margin: auto;
+}
+footer .contenedores .divInstitucion  .institucion {
+    font-size: 0;
+    background: url("../imgs/descarga.png") no-repeat center;
+    height: 11vh;
+}
+footer .contenedores .divInstitucion ul {
+    display: block;
+}
+footer .contenedores .divInstitucion ul li {
+    list-style:  none;
+    color: #fff;
+    text-align: center;
+
+}
+
+footer .contenedores .ambos {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+footer .contenedores .ambos .divNavegacion {
+
+    padding-top: 2rem;
+    margin: auto;
+}
+footer .contenedores  .ambos .divNavegacion .parrafoNavegacion {
+    cursor: pointer;
+}
+
+footer .contenedores  .ambos .divNavegacion ul {
+    padding-left: 0;
+}
+footer .contenedores  .ambos .divNavegacion ul li {
+    list-style:  none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.2rem;
+}
+footer .contenedores .ambos .divContacto {
+    padding-left: 3rem;
+    padding-top: .9rem;
+    margin: auto;
+}
+footer .contenedores .ambos .divContacto ul {
+    padding-left: 0;
+}
+footer .contenedores .ambos .divContacto ul li {
+    list-style:  none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+footer .contenedores .ambos .divContacto ul li i{
+    padding: 0.3rem;
+    color: orange;
+}
+footer .contenedores .ambos .divContacto ul li:nth-child(4){
+    /*    background: url(../imgs/instagram_108043.png) no-repeat 15%;*/
+    /*   height: 10vh;*/
+    position: absolute;
+    display: flex;
+    /* align-items: center;*/
+    flex-wrap: nowrap;
+}
+footer .contenedores .contenedor {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.6rem;
+    margin: auto;
+}
+footer .contenedores .contenedor .divUbicacion {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+footer .contenedores .contenedor .divUbicacion p{
+  /*  padding: .5rem;*/
+}
+/* ------------------fin Footer login--------------------- */
+
+@media (min-width: 400px) and (max-width: 480px){
+    #homes > h2{
+        margin-top: 21%;
+    }
+    #homes .divPresentacion .carruTercero {
+        max-width: 400px;
+        margin: 5rem auto;
+    }
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
+
+    .articleProducto > .divInfoProducto > a > figure {
+        width: 40%;
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 45%;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 30%;
+    }
+    .producto > .divs > .articleProducto > .divInfoProducto > a {
+        margin: 1.5rem auto;
+        width: 95%;
+    }
+    footer .contenedores .divInstitucion ul {
+        display: block;
+    }
+    .logo-home {
+        width: 50%;
+    }
+}
+@media (min-width: 481px) and (max-width: 580px){
+    #homes > h2{
+        margin-top: 10%;
+    }
+    #homes .divPresentacion .carruTercero {
+        max-width: 400px;
+        margin: 4rem auto;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 18%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 22%;
+    }
+    #homes > .btnInicios {
+        font-size: .8em;
+        margin-top: 28%;
+    }
+    #homes .divPresentacion .carru {
+        flex-direction: row;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 35%;
+    }
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
+    .logo-home {
+        width: 50%;
+    }
+    .articleProducto > .divInfoProducto > a > figure {
+        width: 75%;
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 45%;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 25%;
+    }
+    .producto .divs {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .producto > .divs > .articleProducto {
+        width: 50%;
+    }
+    .producto > .divs > .articleProducto > .divInfoProducto > a {
+        margin: 1.5rem auto;
+        width: 90%;
+    }
+    footer .contenedores .ambos {
+        width: 75%;
+    }
+    footer .contenedores .divInstitucion ul {
+      display: block;
+    }
+    footer .contenedores .divInstitucion ul li{
+        text-align: center;
+        padding: 0 0.2rem;
+    }
+
+}
+@media (min-width: 581px) and (max-width: 680px){
+    #homes > h2{
+        margin-top: 10%;
+    }
+    #homes .divPresentacion .carruTercero {
+        max-width: 500px;
+        margin: 2rem auto;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 18%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 22%;
+    }
+    #homes > .btnInicios {
+        font-size: .8em;
+        margin-top: 28%;
+    }
+    #homes .divPresentacion .carru {
+        flex-direction: row;
+        margin-top: 1rem;
+        max-width: 500px;
+        margin-bottom: 4rem;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 35%;
+    }
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
+    .logo-home {
+        width: 50%;
+    }
+    .articleProducto > .divInfoProducto > a > figure {
+        width: 75%;
+
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 45%;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 25%;
+    }
+    .productos > .divs {
+        width: 80%;
+    }
+    .producto .divs {
+        /*background: #ffc107;*/
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .producto > .divs > .articleProducto {
+        width: 33%;
+    }
+    .producto > .divs > .articleProducto > .divInfoProducto > a {
+        margin: 1.5rem auto;
+        width: 90%;
+    }
+    footer .contenedores .divInstitucion ul {
+        display: flex;
+        justify-content: center;
+    }
+    footer .contenedores .divInstitucion ul li {
+        font-size: .7rem;
+        padding: 0rem 0.2rem;
+    }
+    footer .contenedores .ambos {
+        margin-top: 0rem;
+    }
+    footer .contenedores .ambos .divNavegacion {
+        padding-top: 1rem;
+    }
+    footer .contenedores .ambos .divContacto {
+        padding-top: .5rem;
+        margin-top: 0.5rem;
+    }
+    footer .contenedores .contenedor {
+        padding-top: 0rem;
+        font-size: 0.8rem;
+    }
+
+
+}
+@media (min-width: 681px) and (max-width: 768px){
+    #homes > h2{
+        margin-top: 10%;
+    }
+    #homes .divPresentacion .carruTercero {
+       max-width: 500px;
+        margin: auto;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 16%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 20%;
+    }
+    #homes > .btnInicios {
+        font-size: .8em;
+        margin-top: 26%;
+    }
+    #homes .divPresentacion .carru {
+        flex-direction: row;
+        margin-top: 1rem;
+        max-width: 600px;
+        margin-bottom: 4rem;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 35%;
+    }
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
+    .msj-success,
+    .msj-error,
+    .msj-info {
+        font-size: 1rem;
+    }
+    .producto .divs {
+        /*background: #ffc107;*/
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .productos > .divs {
+        width: 60%;
+    }
+    .producto > .divs > .articleProducto {
+        width: 33%;
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 45%;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 25%;
+    }
+    .producto > .divs > .articleProducto > .divInfoProducto > a {
+        margin: 1.5rem auto;
+        width: 90%;
+    }
+    footer .contenedores .divInstitucion ul {
+        display: flex;
+        justify-content: center;
+    }
+    footer .contenedores .divInstitucion ul li {
+        font-size: .7rem;
+        padding: 0rem 0.2rem;
+    }
+    footer .contenedores .ambos {
+        margin-top: 0rem;
+    }
+    footer .contenedores .ambos .divNavegacion {
+        padding-top: 1rem;
+    }
+    footer .contenedores .ambos .divContacto {
+        padding-top: .5rem;
+        margin-top: 0.5rem;
+    }
+    footer .contenedores .contenedor {
+        padding-top: 0rem;
+        font-size: 0.8rem;
+    }
+    .logo-home {
+        width: 40%;
+
+    }
+}
+@media (min-width: 768px) and (max-width: 880px){
+    #homes > h2{
+        margin-top: 10%;
+    }
+    #homes .divPresentacion .carruTercero {
+        max-width: 700px;
+        margin: 4rem auto ;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 16%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 19%;
+    }
+    #homes > .btnInicios {
+        font-size: .8em;
+        margin-top: 25%;
+    }
+    #homes .divPresentacion .carru {
+        flex-direction: row;
+        margin-top: 1rem;
+        max-width: 600px;
+        margin-bottom: 4rem;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 30%;
+    }
+    #homes .divPresentacion .divPresent {
+        margin: auto;
+        width: 90%;
+    }
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
+    .msj-success,
+    .msj-error,
+    .msj-info {
+        font-size: 1rem;
+    }
+    .producto .divs {
+        /*background: #ffc107;*/
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .productos > .divs {
+        width: 60%;
+    }
+    .producto > .divs > .articleProducto {
+        width: 33%;
+    }
+    #sectionPerfil .perfil {
+        display: flex;
+        flex-direction: column;
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 30%;
+        margin: 1rem auto;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    #sectionPerfil .perfil .divAccion {
+        justify-content: space-evenly;
+        width: 70%;
+        margin: 1rem auto;
+    }
+    #sectionPerfil .perfil .divDatos .divNombreApellido {
+        flex-direction: column;
+        text-align: center;
+    }
+    #sectionPerfil .perfil .divDatos .divNombreApellido p {
+        padding: .5rem;
+    }
+    .producto > .divs > .articleProducto > .divInfoProducto > a {
+        margin: 1.5rem auto;
+        width: 90%;
+    }
+    footer .contenedores .divInstitucion ul {
+        display: flex;
+        justify-content: center;
+    }
+    footer .contenedores .divInstitucion ul li {
+        font-size: .7rem;
+        padding: 0rem 0.2rem;
+    }
+    footer .contenedores .ambos {
+        margin-top: 0rem;
+        width: 50%;
+    }
+    footer .contenedores .ambos .divNavegacion {
+        padding-top: 1rem;
+    }
+    footer .contenedores .ambos .divContacto {
+        padding-top: .5rem;
+        margin-top: 0.5rem;
+    }
+    footer .contenedores .contenedor {
+        padding-top: 0rem;
+        font-size: 0.8rem;
+    }
+
+    .logo-home {
+        width: 35%;
+    }
+
+}
+@media (min-width: 881px) and (max-width: 1280px){
+    #homes > h2{
+        font-size: 3em;
+        margin-top: 9%;
+    }
+    #homes .divPresentacion .carruTercero {
+        max-width: 1100px;
+        margin: auto;
+        flex-direction: row;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 16%;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 18%;
+    }
+    #homes > .btnInicios {
+        font-size: .8em;
+        margin-top: 23%;
+    }
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
+    #homes .divPresentacion .carru {
+        flex-direction: row;
+        margin-top: 1rem;
+        width: 80%;
+        margin-bottom: 4rem;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 30%;
+    }
+    #homes .divPresentacion .divPresent {
+        margin: auto;
+        width: 75%;
+    }
+    .msj-success,
+    .msj-error,
+    .msj-info {
+        font-size: 1.2rem;
+    }
+    .producto .divs {
+        /*background: #ffc107;*/
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .productos > .divs {
+        width: 60%;
+    }
+    .producto > .divs > .articleProducto {
+        width: 33%;
+    }
+    .producto > .divs > .articleProducto > .divInfoProducto > a {
+        margin: 1.5rem auto;
+        width: 90%;
+    }
+    #sectionPerfil .perfil {
+        display: flex;
+        flex-direction: column;
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 30%;
+        margin: 1rem auto;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    #sectionPerfil .perfil .divAccion {
+        justify-content: space-evenly;
+        width: 70%;
+        margin: 1rem  auto;
+    }
+    #sectionPerfil .perfil .divDatos .divNombreApellido {
+        flex-direction: column;
+        text-align: center;
+    }
+    #sectionPerfil .perfil .divDatos .divNombreApellido p {
+        padding: .5rem;
+    }
+    footer .contenedores .divInstitucion {
+        width: 30%;
+    }
+    footer .contenedores .ambos {
+        width: 44%;
+    }
+    footer .contenedores .contenedor .divUbicacion {
+        flex-direction: row;
+    }
+    footer .contenedores .contenedor .divUbicacion p {
+        padding: .5rem;
+    }
+    .logo-home {
+        width: 25%;
+
+    }
+    footer .contenedores .contenedor {
+        flex-direction: row
+    }
+}
+@media (min-width: 1281px){
+    #homes > h2{
+        font-size: 4em;
+        margin-top: 11%;
+    }
+    #homes .divPresentacion .carruTercero {
+        max-width: 1100px;
+        margin: 3rem auto;
+        flex-direction: row;
+    }
+    #homes > .divParrafosInicio > .parrafoInicio {
+        margin-top: 17%;
+        font-size: 2rem;
+    }
+    #homes > .divParrafosInicio > .parrafoInicios {
+        margin-top: 20%;
+        font-size: 2rem;
+    }
+    #homes > .btnInicios {
+        font-size: 1.5rem;
+        margin-top: 25%;
+    }
+    .carritoCompras div .parrafoBotones {
+        flex-direction: row;
+    }
+    #homes .divPresentacion {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #homes .divPresentacion .divPresent {
+        padding: 4rem 12rem;
+        line-height: 2;
+        font-size: 1.5rem;
+    }
+    #homes .divPresentacion .carru {
+        margin: auto;
+        flex-direction: row;
+        width: 70%;
+    }
+    #homes .divPresentacion .carru .carruPrimero,
+    #homes .divPresentacion .carru .carruSegundo {
+        width: 30%;
+    }
+    /*--------------------------------------- home --------------------*/
+    .msj-success,
+    .msj-error,
+    .msj-info {
+        font-size: 1.2rem;
+    }
+    #homes .carru {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    #homes .carru .carruPrimero {
+        width: 33%;
+        margin: 1rem 3rem;
+    }
+    #homes .carru .carruSegundo {
+        width: 33%;
+        margin: 1rem 3rem;
+    }
+    #homes .carru .carruTercero {
+       /* width: 33%;
+        margin: 1rem;*/
+    }
+    /*---------------------------------------fin home -----------------*/
+    .producto .divs {
+        /*background: #ffc107;*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .productos > .divs {
+        width: 60%;
+    }
+    .producto > .divs > .articleProducto {
+        width: 15%;
+    }
+    .producto > .divs > .articleProducto > .divInfoProducto > a {
+        margin: 1.5rem auto;
+        width: 90%;
+    }
+    #sectionPerfil .perfil {
+        display: flex;
+        flex-direction: column;
+    }
+    #sectionPerfil .perfil .divImagen {
+        width: 30%;
+        margin: 1rem auto;
+    }
+    #sectionPerfil .perfil .divDatos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    #sectionPerfil .perfil .divAccion {
+        justify-content: space-evenly;
+        width: 70%;
+        margin: 1rem auto;
+
+    }
+    #sectionPerfil .perfil .divDatos .divNombreApellido {
+        flex-direction: column;
+        text-align: center;
+    }
+    #sectionPerfil .perfil .divDatos .divNombreApellido p {
+        padding: .5rem;
+    }
+    footer .contenedores .divInstitucion {
+        width: 30%;
+    }
+    footer .contenedores .ambos {
+        width: 44%;
+    }
+    footer .contenedores .contenedor .divUbicacion {
+        flex-direction: row;
+    }
+    footer .contenedores .contenedor .divUbicacion p {
+        padding: .5rem;
+    }
+    .logo-home {
+        width: 13%;
+
+    }
+}

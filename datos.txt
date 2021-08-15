@@ -8,9 +8,12 @@ Comision: A
 Alumno: Servente, Sebastian Andres
 email:sebastian.servente@davinci.edu.ar
 Docente: Santiago, Gallino 
-Entrega: 2do Parcial
+Entrega: final
 
 datos del sitio:
 
-usuario: ser@ser.com.ar		
+usuario administrador: ser@ser.com.ar		
+password: asdasd
+
+usuario comun: sebas@sebas.com.ar
 password: asdasd
