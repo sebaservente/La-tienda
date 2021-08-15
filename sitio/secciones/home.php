@@ -15,6 +15,10 @@ $productos = getProducto($db);
         <source media="(min-width: 14.25em)" srcset="imgs/vasoCervezaInicio.jpg">
         <img src="imgs/vaso-Cerveza-Inicio-Original.jpg" alt="vaso de cerveza" class="img-fluid figure-img">
     </picture>
+    <div class="divNuevoHome">
+        <div class="primeraNota"></div>
+        <p>Las mejores cervezas</p>
+    </div>
     <div class="divPresentacion">
         <div class="divPresent mt-4 mb-4 ">
             <h3 class="text-center"> Nosostros </h3>
@@ -100,29 +104,6 @@ $productos = getProducto($db);
         </div>
     </div>
     <h5 class="text-center">PROHIBIDA LA VENTA DE BEBIDAS ALCOHOLICAS A MENORES DE 18 AÑOS</h5>
-
-  <!-- <div class="row row-cols-1 row-cols-md-2 carta-1">
-        <div class="col-12">
-            <div class="card card-body">
-                
-                <h4 class="card-title text-center"> Nuestra Tienda</h4>
-                <p class="card-text text-center">Ingresá a Nuestra Tienda de Cervezas y elegí la que más te guste, tenemos Muchas 
-                    variedades en marcas Nacionales e Importadas</p>
-                    <button class="btn btn-light shadow col-12" onclick="window.location='index.php?s=productos'">Ingresar</button>
-                <button type="button" class="btn btn-light shadow"><a class="nav-link text-dark" href="index.php?s=productos">Ingresar</a></button>
-            </div>
-        </div> 
-    </div>  
-    <div class="row row-cols-1 row-cols-md-2 carta-2">
-        <div class="col-12">
-            <div class="card card-body">
-                <h4 class="card-title text-center"> Regístrate </h4>
-                <p class="card-text text-center">Se parte de La Tienda y Recibiras incleibles Descuentos.
-                     Participar De Nuestros Cursos  sobre Cervezas Artesanales</p>
-                     <button class="btn btn-light shadow col-12" onclick="window.location='index.php?s=registro'">Registrate</button>
-            </div>
-        </div>  
-    </div>-->
 
 </section>
 

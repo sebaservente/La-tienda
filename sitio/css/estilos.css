@@ -47,14 +47,24 @@ main #inff {
     font-size: .8rem;
 }
 /*--------------------------------------- home --------------------*/
-/*#homes .carru {
-
-    margin: auto;
+#homes .divNuevoHome  {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
 }
-#homes .card {
-    margin: auto;
-}*/
-
+#homes .divNuevoHome .primeraNota {
+    width: 30%;
+    height: 190px;
+    background: url(../imgs/1627396275.png) no-repeat;
+}
+#homes .divNuevoHome p {
+    background: #121212b3;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    width: 30%;
+    position: relative;
+    margin-top: -2.5rem;
+}
 /*---------------------------------------fin home -----------------*/
 /*#sectionPerfil h2 {
     font-size: 1rem;
