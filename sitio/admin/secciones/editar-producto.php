@@ -34,12 +34,6 @@ if(empty($oldData)) {
         'tags' => $tagsId
     ];
 }    
-//echo mysqli_error($db);
-/*
-echo "<pre>";
-print_r(mysqli_error);
-echo "</pre>";
-*/
 
 ?>
 <section id="editar-producto" class="container sectionRegistro">
@@ -106,12 +100,11 @@ echo "</pre>";
                             <?php 
                             endif; ?>
                 </div>
-                <div>
-                    <p>Imagen Actual</p>
-                    <img src="../imgs/<?= $oldData['imgActual'];?>" alt="Imagen Actual del Producto" class="w-25">
+                <div class="row d-flex justify-content-center">
+                    <p class="pt-3 text-warning font-weight-bold">Imagen Actual</p>
+                    <img src="../imgs/<?= $oldData['imgActual'];?>" alt="Imagen Actual del Producto" class="w-25 rounded-circle">
                 </div>
                 <div class="col-md-12 column">
-                    <p id="img-cambiar">Elije una imagen si queres actualizarla</p> 
                     <label for="img" class="col-md-lg-2 col-form-label"  aria-describedby="img-cambiar">Nueva Imagen</label>
                     <input  type="file" 
                             class="form-control" 
@@ -129,7 +122,7 @@ echo "</pre>";
                             value="<?= $oldData['img_alt'] ?? '';?>">
                 </div>
             </div>
-            <fieldset>
+            <fieldset class="text-center">
                 <?php
                 foreach($tags as $tag): ?>
                     <label for=""><input type="checkbox" name="tags[]" value="<?= $tag['id_tags'] ;?>"<?php

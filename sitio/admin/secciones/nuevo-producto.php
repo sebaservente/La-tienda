@@ -1,29 +1,14 @@
 <?php
 
-/*
-echo "<pre>";
-print_r($_SESSION);
-echo "</pre>";
-*/
+
 require_once  '../libraries/tags.php';
 $tags = tagsTodos($db);
-
-/*echo "<pre>";
-print_r($tags);
-echo "</pre>";*/
 
 $errores = sessionValueGetFlash('errores', []);
 $oldData = sessionValueGetFlash('old_data', []);
 ?>
 <section  class="container sectionRegistro">
-   
         <h2 class="col-12">Nuevo Producto </h2>
-        <!--<picture class="figure w-100">
-            <source media="(min-width: 61.25em)" srcset="imgs/logo-01.png">
-            <source media="(min-width: 46.25em)" srcset="imgs/logo-01.png">
-            <img src="imgs/logo-01.png" alt="foto" class="img-fluid figure-img w-25">-->
-           
-       
         <p>Completa el formulario</p>
         <form action="acciones/producto-crear.php" method="post" enctype="multipart/form-data" class="formRegistro">
             <div class="form-group col-12">
@@ -101,7 +86,7 @@ $oldData = sessionValueGetFlash('old_data', []);
                             value="<?= $oldData['img_alt'] ?? '';?>">
                 </div>
             </div>
-            <fieldset>
+            <fieldset class="text-center">
                 <?php
                     foreach($tags as $tag): ?>
                         <label for=""><input type="checkbox" name="tags[]" value="<?= $tag['id_tags'];?>"<?php

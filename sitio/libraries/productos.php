@@ -194,10 +194,14 @@ function productoCrear($db, $title, $intro, $text, $definicion, $precio, $img, $
     $precio = mysqli_real_escape_string($db, $precio);
     $imgAlt = mysqli_real_escape_string($db, $imgAlt);
 
-    $nombreImagenes = generateSiteImages($img, PATH_IMG . "/", null, true);
+    if(!empty($data['img']['tmp_name'])) {
+        $nombreImagenes = generateSiteImages($data['img'], PATH_IMG . "/", null, true);
+    } else {
+        $nombreImagenes = ['name' => 'logo-01.png'];
+    }
+
     $query = "INSERT INTO cervezas (title, intro, text , img, alt_img, precio, definicion, usuarios_id_usuario)
                 VALUES ('" . $title . "', '" . $intro . "', '" . $text . "', '" . $nombreImagenes['name'] . "', '" . $imgAlt . "', '" . $precio . "', '" . $definicion . "', '" . $idUser . "')"; 
-
 
     $exito = mysqli_query($db, $query);
 

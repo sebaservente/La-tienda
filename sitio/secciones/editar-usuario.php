@@ -1,9 +1,5 @@
 <?php
 
-require 'data/bootstrap.php';
-
-
-
 // traemos la array de errores
 $errores = sessionValueGetFlash('errores', []);
 $oldData = sessionValueGetFlash('old_data', []);
@@ -22,15 +18,6 @@ if(empty($oldData)) {
         'img_alt' => $usuarios['alt_img'],
     ];
 }
-/*echo "<pre>";
-print_r($usuarios);
-echo "</pre>";*/
-//echo mysqli_error($db);
-/*
-echo "<pre>";
-print_r(mysqli_error);
-echo "</pre>";
-*/
 
 ?>
 <section id="editar-producto" class="container sectionRegistro">

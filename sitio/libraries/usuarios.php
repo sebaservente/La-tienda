@@ -71,7 +71,12 @@ function usuariosCrear($db, $data) {
     $apodo      = mysqli_real_escape_string($db, $data['apodo'] ?? '');
     $password   = password_hash($data['password'], PASSWORD_DEFAULT);
     $imgAlt     = mysqli_real_escape_string($db, $data['img-alt'] ?? '');
-    $nombreImagenes = generateSiteImages($data['img'], PATH_IMG . "/", null, true);
+    if(!empty($data['img']['tmp_name'])) {
+        $nombreImagenes = generateSiteImages($data['img'], PATH_IMG . "/", null, true);
+    } else {
+        $nombreImagenes = ['name' => 'logo-01.png'];
+    }
+
 
 
     $query = "INSERT INTO usuarios (id_rol, email, password, nombre, apellido, apodo, img, alt_img)

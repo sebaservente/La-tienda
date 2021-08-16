@@ -5,12 +5,11 @@ require '../data/bootstrap.php';
 //require '../../libraries/image.php';
 
 // tiene que estar autenticado para eliminar un producto
-if(!authEstaAutenticado() || !authEsAdmin()) {
-    /*    $_SESSION['seccion_preten'] = $seccion;*/
+/*if(!authEstaAutenticado() || !authEsAdmin()) {
     $_SESSION['successInfo'] = "Necesitas estar autenticado para realizar esta accion";
     header('Location: ../index.php?s=login');
     exit;
-}
+}*/
 
 // eliminar archivos de la base de datos
 $id = $_GET['id'];
