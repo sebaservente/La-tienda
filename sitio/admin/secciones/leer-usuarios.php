@@ -1,5 +1,4 @@
 <?php
-require '../data/bootstrap.php';
 
 $usuario = usuarioTodos($db);
 
@@ -21,9 +20,9 @@ $usuario = usuarioTodos($db);
                         <p title="<?=$usuarios['nombre']; ?>">Nombre: <?=$usuarios['nombre']; ?></p>
                         <p title="<?=$usuarios['apellido']; ?>">Apellido: <?=$usuarios['apellido']; ?></p>
                         <p title="<?=$usuarios['apodo']; ?>" class="text-center">@ <?=$usuarios['apodo']; ?></p>
-                        <div class="botones text-center m-2">
-                            <a href="../index.php?s=editar-usuario&id=<?=$usuarios['id_usuario'];?>" class="comprar btn btn-info text-light w-100 " >Editar usuario</a>
-                        </div>
+                       <!-- <div class="botones text-center m-2">
+                            <a href="../index.php?s=editar-usuario&id=<?/*=$usuarios['id_usuario'];*/?>" class="comprar btn btn-info text-light w-100 " >Editar usuario</a>
+                        </div>-->
                     </div>
                 </a>
             </div>

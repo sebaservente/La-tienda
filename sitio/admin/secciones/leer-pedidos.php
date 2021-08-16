@@ -1,5 +1,4 @@
 <?php
-require '../data/bootstrap.php';
 require '../libraries/carrito.php';
 require '../libraries/productos.php';
 

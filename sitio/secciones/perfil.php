@@ -1,5 +1,6 @@
 <?php
-require 'data/bootstrap.php';
+
+
 
 /*$idUsuario = authObtenerUsuario()['id_usuario'];
 echo "<pre>";
