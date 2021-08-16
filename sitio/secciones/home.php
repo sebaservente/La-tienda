@@ -26,7 +26,7 @@ $productos = getProducto($db);
     <div class="cards">
         <div class="cards__contener">
             <div class="cards__img"></div>
-            <p class="cards__pfo">LAS MEJORES MARCAS</p>
+            <p class="cards__pfo"><a href="index.php?s=productos" class="text-light">LAS MEJORES MARCAS</a> </p>
         </div>
        <div class="cards__contener">
            <div class="cards__imgs"></div>
