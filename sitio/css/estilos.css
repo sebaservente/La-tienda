@@ -48,35 +48,46 @@ main #inff {
 }
 /*--------------------------------------- home --------------------*/
 #homes .cards  {
-    max-width: 1000px;
-    width: 90%;
-    margin: 0 auto;
+    max-width: 1200px;
+    width:100%;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: center;
 }
 .cards__img {
-    width: 50%;
+    width: 100%;
     height: 500px;
     background: url(../imgs/home/0001.jpg) no-repeat center;
+}
+.cards__imgs {
+    width: 100%;
+    height: 500px;
+    background: url(../imgs/home/0002.jpg) no-repeat center;
+}
+.cards__contener {
+    margin: 1rem;
+    width: 100%;
 }
 .cards__pfo {
     background: #121212b3;
     padding: 1rem 1rem;
     color: #fff;
-    width: 50%;
+    width: 100%;
     position: relative;
     margin-top: -4.4rem;
     font-size: 1.5rem;
 }
 
 #homes .anuncio {
-    max-width: 1000px;
-    width: 90%;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 .anuncio__mjs {
     background: #f8f9fa;
     border-radius: 10px;
     padding: 1rem;
-    margin: 1rem;
+    margin: 3rem 1rem;
     box-shadow: 1px 1px 5px -3px;
     display: flex;
 }

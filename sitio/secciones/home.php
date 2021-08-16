@@ -17,17 +17,24 @@ $productos = getProducto($db);
     </picture>
     <div class="anuncio">
         <div class="anuncio__mjs">
-            <p class="anuncio__pfo w-25"><i class="bi bi-credit-card text-info border rounded-circle p-2"></i>12 Pagos sin interes</p>
-            <p class="anuncio__pfo w-25"><i class="bi bi-credit-card text-info border rounded-circle p-2 ml-2 mr-2"></i>Tarjeta de debito</p>
-            <p class="anuncio__pfo w-25"><i class="bi bi-currency-dollar text-info border rounded-circle p-2 ml-2 mr-2"></i>Efectivo</p>
-            <p class="anuncio__pfo w-25"><i class="bi bi-truck text-info border rounded-circle p-2 ml-2 mr-2"></i>Envios</p>
+            <p class="anuncio__pfo w-25 text-center"><i class="bi bi-credit-card text-info border rounded-circle p-2"></i>12 Pagos sin interes</p>
+            <p class="anuncio__pfo w-25 text-center"><i class="bi bi-credit-card text-info border rounded-circle p-2 ml-2 mr-2"></i>Tarjeta de debito</p>
+            <p class="anuncio__pfo w-25 text-center"><i class="bi bi-currency-dollar text-info border rounded-circle p-2 ml-2 mr-2"></i>Efectivo</p>
+            <p class="anuncio__pfo w-25 text-center"><i class="bi bi-truck text-info border rounded-circle p-2 ml-2 mr-2"></i>Envios</p>
         </div>
     </div>
     <div class="cards">
-        <div class="cards__img"></div>
-        <p class="cards__pfo">LAS MEJORES MARCAS</p>
+        <div class="cards__contener">
+            <div class="cards__img"></div>
+            <p class="cards__pfo">LAS MEJORES MARCAS</p>
+        </div>
+       <div class="cards__contener">
+           <div class="cards__imgs"></div>
+           <p class="cards__pfo">DESCUENTOS IMPERDIBLES</p>
+       </div>
     </div>
-    <div class="divPresentacion">
+
+    <!--<div class="divPresentacion">
         <div class="divPresent mt-4 mb-4 ">
             <h3 class="text-center"> Nosostros </h3>
             <p>Gran variedad de cerveza, novedosas y de calidad. Conocé nuestros Combos y Comprá Online! ¿Querés conocer nuestra Variedad
@@ -110,7 +117,7 @@ $productos = getProducto($db);
                 <button class="btn btn-info shadow m-auto w-50" onclick="window.location='index.php?s=registro'">Registrate</button>
             </div>
         </div>
-    </div>
+    </div>-->
     <h5 class="text-center">PROHIBIDA LA VENTA DE BEBIDAS ALCOHOLICAS A MENORES DE 18 AÑOS</h5>
 
 </section>

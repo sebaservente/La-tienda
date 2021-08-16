@@ -13,7 +13,7 @@
 /**
  * @param mysqli $db
  * */
-ini_set('display_errors', 'Off');
+/*ini_set('display_errors', 'Off');*/
 
 
 const DB_HOST       = "localhost"; // o 127.0.0.1
