@@ -47,23 +47,41 @@ main #inff {
     font-size: .8rem;
 }
 /*--------------------------------------- home --------------------*/
-#homes .divNuevoHome  {
+#homes .cards  {
     max-width: 1000px;
     width: 90%;
     margin: 0 auto;
 }
-#homes .divNuevoHome .primeraNota {
-    width: 30%;
-    height: 190px;
-    background: url(../imgs/1627396275.png) no-repeat;
+.cards__img {
+    width: 50%;
+    height: 500px;
+    background: url(../imgs/home/0001.jpg) no-repeat center;
 }
-#homes .divNuevoHome p {
+.cards__pfo {
     background: #121212b3;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     color: #fff;
-    width: 30%;
+    width: 50%;
     position: relative;
-    margin-top: -2.5rem;
+    margin-top: -4.4rem;
+    font-size: 1.5rem;
+}
+
+#homes .anuncio {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+}
+.anuncio__mjs {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 1px 1px 5px -3px;
+    display: flex;
+}
+.anuncio__pfo {
+    margin: .5rem;
 }
 /*---------------------------------------fin home -----------------*/
 /*#sectionPerfil h2 {

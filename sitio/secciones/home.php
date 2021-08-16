@@ -15,9 +15,17 @@ $productos = getProducto($db);
         <source media="(min-width: 14.25em)" srcset="imgs/vasoCervezaInicio.jpg">
         <img src="imgs/vaso-Cerveza-Inicio-Original.jpg" alt="vaso de cerveza" class="img-fluid figure-img">
     </picture>
-    <div class="divNuevoHome">
-        <div class="primeraNota"></div>
-        <p>Las mejores cervezas</p>
+    <div class="anuncio">
+        <div class="anuncio__mjs">
+            <p class="anuncio__pfo w-25"><i class="bi bi-credit-card text-info border rounded-circle p-2"></i>12 Pagos sin interes</p>
+            <p class="anuncio__pfo w-25"><i class="bi bi-credit-card text-info border rounded-circle p-2 ml-2 mr-2"></i>Tarjeta de debito</p>
+            <p class="anuncio__pfo w-25"><i class="bi bi-currency-dollar text-info border rounded-circle p-2 ml-2 mr-2"></i>Efectivo</p>
+            <p class="anuncio__pfo w-25"><i class="bi bi-truck text-info border rounded-circle p-2 ml-2 mr-2"></i>Envios</p>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="cards__img"></div>
+        <p class="cards__pfo">LAS MEJORES MARCAS</p>
     </div>
     <div class="divPresentacion">
         <div class="divPresent mt-4 mb-4 ">
