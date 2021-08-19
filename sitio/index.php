@@ -98,15 +98,15 @@ $successInfo = sessionValueGetFlash('successInfo');
                         ?>
 
                     </ul>
+                    <?php
+                    if(authEstaAutenticado()):?>
                     <div class="divImagen d-none d-md-block d-sm-none ">
                         <figure>
-                            <?php
-                            if(authEstaAutenticado()):?>
-                                <img src="imgs/<?= authObtenerUsuario()['img'];?>" class="img-fluid figure-img d-flex justify-content-center" alt="<?= htmlspecialchars(authObtenerUsuario()['alt_img']);?>">
+                            <img src="imgs/<?= authObtenerUsuario()['img'];?>" class="img-fluid figure-img d-flex justify-content-center" alt="<?= htmlspecialchars(authObtenerUsuario()['alt_img']);?>">
                             <?php
                             else: ?>
-                                <div></div>
-                                <!--<img src="imgs/logo-01.png" class="img-fluid figure-img d-flex justify-content-center" alt="logo del ecommerce">-->
+                            <div></div>
+                            <!--<img src="imgs/logo-01.png" class="img-fluid figure-img d-flex justify-content-center" alt="logo del ecommerce">-->
                             <?php
                             endif;
                             ?>

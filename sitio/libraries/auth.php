@@ -75,6 +75,6 @@ function authEsAdmin(){
 }
 // usuario autenticado
 function authObtenerUsuario(){
-    return $_SESSION['usuario_admin'];
+    return $_SESSION['usuario_admin'] ?? null;
 }
 
