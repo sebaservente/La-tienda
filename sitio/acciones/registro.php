@@ -14,10 +14,11 @@ $imgAlt = $_POST['img-alt'];
 $img = $_FILES['img'];
 
 // todo validar
-if(empty($email)){
-    $errores['email'] = "Te estas olvidando el email";
+if(empty($email)) {
+    $errores['email'] = "Debes escribir tu email";
+} else if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errores['email'] =  "El email no tiene un formato valido - 'tienda@tienda.com.ar'";
 }
-
 if(empty($password)){
     $errores['password'] = "Te olvidaste el Password";
 } else if(strlen($password) < 6){
