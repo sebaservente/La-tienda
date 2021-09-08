@@ -19,8 +19,8 @@ body {
     /*background: #111;*/
 }
 
-.horizontal-scroll-wrapper{
-   /* position:absolute;*/
+/*.horizontal-scroll-wrapper{
+   !* position:absolute;*!
     display: block;
     top: 0;
     left: 0;
@@ -49,7 +49,7 @@ body {
     width: 60px;
     height: 60px;
     margin: 10px;
-}
+}*/
 /*
 .rectangles{
     top: 100px;
